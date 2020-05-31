@@ -1,0 +1,19 @@
+# Site navigation links
+- title: Home
+  url: /
+
+- title: Presentations
+  url: /presentations/
+
+- title: Resume
+  url: /resume/
+
+- title: Blog
+  url: /blog/
+
+- title: Orcid
+  url: https://orcid.org/0000-0001-7031-5225
+
+- title: Work
+  url: https://usuario.cicese.mx/~julios
+
