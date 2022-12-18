@@ -1,5 +1,5 @@
 ---
-layout: presentation-post-index
-title: Presentations
-excerpt: "Presentations"
+title: "Hello Shower"
+author: "Julio"
+output: rmdshower::shower_presentation
 ---
