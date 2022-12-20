@@ -5,6 +5,10 @@ layout: raw
 ---
 
 # The Equations
+<script src="plugin/math/math.js"></script>
+<script>
+  Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
+</script>
 
 <section>
   <h2>The Lorenz Equations</h2>
