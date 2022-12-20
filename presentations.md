@@ -1,15 +1,5 @@
 ---
 title: "Hello Shower"
 author: "Julio"
-output: {rmdshower::shower_presentation
-<section data-markdown>
-  <textarea data-template>
-    ## Slide 1
-    A paragraph with some text and a [link](http://hakim.se).
-    ---
-    ## Slide 2
-    ---
-    ## Slide 3
-  </textarea>
-</section>}
+output: rmdshower::shower_presentation
 ---
