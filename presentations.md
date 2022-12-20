@@ -12,11 +12,16 @@ layout: raw
 
 <section>
   <h2>The Lorenz Equations</h2>
-  \[\begin{aligned}
+ $$
   \dot{x} &amp; = \sigma(y-x) \\
   \dot{y} &amp; = \rho x - y - xz \\
   \dot{z} &amp; = -\beta z + xy
-  \end{aligned} \]
+   \]
+$$
+</section>
+
+<section data-markdown>
+  `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
 </section>
 
 ___  <!-- "___" Makes a basement slide -->
