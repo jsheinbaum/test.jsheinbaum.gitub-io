@@ -3,8 +3,6 @@ title: "Hello"
 author: "Julio"
 layout: raw
 ---
-
-# The Equations
 Reveal.initialize({
   katex: {
     version: 'latest',
@@ -23,6 +21,8 @@ Reveal.initialize({
 <script>
   Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
 </script>
+
+# The Equations
 
 <section>
   <h2>The Lorenz Equations</h2>
