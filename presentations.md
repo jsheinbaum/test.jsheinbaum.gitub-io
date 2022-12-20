@@ -17,17 +17,27 @@ Reveal.initialize({
  plugins: [ RevealMath.KaTeX ]
 });
 
-<script src="plugin/math/math.js"></script>
-<script>
-  Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
-</script>
+Reveal.initialize({
+  katex: {
+    local: 'node_modules/katex',
+  },
+  plugins: [ RevealMath.KaTeX ]
+});
+
 
 # The Equations
 
 <section>
   <h2>The Lorenz Equations</h2>
- $$\dot{x} &amp; = \sigma(y-x) $$
-</section>
+  <section>
+    
+  <section>
+  \[\begin{aligned}
+  \dot{x} &amp; = \sigma(y-x) \\
+  \dot{y} &amp; = \rho x - y - xz \\
+  \dot{z} &amp; = -\beta z + xy
+  \end{aligned} \]
+   <section>
 
 <section data-markdown>
   `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
