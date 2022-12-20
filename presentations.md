@@ -4,9 +4,16 @@ author: "Julio"
 layout: raw
 ---
 
-# First Slide
+# The Equations
 
-stuff
+<section>
+  <h2>The Lorenz Equations</h2>
+  \[\begin{aligned}
+  \dot{x} &amp; = \sigma(y-x) \\
+  \dot{y} &amp; = \rho x - y - xz \\
+  \dot{z} &amp; = -\beta z + xy
+  \end{aligned} \]
+</section>
 
 ___  <!-- "___" Makes a basement slide -->
 
