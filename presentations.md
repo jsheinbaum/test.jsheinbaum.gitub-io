@@ -3,27 +3,6 @@ title: "Hello"
 author: "Julio"
 layout: raw
 ---
-Reveal.initialize({
-  katex: {
-    version: 'latest',
-    delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false},
-      {left: '\\(', right: '\\)', display: false},
-      {left: '\\[', right: '\\]', display: true}
-   ],
-   ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
- },
- plugins: [ RevealMath.KaTeX ]
-});
-
-Reveal.initialize({
-  katex: {
-    local: 'node_modules/katex',
-  },
-  plugins: [ RevealMath.KaTeX ]
-});
-
 
 # The Equations
 
