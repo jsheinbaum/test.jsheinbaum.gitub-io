@@ -24,7 +24,14 @@ You're rock bottom!
 
 # Second slide
 
-stuff
+<section>
+  <h2>The Lorenz Equations</h2>
+  \[\begin{aligned}
+  \dot{x} &amp; = \sigma(y-x) \\
+  \dot{y} &amp; = \rho x - y - xz \\
+  \dot{z} &amp; = -\beta z + xy
+  \end{aligned} \]
+</section>
 
 Note:
 This will only display in the notes window.
