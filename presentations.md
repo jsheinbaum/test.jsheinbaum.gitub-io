@@ -18,9 +18,6 @@ layout: raw
   \end{aligned} \]
    <section>
 
-<section data-markdown>
-  `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
-</section>
 
 ___  <!-- "___" Makes a basement slide -->
 
