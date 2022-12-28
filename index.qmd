@@ -1,7 +1,41 @@
 ---
-title: "jsheinbaum.github.io"
+title: "Julio Sheinbaum"
+about: 
+  template: solana
+  image: JSP.jpg
+  image-shape: rounded
+  image-width: 10em
+  links:
+    - text: WORK
+      href: https://www.cicese.edu.mx
+    - text: WORK-PERSONAL
+      href: https://usuario.cicese.mx/~julios
+    - text: GitHub
+      href: https://github.com/jsheinbaum
+    - text: ORCID
+      href: https://orcid.org/0000-0001-7031-5225
 ---
 
-This is a Quarto website.
+# Professor Physical Oceanography, CICESE, Ensenada, Mexico
 
+## Reasearch Interests:
+
+- Modelling the Caribbean Sea and Gulf of Mexico
+- Forecasting the Loop Current
+- Ocean Data Assimilation
+- Observing the Ocean (Moorings,Gliders,Argos,Drifters)
+- Air-Sea Interaction and Climate
+
+## Education
+
+1983- 1985
+Universidad Nacional Autonoma de Mexico
+M. Sc. Physics
+
+1985 - 1989
+University of Oxford
+D.Phil. Physical Oceanography
+
+---
+This is a Quarto website.
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
