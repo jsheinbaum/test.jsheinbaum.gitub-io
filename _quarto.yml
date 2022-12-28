@@ -5,10 +5,12 @@ project:
 website:
   title: "Julio Sheinbaum"
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+   background: primary
+   left:
+     - href: index.qmd
+       text: Home
+     - about.qmd
+     - cvprod.qmd # my new navbar page
 
 format:
   html:
