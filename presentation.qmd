@@ -1,0 +1,20 @@
+---
+title: "Reveal Presentations"
+author: "Julio"
+format: revealjs
+---
+
+## Empieza 
+
+- Turn on Math
+- $Ax=b$
+
+## Ahora No lineal
+
+- Get It?
+- $F(x)=b$
+- The Lorenz Equations
+
+  $$\dot{x} = \sigma(y-x) $$
+  $$\dot{y} = \rho x - y - xz $$
+  $$\dot{z} = \beta z + xy$$

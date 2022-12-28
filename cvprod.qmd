@@ -5,6 +5,24 @@ title: "CV-PRODUCTS"
 
 
 ### Journals
+
+A.E. Romo-Curiel,Z. Ramírez-Mendoza,A. Fajardo-Yamamoto, M.R. Ramírez-León, M.C. García-Aguilar, S.Z. Herzka,P. Pérez-Brunius,L.E. Saldaña-Ruiz, J. Sheinbaum, K. Kotzakoulakis, J. Rodríguez-Outerelo, F. Medrano and O. Sosa-Nishizaki, (2022). Assessing the exposure risk of large pelagic fish to oil spills scenarios in the deep waters of the Gulf of Mexico. Marine Pollution Bulletin VL - IS - SP - EP - PY - T2 -, 176, p.113434, https://doi.org/10.1016/j.marpolbul.2022.113434
+
+Damien, P., Sheinbaum Pardo, J., Pasqueron De Fommervault, O., Jouanno, J., Linacre Rojas , L., & Duteil, O. (2021). Do Loop Current eddies stimulate productivity in the Gulf of Mexico?. Biogeosciences, 18(14), 4281-4303. doi: 10.5194/bg-18-4281-2021
+Maslo, A., Azevedo Correia de Souza, J. M., & Sheinbaum Pardo, J. (2020). Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 1655-1675. doi: 10.1175/JPO-D-19-0308.1.
+
+Jouanno, J., Benshila, R., Berline, L., Soulié, A., Radenac, R. H., Morvan, G., Diaz, F., Sheinbaum Pardo, J., Chevalier, C., Thibaut, T., Changeux, T., Menard, F., Berthet, S., Aumont, O., Ethé, C., Nabat, P., & Mallet, M. (2021). A NEMO-based model of Sargassum distribution in the tropical Atlantic: Description of the model and sensitivity analysis (NEMO-Sarg1.0). Geoscientific Model Development, 14(6), 4069-4086. doi: 10.5194/gmd-14-4069-2021.
+
+Ursella, L., Pensieri, S., Pallás Sanz, E., Herzka Llona, S. Z., Bozzano, R., Costa de Almeida Tenreiro, M. J., Cardin, V., Candela Pérez, J., & Sheinbaum Pardo, J. (2021). Diel, lunar and seasonal vertical migration in the deep western Gulf of Mexico evidenced from a long-term data series of acoustic backscatter. Progress in Oceanography, 195. doi: 10.1016/j.pocean.2021.102562.
+
+Ochoa de la Torre, J. L., Ferreira Bartrina, V., Candela Pérez, J., Sheinbaum Pardo, J., López Mariscal, J. M., Pérez Brunius, P., Herzka Llona, S. Z., & Amon, R. (2021). Deep-Water Warming in the Gulf of Mexico from 2003 to 2019. Journal of Physical Oceanography, 51(4), 1021-1035. doi: 10.1175/JPO-D-19-0295.1.
+
+Jouanno, J., Moquet, J. S., Berline, L., Radenac, R. H., Santini, W., Changeux, T., Thibaut, T., Podlejski, W., Menard, F., Martinez, J. M., Aumont, O., Sheinbaum Pardo, J., Filizola, N., & Moukandi N'Kaya, G. (2021). Evolution of the riverine nutrient export to the Tropical Atlantic over the last 15 years: is there a link with Sargassum proliferation?. Environmental Research Letters, 16(3), 034042 1-14. doi: 10.1088/1748-9326/abe11a. 
+
+Guerrero Moreno, L., Sheinbaum Pardo, J., Mariño Tapia, I., González Rejón, J. J., & Pérez Brunius, P. (2020). Influence of mesoscale eddies on cross-shelf exchange in the western Gulf of Mexico. Continental Shelf Research, 209(12), 104243. doi: 10.1016/j.csr.2020.104243.
+
+Ochoa de la Torre, J. L., Badan Dangon, A. R. F., Sheinbaum Pardo, J., & Castro López, J. (2020). `Preferred Trajectories¿ defined by mass and potential vorticity conservation. Geofísica Internacional, 59(3), 195-207. doi: 10.22201/igeof.00167169p.2020.59.3.2094.
+
   - 1  
     Sheila N Estrada-Allis, Julio Sheinbaum Pardo, Joao M Azevedo
     Correia de Souza, Cecilia Elizabeth
@@ -15,8 +33,8 @@ title: "CV-PRODUCTS"
     Yucat<span class="bibtex-protected">á</span>n shelf: driving
     mechanisms through a
     physical<span class="bibtex-protected">–</span>biogeochemical
-    coupled model</span>. *Biogeosciences*, 17(4):1087–1111, February
-    2020. URL: [https://www.biogeosciences.net/17/1087/2020/ 2020
+    coupled model</span>. *Biogeosciences*, 17(4):1087–1111, February  2020. URL: 
+    [https://www.biogeosciences.net/17/1087/2020/ 2020
     Estrada-Allis.pdf:[doi:10.5194/bg-17-1087-2020](https://doi.org/10.5194/bg-17-1087-2020).
   - 2  
     Thomas Meunier, julio sheinbaum,
