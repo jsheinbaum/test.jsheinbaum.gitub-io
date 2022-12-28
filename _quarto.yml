@@ -12,6 +12,7 @@ website:
      - about.qmd
      - cvprod.qmd # my new navbar page
      - presentation.qmd
+     - basics_jupyter.qmd
 
 format:
   html:
