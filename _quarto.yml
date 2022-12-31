@@ -13,6 +13,7 @@ website:
      - cvprod.qmd # my new navbar page
      - presentation.qmd
      - basics_jupyter.qmd
+     - makie_julia.qmd
 
 format:
   html:

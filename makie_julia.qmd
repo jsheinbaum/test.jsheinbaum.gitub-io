@@ -1,0 +1,20 @@
+---
+title: "Makie Demo"
+author: "JSP"
+date: "12/28/2022"
+format:
+  html:
+    code-fold: true
+jupyter: julia-1.8
+---
+## TEST MAKIE
+
+```{julia}
+#| label: fig-streamplot
+#| fig-cap: "Stream Plot"
+
+using GLMakie
+v(x::Point2{T}) where T = Point2{T}(x[2], 4*x[1])
+streamplot(v, -2..2, -2..2)
+
+```

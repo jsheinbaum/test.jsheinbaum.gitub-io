@@ -13,5 +13,11 @@
   },
   "basics_jupyter.qmd": {
     "basics_jupyter.html": "cb87034f"
+  },
+  "basics_julia.qmd": {
+    "basics_julia.html": "e0580ba3"
+  },
+  "makie_julia.qmd": {
+    "makie_julia.html": "3f211ae8"
   }
 }

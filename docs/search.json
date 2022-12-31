@@ -2,23 +2,44 @@
   {
     "objectID": "presentation.html#empieza",
     "href": "presentation.html#empieza",
-    "title": "Reveal Presentations",
+    "title": "Test Reveal Presentations",
     "section": "Empieza",
-    "text": "Empieza\n\nTurn on Math\n\\(Ax=b\\)\n\\(\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \\leq \\left( \\sum_{k=1}^n a_k^2 \\right) \\left( \\sum_{k=1}^n b_k^2 \\right)\\)\nA Cross Product Formula\n\n\\[\\mathbf{V}_1 \\times \\mathbf{V}_2 =  \\begin{vmatrix}\n  \\mathbf{\\hat i} ; \\mathbf{\\hat j} ; \\mathbf{\\hat k} \\\\\n  \\frac{\\partial X}{\\partial u} ;  \\frac{\\partial Y}{\\partial u} ; 0 \\\\\n  \\frac{\\partial X}{\\partial v} ;  \\frac{\\partial Y}{\\partial v} ; 0\n  \\end{vmatrix}  \\]"
+    "text": "Empieza\n\nTurn on Math\n\\(Ax=b\\)\nCauchy-Shwarz\n\n\\[\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \\leq \\left( \\sum_{k=1}^n a_k^2 \\right) \\left( \\sum_{k=1}^n b_k^2 \\right)\\]"
   },
   {
-    "objectID": "presentation.html#ahora-no-lineal",
-    "href": "presentation.html#ahora-no-lineal",
-    "title": "Reveal Presentations",
-    "section": "Ahora No lineal",
-    "text": "Ahora No lineal\n\nGet It?\n\\(F(x)=b\\)\nThe Lorenz Equations\n\\[\\dot{x} = \\sigma(y-x) \\] \\[\\dot{y} = \\rho x - y - xz \\] \\[\\dot{z} = \\beta z + xy\\]"
+    "objectID": "presentation.html#more-math",
+    "href": "presentation.html#more-math",
+    "title": "Test Reveal Presentations",
+    "section": "More Math",
+    "text": "More Math\n\n\n\nA Cross Product Formula\n\n\\[\\mathbf{V}_1 \\times \\mathbf{V}_2 =  \\begin{vmatrix}\n  \\mathbf{\\hat i} &  \\mathbf{\\hat j} & \\mathbf{\\hat k} \\\\\n  \\frac{\\partial X}{\\partial u} &  \\frac{\\partial Y}{\\partial u} & 0 \\\\\n  \\frac{\\partial X}{\\partial v} &  \\frac{\\partial Y}{\\partial v} & 0\n  \\end{vmatrix}  \\]\n\n\nThe Lorenz Equations \\[\n\\begin{aligned}\n\\dot{x} & = \\sigma(y-x) \\\\\n\\dot{y} & = \\rho x - y - xz \\\\\n\\dot{z} & = -\\beta z + xy\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "presentation.html#julia",
+    "href": "presentation.html#julia",
+    "title": "Test Reveal Presentations",
+    "section": "Julia",
+    "text": "Julia\n#| echo: true\nusing GLMakie\n\nBase.@kwdef mutable struct Lorenz\n    dt::Float64 = 0.01\n    σ::Float64 = 10\n    ρ::Float64 = 28\n    β::Float64 = 8/3\n    x::Float64 = 1\n    y::Float64 = 1\n    z::Float64 = 1\nend\n\nfunction step!(l::Lorenz)\n    dx = l.σ * (l.y - l.x)\n    dy = l.x * (l.ρ - l.z) - l.y\n    dz = l.x * l.y - l.β * l.z\n    l.x += l.dt * dx\n    l.y += l.dt * dy\n    l.z += l.dt * dz\n    Point3f(l.x, l.y, l.z)\nend\n\nattractor = Lorenz()\n\npoints = Observable(Point3f[])\ncolors = Observable(Int[])\n\nset_theme!(theme_black())\n\nfig, ax, l = lines(points, color = colors,\n    colormap = :inferno, transparency = true,\n    axis = (; type = Axis3, protrusions = (0, 0, 0, 0),\n        viewmode = :fit, limits = (-30, 30, -30, 30, 0, 50)))\n\nrecord(fig, \"lorenz.mp4\", 1:120) do frame\n    for i in 1:50\n        push!(points[], step!(attractor))\n        push!(colors[], frame)\n    end\n    ax.azimuth[] = 1.7pi + 0.3 * sin(2pi * frame / 120)\n    notify.((points, colors))\n    l.colorrange = (0, frame)\nend"
+  },
+  {
+    "objectID": "presentation.html#polar-axis",
+    "href": "presentation.html#polar-axis",
+    "title": "Test Reveal Presentations",
+    "section": "Polar Axis",
+    "text": "Polar Axis\nFor a demonstration of a line plot on a polar axis, see Figure 1.\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   },
   {
     "objectID": "presentation.html#python",
     "href": "presentation.html#python",
-    "title": "Reveal Presentations",
+    "title": "Test Reveal Presentations",
     "section": "Python",
     "text": "Python\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
+  },
+  {
+    "objectID": "makie_julia.html",
+    "href": "makie_julia.html",
+    "title": "Makie Demo",
+    "section": "",
+    "text": "Code\nusing GLMakie\nv(x::Point2{T}) where T = Point2{T}(x[2], 4*x[1])\nstreamplot(v, -2..2, -2..2)\n\n\n\n\n\nFigure 1: Stream Plot"
   },
   {
     "objectID": "cvprod.html",

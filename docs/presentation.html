@@ -7,10 +7,10 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.269">
+  <meta name="generator" content="quarto-1.2.280">
 
   <meta name="author" content="Julio">
-  <title>Julio Sheinbaum - Reveal Presentations</title>
+  <title>Julio Sheinbaum - Test Reveal Presentations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -388,7 +388,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Reveal Presentations</h1>
+  <h1 class="title">Test Reveal Presentations</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -402,41 +402,116 @@ Julio
 <section id="empieza" class="slide level2">
 <h2>Empieza</h2>
 <ul>
-<li>Turn on Math</li>
-<li><span class="math inline">\(Ax=b\)</span></li>
-<li><span class="math inline">\(\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\)</span></li>
+<li><p>Turn on Math</p></li>
+<li><p><span class="math inline">\(Ax=b\)</span></p></li>
+<li><p>Cauchy-Shwarz</p></li>
+</ul>
+<p><span class="math display">\[\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\]</span></p>
+</section>
+<section id="more-math" class="slide level2">
+<h2>More Math</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
 <li>A Cross Product Formula</li>
 </ul>
 <p><span class="math display">\[\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
-  \mathbf{\hat i} ; \mathbf{\hat j} ; \mathbf{\hat k} \\
-  \frac{\partial X}{\partial u} ;  \frac{\partial Y}{\partial u} ; 0 \\
-  \frac{\partial X}{\partial v} ;  \frac{\partial Y}{\partial v} ; 0
+  \mathbf{\hat i} &amp;  \mathbf{\hat j} &amp; \mathbf{\hat k} \\
+  \frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+  \frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0
   \end{vmatrix}  \]</span></p>
-</section>
-<section id="ahora-no-lineal" class="slide level2">
-<h2>Ahora No lineal</h2>
+</div><div class="column" style="width:40%;">
 <ul>
-<li><p>Get It?</p></li>
-<li><p><span class="math inline">\(F(x)=b\)</span></p></li>
-<li><p>The Lorenz Equations</p>
-<p><span class="math display">\[\dot{x} = \sigma(y-x) \]</span> <span class="math display">\[\dot{y} = \rho x - y - xz \]</span> <span class="math display">\[\dot{z} = \beta z + xy\]</span></p></li>
+<li>The Lorenz Equations <span class="math display">\[
+\begin{aligned}
+\dot{x} &amp; = \sigma(y-x) \\
+\dot{y} &amp; = \rho x - y - xz \\
+\dot{z} &amp; = -\beta z + xy
+\end{aligned}
+\]</span></li>
 </ul>
+</div>
+</div>
+</section>
+<section id="julia" class="slide level2">
+<h2>Julia</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {julia} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>#| echo: true</span>
+<span id="cb1-2"><a href="#cb1-2"></a>using GLMakie</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>Base.@kwdef mutable struct Lorenz</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    dt::Float64 = 0.01</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    σ::Float64 = 10</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    ρ::Float64 = 28</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    β::Float64 = 8/3</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    x::Float64 = 1</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    y::Float64 = 1</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    z::Float64 = 1</span>
+<span id="cb1-12"><a href="#cb1-12"></a>end</span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a>function step!(l::Lorenz)</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    dx = l.σ * (l.y - l.x)</span>
+<span id="cb1-16"><a href="#cb1-16"></a>    dy = l.x * (l.ρ - l.z) - l.y</span>
+<span id="cb1-17"><a href="#cb1-17"></a>    dz = l.x * l.y - l.β * l.z</span>
+<span id="cb1-18"><a href="#cb1-18"></a>    l.x += l.dt * dx</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    l.y += l.dt * dy</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    l.z += l.dt * dz</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    Point3f(l.x, l.y, l.z)</span>
+<span id="cb1-22"><a href="#cb1-22"></a>end</span>
+<span id="cb1-23"><a href="#cb1-23"></a></span>
+<span id="cb1-24"><a href="#cb1-24"></a>attractor = Lorenz()</span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a>points = Observable(Point3f[])</span>
+<span id="cb1-27"><a href="#cb1-27"></a>colors = Observable(Int[])</span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a>set_theme!(theme_black())</span>
+<span id="cb1-30"><a href="#cb1-30"></a></span>
+<span id="cb1-31"><a href="#cb1-31"></a>fig, ax, l = lines(points, color = colors,</span>
+<span id="cb1-32"><a href="#cb1-32"></a>    colormap = :inferno, transparency = true,</span>
+<span id="cb1-33"><a href="#cb1-33"></a>    axis = (; type = Axis3, protrusions = (0, 0, 0, 0),</span>
+<span id="cb1-34"><a href="#cb1-34"></a>        viewmode = :fit, limits = (-30, 30, -30, 30, 0, 50)))</span>
+<span id="cb1-35"><a href="#cb1-35"></a></span>
+<span id="cb1-36"><a href="#cb1-36"></a>record(fig, "lorenz.mp4", 1:120) do frame</span>
+<span id="cb1-37"><a href="#cb1-37"></a>    for i in 1:50</span>
+<span id="cb1-38"><a href="#cb1-38"></a>        push!(points[], step!(attractor))</span>
+<span id="cb1-39"><a href="#cb1-39"></a>        push!(colors[], frame)</span>
+<span id="cb1-40"><a href="#cb1-40"></a>    end</span>
+<span id="cb1-41"><a href="#cb1-41"></a>    ax.azimuth[] = 1.7pi + 0.3 * sin(2pi * frame / 120)</span>
+<span id="cb1-42"><a href="#cb1-42"></a>    notify.((points, colors))</span>
+<span id="cb1-43"><a href="#cb1-43"></a>    l.colorrange = (0, frame)</span>
+<span id="cb1-44"><a href="#cb1-44"></a>end</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section" class="slide level2" data-background-video="lorenz.mp4">
+<h2></h2>
+</section>
+<section id="polar-axis" class="slide level2">
+<h2>Polar Axis</h2>
+<p>For a demonstration of a line plot on a polar axis, see <a href="#/fig-polar">Figure&nbsp;1</a>.</p>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div id="fig-polar" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="presentation_files/figure-revealjs/fig-polar-output-1.png" width="445" height="438"></p>
+<p></p><figcaption>Figure&nbsp;1: A line plot on a polar axis</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="python" class="slide level2">
 <h2>Python</h2>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb1-6"><a href="#cb1-6"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
-<span id="cb1-7"><a href="#cb1-7"></a>ax.plot(theta, r)</span>
-<span id="cb1-8"><a href="#cb1-8"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-9"><a href="#cb1-9"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb1-10"><a href="#cb1-10"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb2-5"><a href="#cb2-5"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb2-6"><a href="#cb2-6"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb2-7"><a href="#cb2-7"></a>ax.plot(theta, r)</span>
+<span id="cb2-8"><a href="#cb2-8"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb2-9"><a href="#cb2-9"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb2-10"><a href="#cb2-10"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="presentation_files/figure-revealjs/cell-2-output-1.png" width="445" height="438"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-3-output-1.png" width="445" height="438"></p>
 </div>
 </div>
 
@@ -486,7 +561,7 @@ Julio
         controlsTutorial: false,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
+        controlsLayout: 'bottom-right',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
@@ -601,14 +676,14 @@ Julio
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
