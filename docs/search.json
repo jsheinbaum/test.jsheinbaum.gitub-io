@@ -39,7 +39,7 @@
     "href": "presentation.html#python",
     "title": "Test Reveal Presentations",
     "section": "Python",
-    "text": "Python\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
+    "text": "Python\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\nhttps://quarto.org"
   },
   {
     "objectID": "makie_julia.html",
@@ -67,7 +67,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "JuliaPython\n\n\nusing CairoMakie\n\nxs = LinRange(0, 10, 100);\nys = LinRange(0, 10, 100);\nzs = [cos(x) * sin(y) for x in xs, y in ys];\nus=[-cos(x) * cos(y) for x in xs, y in ys];\nvs=[-sin(x) * sin(y) for x in xs, y in ys];\nfig = Figure(backgroundcolor = RGBf0(0.98, 0.98, 0.98),\n    resolution = (1000, 600))\n\nax1 = fig[1, 1] = Axis(fig, title = \"Test\")\n#scene, layout = layoutscene(resolution = (1000, 600))\n#scene, layout = layoutscene()\n#display(scene)\n#ax1 = layout[1,1] = LAxis(scene)\nheatmap!(ax1, xs, ys, zs, colormap=cgrad(:jet, 10, categorical=true), interpolate=true)\nax1.aspect = AxisAspect(1)\nax1.xticks = 1:10\nax1.yticks = 0:10\ncontour!(ax1,xs, ys, zs, levels = 10, linewidth = 1, fillrange = true)\ncontour!(ax1,xs, ys, zs, levels = 10, linewidth = 0.2, fillrange = false, color = \"black\")\narrows!(ax1,xs,ys,us,vs, arrowsize = 0.25, lengthscale = 0.25)\n#heatmap!(ax2, xs, ys, zs, colormap=:starrynight)\n#ax1.aspect = AxisAspect(1)\nfig\n\n\nimport plotly.graph_objects as go\n\nimport pandas as pd\n\n# Read data from a csv\nz_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv')\n\nfig = go.Figure(data=[go.Surface(z=z_data.values)])\n\nfig.update_layout(title='Mt Bruno Elevation', autosize=False,\n                  width=500, height=500,\n                  margin=dict(l=65, r=50, b=65, t=90))\n\nfig.show()"
+  },
+  {
+    "objectID": "about.html#modelos-de-capas",
+    "href": "about.html#modelos-de-capas",
+    "title": "About",
+    "section": "1 Modelos de Capas",
+    "text": "1 Modelos de Capas\n\\dfrac {\\partial \\overrightarrow {u}_{i}}{\\partial t}+\\overrightarrow {u}_{i}\\cdot {\\nabla  \\overrightarrow u}_{i}+f  \\overrightarrow {k}\\times \\overrightarrow {u}_{i}=-\\dfrac {1}{\\rho _{0}}\\nabla P_{i}\n\\dfrac {\\partial h_{i}}{\\partial t}+\\nabla \\cdot \\left( h\\overrightarrow {u}_{i}\\right) =0\n\\dfrac {\\partial P}{\\partial z}=-\\rho g"
   },
   {
     "objectID": "basics_jupyter.html",

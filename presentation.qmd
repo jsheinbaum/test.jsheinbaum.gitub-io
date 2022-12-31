@@ -1,12 +1,16 @@
 ---
 title: "Test Reveal Presentations"
 author: "Julio"
+subtitle: "Testing stuff"
 format:
   revealjs: 
     theme: solarized
-    transition: slide
-    controls-layout: bottom-right
-    background-transition: fade
+    slide-number: true
+    chalkboard: true 
+    buttons: false
+    preview-links: auto
+    css: styles.css
+    footer: <https://quarto.org>
 ---
 
 ## Empieza 

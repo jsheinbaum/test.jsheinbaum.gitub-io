@@ -1,5 +1,71 @@
 ---
 title: "About"
+format:
+  html:
+    toc: true
+    toc-location: left
+    number-sections: true
+    html-math-method: katex
+    css: styles.css
 ---
+::: {.panel-tabset}
+## Julia
 
-About this site
+``` {.julia}
+using CairoMakie
+
+xs = LinRange(0, 10, 100);
+ys = LinRange(0, 10, 100);
+zs = [cos(x) * sin(y) for x in xs, y in ys];
+us=[-cos(x) * cos(y) for x in xs, y in ys];
+vs=[-sin(x) * sin(y) for x in xs, y in ys];
+fig = Figure(backgroundcolor = RGBf0(0.98, 0.98, 0.98),
+    resolution = (1000, 600))
+
+ax1 = fig[1, 1] = Axis(fig, title = "Test")
+#scene, layout = layoutscene(resolution = (1000, 600))
+#scene, layout = layoutscene()
+#display(scene)
+#ax1 = layout[1,1] = LAxis(scene)
+heatmap!(ax1, xs, ys, zs, colormap=cgrad(:jet, 10, categorical=true), interpolate=true)
+ax1.aspect = AxisAspect(1)
+ax1.xticks = 1:10
+ax1.yticks = 0:10
+contour!(ax1,xs, ys, zs, levels = 10, linewidth = 1, fillrange = true)
+contour!(ax1,xs, ys, zs, levels = 10, linewidth = 0.2, fillrange = false, color = "black")
+arrows!(ax1,xs,ys,us,vs, arrowsize = 0.25, lengthscale = 0.25)
+#heatmap!(ax2, xs, ys, zs, colormap=:starrynight)
+#ax1.aspect = AxisAspect(1)
+fig
+```
+
+## Python
+
+``` {.python}
+import plotly.graph_objects as go
+
+import pandas as pd
+
+# Read data from a csv
+z_data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv')
+
+fig = go.Figure(data=[go.Surface(z=z_data.values)])
+
+fig.update_layout(title='Mt Bruno Elevation', autosize=False,
+                  width=500, height=500,
+                  margin=dict(l=65, r=50, b=65, t=90))
+
+fig.show()
+```
+
+:::
+
+## Modelos de Capas
+
+$$\dfrac {\partial \overrightarrow {u}_{i}}{\partial t}+\overrightarrow {u}_{i}\cdot {\nabla  \overrightarrow u}_{i}+f  \overrightarrow {k}\times \overrightarrow {u}_{i}=-\dfrac {1}{\rho _{0}}\nabla P_{i}$$
+
+
+
+$$\dfrac {\partial h_{i}}{\partial t}+\nabla \cdot \left( h\overrightarrow {u}_{i}\right) =0$$
+
+$$\dfrac {\partial P}{\partial z}=-\rho g$$
