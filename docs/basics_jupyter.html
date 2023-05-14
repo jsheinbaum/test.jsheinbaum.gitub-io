@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,9 +19,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -48,43 +49,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -143,37 +114,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">Julio Sheinbaum</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cvprod.html">
+    <a class="nav-link" href="./cvprod.html" rel="" target="">
  <span class="menu-text">CV-PRODUCTS</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./presentation.html">
+    <a class="nav-link" href="./presentation.html" rel="" target="">
  <span class="menu-text">Test Reveal Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./basics_jupyter.html" aria-current="page">
+    <a class="nav-link active" href="./basics_jupyter.html" rel="" target="" aria-current="page">
  <span class="menu-text">Matplotlib Demo</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./makie_julia.html">
- <span class="menu-text">Makie Demo</span></a>
+    <a class="nav-link" href="./bickley_julia.html" rel="" target="">
+ <span class="menu-text">Bickley Jet No_Distributed Demo from CoherentStructures.jl</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -189,6 +162,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#polar-axis" id="toc-polar-axis" class="nav-link active" data-scroll-target="#polar-axis">Polar Axis</a></li>
   <li><a href="#widgets" id="toc-widgets" class="nav-link" data-scroll-target="#widgets">WIDGETS</a></li>
+  <li><a href="#xarray" id="toc-xarray" class="nav-link" data-scroll-target="#xarray">XARRAY</a></li>
   </ul>
 </nav>
     </div>
@@ -232,20 +206,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">1000</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="dv">3</span><span class="op">*</span> np.sin(<span class="dv">18</span> <span class="op">*</span> theta)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>r1 <span class="op">=</span> <span class="fl">0.5</span> <span class="op">-</span> <span class="fl">0.5</span> <span class="op">*</span> np.sin(<span class="dv">10</span><span class="op">*</span>theta)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>r2<span class="op">=</span><span class="fl">0.5</span><span class="op">+</span><span class="fl">0.5</span><span class="op">*</span>np.cos(<span class="dv">18</span><span class="op">*</span>theta)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.polar(theta, r, 'r')</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#r = np.arange(0, 2, 0.01)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#theta = 2 * np.pi * r</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r,<span class="st">'b'</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r1,<span class="st">'r'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r2,<span class="st">'g'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="op">-</span><span class="fl">1.0</span>,<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">0.0</span>,<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>, <span class="fl">2.5</span>, <span class="fl">3.0</span>])</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-polar" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="basics_jupyter_files/figure-html/fig-polar-output-1.png" width="445" height="438" class="figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: A line plot on a polar axis</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;1: A line plot on a polar axis</figcaption>
 </figure>
 </div>
 </div>
@@ -270,10 +250,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-widgets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"d45cea6847d440beb13436fd2de3dde2","version_major":2,"version_minor":0}
+{"model_id":"c98b30cd8912414aaf15d3decead4d17","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: A widgets demo</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;2: A widgets demo</figcaption>
 </figure>
+</div>
+</div>
+</section>
+<section id="xarray" class="level2">
+<h2 class="anchored" data-anchor-id="xarray">XARRAY</h2>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.crs <span class="im">as</span> ccrs</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.animation <span class="im">import</span> FuncAnimation</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>variables<span class="op">=</span>[<span class="st">'u-component_of_wind_height_above_ground'</span>,<span class="st">'v-component_of_wind_height_above_ground'</span>]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>dsw<span class="op">=</span>xr.open_dataset(<span class="st">'https://thredds.ucar.edu/thredds/dodsC/grib/NCEP/GFS/Global_0p25deg/Best'</span>)[variables]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>starttime<span class="op">=</span>datetime.utcnow()</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>starttime</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>inittime <span class="op">=</span> datetime.utcnow().date().isoformat()   <span class="co">### Simulation startime..</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>endtime <span class="op">=</span> starttime <span class="op">+</span> timedelta(days<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>finaltime<span class="op">=</span>endtime.date().isoformat()</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inittime)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(finaltime)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>lat_toplot <span class="op">=</span> np.arange(<span class="dv">5</span>, <span class="fl">35.25</span>, <span class="fl">0.25</span>) <span class="co"># last number is exclusive</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>lon_toplot <span class="op">=</span> np.arange(<span class="dv">260</span>, <span class="fl">310.25</span>, <span class="fl">0.25</span>) <span class="co"># last number is exclusive</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>dataw<span class="op">=</span> dsw.sel(time<span class="op">=</span><span class="bu">slice</span>(inittime,finaltime),height_above_ground2<span class="op">=</span><span class="dv">10</span>, lon<span class="op">=</span>lon_toplot, lat<span class="op">=</span>lat_toplot)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>u10<span class="op">=</span>dataw[<span class="st">'u-component_of_wind_height_above_ground'</span>].values</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>v10<span class="op">=</span>dataw[<span class="st">'v-component_of_wind_height_above_ground'</span>].values</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>lon<span class="op">=</span>dataw.lon.values</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>lat<span class="op">=</span>dataw.lat.values</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>l<span class="op">=</span><span class="dv">10</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>U10<span class="op">=</span>u10[l,:,:].squeeze()</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>V10<span class="op">=</span>v10[l,:,:].squeeze()</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>vec_crs <span class="op">=</span> ccrs.RotatedPole(pole_longitude<span class="op">=</span><span class="fl">180.0</span>, pole_latitude<span class="op">=</span><span class="fl">90.0</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">#central_rotated_longitude=0.0)</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>data_crs<span class="op">=</span>ccrs.PlateCarree()</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dataw.time[l])</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">5</span>))</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, projection<span class="op">=</span>ccrs.PlateCarree())</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>ax1.set_extent([<span class="dv">260</span>, <span class="dv">311</span>, <span class="dv">4</span>, <span class="dv">40</span>], crs<span class="op">=</span>ccrs.PlateCarree())</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>ax1.coastlines()</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>magnitude <span class="op">=</span> (U10 <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> V10 <span class="op">**</span> <span class="dv">2</span>) <span class="op">**</span> <span class="fl">0.5</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>magnitude.shape</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>ax1.streamplot(lon, lat, U10, V10, transform<span class="op">=</span>vec_crs,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>                  linewidth<span class="op">=</span><span class="dv">2</span>, density<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>magnitude)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>ax1.quiver(lon[::<span class="dv">5</span>],lat[::<span class="dv">5</span>],U10[::<span class="dv">5</span>,::<span class="dv">5</span>],V10[::<span class="dv">5</span>,::<span class="dv">5</span>],scale<span class="op">=</span><span class="fl">200.0</span>,color<span class="op">=</span><span class="st">'b'</span>,transform<span class="op">=</span>data_crs)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>2023-05-14
+2023-05-24
+&lt;xarray.DataArray 'time' ()&gt;
+array('2023-05-15T06:00:00.000000000', dtype='datetime64[ns]')
+Coordinates:
+    time                  datetime64[ns] 2023-05-15T06:00:00
+    reftime               datetime64[ns] ...
+    height_above_ground2  float32 10.0
+Attributes:
+    standard_name:        time
+    long_name:            GRIB forecast or observation time
+    _CoordinateAxisType:  Time</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div id="xarray-plot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="basics_jupyter_files/figure-html/xarray-plot-output-2.png" width="543" height="389" class="figure-img"></p>
+<figcaption class="figure-caption">xarray demo</figcaption>
+</figure>
+</div>
 </div>
 </div>
 
@@ -282,7 +331,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </main> <!-- /main -->
 <script type="application/vnd.jupyter.widget-state+json">
-{"state":{"01d160babca44c8b8404bc8aee894b9b":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"13ed970137e640d990209caae66aafe5":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletTileLayerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletTileLayerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletTileLayerView","attribution":"Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href=\"https://earthdata.nasa.gov\">ESDIS</a>) with funding provided by NASA/HQ.","base":false,"bottom":true,"bounds":null,"detect_retina":false,"loading":false,"max_native_zoom":null,"max_zoom":9,"min_native_zoom":null,"min_zoom":1,"name":"NASAGIBS.ModisTerraTrueColorCR","no_wrap":false,"opacity":1,"options":["attribution","bounds","detect_retina","max_native_zoom","max_zoom","min_native_zoom","min_zoom","no_wrap","tile_size","tms","zoom_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"show_loading":false,"subitems":[],"tile_size":256,"tms":false,"url":"https://map1.vis.earthdata.nasa.gov/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor/default/2017-04-08/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg","visible":true,"zoom_offset":0}},"146adda96fdd4647b4f5ba49be282bfb":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"1b121655c35540408729ea34f5b6a4a8":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"1cda6b5994334077a6c7b29ac198f3d6":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletZoomControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletZoomControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletZoomControlView","options":["position","zoom_in_text","zoom_in_title","zoom_out_text","zoom_out_title"],"position":"topleft","zoom_in_text":"+","zoom_in_title":"Zoom in","zoom_out_text":"-","zoom_out_title":"Zoom out"}},"20f1b10373394066a16f83c29efcd57d":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"2740c0fa445548a582a26a2642ab41af":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletAttributionControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletAttributionControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletAttributionControlView","options":["position","prefix"],"position":"bottomright","prefix":"ipyleaflet"}},"27e4bea804f448fabe32c5325d8ce74e":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletTileLayerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletTileLayerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletTileLayerView","attribution":"Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href=\"https://earthdata.nasa.gov\">ESDIS</a>) with funding provided by NASA/HQ.","base":true,"bottom":true,"bounds":null,"detect_retina":false,"loading":false,"max_native_zoom":null,"max_zoom":9,"min_native_zoom":null,"min_zoom":1,"name":"NASAGIBS.ModisTerraTrueColorCR","no_wrap":false,"opacity":1,"options":["attribution","bounds","detect_retina","max_native_zoom","max_zoom","min_native_zoom","min_zoom","no_wrap","tile_size","tms","zoom_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"show_loading":false,"subitems":[],"tile_size":256,"tms":false,"url":"https://map1.vis.earthdata.nasa.gov/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor/default/2017-04-08/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg","visible":true,"zoom_offset":0}},"38902fcc5f8e4266876c184b6a111acd":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"move"}},"5dc258af5c03475a929b8c64b368f5a9":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletZoomControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletZoomControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletZoomControlView","options":["position","zoom_in_text","zoom_in_title","zoom_out_text","zoom_out_title"],"position":"topleft","zoom_in_text":"+","zoom_in_title":"Zoom in","zoom_out_text":"-","zoom_out_title":"Zoom out"}},"5ffd5a6ea0474325894eb1c058d99632":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletAttributionControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletAttributionControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletAttributionControlView","options":["position","prefix"],"position":"bottomright","prefix":"ipyleaflet"}},"67a5d3dfa36841db91b674d5b47ca5d8":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMarkerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMarkerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMarkerView","alt":"","base":false,"bottom":false,"draggable":true,"icon":null,"keyboard":true,"location":[52.204793,360.121558],"name":"","opacity":1,"options":["alt","draggable","keyboard","rise_offset","rise_on_hover","rotation_angle","rotation_origin","title","z_index_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"rise_offset":250,"rise_on_hover":false,"rotation_angle":0,"rotation_origin":"","subitems":[],"title":"","visible":true,"z_index_offset":0}},"a420a741653640f084a22f4e69ae2325":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"move"}},"ab9a3b91de8a42549573d16795e8ea2a":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"b3e4adeec8974bbdb5261b1d080ee790":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"c400bf9d184243dda2ea21b71d285798":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapModel","state":{"_dom_classes":[],"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMapView","bottom":0,"bounce_at_zoom_limits":true,"box_zoom":true,"center":[52.204793,360.121558],"close_popup_on_click":true,"controls":[],"crs":{"custom":false,"name":"EPSG3857"},"default_style":"IPY_MODEL_1b121655c35540408729ea34f5b6a4a8","double_click_zoom":true,"dragging":true,"dragging_style":"IPY_MODEL_38902fcc5f8e4266876c184b6a111acd","east":0,"fullscreen":false,"inertia":true,"inertia_deceleration":3000,"inertia_max_speed":1500,"interpolation":"bilinear","keyboard":true,"keyboard_pan_offset":80,"keyboard_zoom_offset":1,"layers":["IPY_MODEL_27e4bea804f448fabe32c5325d8ce74e"],"layout":"IPY_MODEL_20f1b10373394066a16f83c29efcd57d","left":9007199254740991,"max_zoom":null,"min_zoom":null,"modisdate":"2023-01-30","north":0,"options":["bounce_at_zoom_limits","box_zoom","center","close_popup_on_click","double_click_zoom","dragging","fullscreen","inertia","inertia_deceleration","inertia_max_speed","interpolation","keyboard","keyboard_pan_offset","keyboard_zoom_offset","max_zoom","min_zoom","prefer_canvas","scroll_wheel_zoom","tap","tap_tolerance","touch_zoom","world_copy_jump","zoom","zoom_animation_threshold","zoom_delta","zoom_snap"],"panes":{},"prefer_canvas":false,"right":0,"scroll_wheel_zoom":false,"south":0,"style":"IPY_MODEL_ab9a3b91de8a42549573d16795e8ea2a","tabbable":null,"tap":true,"tap_tolerance":15,"tooltip":null,"top":9007199254740991,"touch_zoom":true,"west":0,"window_url":"","world_copy_jump":false,"zoom":4,"zoom_animation_threshold":4,"zoom_delta":1,"zoom_snap":1}},"d45cea6847d440beb13436fd2de3dde2":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapModel","state":{"_dom_classes":[],"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMapView","bottom":0,"bounce_at_zoom_limits":true,"box_zoom":true,"center":[52.204793,360.121558],"close_popup_on_click":true,"controls":["IPY_MODEL_5dc258af5c03475a929b8c64b368f5a9","IPY_MODEL_5ffd5a6ea0474325894eb1c058d99632"],"crs":{"custom":false,"name":"EPSG3857"},"default_style":"IPY_MODEL_1b121655c35540408729ea34f5b6a4a8","double_click_zoom":true,"dragging":true,"dragging_style":"IPY_MODEL_38902fcc5f8e4266876c184b6a111acd","east":0,"fullscreen":false,"inertia":true,"inertia_deceleration":3000,"inertia_max_speed":1500,"interpolation":"bilinear","keyboard":true,"keyboard_pan_offset":80,"keyboard_zoom_offset":1,"layers":["IPY_MODEL_27e4bea804f448fabe32c5325d8ce74e","IPY_MODEL_67a5d3dfa36841db91b674d5b47ca5d8"],"layout":"IPY_MODEL_20f1b10373394066a16f83c29efcd57d","left":9007199254740991,"max_zoom":null,"min_zoom":null,"modisdate":"2023-01-30","north":0,"options":["bounce_at_zoom_limits","box_zoom","center","close_popup_on_click","double_click_zoom","dragging","fullscreen","inertia","inertia_deceleration","inertia_max_speed","interpolation","keyboard","keyboard_pan_offset","keyboard_zoom_offset","max_zoom","min_zoom","prefer_canvas","scroll_wheel_zoom","tap","tap_tolerance","touch_zoom","world_copy_jump","zoom","zoom_animation_threshold","zoom_delta","zoom_snap"],"panes":{},"prefer_canvas":false,"right":0,"scroll_wheel_zoom":false,"south":0,"style":"IPY_MODEL_ab9a3b91de8a42549573d16795e8ea2a","tabbable":null,"tap":true,"tap_tolerance":15,"tooltip":null,"top":9007199254740991,"touch_zoom":true,"west":0,"window_url":"","world_copy_jump":false,"zoom":4,"zoom_animation_threshold":4,"zoom_delta":1,"zoom_snap":1}},"fab4308299a04d6794b4324c6d302dc5":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMarkerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMarkerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMarkerView","alt":"","base":false,"bottom":false,"draggable":true,"icon":null,"keyboard":true,"location":[52.204793,360.121558],"name":"","opacity":1,"options":["alt","draggable","keyboard","rise_offset","rise_on_hover","rotation_angle","rotation_origin","title","z_index_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"rise_offset":250,"rise_on_hover":false,"rotation_angle":0,"rotation_origin":"","subitems":[],"title":"","visible":true,"z_index_offset":0}}},"version_major":2,"version_minor":0}
+{"state":{"15760cf4ee664929af1cd2f60fe33a90":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMarkerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMarkerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMarkerView","alt":"","base":false,"bottom":false,"draggable":true,"icon":null,"keyboard":true,"location":[52.204793,360.121558],"name":"","opacity":1,"options":["alt","draggable","keyboard","rise_offset","rise_on_hover","rotation_angle","rotation_origin","title","z_index_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"rise_offset":250,"rise_on_hover":false,"rotation_angle":0,"rotation_origin":"","subitems":[],"title":"","visible":true,"z_index_offset":0}},"1fd92382188547249de40890b3fca846":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"3dc5dbe2a72e4cbe82521e8cad43fccc":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletTileLayerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletTileLayerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletTileLayerView","attribution":"Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href=\"https://earthdata.nasa.gov\">ESDIS</a>) with funding provided by NASA/HQ.","base":true,"bottom":true,"bounds":null,"detect_retina":false,"loading":false,"max_native_zoom":null,"max_zoom":9,"min_native_zoom":null,"min_zoom":1,"name":"NASAGIBS.ModisTerraTrueColorCR","no_wrap":false,"opacity":1,"options":["attribution","bounds","detect_retina","max_native_zoom","max_zoom","min_native_zoom","min_zoom","no_wrap","tile_size","tms","zoom_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"show_loading":false,"subitems":[],"tile_size":256,"tms":false,"url":"https://map1.vis.earthdata.nasa.gov/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor/default/2017-04-08/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg","visible":true,"zoom_offset":0}},"4e4b61fba26d49bea62fb167b317a68b":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"68f2d72963fa4c0d9bc28ed962eb4769":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"move"}},"af698f51cc574933a522d3206eafcd44":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletAttributionControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletAttributionControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletAttributionControlView","options":["position","prefix"],"position":"bottomright","prefix":"ipyleaflet"}},"c98b30cd8912414aaf15d3decead4d17":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapModel","state":{"_dom_classes":[],"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMapView","bottom":0,"bounce_at_zoom_limits":true,"box_zoom":true,"center":[52.204793,360.121558],"close_popup_on_click":true,"controls":["IPY_MODEL_ed5f54ad08f44bb0bb05cd5a18945175","IPY_MODEL_af698f51cc574933a522d3206eafcd44"],"crs":{"custom":false,"name":"EPSG3857"},"default_style":"IPY_MODEL_4e4b61fba26d49bea62fb167b317a68b","double_click_zoom":true,"dragging":true,"dragging_style":"IPY_MODEL_68f2d72963fa4c0d9bc28ed962eb4769","east":0,"fullscreen":false,"inertia":true,"inertia_deceleration":3000,"inertia_max_speed":1500,"interpolation":"bilinear","keyboard":true,"keyboard_pan_offset":80,"keyboard_zoom_offset":1,"layers":["IPY_MODEL_3dc5dbe2a72e4cbe82521e8cad43fccc","IPY_MODEL_15760cf4ee664929af1cd2f60fe33a90"],"layout":"IPY_MODEL_1fd92382188547249de40890b3fca846","left":9007199254740991,"max_zoom":null,"min_zoom":null,"modisdate":"2023-05-13","north":0,"options":["bounce_at_zoom_limits","box_zoom","center","close_popup_on_click","double_click_zoom","dragging","fullscreen","inertia","inertia_deceleration","inertia_max_speed","interpolation","keyboard","keyboard_pan_offset","keyboard_zoom_offset","max_zoom","min_zoom","prefer_canvas","scroll_wheel_zoom","tap","tap_tolerance","touch_zoom","world_copy_jump","zoom","zoom_animation_threshold","zoom_delta","zoom_snap"],"panes":{},"prefer_canvas":false,"right":0,"scroll_wheel_zoom":false,"south":0,"style":"IPY_MODEL_db36f74f97f64fd0aeb425a27bd3dff0","tabbable":null,"tap":true,"tap_tolerance":15,"tooltip":null,"top":9007199254740991,"touch_zoom":true,"west":0,"window_url":"","world_copy_jump":false,"zoom":4,"zoom_animation_threshold":4,"zoom_delta":1,"zoom_snap":1}},"db36f74f97f64fd0aeb425a27bd3dff0":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"ed5f54ad08f44bb0bb05cd5a18945175":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletZoomControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletZoomControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletZoomControlView","options":["position","zoom_in_text","zoom_in_title","zoom_out_text","zoom_out_title"],"position":"topleft","zoom_in_text":"+","zoom_in_title":"Zoom in","zoom_out_text":"-","zoom_out_title":"Zoom out"}}},"version_major":2,"version_minor":0}
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -311,9 +360,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -378,6 +441,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

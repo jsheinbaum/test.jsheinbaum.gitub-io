@@ -1,0 +1,11 @@
+{
+  "hash": "0e64be6c14d403281421c3a6b4741117",
+  "result": {
+    "markdown": "---\ntitle: Makie Demo\nauthor: JSP\ndate: 12/28/2022\nformat:\n  html:\n    code-fold: true\n---\n\n## TEST MAKIE\n\n::: {.cell execution_count=1}\n``` {.julia .cell-code}\nusing GLMakie\nv(x::Point2{T}) where T = Point2{T}(x[2], 4*x[1])\nstreamplot(v, -2..2, -2..2)\n```\n\n::: {.cell-output .cell-output-display execution_count=2}\n![Stream Plot](makie_julia_files/figure-html/fig-streamplot-output-1.png){#fig-streamplot}\n:::\n:::\n\n\n",
+    "supporting": [
+      "makie_julia_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
