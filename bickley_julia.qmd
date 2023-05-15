@@ -1,6 +1,6 @@
 ---
-title: "Bickley Jet No_Distributed Demo from CoherentStructures.jl"
-author: "JSP"
+title: "Bickley Jet from CoherentStructures.jl"
+author: "CoherentSructures.jl changed to nodist by JS"
 date: "05/09/2023"
 format:
   html:
