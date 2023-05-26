@@ -5,20 +5,31 @@ title: "CV-PRODUCTS"
 
 
 ### Journals
-
+   - 0.1
+Tania Reyes-Jiménez, Gabriela Athié, Cecilia Enriquez, Julio Sheinbaum, 
+Ismael Mariño-Tapia, Mark Marín-Hernández, David Salas-Monreal, Julio Candela. 
+(2023).Triggering mechanisms of the Yucatan upwelling, Continental Shelf Research, 
+Volume 255,104910,ISSN 0278-4343, https://doi.org/10.1016/j.csr.2022.104910.
+   - 0.2
+Amon, R. M. W., Ochoa, J., Candela, J., Herzka, S. Z., Pérez-Brunius, P., 
+Sheinbaum, J., ... Molodtsov, S. (2023). Ventilation of the deep Gulf of Mexico 
+and potential insights to the Atlantic Meridional Overturning 
+Circulation. Science Advances, 9(11). https://doi.org/10.1126/sciadv.ade1685
+   - 0.3
+Vazquez, H. J., G. Gopalakrishnan, and J. Sheinbaum, 2023: Impact of Yucatan Channel 
+Subsurface Velocity Observations on the Gulf of Mexico State Estimates. 
+J. Phys. Oceanogr., 53, 361–385, https://doi.org/10.1175/JPO-D-21-0213.1.
    - 1
 A.E. Romo-Curiel,Z. Ramírez-Mendoza,A. Fajardo-Yamamoto, M.R. Ramírez-León, M.C. García-Aguilar, 
 S.Z. Herzka,P. Pérez-Brunius,L.E. Saldaña-Ruiz, J. Sheinbaum, K. Kotzakoulakis, J. Rodríguez-Outerelo, 
 F. Medrano and O. Sosa-Nishizaki, (2022). Assessing the exposure risk of large pelagic 
 fish to oil spills scenarios in the deep waters of the Gulf of Mexico. 
 Marine Pollution Bulletin, 176, p.113434, https://doi.org/10.1016/j.marpolbul.2022.113434
-
    - 2
 Damien, P., Sheinbaum Pardo, J., Pasqueron De Fommervault, O., Jouanno, J., 
 Linacre Rojas , L., & Duteil, O. (2021). Do Loop Current eddies stimulate 
 productivity in the Gulf of Mexico?. Biogeosciences, 18(14), 
 4281-4303. doi: 10.5194/bg-18-4281-2021
-
    - 3
 Jouanno, J., Benshila, R., Berline, L., Soulié, A., Radenac, R. H., Morvan, 
 G., Diaz, F., Sheinbaum Pardo, J., Chevalier, C., Thibaut, T., Changeux, T., 
@@ -26,20 +37,17 @@ Menard, F., Berthet, S., Aumont, O., Ethé, C., Nabat, P., &
 Mallet, M. (2021). A NEMO-based model of Sargassum distribution in the tropical 
 Atlantic: Description of the model and sensitivity analysis (NEMO-Sarg1.0). 
 Geoscientific Model Development, 14(6), 4069-4086. doi: 10.5194/gmd-14-4069-2021.
-
    - 4
 Ursella, L., Pensieri, S., Pallás Sanz, E., Herzka Llona, S. Z., Bozzano, R., 
 Costa de Almeida Tenreiro, M. J., Cardin, V., Candela Pérez, J., & 
 Sheinbaum Pardo, J. (2021). Diel, lunar and seasonal vertical migration 
 in the deep western Gulf of Mexico evidenced from a long-term data series of 
 acoustic backscatter. Progress in Oceanography, 195. doi: 10.1016/j.pocean.2021.102562.
-
    - 5 
 Ochoa de la Torre, J. L., Ferreira Bartrina, V., Candela Pérez, J., 
 Sheinbaum Pardo, J., López Mariscal, J. M., Pérez Brunius, P., Herzka Llona, 
 S. Z., & Amon, R. (2021). Deep-Water Warming in the Gulf of Mexico from 2003 to 2019. 
 Journal of Physical Oceanography, 51(4), 1021-1035. doi: 10.1175/JPO-D-19-0295.1.
-
    - 6
 Jouanno, J., Moquet, J. S., Berline, L., Radenac, R. H., Santini, W., Changeux, T., 
 Thibaut, T., Podlejski, W., Menard, F., Martinez, J. M., Aumont, O., 
@@ -47,24 +55,20 @@ Sheinbaum Pardo, J., Filizola, N., & Moukandi N'Kaya, G. (2021).
 Evolution of the riverine nutrient export to the Tropical Atlantic over the last 15 years: 
 is there a link with Sargassum proliferation?. 
 Environmental Research Letters, 16(3), 034042 1-14. doi: 10.1088/1748-9326/abe11a. 
-
    - 7
 Guerrero Moreno, L., Sheinbaum Pardo, J., Mariño Tapia, I., 
 González Rejón, J. J., & Pérez Brunius, P. (2020). Influence of mesoscale eddies on 
 cross-shelf exchange in the western Gulf of Mexico. 
 Continental Shelf Research, 209(12), 104243. doi: 10.1016/j.csr.2020.104243.
-
    - 8
 Ochoa de la Torre, J. L., Badan Dangon, A. R. F., Sheinbaum Pardo, 
 J., & Castro López, J. (2020). `Preferred Trajectories¿ defined by mass and 
 potential vorticity conservation. Geofísica Internacional, 59(3), 195-207. 
 doi: 10.22201/igeof.00167169p.2020.59.3.2094.
-
    - 8.5
 Maslo, A., Azevedo Correia de Souza, J. M., & Sheinbaum Pardo, J. (2020). 
 Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 1655-1675. doi: 10.1175/JPO-D-19-0308.1.
-
-  - 9  
+   - 9  
     Sheila N Estrada-Allis, Julio Sheinbaum Pardo, Joao M Azevedo
     Correia de Souza, Cecilia Elizabeth
     Enr<span class="bibtex-protected">í</span>quez Ortiz, Ismael
@@ -77,7 +81,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     coupled model</span>. *Biogeosciences*, 17(4):1087–1111, February  2020. URL: 
     [https://www.biogeosciences.net/17/1087/2020/ 2020
     Estrada-Allis.pdf:[doi:10.5194/bg-17-1087-2020](https://doi.org/10.5194/bg-17-1087-2020).
-  - 10 
+   - 10 
     Thomas Meunier, julio sheinbaum,
     Enric Pall<span class="bibtex-protected">à</span>s Sanz, Miguel
     Tenreiro, Jos<span class="bibtex-protected">é</span> Ochoa,
@@ -87,7 +91,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     research letters*, 47(3):21, February 2020. URL:
     <https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL085600>,
     [doi:10.1029/2019GL085600](https://doi.org/10.1029/2019GL085600).
-  - 11  
+   - 11  
     Gabriela Athi<span class="bibtex-protected">é</span>, julio
     sheinbaum, Julio Candela, Jos<span class="bibtex-protected">é</span>
     Ochoa, Paula P<span class="bibtex-protected">é</span>rez-Brunius,
@@ -97,7 +101,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Oceanogr*, 50(2):343–360, February 2020. URL:
     <http://journals.ametsoc.org/doi/10.1175/JPO-D-18-0269.1>,
     [doi:10.1175/JPO-D-18-0269.1](https://doi.org/10.1175/JPO-D-18-0269.1).
-  - 12 
+   - 12 
     Olaf Duteil, Pierre Damien, julio sheinbaum, and Marlene Spinner.
     <span class="bibtex-protected">Ocean currents and coastal exposure
     to offshore releases of passively transported material in the Gulf
@@ -105,7 +109,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     1(8):081006, September 2019. URL:
     <https://iopscience.iop.org/article/10.1088/2515-7620/ab3aad>,
     [doi:10.1088/2515-7620/ab3aad](https://doi.org/10.1088/2515-7620/ab3aad).
-  - 13 
+   - 13 
     J Candela, J Ochoa, J Sheinbaum,
     M L<span class="bibtex-protected">ó</span>pez,
     P P<span class="bibtex-protected">é</span>rez-Brunius, M Tenreiro,
@@ -115,7 +119,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     2019. URL:
     <http://journals.ametsoc.org/doi/10.1175/JPO-D-18-0189.1>,
     [doi:10.1175/JPO-D-18-0189.1](https://doi.org/10.1175/JPO-D-18-0189.1).
-  - 14  
+   - 14  
     Matt K Gough, Francisco J Beron-Vera,
     Mar<span class="bibtex-protected">í</span>a J Olascoaga, julio
     sheinbaum, Julien Jouanno, and Rodrigo Duran.
@@ -124,14 +128,14 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Oceanogr*, 49(2):353–367, December 2018. URL:
     <https://doi.org/10.1175/JPO-D-17-0207.1>,
     [doi:10.1175/JPO-D-17-0207.1](https://doi.org/10.1175/JPO-D-17-0207.1).
-  - 15  
+   - 15  
     P Miron, F J Beron-Vera, M J Olascoaga, G Froyland,
     P P<span class="bibtex-protected">é</span>rez-Brunius, and
     J Sheinbaum. <span class="bibtex-protected">Lagrangian Geography of
     the Deep Gulf of Mexico</span>. *J Phys Oceanogr*, 49(1):269–290,
     November 2018. URL: <https://doi.org/10.1175/JPO-D-18-0073.1>,
     [doi:10.1175/JPO-D-18-0073.1](https://doi.org/10.1175/JPO-D-18-0073.1).
-  - 16 
+   - 16 
     Pierre Damien, Orens Pasqueron de Fommervault, julio sheinbaum,
     Julien Jouanno, Victor F Camacho-Ibar, and Olaf Duteil.
     <span class="bibtex-protected">Partitioning of the Open Waters of
@@ -140,7 +144,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Research-Oceans*, 115(1):85, April 2018. URL:
     <http://doi.wiley.com/10.1002/2017JC013456>,
     [doi:10.1002/2017JC013456](https://doi.org/10.1002/2017JC013456).
-  - 17 
+   - 17 
     M Tenreiro, Julio Candela, julio sheinbaum,
     Enric Pall<span class="bibtex-protected">à</span>s Sanz, and
     Jos<span class="bibtex-protected">é</span> Ochoa.
@@ -149,7 +153,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Oceanography*, 48(1):145–161, 2018. URL:
     <https://journals.ametsoc.org/doi/abs/10.1175/JPO-D-17-0018.1>,
     [doi:10.1175/JPO-D-17-0018.1](https://doi.org/10.1175/JPO-D-17-0018.1).
-  - 18  
+   - 18  
     Jouanno J, Pall<span class="bibtex-protected">à</span>s Sanz E, and
     Sheinbaum J. <span class="bibtex-protected">Variability and Dynamics
     of the Yucatan Upwelling: High-Resolution Simulations</span>.
@@ -157,7 +161,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     URL:
     <https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017JC013535>,
     [doi:10.1002/2017JC013535](https://doi.org/10.1002/2017JC013535).
-  - 19  
+   - 19  
     Orens Pasqueron de Fommervault, Paula
     P<span class="bibtex-protected">é</span>rez-Brunius, Pierre Damien,
     Victor F Camacho-Ibar, and julio sheinbaum.
@@ -166,7 +170,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     floats</span>. *Biogeosciences*, 14(24):5647–5662, December 2017.
     URL: <https://www.biogeosciences.net/14/5647/2017/>,
     [doi:10.5194/bg-14-5647-2017](https://doi.org/10.5194/bg-14-5647-2017).
-  - 20  
+   - 20  
     P Miron, F J Beron-Vera, M J Olascoaga, J Sheinbaum,
     P P<span class="bibtex-protected">é</span>rez-Brunius, and
     G Froyland. <span class="bibtex-protected">Lagrangian dynamical
@@ -174,7 +178,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     7(1):7021, August 2017. URL:
     <http://www.nature.com/articles/s41598-017-07177-w>,
     [doi:10.1038/s41598-017-07177-w](https://doi.org/10.1038/s41598-017-07177-w).
-  - 21 
+   - 21 
     P Miron, F J Beron-Vera, M J Olascoaga, J Sheinbaum,
     P P<span class="bibtex-protected">é</span>rez-Brunius, and
     G Froyland. <span class="bibtex-protected">Lagrangian dynamical
@@ -182,7 +186,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     7(1):7021, August 2017. URL:
     <http://www.nature.com/articles/s41598-017-07177-w>,
     [doi:10.1038/s41598-017-07177-w](https://doi.org/10.1038/s41598-017-07177-w).
-  - 22  
+   - 22  
     Luis Zavala Sans<span class="bibtex-protected">ó</span>n, Paula
     P<span class="bibtex-protected">é</span>rez-Brunius, and julio
     sheinbaum. <span class="bibtex-protected">Surface Relative
@@ -190,7 +194,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Oceanogr*, 47(2):387–403, February 2017. URL:
     <http://journals.ametsoc.org/doi/10.1175/JPO-D-16-0105.1>,
     [doi:10.1175/JPO-D-16-0105.1](https://doi.org/10.1175/JPO-D-16-0105.1).
-  - 23  
+   - 23  
     Luis Zavala Sans<span class="bibtex-protected">ó</span>n, Paula
     P<span class="bibtex-protected">é</span>rez-Brunius, and julio
     sheinbaum. <span class="bibtex-protected">Surface Relative
@@ -198,14 +202,14 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Oceanogr*, 47(2):387–403, February 2017. URL:
     <http://journals.ametsoc.org/doi/10.1175/JPO-D-16-0105.1>,
     [doi:10.1175/JPO-D-16-0105.1](https://doi.org/10.1175/JPO-D-16-0105.1).
-  - 24  
+   - 24  
     L Zavala Sans<span class="bibtex-protected">ó</span>n,
     P P<span class="bibtex-protected">é</span>rez-Brunius, and
     J Sheinbaum. <span class="bibtex-protected">Point source dispersion
     of surface drifters in the southern Gulf of Mexico</span>.
     *Environmental Research Letters*, 12(2):024006, 2017. URL:
     <http://stacks.iop.org/1748-9326/12/i=2/a=024006>.
-  - 25 
+   - 25 
     Enric Pall<span class="bibtex-protected">à</span>s-Sanz, Julio
     Candela, julio sheinbaum, and
     Jos<span class="bibtex-protected">é</span> Ochoa.
@@ -215,7 +219,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     -:325–344, December 2016. URL:
     <http://www.sciencedirect.com/science/article/pii/S0377026516300355>,
     [doi:10.1016/j.dynatmoce.2016.05.003](https://doi.org/10.1016/j.dynatmoce.2016.05.003).
-  - 26  
+   - 26  
     julio sheinbaum, Gabriela
     Athi<span class="bibtex-protected">é</span>, Julio Candela,
     Jos<span class="bibtex-protected">é</span> Ochoa, and
@@ -226,7 +230,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     and Oceans VL - IS - SP - EP - PY - T2 -*, 76, Part 2 IS -:217–239,
     December 2016. URL:
     <http://www.sciencedirect.com/science/article/pii/S0377026516300501>.
-  - 27  
+   - 27  
     Alejandro Adem, Omar Antol<span class="bibtex-protected">í</span>n
     Camarena, Gordon W Semenoff, and Daniel Sheinbaum.
     <span class="bibtex-protected">Topology of Fermi surfaces and
@@ -234,7 +238,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     2016(11):83, November 2016. URL:
     <http://link.springer.com/10.1007/JHEP11(2016)083>,
     [doi:10.1007/JHEP11(2016)083](https://doi.org/10.1007/JHEP11\(2016\)083).
-  - 28  
+   - 28  
     Julien Jouanno, Jos<span class="bibtex-protected">é</span> Ochoa,
     Enric Pall<span class="bibtex-protected">à</span>s-Sanz, julio
     sheinbaum, Fernando Andrade-Canto, Julio Candela, and Jean-Marc
@@ -244,14 +248,14 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     November 2016. URL:
     <http://journals.ametsoc.org/doi/10.1175/JPO-D-16-0052.1>,
     [doi:10.1175/JPO-D-16-0052.1](https://doi.org/10.1175/JPO-D-16-0052.1).
-  - 29  
+   - 29  
     Maximo Garcia-Jove Navarro, julio sheinbaum, and Julien Jouanno.
     <span class="bibtex-protected">Sensitivity of Loop Current metrics
     and eddy detachments to different model configurations: The impact
     of topography and Caribbean perturbations</span>. *ATMOSFERA*,
     29(3):235–265, June 2016. URL:
     <http://www.revistascca.unam.mx/atm/index.php/atm/article/view/ATM.2016.29.03.05/46565>.
-  - 30  
+   - 30  
     Sabrina M Parra, Arnoldo Valle-Levinson, Ismael
     Mari<span class="bibtex-protected">ñ</span>o Tapia, Cecilia
     Enriquez, Julio Candela, and julio sheinbaum.
@@ -260,7 +264,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     *Limnology and Oceanography*, 61(4):1245–1258, May 2016. URL:
     <http://doi.wiley.com/10.1002/lno.10286>,
     [doi:10.1002/lno.10286](https://doi.org/10.1002/lno.10286).
-  - 31  
+   - 31  
     Eugenio Ruiz-Castillo, Jose Gomez-Valdes, julio sheinbaum, and
     Rodolfo Rioja-Nieto. <span class="bibtex-protected">Wind-driven
     coastal upwelling and westward circulation in the Yucatan
@@ -268,7 +272,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     T2 -*, 118 IS -:63–76, April 2016. URL:
     <http://www.sciencedirect.com/science/article/pii/S0278434316300644>,
     [doi:10.1016/j.csr.2016.02.010](https://doi.org/10.1016/j.csr.2016.02.010).
-  - 32  
+   - 32  
     Peter Hamilton, Alexis
     Lugo-Fern<span class="bibtex-protected">á</span>ndez, and julio
     sheinbaum. <span class="bibtex-protected">A Loop Current experiment:
@@ -276,7 +280,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Oceans VL - IS - SP - EP - PY - T2 -*, 76 IS -:156–173, 2016. URL:
     <http://www.sciencedirect.com/science/article/pii/S0377026516300069>,
     [doi:10.1016/j.dynatmoce.2016.01.005](https://doi.org/10.1016/j.dynatmoce.2016.01.005).
-  - 33  
+   - 33  
     G A Passalacqua, J Sheinbaum, and J A Martinez.
     <span class="bibtex-protected">Sea surface temperature influence on
     a winter cold front position and propagation:
@@ -286,7 +290,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     winds in the Gulf of Mexico</span>. *Atmospheric Science Letters*,
     17(5):302–307, 2016. URL: <http://dx.doi.org/10.1002/asl.655>,
     [doi:10.1002/asl.655](https://doi.org/10.1002/asl.655).
-  - 34 
+   - 34 
     Sabrina M Parra, Arnoldo Valle-Levinson, Ismael
     Mari<span class="bibtex-protected">ñ</span>o Tapia, Cecilia
     Enriquez, Julio Candela, and julio sheinbaum.
@@ -295,7 +299,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     *Limnology and Oceanography*, 61(4):1245–1258, 2016. URL:
     <http://dx.doi.org/10.1002/lno.10286>,
     [doi:10.1002/lno.10286](https://doi.org/10.1002/lno.10286).
-  - 35  
+   - 35  
     Gabriela Athi<span class="bibtex-protected">é</span>, julio
     sheinbaum, Robert Leben, Jos<span class="bibtex-protected">é</span>
     Ochoa, Michael R Shannon, and Julio Candela.
@@ -304,7 +308,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     *Journal of Geophysical Research-Oceans*, 121(10):7431–7454, 2016.
     URL: <http://dx.doi.org/10.1002/2015JC011592>,
     [doi:10.1002/2015JC011592](https://doi.org/10.1002/2015JC011592).
-  - 36 
+   - 36 
     Jos<span class="bibtex-protected">é</span> Ochoa, H Maske,
     J Sheinbaum, and J Candela. <span class="bibtex-protected">Diel and
     lunar cycles of vertical migration extending to below 1000 m in the
@@ -313,14 +317,14 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     June 2013. URL:
     <http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2013LimOc..58.1207O&link_type=EJOURNAL>,
     [doi:10.4319/lo.2013.58.4.1207](https://doi.org/10.4319/lo.2013.58.4.1207).
-  - 37  
+   - 37  
     Julien Jouanno and julio sheinbaum.
     <span class="bibtex-protected">Heat Balance and Eddies in the
     Caribbean Upwelling System</span>. *Journal of Physical
     Oceanography*, 43(5):1004–1014, May 2013. URL:
     <http://journals.ametsoc.org/doi/abs/10.1175/JPO-D-12-0140.1>,
     [doi:10.1175/JPO-D-12-0140.1](https://doi.org/10.1175/JPO-D-12-0140.1).
-  - 38  
+   - 38  
     F Andrade-Canto, J Sheinbaum, and
     L Zavala Sans<span class="bibtex-protected">ó</span>n.
     <span class="bibtex-protected">A Lagrangian approach to the Loop
@@ -328,7 +332,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     20(1):85–96, 2013. URL:
     <http://www.nonlin-processes-geophys.net/20/85/2013/>,
     [doi:10.5194/npg-20-85-2013](https://doi.org/10.5194/npg-20-85-2013).
-  - 39  
+   - 39  
     Paula P<span class="bibtex-protected">é</span>rez-Brunius, Paula
     Garc<span class="bibtex-protected">í</span>a-Carrillo, Jean
     Dubranna, julio sheinbaum, and Julio Candela.
@@ -338,7 +342,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     PY - T2 -):182–194, 2013. URL:
     <http://www.sciencedirect.com/science/article/pii/S0967064512001063>,
     [doi:doi: 10.1016/j.dsr2.2012.07.020](https://doi.org/doi:%2010.1016/j.dsr2.2012.07.020).
-  - 40  
+   - 40  
     Julien Jouanno, julio sheinbaum, Bernard Barnier, Jean-Marc Molines,
     and Julio Candela. <span class="bibtex-protected">Seasonal and
     Interannual Modulation of the Eddy Kinetic Energy in the Caribbean
@@ -346,7 +350,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     November 2012. URL:
     <http://journals.ametsoc.org/doi/abs/10.1175/JPO-D-12-048.1>,
     [doi:10.1175/JPO-D-12-048.1](https://doi.org/10.1175/JPO-D-12-048.1).
-  - 41  
+   - 41  
     Nicolas Kolodziejczyk, Jos<span class="bibtex-protected">é</span>
     Ochoa, Julio Candela, and julio sheinbaum.
     <span class="bibtex-protected">Observations of intermittent deep
@@ -354,7 +358,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Geophysical Research*, 117(C9):n/a–n/a, September 2012. URL:
     <http://doi.wiley.com/10.1029/2012JC007890>,
     [doi:10.1029/2012JC007890](https://doi.org/10.1029/2012JC007890).
-  - 42  
+   - 42  
     Gabriela Athi<span class="bibtex-protected">é</span>, Julio Candela,
     Jos<span class="bibtex-protected">é</span> Ochoa, and julio
     sheinbaum. <span class="bibtex-protected">Impact of Caribbean
@@ -362,7 +366,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     *Journal of Geophysical Research: Oceans
     (1978<span class="bibtex-protected">–</span>2012)*, 117(C3):C03018,
     2012. URL: <http://dx.doi.org/10.1029/2011JC007090>.
-  - 43  
+   - 43  
     Nicolas Kolodziejczyk, Jos<span class="bibtex-protected">é</span>
     Ochoa, Julio Candela, and julio sheinbaum.
     <span class="bibtex-protected">Deep Currents in the Bay of
@@ -370,7 +374,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     41(10):1902–1920, October 2011. URL:
     <http://journals.ametsoc.org/doi/abs/10.1175/2011JPO4526.1>,
     [doi:10.1175/2011JPO4526.1](https://doi.org/10.1175/2011JPO4526.1).
-  - 44 
+   - 44 
     Jos<span class="bibtex-protected">é</span> Ochoa, julio sheinbaum,
     and Aleph Jim<span class="bibtex-protected">é</span>nez.
     <span class="bibtex-protected">Lateral Friction in Reduced-Gravity
@@ -379,7 +383,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Oceanography*, 41(10):1894–1901, October 2011. URL:
     <http://journals.ametsoc.org/doi/abs/10.1175/2011JPO4599.1>,
     [doi:10.1175/2011JPO4599.1](https://doi.org/10.1175/2011JPO4599.1).
-  - 45 
+   - 45 
     Julien Jouanno,
     Fr<span class="bibtex-protected">é</span>d<span class="bibtex-protected">é</span>ric
     Marin, Yves du Penhoat, julio sheinbaum, and Jean-Marc Molines.
@@ -388,7 +392,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     Geophysical Research*, 116(C9):C09003–, September 2011. URL:
     <http://www.agu.org/pubs/crossref/2011/2010JC006912.shtml>,
     [doi:10.1029/2010JC006912](https://doi.org/10.1029/2010JC006912).
-  - 46  
+   - 46  
     Julien Jouanno,
     Fr<span class="bibtex-protected">é</span>d<span class="bibtex-protected">é</span>ric
     Marin, Yves du Penhoat, Jean-Marc Molines, and julio sheinbaum.
@@ -396,7 +400,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     the Gulf of Guinea</span>. *J Phys Oceanogr*, 41(7):1408–1416, April
     2011. URL: <http://dx.doi.org/10.1175/JPO-D-11-031.1>,
     [doi:10.1175/JPO-D-11-031.1](https://doi.org/10.1175/JPO-D-11-031.1).
-  - 47  
+   - 47  
     G Athie, Julio Candela, J Sheinbaum, A Badan, and
     Jos<span class="bibtex-protected">é</span> Ochoa.
     <span class="bibtex-protected">Yucatan Current variability through
@@ -404,14 +408,14 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     37(4A):471–492, 2011. URL:
     <http://rcmarinas.ens.uabc.mx/index.php/cmarinas/article/view/1794/1340>,
     [doi:10.7773/cm.v37i4a.1794](https://doi.org/10.7773/cm.v37i4a.1794).
-  - 48  
+   - 48  
     Julien Jouanno, julio sheinbaum, Bernard Barnier, and Jean-Marc
     Molines. <span class="bibtex-protected">The mesoscale variability in
     the Caribbean Sea. Part II: Energy sources</span>. *ocean
     modelling*, 26(3<span class="bibtex-protected">–</span>4):226–239,
     January 2009. URL:
     <http://www.sciencedirect.com/science/article/pii/S1463500308001601>.
-  - 49  
+   - 49  
     David Rivas, Antoine Badan, julio sheinbaum,
     Jos<span class="bibtex-protected">é</span> Ochoa, and Julio Candela.
     <span class="bibtex-protected">Vertical Velocity and Vertical Heat
@@ -420,13 +424,13 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     November 2008. URL:
     <http://journals.ametsoc.org/doi/abs/10.1175/2008JPO3755.1>,
     [doi:10.1175/2008JPO3755.1](https://doi.org/10.1175/2008JPO3755.1).
-  - 50  
+   - 50  
     L Zavala Sans<span class="bibtex-protected">ó</span>n and
     J Sheinbaum. <span class="bibtex-protected">Elementary properties
     of the enstrophy and strain fields in confined two-dimensional
     flows</span>. *European Journal of Mechanics-B/Fluids*, 2008. URL:
     <http://linkinghub.elsevier.com/retrieve/pii/S0997754607000441>.
-  - 51  
+   - 51  
     M Mar<span class="bibtex-protected">í</span>n, J Candela,
     J Sheinbaum, J Ochoa, and A Badan.
     <span class="bibtex-protected">On the near surface momentum balance
@@ -434,7 +438,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     *Geof<span class="bibtex-protected">í</span>sica internacional*,
     47(1):57–75, 2008. URL:
     <http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0016-71692008000100005>.
-  - 52  
+   - 52  
     Julien Jouanno, julio sheinbaum, Bernard Barnier, Jean-Marc Molines,
     Laurent Debreu, and Florian
     Lemari<span class="bibtex-protected">é</span>.
@@ -444,7 +448,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     <http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcAuth=mekentosj&SrcApp=Papers&DestLinkType=FullRecord&DestApp=WOS&KeyUT=000258612800002>,
     [doi:10.1016/j.ocemod.2008.04.002](https://doi.org/10.1016/j.ocemod.2008.04.002).
   
-  - 53  
+   - 53  
     C Coronado, J Candela, R Iglesias-Prieto, J Sheinbaum,
     M L<span class="bibtex-protected">ó</span>pez, and F J
     Ocampo-Torres. <span class="bibtex-protected">On the circulation in
@@ -452,43 +456,43 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     26(1):149–163, February 2007. URL:
     <https://link-springer-com/article/10.1007/s00338-006-0175-9>,
     [doi:10.1007/s00338-006-0175-9](https://doi.org/10.1007/s00338-006-0175-9).
-  - 54
+   - 54
     P Cetina, J Candela, J Sheinbaum, J Ochoa, and A Badan.
     <span class="bibtex-protected">Circulation along the Mexican
     Caribbean coast</span>. *Journal of Geophysical Research*,
     111(C8):C08021, 2006. URL:
     <http://www.agu.org/pubs/crossref/2006/2005JC003056.shtml>,
     [doi:10.1029/2005JC003056](https://doi.org/10.1029/2005JC003056).
-  - 55  
+   - 55  
     I Polo, B R De Fonseca, and J Sheinbaum.
     <span class="bibtex-protected">Northwest Africa upwelling and the
     Atlantic climate variability</span>. *Geophysical research letters*,
     32(23):L23702, January 2005. URL: <https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2005GL023883>
-  - 56
+   - 56
     Jos<span class="bibtex-protected">é</span> Ochoa, Julio Candela,
     Antonio Badan, and julio sheinbaum.
     <span class="bibtex-protected">Ageostrophic fluctuations in Cozumel
     Channel</span>. *Journal of Geophysical Research*, 110(C2):C02004,
     2005. URL: <http://dx.doi.org/10.1029/2004JC002408>,
     [doi:10.1029/2004JC002408](https://doi.org/10.1029/2004JC002408).
-  - 57
+   - 57
     A J Abascal, J Sheinbaum, J Candela, J Ochoa, and A Badan.
     <span class="bibtex-protected">Analysis of flow variability in the
     Yucatan Channel</span>. *Journal of Geophysical Research*,
     108(C12):3381, 2003. URL: <http://dx.doi.org/10.1029/2003JC001922>.
-  - 58
+   - 58
     J Sheinbaum. <span class="bibtex-protected">Current theories on El
     Ni<span class="bibtex-protected">ñ</span>o-Southern Oscillation: A
     review</span>. *GEOFISICA INTERNACIONAL-MEXICO-*, 42(3):291–306,
     2003. URL:<http://areas.geofisica.unam.mx/geofisica_internacional/anteriores/2003/03/sheinbaum.pdf>
-  - 59  
+   - 59  
     Julio Candela, Sorayda Tanahara, Michel Crepon, Bernard Barnier, and
     julio sheinbaum. <span class="bibtex-protected">Yucatan Channel
     flow: Observations versus CLIPPER ATL6 and MERCATOR PAM
     models</span>. *Journal of Geophysical Research: Oceans
     (1978<span class="bibtex-protected">–</span>2012)*, 108(C12):3385,
     2003. URL: <http://dx.doi.org/10.1029/2003JC001961>.
-  - 60
+   - 60
     Julio Candela, julio sheinbaum,
     Jos<span class="bibtex-protected">é</span> Ochoa, Antoine Badan,
     and Robert Leben. <span class="bibtex-protected">The potential
@@ -497,12 +501,12 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     29(22):16–1–16–4, November 2002. URL:
     <https://agupubs-onlinelibrary-wiley-com/doi/full/10.1029/2002GL015587>,
     [doi:10.1029/2002GL015587](https://doi.org/10.1029/2002GL015587).
-  - 61  
+   - 61  
     J Sheinbaum, J Candela, A Badan, and J Ochoa.
     <span class="bibtex-protected">Flow structure and transport in the
     Yucatan Channel</span>. *Geophysical research letters*, 29(3):10–11,
     January 2002. URL:<https://doi.org/10.1029/2001GL013990>
-  - 62 
+   - 62 
     L Bunge, J Ochoa, A Badan, J Candela, and J Sheinbaum.
     <span class="bibtex-protected">Deep flows in the Yucatan Channel and
     their relation to changes in the Loop Current extension</span>.
@@ -510,44 +514,44 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     (1978<span class="bibtex-protected">–</span>2012)*, 107(C12):3233,
     2002. URL: <http://dx.doi.org/10.1029/2001JC001256>,
     [doi:10.1029/2001JC001256](https://doi.org/10.1029/2001JC001256).
-  - 63  
+   - 63  
     Jos<span class="bibtex-protected">é</span> Ochoa, julio sheinbaum,
     and Edgar G Pav<span class="bibtex-protected">í</span>a.
     <span class="bibtex-protected">Inhomogeneous rodons</span>. *Journal
     of Geophysical Research*, 103(C11):24869–24,880, January 1998. URL:
     <http://www.agu.org/pubs/crossref/1998/98JC02159.shtml>,
     [doi:doi:10.1029/98JC02159](https://doi.org/doi:10.1029/98JC02159).
-  - 64 
+   - 64 
     DLT Anderson, J Sheinbaum, and K Haines.
     <span class="bibtex-protected">Data assimilation in ocean
     models</span>. *Reports on Progress in Physics*, 59(10):1209, 1996.
     URL: <http://iopscience.iop.org/0034-4885/59/10/001>.
-  - 65  
+   - 65  
     J Sheinbaum. <span class="bibtex-protected">Variational assimilation
     of simulated acoustic tomography data and point observations: A
     comparative study</span>. *Journal of Geophysical Research*,
     100(C10):20745–20,761, January 1995.
-  - 66  
+   - 66  
     julio sheinbaum. <span class="bibtex-protected">Variational
     assimilation of simulated acoustic tomography data and point
     observations: A comparative study</span>. *Journal of Geophysical
     Research*, 100(C10):20745, 1995. URL:
     <http://doi.wiley.com/10.1029/95JC02113>,
     [doi:10.1029/95JC02113](https://doi.org/10.1029/95JC02113).
-  - 67  
+   - 67  
     julio sheinbaum and David L T Anderson.
     <span class="bibtex-protected">Variational Assimilation of XBT Data.
     Part 1</span>. *J Phys Oceanogr*, 20(5):672–688, May 1990. URL:
     <http://journals.ametsoc.org/doi/abs/10.1175/1520-0485%281990%29020%3C0672%3AVAOXDP%3E2.0.CO%3B2>,
     [doi:10.1175/1520-0485(1990)020\<0672:VAOXDP\>2.0.CO;2](https://doi.org/10.1175/1520-0485\(1990\)020%3C0672:VAOXDP%3E2.0.CO;2).
-  - 68 
+   - 68 
     julio sheinbaum and David L T Anderson.
     <span class="bibtex-protected">Variational Assimilation of XBT Data.
     Part 1</span>. *Journal of Physical Oceanography*, 20(5):672–688,
     May 1990. URL:
     <http://journals.ametsoc.org/doi/abs/10.1175/1520-0485%281990%29020%3C0672%3AVAOXDP%3E2.0.CO%3B2>,
     [doi:10.1175/1520-0485(1990)020\<0672:VAOXDP\>2.0.CO;2](https://doi.org/10.1175/1520-0485\(1990\)020%3C0672:VAOXDP%3E2.0.CO;2).
-  - 69  
+   - 69  
     julio sheinbaum and David L T Anderson.
     <span class="bibtex-protected">Variational Assimilation of XBT Data.
     Part II. Sensitivity Studies and Use of Smoothing
@@ -555,7 +559,7 @@ Energetics of the Deep Gulf of Mexico. Journal of Physical Oceanography, 50(6), 
     20(5):689–704, May 1990. URL:
     <http://journals.ametsoc.org/doi/abs/10.1175/1520-0485%281990%29020%3C0689%3AVAOXDP%3E2.0.CO%3B2>,
     [doi:10.1175/1520-0485(1990)020\<0689:VAOXDP\>2.0.CO;2](https://doi.org/10.1175/1520-0485\(1990\)020%3C0689:VAOXDP%3E2.0.CO;2).
-  - 70  
+   - 70  
     Roberto Hojman, Sergio Hojman, and julio sheinbaum.
     <span class="bibtex-protected">Shortcut for constructing any
     Lagrangian from its equations of motion</span>. *Physical Review D*,
