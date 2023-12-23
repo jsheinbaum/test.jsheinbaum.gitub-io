@@ -49,6 +49,9 @@ $$
 ::::
 
 ## Julia
+
+Example taken from <https://docs.makie.org/stable/>
+
 ```{julia}
 #| echo: true
 using GLMakie

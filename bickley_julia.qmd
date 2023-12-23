@@ -5,9 +5,10 @@ date: "05/09/2023"
 format:
   html:
     code-fold: true
-jupyter: julia-1.8
+jupyter: julia1.9
 ---
 ## TEST BiCKLEY JET NOT DISTRIBUTED
+Example taken from <https://github.com/CoherentStructures/CoherentStructures.jl>
 
 ```{julia}
 #| label: fig-streamplot
@@ -17,7 +18,7 @@ jupyter: julia-1.8
 #nprocs() == 1 && addprocs()
 #@everywhere begin
           import Pkg
-          Pkg.activate("/Users/julios/JULIA/CoherentStructures.jl/")
+          Pkg.activate("/Users/julios/JULIA/CoherentStructures_julia1.9.jl/")
 #       end
 
 #@everywhere 
