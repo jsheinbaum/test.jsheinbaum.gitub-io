@@ -10,10 +10,11 @@ website:
      - href: index.qmd
        text: Home
      - about.qmd
-     - cvprod.qmd # my new navbar page
      - presentation.qmd
+     - cvprod.qmd # my new navbar page
      - basics_jupyter.qmd
      - bickley_julia.qmd
+     - chap4.qmd
 
 format:
   html:

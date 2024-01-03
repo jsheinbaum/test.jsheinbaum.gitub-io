@@ -1,0 +1,7 @@
+---
+title: "Notas del Curso Análisis de Datos"
+---
+### Notas del Curso en Latex
+
+{{< include article2_new.qmd >}}
+
