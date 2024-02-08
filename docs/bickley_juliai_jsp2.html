@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -79,7 +79,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -88,13 +94,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
@@ -105,9 +112,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Julio Sheinbaum</span>
     </a>
@@ -119,33 +126,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cvprod.html" rel="" target="">
- <span class="menu-text">CV-PRODUCTS</span></a>
+    <a class="nav-link" href="./presentation.html"> 
+<span class="menu-text">Test Reveal Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./presentation.html" rel="" target="">
- <span class="menu-text">Test Reveal Presentations</span></a>
+    <a class="nav-link" href="./cvprod.html"> 
+<span class="menu-text">CV-PRODUCTS</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./basics_jupyter.html" rel="" target="">
- <span class="menu-text">Matplotlib Demo</span></a>
+    <a class="nav-link" href="./basics_jupyter.html"> 
+<span class="menu-text">Matplotlib Demo</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./bickley_julia.html" rel="" target="">
- <span class="menu-text">Bickley Jet from CoherentStructures.jl</span></a>
+    <a class="nav-link" href="./bickley_julia.html"> 
+<span class="menu-text">Bickley Jet from CoherentStructures.jl</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chap4.html"> 
+<span class="menu-text">Notas del Curso Análisis de Datos</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -154,7 +165,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#test-bickley-jet-distributed" id="toc-test-bickley-jet-distributed" class="nav-link active" data-scroll-target="#test-bickley-jet-distributed">TEST BiCKLEY JET DISTRIBUTED</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -174,9 +191,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
 
-<div class="cell">
+
+<div id="b13785f6" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title<span class="op">:</span> Bickley Jet <span class="bu">Distributed</span> Demo</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>author<span class="op">:</span> JSP</span>
@@ -186,62 +205,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    code<span class="op">-</span>fold<span class="op">:</span> <span class="cn">true</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="fig-streamplot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#using Distributed</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#nprocs() == 1 &amp;&amp; addprocs()</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#@everywhere begin</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#          import Pkg</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#          Pkg.activate("/Users/julios/JULIA/CoherentStructures.jl/")</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#       end</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#@everywhere </span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">CoherentStructures</span>, <span class="bu">StreamMacros</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<figcaption class="figure-caption">Figure&nbsp;1: <strong>?(caption)</strong></figcaption>
+<section id="test-bickley-jet-distributed" class="level2">
+<h2 class="anchored" data-anchor-id="test-bickley-jet-distributed">TEST BiCKLEY JET DISTRIBUTED</h2>
+<div id="fig-streamplot" class="cell quarto-figure quarto-figure-center quarto-float anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-streamplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode cell-code" id="fig-streamplot" data-execution_count="1"><pre class="sourceCode julia cell code-with-copy"><code class="sourceCode julia"><span id="fig-streamplot-1"><a href="#fig-streamplot-1" aria-hidden="true" tabindex="-1"></a><span class="co">#using Distributed</span></span>
+<span id="fig-streamplot-2"><a href="#fig-streamplot-2" aria-hidden="true" tabindex="-1"></a><span class="co">#nprocs() == 1 &amp;&amp; addprocs()</span></span>
+<span id="fig-streamplot-3"><a href="#fig-streamplot-3" aria-hidden="true" tabindex="-1"></a><span class="co">#@everywhere begin</span></span>
+<span id="fig-streamplot-4"><a href="#fig-streamplot-4" aria-hidden="true" tabindex="-1"></a><span class="co">#          import Pkg</span></span>
+<span id="fig-streamplot-5"><a href="#fig-streamplot-5" aria-hidden="true" tabindex="-1"></a><span class="co">#          Pkg.activate("/Users/julios/JULIA/CoherentStructures.jl/")</span></span>
+<span id="fig-streamplot-6"><a href="#fig-streamplot-6" aria-hidden="true" tabindex="-1"></a><span class="co">#       end</span></span>
+<span id="fig-streamplot-7"><a href="#fig-streamplot-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="fig-streamplot-8"><a href="#fig-streamplot-8" aria-hidden="true" tabindex="-1"></a><span class="co">#@everywhere </span></span>
+<span id="fig-streamplot-9"><a href="#fig-streamplot-9" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">CoherentStructures</span>, <span class="bu">StreamMacros</span></span>
+<span id="fig-streamplot-10"><a href="#fig-streamplot-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="fig-streamplot-11"><a href="#fig-streamplot-11" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-streamplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
 </figure>
 </div>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bickley <span class="op">=</span> <span class="pp">@velo_from_stream</span> psi <span class="cf">begin</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    psi  <span class="op">=</span> psi₀ <span class="op">+</span> psi₁</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    psi₀ <span class="op">=</span> <span class="op">-</span> U₀ <span class="op">*</span> L₀ <span class="op">*</span> <span class="fu">tanh</span>(y <span class="op">/</span> L₀)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    psi₁ <span class="op">=</span>   U₀ <span class="op">*</span> L₀ <span class="op">*</span> <span class="fu">sech</span>(y <span class="op">/</span> L₀)<span class="op">^</span><span class="fl">2</span> <span class="op">*</span> re_sum_term</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    re_sum_term <span class="op">=</span> Σ₁ <span class="op">+</span> Σ₂ <span class="op">+</span> Σ₃</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    Σ₁ <span class="op">=</span> ε₁ <span class="op">*</span> <span class="fu">cos</span>(<span class="fu">k₁*</span>(x <span class="op">-</span> c₁<span class="op">*</span>t))</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    Σ₂ <span class="op">=</span> ε₂ <span class="op">*</span> <span class="fu">cos</span>(<span class="fu">k₂*</span>(x <span class="op">-</span> c₂<span class="op">*</span>t))</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    Σ₃ <span class="op">=</span> ε₃ <span class="op">*</span> <span class="fu">cos</span>(<span class="fu">k₃*</span>(x <span class="op">-</span> c₃<span class="op">*</span>t))</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    k₁ <span class="op">=</span> <span class="fl">2</span><span class="op">/</span>r₀    ; k₂ <span class="op">=</span> <span class="fl">4</span><span class="op">/</span>r₀   ; k₃ <span class="op">=</span> <span class="fl">6</span><span class="op">/</span>r₀</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    ε₁ <span class="op">=</span> <span class="fl">0.0075</span>  ; ε₂ <span class="op">=</span> <span class="fl">0.15</span>   ; ε₃ <span class="op">=</span> <span class="fl">0.3</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    c₂ <span class="op">=</span> <span class="fl">0.205</span>U₀ ; c₃ <span class="op">=</span> <span class="fl">0.461</span>U₀; c₁ <span class="op">=</span> c₃ <span class="op">+</span> (√<span class="fl">5</span><span class="op">-</span><span class="fl">1</span>)<span class="fu">*</span>(c₂<span class="op">-</span>c₃)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    U₀ <span class="op">=</span> <span class="fl">62.66e-6</span>; L₀ <span class="op">=</span> <span class="fl">1770e-3</span>; r₀ <span class="op">=</span> <span class="fl">6371e-3</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="30b0b88f" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bickley <span class="op">=</span> <span class="pp">@velo_from_stream</span> psi <span class="cf">begin</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    psi  <span class="op">=</span> psi₀ <span class="op">+</span> psi₁</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    psi₀ <span class="op">=</span> <span class="op">-</span> U₀ <span class="op">*</span> L₀ <span class="op">*</span> <span class="fu">tanh</span>(y <span class="op">/</span> L₀)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    psi₁ <span class="op">=</span>   U₀ <span class="op">*</span> L₀ <span class="op">*</span> <span class="fu">sech</span>(y <span class="op">/</span> L₀)<span class="op">^</span><span class="fl">2</span> <span class="op">*</span> re_sum_term</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    re_sum_term <span class="op">=</span> Σ₁ <span class="op">+</span> Σ₂ <span class="op">+</span> Σ₃</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    Σ₁ <span class="op">=</span> ε₁ <span class="op">*</span> <span class="fu">cos</span>(<span class="fu">k₁*</span>(x <span class="op">-</span> c₁<span class="op">*</span>t))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    Σ₂ <span class="op">=</span> ε₂ <span class="op">*</span> <span class="fu">cos</span>(<span class="fu">k₂*</span>(x <span class="op">-</span> c₂<span class="op">*</span>t))</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    Σ₃ <span class="op">=</span> ε₃ <span class="op">*</span> <span class="fu">cos</span>(<span class="fu">k₃*</span>(x <span class="op">-</span> c₃<span class="op">*</span>t))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    k₁ <span class="op">=</span> <span class="fl">2</span><span class="op">/</span>r₀    ; k₂ <span class="op">=</span> <span class="fl">4</span><span class="op">/</span>r₀   ; k₃ <span class="op">=</span> <span class="fl">6</span><span class="op">/</span>r₀</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    ε₁ <span class="op">=</span> <span class="fl">0.0075</span>  ; ε₂ <span class="op">=</span> <span class="fl">0.15</span>   ; ε₃ <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    c₂ <span class="op">=</span> <span class="fl">0.205</span>U₀ ; c₃ <span class="op">=</span> <span class="fl">0.461</span>U₀; c₁ <span class="op">=</span> c₃ <span class="op">+</span> (√<span class="fl">5</span><span class="op">-</span><span class="fl">1</span>)<span class="fu">*</span>(c₂<span class="op">-</span>c₃)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    U₀ <span class="op">=</span> <span class="fl">62.66e-6</span>; L₀ <span class="op">=</span> <span class="fl">1770e-3</span>; r₀ <span class="op">=</span> <span class="fl">6371e-3</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>(::SciMLBase.ODEFunction{false, SciMLBase.FullSpecialize, var"#9#10", LinearAlgebra.UniformScaling{Bool}, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, typeof(SciMLBase.DEFAULT_OBSERVED), Nothing, Nothing}) (generic function with 1 method)</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@everywhere </span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">OrdinaryDiffEq</span>, <span class="bu">Tensors</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> <span class="fl">81</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> tspan <span class="op">=</span> <span class="fu">range</span>(<span class="fl">0</span>., stop<span class="op">=</span><span class="fl">3456000</span>., length<span class="op">=</span>q)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ny <span class="op">=</span> <span class="fl">61</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>nx <span class="op">=</span> (<span class="fl">22</span>ny) <span class="op">÷</span> <span class="fl">6</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>xmin, xmax, ymin, ymax <span class="op">=</span> <span class="fl">0.0</span> <span class="op">-</span> <span class="fl">2.0</span>, <span class="fl">6.371</span>π <span class="op">+</span> <span class="fl">2.0</span>, <span class="op">-</span><span class="fl">3.0</span>, <span class="fl">3.0</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>xspan <span class="op">=</span> <span class="fu">range</span>(xmin, stop<span class="op">=</span>xmax, length<span class="op">=</span>nx)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>yspan <span class="op">=</span> <span class="fu">range</span>(ymin, stop<span class="op">=</span>ymax, length<span class="op">=</span>ny)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> <span class="fu">tuple</span>.(xspan, yspan<span class="op">'</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> δ <span class="op">=</span> <span class="fl">1</span>.<span class="cn">e</span><span class="op">-</span><span class="fl">6</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> D <span class="op">=</span> <span class="fu">SymmetricTensor</span><span class="dt">{2,2}</span>((<span class="fl">2</span>., <span class="fl">0</span>., <span class="fl">1</span><span class="op">/</span><span class="fl">2</span>))</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>mCG_tensor <span class="op">=</span> u <span class="op">-&gt;</span> <span class="fu">av_weighted_CG_tensor</span>(bickley, u, tspan, δ; D<span class="op">=</span>(_ <span class="op">-&gt;</span> D), tolerance<span class="op">=</span><span class="fl">1e-6</span>, solver<span class="op">=</span><span class="fu">Tsit5</span>())</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">#C̅ = pmap(mCG_tensor, P; batch_size=ceil(Int, length(P)/nprocs()^2))</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>C̅ <span class="op">=</span> <span class="fu">map</span>(mCG_tensor, P)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fu">LCSParameters</span>(<span class="fl">2.0</span>)</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>vortices, singularities <span class="op">=</span> <span class="fu">ellipticLCS</span>(C̅, xspan, yspan, p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="673f2b4c" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@everywhere </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">OrdinaryDiffEq</span>, <span class="bu">Tensors</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> <span class="fl">81</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> tspan <span class="op">=</span> <span class="fu">range</span>(<span class="fl">0</span>., stop<span class="op">=</span><span class="fl">3456000</span>., length<span class="op">=</span>q)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>ny <span class="op">=</span> <span class="fl">61</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>nx <span class="op">=</span> (<span class="fl">22</span>ny) <span class="op">÷</span> <span class="fl">6</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>xmin, xmax, ymin, ymax <span class="op">=</span> <span class="fl">0.0</span> <span class="op">-</span> <span class="fl">2.0</span>, <span class="fl">6.371</span>π <span class="op">+</span> <span class="fl">2.0</span>, <span class="op">-</span><span class="fl">3.0</span>, <span class="fl">3.0</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>xspan <span class="op">=</span> <span class="fu">range</span>(xmin, stop<span class="op">=</span>xmax, length<span class="op">=</span>nx)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>yspan <span class="op">=</span> <span class="fu">range</span>(ymin, stop<span class="op">=</span>ymax, length<span class="op">=</span>ny)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> <span class="fu">tuple</span>.(xspan, yspan<span class="op">'</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> δ <span class="op">=</span> <span class="fl">1</span>.<span class="cn">e</span><span class="op">-</span><span class="fl">6</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> D <span class="op">=</span> <span class="fu">SymmetricTensor</span><span class="dt">{2,2}</span>((<span class="fl">2</span>., <span class="fl">0</span>., <span class="fl">1</span><span class="op">/</span><span class="fl">2</span>))</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>mCG_tensor <span class="op">=</span> u <span class="op">-&gt;</span> <span class="fu">av_weighted_CG_tensor</span>(bickley, u, tspan, δ; D<span class="op">=</span>(_ <span class="op">-&gt;</span> D), tolerance<span class="op">=</span><span class="fl">1e-6</span>, solver<span class="op">=</span><span class="fu">Tsit5</span>())</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">#C̅ = pmap(mCG_tensor, P; batch_size=ceil(Int, length(P)/nprocs()^2))</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>C̅ <span class="op">=</span> <span class="fu">map</span>(mCG_tensor, P)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fu">LCSParameters</span>(<span class="fl">2.0</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>vortices, singularities <span class="op">=</span> <span class="fu">ellipticLCS</span>(C̅, xspan, yspan, p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>┌ Info: Found 63 singularities...
 └ @ CoherentStructures /Users/julios/.julia/environments/CoherentStructures/src/ellipticLCS.jl:894
@@ -258,12 +283,12 @@ Detecting vortices 100%|██████████████████�
 <pre><code>(CoherentStructures.EllipticVortex[CoherentStructures.EllipticVortex([6.9245254985211595, -1.2], CoherentStructures.EllipticBarrier[CoherentStructures.EllipticBarrier(StaticArraysCore.SVector{2, Float64}[[8.179937219365762, -1.2], [8.174550234556019, -1.1864225639817538], [8.158907507304592, -1.149513237617858], [8.151314552511586, -1.1328414223938708], [8.136901415284362, -1.1029727274000647], [8.118681525668242, -1.0677072520006987], [8.107098098345423, -1.046375445491992], [8.066977713963475, -0.9776638610785207], [8.049137922019563, -0.9494182577535918], [8.03269938223394, -0.9246196727399018]  …  [8.242808279441496, -1.4748019756464354], [8.241142455600919, -1.4484852962211603], [8.236214789489916, -1.4050476498332185], [8.22832633126203, -1.3599274926915212], [8.221238073844878, -1.328442799555096], [8.204353367802028, -1.26872035540583], [8.193645186021824, -1.2366673376703643], [8.180083608673206, -1.200087137022632], [8.180049621034497, -1.2000000000000004], [8.180049621034497, -1.2000000000000004]], [6.9245254985211595, -1.2], 1.233048504373692, false)]), CoherentStructures.EllipticVortex([13.090561297499413, -1.2], CoherentStructures.EllipticBarrier[CoherentStructures.EllipticBarrier(StaticArraysCore.SVector{2, Float64}[[14.425681699032562, -1.2], [14.419629574391488, -1.186632957881917], [14.398819252311547, -1.1431514353262542], [14.38019807876337, -1.1072293693076916], [14.369219808509307, -1.0871902661093897], [14.363618222937294, -1.0771787080937454], [14.339170007401691, -1.0350409896707524], [14.322704568050272, -1.0079955651925039], [14.314488150491224, -0.994871834688239], [14.305330117415732, -0.9805185038878036]  …  [14.503722043522757, -1.4648264388613497], [14.498976731320129, -1.4311429437279386], [14.48492346039499, -1.3654583224004841], [14.475044582597194, -1.3302645663396064], [14.46672143402849, -1.3042997128430251], [14.449417243362838, -1.2566357516551476], [14.440607930719947, -1.234572675502949], [14.431745490930927, -1.213531673959329], [14.425795134994164, -1.2000000000000006], [14.425795134994164, -1.2000000000000006]], [13.090561297499413, -1.2], 1.2217857870452369, false)]), CoherentStructures.EllipticVortex([-0.052830800322656316, -0.8999999999999999], CoherentStructures.EllipticBarrier[CoherentStructures.EllipticBarrier(StaticArraysCore.SVector{2, Float64}[[1.1393136076430643, -0.8999999999999999], [1.133783394494916, -0.8870913618829113], [1.128875850076516, -0.8759126131059427], [1.1086889485808942, -0.832302585414342], [1.0943126168930986, -0.8032111292924007], [1.0792536415694631, -0.7739869554934028], [1.072141755469282, -0.7605161185827971], [1.0402184020412715, -0.7028739459590315], [1.0145824021372918, -0.6600916221395909], [0.9927101947957275, -0.6258262502481187]  …  [1.2189175822021618, -1.1325299824885022], [1.2119424391124458, -1.1067088249114165], [1.2056483707298014, -1.08497684138225], [1.2028464658863423, -1.0756379045444406], [1.1797856097023816, -1.0051714300614023], [1.1678671899634574, -0.9722329522663057], [1.1603918369474608, -0.9524299360373579], [1.1419538339973203, -0.9063441149246717], [1.1392882304444607, -0.9000000000000005], [1.1392882304444607, -0.9000000000000005]], [-0.052830800322656316, -0.8999999999999999], 1.2375831789339802, false)]), CoherentStructures.EllipticVortex([20.013829563018856, -0.8999999999999999], CoherentStructures.EllipticBarrier[CoherentStructures.EllipticBarrier(StaticArraysCore.SVector{2, Float64}[[21.14967826283064, -0.8999999999999999], [21.14408545107262, -0.8869186023986599], [21.12576656562869, -0.8463456212154425], [21.110646327579715, -0.8150481969792599], [21.094252414121417, -0.7828340279999625], [21.083897381920103, -0.7631048541844845], [21.052569643987766, -0.7063358561579394], [21.02639523566657, -0.6624743533061815], [21.00636500489063, -0.6309724895205713], [20.971324977422068, -0.5793339172900218]  …  [21.262396807578767, -1.3260897495459978], [21.257087571068663, -1.2770269502393807], [21.249973676826468, -1.2296882076963151], [21.226325038728934, -1.1216068513362418], [21.211974389391774, -1.0714979637216036], [21.19904406713166, -1.0308848897360152], [21.177472954512268, -0.9698348509368971], [21.167155077626894, -0.9427371112844164], [21.149837237059227, -0.9000000000000008], [21.149837237059227, -0.9000000000000008]], [20.013829563018856, -0.8999999999999999], 1.2428512973246524, false)]), CoherentStructures.EllipticVortex([3.516979399085807, 1.0], CoherentStructures.EllipticBarrier[CoherentStructures.EllipticBarrier(StaticArraysCore.SVector{2, Float64}[[4.589909366254956, 1.0], [4.5931448180185495, 1.013838508374781], [4.600171068500731, 1.0475366101334407], [4.603451339313752, 1.0656673402146584], [4.612385574088888, 1.1322629387157679], [4.614768132996646, 1.1631074350759203], [4.61524392325829, 1.251073247658957], [4.611819794739753, 1.2945737688630181], [4.60214068803026, 1.3584631181896805], [4.596844364379431, 1.3830295089469955]  …  [4.481747200115654, 0.7235492580439102], [4.498514505021339, 0.755491855683896], [4.506037002522079, 0.7704758178556254], [4.528077662481855, 0.8174393164406109], [4.537696845108924, 0.8398134154028079], [4.558206008234462, 0.8929950832616457], [4.574393464688156, 0.9426307420716656], [4.584420406216815, 0.9783514229279265], [4.58987242122158, 0.9999999999999994], [4.58987242122158, 0.9999999999999994]], [3.516979399085807, 1.0], 1.282529038396732, true)]), CoherentStructures.EllipticVortex([16.444019363610394, 1.0], CoherentStructures.EllipticBarrier[CoherentStructures.EllipticBarrier(StaticArraysCore.SVector{2, Float64}[[17.559940893250044, 1.0], [17.564527934724236, 1.0135444329467571], [17.57458652277073, 1.0452829992782822], [17.5865960792025, 1.0880376478979004], [17.596543711635476, 1.129066309731338], [17.603194896268953, 1.1609582880265559], [17.615909893673248, 1.243781061516744], [17.620171939319636, 1.2943749749730933], [17.61993166570977, 1.3930920358914032], [17.61287790018642, 1.4580188782837074]  …  [17.41449105065031, 0.6943286183697317], [17.443422591246204, 0.7432952241004384], [17.46022348036495, 0.7735788954370825], [17.48567059991337, 0.8226202748621035], [17.49638894206539, 0.8447640918118674], [17.51845044646951, 0.8934886008708054], [17.540818376681948, 0.9479037254806912], [17.55328400060342, 0.9811833490854039], [17.55992672746429, 0.9999999999999997], [17.55992672746429, 0.9999999999999997]], [16.444019363610394, 1.0], 1.1799954710505167, true)]), CoherentStructures.EllipticVortex([10.007543398010288, 1.25], CoherentStructures.EllipticBarrier[CoherentStructures.EllipticBarrier(StaticArraysCore.SVector{2, Float64}[[11.457985761035246, 1.25], [11.465995995048958, 1.2626408345092017], [11.480135787861322, 1.285655076002317], [11.496433390238481, 1.313561925267759], [11.506623980305987, 1.3319091710405968], [11.51996890431772, 1.3570807334500052], [11.540380768189506, 1.3981315615680356], [11.54974668258743, 1.4182483606683556], [11.55961102081072, 1.4407781601490943], [11.574928265268362, 1.4792222961002006]  …  [11.3005864202349, 1.0366748508842252], [11.324921216155753, 1.0663720515569877], [11.346532742838907, 1.093395011247609], [11.36558787694774, 1.117793375889736], [11.373728246396185, 1.1284573937504714], [11.411593981373125, 1.1804309272247895], [11.435215470700872, 1.2149914134760833], [11.452119661375026, 1.2405919027589183], [11.458185383067358, 1.2499999999999984], [11.458185383067358, 1.2499999999999984]], [10.007543398010288, 1.25], 1.1748930265565731, true)])], Singularity[Singularity([-1.9459119666756293, -2.95], 1//2), Singularity([9.953455364685915, -2.95], -1//2), Singularity([10.602511764578363, -2.85], 1//2), Singularity([15.362258697122982, -2.95], -1//2), Singularity([18.066660363341512, -2.95], 1//2), Singularity([4.003771699005143, -2.85], -1//2), Singularity([11.467920297768295, -2.85], -1//2), Singularity([-1.7295598333781466, -2.45], -1//2), Singularity([8.438990431603537, -2.45], 1//2), Singularity([10.191442711313147, -2.33], -1//2)  …  Singularity([11.792448497714519, 2.65], 1//2), Singularity([12.549680964255707, 2.65], -1//2), Singularity([13.955969830689344, 2.65], 1//2), Singularity([19.689301363072634, 2.65], -1//2), Singularity([13.63144163074312, 2.75], -1//2), Singularity([4.003771699005143, 2.8499999999999996], -1//2), Singularity([5.734588765385005, 2.8499999999999996], 1//2), Singularity([6.708173365223677, 2.8499999999999996], 1//2), Singularity([7.681757965062348, 2.9499999999999997], -1//2), Singularity([17.417603963449064, 2.9499999999999997], -1//2)])</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Plots</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>trace <span class="op">=</span> <span class="fu">tensor_invariants</span>(C̅)[<span class="fl">5</span>]</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> <span class="fu">plot_vortices</span>(vortices, singularities, (xmin, ymin), (xmax, ymax);</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    bg<span class="op">=</span>trace, xspan<span class="op">=</span>xspan, yspan<span class="op">=</span>yspan, title<span class="op">=</span><span class="st">"DBS field and transport barriers"</span>, showlabel<span class="op">=</span><span class="cn">false</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Plots.<span class="fu">plot</span>(fig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3a7fadf8" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Plots</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>trace <span class="op">=</span> <span class="fu">tensor_invariants</span>(C̅)[<span class="fl">5</span>]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> <span class="fu">plot_vortices</span>(vortices, singularities, (xmin, ymin), (xmax, ymax);</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    bg<span class="op">=</span>trace, xspan<span class="op">=</span>xspan, yspan<span class="op">=</span>yspan, title<span class="op">=</span><span class="st">"DBS field and transport barriers"</span>, showlabel<span class="op">=</span><span class="cn">false</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>Plots.<span class="fu">plot</span>(fig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <!--?xml version="1.0" encoding="utf-8"?-->
 <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="600" height="400" viewbox="0 0 2400 1600">
@@ -1417,6 +1442,7 @@ mNcMWikomEFBQcHTfPgHC1qFd76Zx6gAAAAASUVORK5CYII=
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1498,10 +1524,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1511,8 +1536,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1525,6 +1559,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1568,6 +1721,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1593,6 +1747,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1653,6 +1833,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

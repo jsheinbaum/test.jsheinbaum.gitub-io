@@ -11,7 +11,7 @@ format:
 ::: {.panel-tabset}
 ## Julia
 
-``` {.julia}
+```{.julia}
 using CairoMakie
 
 xs = LinRange(0, 10, 100);
@@ -41,7 +41,7 @@ fig
 
 ## Python
 
-``` {.python}
+```{.python}
 import plotly.graph_objects as go
 
 import pandas as pd

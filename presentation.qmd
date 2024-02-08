@@ -123,7 +123,7 @@ plt.show()
 ## GFS Download and Plot
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="90%"}
 ```{python}
 #| echo: true 
 #| output-location: slide 
@@ -147,7 +147,7 @@ print(inittime)
 print(finaltime)
 lat_toplot = np.arange(5, 35.25, 0.25) # last number is exclusive
 lon_toplot = np.arange(260, 310.25, 0.25) # last number is exclusive
-dataw= dsw.sel(time=slice(inittime,finaltime),height_above_ground2=10, lon=lon_toplot, lat=lat_toplot)
+dataw= dsw.sel(time1=slice(inittime,finaltime),height_above_ground2=10, lon=lon_toplot, lat=lat_toplot)
 u10=dataw['u-component_of_wind_height_above_ground'].values
 v10=dataw['v-component_of_wind_height_above_ground'].values
 lon=dataw.lon.values
@@ -171,6 +171,9 @@ ax1.quiver(lon[::5],lat[::5],U10[::5,::5],V10[::5,::5],scale=200.0,color='b',tra
 plt.savefig('foo.png', bbox_inches='tight')
 plt.show()
 ```
+:::
+
+::::
 ## Plotly
 :::: {.columns}
 
@@ -191,5 +194,39 @@ fig.show()
 
 ::::
 
+## INSTRMENTACIÓN 1 y LaTeX
+:::: {.columns}
+
+$$\frac{\partial{\mathbf {u}_h}}{\partial{t}} + \mathbf {u}_h \cdot {\nabla}_h \mathbf {{u}_h}$$
+
+::: {.column width="90%"}
+
+::: {layout-ncol=2}
+![Estaciones Hidrográficas](inst2023-1.png){width=5in}
 
 
+![Perfiladores Anclajes2](inst2023-2.png){width=5in}
+
+:::
+
+:::
+
+::::
+
+## INSTRUMENTACION2
+:::: {.columns}
+
+::: {.column width="90%"}
+
+::: {layout-ncol=2}
+
+![Revolución Lagrangiana](inst2023-3.png){width=5in}
+
+
+![Percepción Remota](inst2023-4.png){width=5in}
+
+:::
+
+:::
+
+::::

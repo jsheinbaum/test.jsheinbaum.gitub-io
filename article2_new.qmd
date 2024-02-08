@@ -1,4 +1,4 @@
----
+m--
 title: "Notas Curso Análisis de datos"
 format:
   pdf:
@@ -69,8 +69,11 @@ citation:
 keep-tex: true
 date: last-modified
 ---
-
+```{=html}
+<!--
 \includepdf[pages={-}]{/Users/julios/curso_analisis_de_datos/Instrumentacion_2023.pdf}
+-->
+```
 
 ## Estadística y conceptos de probabilidad
 
@@ -87,29 +90,36 @@ A pesar de nuestra formación determinista a la hora de resolver problemas matem
 Ejemplo:\
 Supongamos el término de aceleración horizontal en las ecuaciones de Navier Stokes para fluidos incompresibles,
 
-$$\frac{\partial{\bf {u}_h}}{\partial{t}} + \bf {u}_h \cdot {\nabla}_h \bf {{u}_h}$$
-
+```{=tex}
+\begin{equation}
+\frac{\partial{\mathbf {u}_h}}{\partial{t}} + \mathbf {u}_h \cdot {\nabla}_h \mathbf {{u}_h}
+\end{equation}
+```
 Como ya sabemos por el curso de Mecánica de Fluidos, la aceleración de un fluido es una derivada material y consta de un término local (aceleración local) y de un término advectivo o aceleración advectiva. En general, esta ecuación no se aplica a partículas de agua individuales.
 
 En oceanografía hablamos de continuo. No estamos interesados en las características cinemáticas de las partículas individuales sino en la manifestación promedia del movimiento molecular, es decir, del fluido como un conjunto o contínuo. Es decir, asumimos que el fluido es uniforme en el espacio que ocupa sin considerar la estructura molecular.
 
 Por ello debemos de promediar de alguna forma para explicar el comportamiento conjunto del fluído y no de una partícula de agua específica? Y como se realiza tal promedio? En general, el promediado se realiza de tal forma que nos permite separar la larga escala que trataremos como determinística, de la pequeña escala que consideramos un proceso aleatorio (turbulento). Supongamos entonces la separación de la velocidad horizontal en una velocidad promedio y una velocidad fluctuante alrededor de la media
 
-$$ \bf {u_h} = <\bf {u_h}> + \bf {u'_h} $$
+$${\mathbf u_h} = <{\mathbf u_h}> + {\mathbf u'_h} $$
 
 donde \$ \< \> \$ denotan promedio. Si aplicamos esta descomposición a la componente $x$ de la aceleración obtenemos:
 
-$$
-\frac{\partial <\bf {u}>}{\partial t} +  <{\bf u}> \cdot  {\nabla} <{\bf u} >  + < {\bf u'} \cdot {\nabla} \bf {u}'> 
-$$
+```{=tex}
+\begin{equation}
+\frac{\partial <\mathbf {u}>}{\partial t} +  <{\mathbf u}> \cdot  {\nabla} <{\mathbf u} >  + < {\mathbf u'} \cdot {\nabla} \mathbf {u}'> 
+\end{equation}
+```
 
-$$
- \frac{\partial \bf {< u >}}{\partial t} + \nabla \cdot (<{\bf u}> \textbf {< u >}) + \nabla \cdot< \bf {u'} \bf {u}' >
-$$
+```{=tex}
+\begin{equation}
+ \frac{\partial \mathbf {< u >}}{\partial t} + \nabla \cdot (<{\mathbf u}> \textbf {< u >}) + \nabla \cdot< \mathbf {u'} \mathbf {u}' >
+\end{equation}
+```
 
 Donde usamos la ecuación de continuidad 
 
-$$ \nabla \cdot (< \bf {u} > + \bf {u}') =0 $$ 
+$$ \nabla \cdot (< \mathbf {u} > + \mathbf {u}') =0 $$ 
 
 para pasar de la primera a la segunda expresión.\
 
@@ -118,7 +128,7 @@ para pasar de la primera a la segunda expresión.\
 comment
 
 $$
-\frac{\partial \bf{<u>}}{\partial t} + < {\textbf u} > \cdot { \nabla}{ \textbf <u> } + < {\bf u'}\cdot {\nabla} {\textbf u}' >
+\frac{\partial \mathbf{<u>}}{\partial t} + < {\textbf u} > \cdot { \nabla}{ \textbf <u> } + < {\mathbf u'}\cdot {\nabla} {\textbf u}' >
 $$
 
 -->
@@ -144,11 +154,11 @@ En oceanografía física se muestrea el océano de forma discontínua, es decir,
 
 $$f_N=1/(2\Delta{t})\,.$$
 
-Por ejemplo, si medimos a intervalos de $\Delta{t}=5\,{\rm h}$ podremos como máximo resolver procesos que ocurren con frecuencia $f_N\le1/10\,{ cph}$. La frecuencia mas baja que podemos resolver va a depender de la longitud del registro. A esa frecuencia le llamamos frecuencia fundamental
+Por ejemplo, si medimos a intervalos de $\Delta{t}=5\,{ h}$ podremos como máximo resolver procesos que ocurren con frecuencia $f_N\le1/10\,{ cph}$. La frecuencia mas baja que podemos resolver va a depender de la longitud del registro. A esa frecuencia le llamamos frecuencia fundamental
 
 $$f_0=1/(\Delta{t}N)\,,$$
 
-donde $T=\Delta{t} N$ es la duración del muestreo y N es el número de muestras o datos. En general, debemos de medir suficiente tiempo para registrar varios ciclos del fenómeno de estudio para tener significancia estadística. Por lo tanto, nuestra resolución frecuencial va a depender del intervalo y duración del muestreo. El cociente $f_N/f_0=(1/2\Delta{t})/(1/N\Delta{t})=N/2$ indica el número máximo de componentes de Fourier que podemos estimar. Una señal periódica se puede descomponer en la suma de un conjunto (infinito) de funciones oscilatorias de senos y cosenos o componentes de Fourier. Esto lo veremos en el capítulo\~7. A cada muestreo de un fenómeno le denominamos realización, y a un conjunto de realizaciones se les denomina ensamble.
+{\noindent}donde $T=\Delta{t} N$ es la duración del muestreo y N es el número de muestras o datos. En general, debemos de medir suficiente tiempo para registrar varios ciclos del fenómeno de estudio para tener significancia estadística. Por lo tanto, nuestra resolución frecuencial va a depender del intervalo y duración del muestreo. El cociente $f_N/f_0=(1/2\Delta{t})/(1/N\Delta{t})=N/2$ indica el número máximo de componentes de Fourier que podemos estimar. Una señal periódica se puede descomponer en la suma de un conjunto (infinito) de funciones oscilatorias de senos y cosenos o componentes de Fourier. Esto lo veremos en el capítulo\~7. A cada muestreo de un fenómeno le denominamos realización, y a un conjunto de realizaciones se les denomina ensamble.
 
 ### Estadística básica
 
@@ -213,7 +223,7 @@ Podemos definir un momento alrededor de la media como:
 m_p=\frac{1}{N}\sum^N_{i=1}(x_i-\bar{x})^p=<x'^p>\,.
 \end{equation}
 ```
-De esta forma $m_2$ es la varianza, $m_3$ es la asimetría, y $m_4$ la curtosis. El momento $m_3$ indica la asimetría de la muestra alrededor de la media ($m_3>0$ implica distribución con cola larga en la parte positiva y viceversa). $m_4$ indica el grado de esparcimiento de las muestras alrededor de la media. Una mayor curtosis indica mayor concentración de puntos alrededor de la media. Los momentos de orden superior ($>2$) se suelen adimensionalizar dividiendo por la desviación estandar:
+De esta forma $m_2$ es la varianza, $m_3$ es la asimetría, y $m_4$ la curtosis. El momento $m_3$ indica la asimetría de la muestra alrededor de la media ($m_3>0$ implica distribución con cola larga en la parte positiva y viceversa). $m_4$ indica el grado de esparcimiento de las muestras alrededor de la media. Una mayor curtosis indica mayor concentración de puntos alrededor de la media. Los momentos de orden superior ($>2$) se suelen adimensionalizar dividiendo por la desviación estándar:
 
 ```{=tex}
 \begin{equation}
@@ -280,7 +290,7 @@ y el $\alpha$ es
 
 $$\alpha=\frac{<xy>}{<x^2>}\,.$$
 
-El error mínimo cuadrado se encuentra substituyendo el valor de $\alpha$ en la expresión del error $\epsilon$ de arriba
+El error cuadrático mínimo  se encuentra substituyendo el valor de $\alpha$ en la expresión del error $\epsilon$ de arriba
 
 $$\epsilon=\frac{<xy>^2}{<x^2>} + <y^2> - 2\frac{<xy>^2}{<x^2>}=
            <y^2>\left(\frac{<xy>^2}{<x^2><y^2>}+1-2\frac{<xy>^2}{<x^2><y^2>}\right)=$$
@@ -289,7 +299,7 @@ $$=<y^2>(1-\rho^2_{xy})\,.$$
 
 Si $\rho^2_{xy}=1$ entonces el error es cero, es decir, mínimo error. Opuestamente, si $\rho^2_{xy}=0$ entonces el error es igual a la varianza, es decir, máximo error. Si $\rho$ toma valores intermedios, i.e., $\rho^2_{xy}=0.5$, entonces el error es $\epsilon=0.5<y^2>$, es decir, el error del modelo lineal es un $50\%$ de la varianza. Por lo tanto, la correlación al cuadrado puede definirse también ciomo la eficiencia relativa del estimador $\hat{y}^2$ o la fracción de varianza explicada por el modelo lineal
 
-$$\rho^2_{xy}=\frac{<\hat{y}^2>}{<y^2>}=\frac{{\rm varianza\,\,\,explicada}}{{\rm varianza\,\,\,total}}\,.$$
+$$\rho^2_{xy}=\frac{<\hat{y}^2>}{<y^2>}=\frac{{varianza\,\,\,explicada}}{{ varianza\,\,\,total}}\,.$$
 
 A este parámetro se le puede encontrar en literatura inglesa como *skill* del modelo lineal.
 
@@ -309,10 +319,10 @@ $$F(x)=\frac{d}{dx} D(x)$$
 
 es la función de densidad de probabilidad (PDF, por su siglas en inglés). La PDF nos informa de la probabilidad que $x$ sea igual a un cierto valor $r$, $P(x=r)$.\
 
-Algunas propiedades de $D(x)$:
+{\noindent} Algunas propiedades de $D(x)$:
 
 \
-\* $D(r)\le D(s)\,\,\,{\rm if}\,\,\,r\le s$\
+\* $D(r)\le D(s)\,\,\,{ if}\,\,\,r\le s$\
 \* $D(-\infty)=0$\
 \* $D(\infty)=1$\
 
@@ -341,7 +351,7 @@ La densidad de probabilidad de que la suma de los dos dados sea 7 es máxima y q
 ```
 \vspace{0.5cm}
 
-Momentos estadísticos de una función de densidad de probabilidad:\
+{\noindent} Momentos estadísticos de una función de densidad de probabilidad:\
 
 Los momentos centrados (o alrededor de la media) de una distribución de probabilidad se definen como
 
@@ -377,7 +387,7 @@ La función de distribución acumulativa es $$D(x)=0,\,\,\,x<a$$ $$D(x)=\frac{x-
 ```
 La media es $\mu=(b+a)/2$ y la varianza es $\sigma^2=1/3(a^2 + b^2 +ab)$. Demostración:\
 
-Los momentos estadísticos alrededor del origen de la distribución uniforme son 
+{\noindent} Los momentos estadísticos alrededor del origen de la distribución uniforme son 
 $$m^0_r=E[x^r]=\int^{\infty}_{-\infty} x^rF(x)dx=\int^{b}_{a} \frac{x^r}{b-a}dx=$$ 
 
 $$\frac{1}{b-a}\int^{b}_{a}x^r dx=\frac{1}{b-a}\left[\frac{x^{r+1}}{r+1}\right]^b_a=
@@ -409,7 +419,7 @@ $$D(x)=0,\,\,\,x<0$$ $$D(x)=\frac{x}{360},\,\,\,0 \le x \le 360$$ $$D(x)=1,\,\,\
 
 La distribución normal es una de las distribuciones mas recurrente en la naturaleza. En general cualquier variable aleatoria medida, especialmente aquellas que son suma de otras variables aleatorias, tiene una distribución normal alrededor de la media
 
-$$F(x)=\frac{1}{\sigma\sqrt{2\pi}}{\rm exp}
+$$F(x)=\frac{1}{\sigma\sqrt{2\pi}}{exp}
    \left\{ -\frac{(x-\bar{x})^2}{2\sigma^2} \right\}\,.$$
 
 ```{=tex}
@@ -424,12 +434,12 @@ $$z=\frac{x-\bar{x}}{\sigma\sqrt{2}}$$ y $$dz=\frac{dx}{\sigma\sqrt{2}}\,,$$
 
 de lo que se deduce
 
-$$D(z)=\frac{\sigma\sqrt{2}}{\sigma\sqrt{2\pi}}\int^z_{-\infty} {\rm exp}
+$$D(z)=\frac{\sigma\sqrt{2}}{\sigma\sqrt{2\pi}}\int^z_{-\infty} {exp}
   \left\{ -z^2 \right\}dz =
-  \frac{1}{\sqrt{\pi}}\int^z_{-\infty} {\rm exp}
+  \frac{1}{\sqrt{\pi}}\int^z_{-\infty} {exp}
   \left\{ -z^2 \right\} dz\,,$$
 
-donde $\frac{2}{\sqrt{\pi}}\int^z_{0}{\rm exp}\left\{ -t^2 \right\}dt={\rm erf}(z)\,.$
+donde $\frac{2}{\sqrt{\pi}}\int^z_{0}{exp}\left\{ -t^2 \right\}dt={erf}(z)\,.$
 
 ```{=tex}
 \begin{center}
@@ -439,7 +449,7 @@ donde $\frac{2}{\sqrt{\pi}}\int^z_{0}{\rm exp}\left\{ -t^2 \right\}dt={\rm erf}(
 ```
 Los momentos estadísticos alrededor del origen de la función de distribución Normal son
 
-$$m^0_r=E[x^r]=\int^{\infty}_{-\infty} x^rF(x)dx=\frac{1}{\sigma\sqrt{2\pi}}\int^{\infty}_{-\infty}x^r{\rm exp}
+$$m^0_r=E[x^r]=\int^{\infty}_{-\infty} x^rF(x)dx=\frac{1}{\sigma\sqrt{2\pi}}\int^{\infty}_{-\infty}x^r{exp}
    \left\{ -\frac{(x-\bar{x})^2}{2\sigma^2} \right\} dx$$
 
 Hagamos el cambio de variable
@@ -449,21 +459,21 @@ $$u=\frac{x-\bar{x}}{\sigma\sqrt{2}}$$ $$du=\frac{dx}{\sigma\sqrt{2}}$$
 Si substituimos en la expresión de $m_r$ obtenemos
 
 $$m^0_r=\frac{\sigma\sqrt{2}}{\sigma\sqrt{2\pi}}\int^{\infty}_{-\infty}
-  \left( \sigma \sqrt{2}u+\bar{x}\right)^r{\rm e}^{-u^2}du=
-  \frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}\left( \sigma \sqrt{2}u+\bar{x}\right)^r{\rm e}
+  \left( \sigma \sqrt{2}u+\bar{x}\right)^r{e}^{-u^2}du=
+  \frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}\left( \sigma \sqrt{2}u+\bar{x}\right)^r{e}
    ^{-u^2}du\,.$$
 
 \vspace{0.25cm}
 
 **Ejercicio**: Deducir los momentos estadísticos de orden 1 y 2 de la distribución Normal, es decir, la media y la varianza. Integrales útiles:
 
-$$\int e^{-ax^2}dx=\frac{\sqrt{\pi}}{2\sqrt{a}}{\rm erf}(x\sqrt{a})$$ $$\int xe^{-ax^2}dx=-\frac{1}{2a}e^{-ax^2}\,,$$
+$$\int e^{-ax^2}dx=\frac{\sqrt{\pi}}{2\sqrt{a}}{erf}(x\sqrt{a})$$ $$\int xe^{-ax^2}dx=-\frac{1}{2a}e^{-ax^2}\,,$$
 
 donde la función de error se define cómo:
 
 $$erf(z)=\frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2} dt\,.$$
 
-La función de error cumple las siguientes identidades: $${\rm erf}(0)=\frac{2}{\sqrt{\pi}}\int_0^0 e^{-t^2} dt=0$$, $${\rm erf}(\infty)=\frac{2}{\sqrt{\pi}}\underbrace{\int_0^\infty e^{-t^2} dt}_{\frac{\sqrt{\pi}}{2}}=1$$. $${\rm erf}(-\infty)=\frac{2}{\sqrt{\pi}}\underbrace{\int_0^{-\infty} e^{-t^2} dt}_{-\frac{\sqrt{\pi}}{2}}=-1$$.
+La función de error cumple las siguientes identidades: $${erf}(0)=\frac{2}{\sqrt{\pi}}\int_0^0 e^{-t^2} dt=0$$, $${erf}(\infty)=\frac{2}{\sqrt{\pi}}\underbrace{\int_0^\infty e^{-t^2} dt}_{\frac{\sqrt{\pi}}{2}}=1$$. $${erf}(-\infty)=\frac{2}{\sqrt{\pi}}\underbrace{\int_0^{-\infty} e^{-t^2} dt}_{-\frac{\sqrt{\pi}}{2}}=-1$$.
 
 \vspace{0.25cm}
 
@@ -475,18 +485,18 @@ $$m^0_1=E(x)=\mu\,\,\,\,\,\,;\,\,\,\,\,\,m_1=0$$ $$m^0_2=Var(x)=\mu^2 + \sigma^2
 
 Deducción de la media: El momento de orden 1 centrado es: 
 
-$$m_1=\frac{\sigma\sqrt{2}}{\sqrt{\pi}}\int^{\infty}_{-\infty}u{\rm e}
-   ^{-u^2}du=-\frac{\sigma\sqrt{2}}{2\sqrt{\pi}}{\rm e}
+$$m_1=\frac{\sigma\sqrt{2}}{\sqrt{\pi}}\int^{\infty}_{-\infty}u{e}
+   ^{-u^2}du=-\frac{\sigma\sqrt{2}}{2\sqrt{\pi}}{e}
    ^{-u^2}\Big|^{\infty}_{-\infty}=0\,.$$\
 y alrededor de cero (momentos crudos):
 
-$$m^0_1=\frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}(\sigma \sqrt{2} u + \mu){\rm e}
-   ^{-u^2}du=\frac{\sigma\sqrt{2}}{\sqrt{\pi}}\int^{\infty}_{-\infty}u{\rm e}
-   ^{-u^2}du + \frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}\mu{\rm e}
+$$m^0_1=\frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}(\sigma \sqrt{2} u + \mu){e}
+   ^{-u^2}du=\frac{\sigma\sqrt{2}}{\sqrt{\pi}}\int^{\infty}_{-\infty}u{e}
+   ^{-u^2}du + \frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}\mu{ e}
    ^{-u^2}du=$$\
-$$=\underbrace{\frac{\sigma\sqrt{2}}{\sqrt{\pi}}\left( -\frac{1}{2}{\rm e}
+$$=\underbrace{\frac{\sigma\sqrt{2}}{\sqrt{\pi}}\left( -\frac{1}{2}{ e}
    ^{-u^2}\right)}_{0} \Big|^{\infty}_{-\infty}+
-   \frac{\mu}{\sqrt{\pi}}\left( \frac{\sqrt{\pi}}{2}{\rm erf}(u)\right) \Big|^{\infty}_{-\infty}=
+   \frac{\mu}{\sqrt{\pi}}\left( \frac{\sqrt{\pi}}{2}{ erf}(u)\right) \Big|^{\infty}_{-\infty}=
    \frac{\mu}{2}[1-(-1)]=\mu\,,$$
 
 \vspace{0.25cm}
@@ -495,38 +505,38 @@ $$=\underbrace{\frac{\sigma\sqrt{2}}{\sqrt{\pi}}\left( -\frac{1}{2}{\rm e}
 
 El momento de orden 2 centrado es:\
 
-$$m_2=\frac{(\sigma\sqrt{2})^2}{\sqrt{\pi}}\int^{\infty}_{-\infty}u^2{\rm e}^{-u^2}du$$
+$$m_2=\frac{(\sigma\sqrt{2})^2}{\sqrt{\pi}}\int^{\infty}_{-\infty}u^2{ e}^{-u^2}du$$
 
-$$x=u \rightarrow dx=du$$ $$dy=u{\rm e}^{-u^2} \rightarrow y=\frac{1}{2}{\rm e}^{-u^2}$$
+$$x=u \rightarrow dx=du$$ $$dy=u{ e}^{-u^2} \rightarrow y=\frac{1}{2}{ e}^{-u^2}$$
 
-$$m_2=\frac{2\sigma^2}{\sqrt{\pi}}\left[ -\frac{1}{2}{\rm e}^{-u^2}
-      \Big|^{\infty}_{-\infty} +\frac{\sqrt{\pi}}{4} {\rm erf}(u)\Big|^{\infty}_{-\infty}\right]=
-  \frac{2\sigma^2}{\sqrt{\pi}}\left[0 + \frac{\pi}{4}\left({\rm erf}(\infty) - {\rm erf}(-\infty) \right)
+$$m_2=\frac{2\sigma^2}{\sqrt{\pi}}\left[ -\frac{1}{2}{ e}^{-u^2}
+      \Big|^{\infty}_{-\infty} +\frac{\sqrt{\pi}}{4} { erf}(u)\Big|^{\infty}_{-\infty}\right]=
+  \frac{2\sigma^2}{\sqrt{\pi}}\left[0 + \frac{\pi}{4}\left({ erf}(\infty) - { erf}(-\infty) \right)
   \right]=$$ $$=\frac{2\sigma^2}{\sqrt{\pi}}\left[ \frac{\pi}{4}+\frac{\pi}{4}\right]=\sigma^2$$\
 
 y alrededor de cero (momentos crudos): 
 
-$$m^0_2=\frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}(\sigma \sqrt{2} u + \mu)^2{\rm e}^{-u^2}du=
-   \frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}2\sigma^2 u^2{\rm e}^{-u^2}du +$$ 
-$$ +\frac{\mu^2}{\sqrt{\pi}}\int^{\infty}_{-\infty}{\rm e}^{-u^2}du
-   +\frac{2\sigma\sqrt{2}\mu}{\sqrt{\pi}}\int^{\infty}_{-\infty}u{\rm e}^{-u^2}du=$$ 
+$$m^0_2=\frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}(\sigma \sqrt{2} u + \mu)^2{ e}^{-u^2}du=
+   \frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}2\sigma^2 u^2{ e}^{-u^2}du +$$ 
+$$ +\frac{\mu^2}{\sqrt{\pi}}\int^{\infty}_{-\infty}{ e}^{-u^2}du
+   +\frac{2\sigma\sqrt{2}\mu}{\sqrt{\pi}}\int^{\infty}_{-\infty}u{ e}^{-u^2}du=$$ 
 
 $$
-   =\underbrace{\frac{2\sigma^2}{\sqrt{\pi}}\int^{\infty}_{-\infty}u^2{\rm e}^{-u^2}du}_{m_2=\sigma^2}
-   +\mu \underbrace{\frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}\mu{\rm e}^{-u^2}du}_{m_1^0=\mu}+
-   +2\mu \underbrace{\frac{\sigma\sqrt{2}}{\sqrt{\pi}}\int^{\infty}_{-\infty}u{\rm e}^{-u^2}du}_{m_1=0}= \sigma^2+\mu^2\,,$$\
+   =\underbrace{\frac{2\sigma^2}{\sqrt{\pi}}\int^{\infty}_{-\infty}u^2{ e}^{-u^2}du}_{m_2=\sigma^2}
+   +\mu \underbrace{\frac{1}{\sqrt{\pi}}\int^{\infty}_{-\infty}\mu{ e}^{-u^2}du}_{m_1^0=\mu}+
+   +2\mu \underbrace{\frac{\sigma\sqrt{2}}{\sqrt{\pi}}\int^{\infty}_{-\infty}u{ e}^{-u^2}du}_{m_1=0}= \sigma^2+\mu^2\,,$$\
 
-La probabilidad de que una variable normalmente distribuida caiga en una desviación estandard de su valor medio viene dada por 
+La probabilidad de que una variable normalmentedistribuida caiga en una desviación estándar de su valor medio viene dada por 
 $$P(-1\le z \le 1)=\int^{+1}_{-1} F(z) dz=\frac{1}{\sqrt{2\pi}}\int^{+1}_{-1}e^{-\frac{1}{2}z^2}dz=$$ 
-$$=\frac{1}{\sqrt{2\pi}}\frac{\sqrt{\pi}}{2\sqrt{1/2}}\left[{\rm erf}({z\sqrt{1/2}})\right]^1_{-1}=
-   \frac{1}{2}\left[{\rm erf}({1/\sqrt{2}})-{\rm erf}({-1/\sqrt{2}}) \right]=$$ 
+$$=\frac{1}{\sqrt{2\pi}}\frac{\sqrt{\pi}}{2\sqrt{1/2}}\left[{ erf}({z\sqrt{1/2}})\right]^1_{-1}=
+   \frac{1}{2}\left[{ erf}({1/\sqrt{2}})-{ erf}({-1/\sqrt{2}}) \right]=$$ 
 $$=\frac{1}{2}\left[0.6827-(-0.6827)\right]=0.6827\,(~68.27\%)\,,$$\
 
-y similarmente para 2 y 3 desviaciones estandard\
+y similarmente para 2 y 3 desviaciones estándar\
 
 $$P(-2\le z \le 2)=\int^{+2}_{-2} F_x(z) dz=95.45\%$$ $$P(-3\le z \le 3)=\int^{+3}_{-3} F_x(z) dz=99.73\%\,.$$
 
-Entonces solo hay un $4.55\%$ de probabilidad de que una variable normalmente distribuida caiga fuera de dos desviaciones estandard respecto de la media. Puesto que es una probabilidad con 2 colas, la probabilidad de que una variable normal exceda su media por mas de $2\sigma$ es la mitad de esto, es decir $2.275\%$, ya que la distribución normal es simétrica.\
+Entonces solo hay un $4.55\%$ de probabilidad de que una variable normalmente distribuida caiga fuera de dos desviaciones estándar respecto de la media. Puesto que es una probabilidad con 2 colas, la probabilidad de que una variable normal exceda su media por mas de $2\sigma$ es la mitad de esto, es decir $2.275\%$, ya que la distribución normal es simétrica.\
 En la práctica una PDF se calcula como un histograma escalado. Es por ello que necesitamos escojer el tamaño y localización de los bins en el histograma. La demo muestra las consecuencias de esta elección (pdf_demo.m).
 
 ```{=tex}
@@ -565,7 +575,7 @@ Los momentos estadísticos alrededor del origen de la función de distribución 
 
 $$m^0_r=E[x^r]=\sum k^r P(X=k)=\sum_{k\ge0} k^rF(x)= \sum_{k\ge0} k^r\frac{{\lambda}^k e^{-\lambda}}{k!}=$$ $$=\lambda e^{-\lambda}\sum_{k \ge 0}\frac{k^r}{k!}\lambda^{k-1}$$
 
-Veamos el momento de orden 1 alrededor del orígen:
+{\noindent}Veamos el momento de orden 1 alrededor del orígen:
 
 $$m^0_1=E[x]=\lambda e^{-\lambda}\sum_{k \ge 0}\frac{k}{k!}\lambda^{k-1}=
  \lambda e^{-\lambda}\sum_{k \ge 1}\frac{k}{(k-1)!k}\lambda^{k-1}=
@@ -644,7 +654,7 @@ Si realizas esta operación a mano se vuelve muy tediosa. Es por ello que se uti
 
 \vspace{0.5cm} 
 
-**Teorema de DeMoivere-Laplace** (aproximación de Binomial a Normal)\
+{\noindent}  **Teorema de DeMoivere-Laplace** (aproximación de Binomial a Normal)\
 
 La distribución binomial de una variable X definida por n tiradas independientes cada una de las cuales tienen una probabilidad $p$ de acertar, es aproximadamente una distribución Normal de media $np$ y desviación típica $\sqrt{np(1-p)}$, cuando n es suficientemente grande. Entonces se deduce que para cualquier número a y b,
 
@@ -654,16 +664,16 @@ Esto significa que el estadístico, $\frac{X-np}{\sqrt{np(1-p)}}$ , tiene una di
 
 \vspace{0.5cm} 
 
-**Ejemplo de la aproximación Normal a la distribución Binomial**:\
+{\noindent}  **Ejemplo de la aproximación Normal a la distribución Binomial**:\
 
 El 2% de los XBTs fabricados por una empresa presentan defectos. Si hemos adquirido 2000 XBTs, ¿Cual es la probabilidad de que haya menos de 50 defectuosos?\
 
-Respuesta: Se trata de una distribución binomial ya que solo pueden ser defectuosos o no defectuosos. La probabilidad que sea defectuoso es $p=0.02$ (2%) y $n=2000$, lo que nos da una distribución Binomial $B(2000,0.02)$. Puesto que la $n$ es grande podemos hacer una aproximación a la distribución Normal. Calculamos la media y desviación estandar de la distribución Normal $\mu=np=200*0.02=40$ y $\sigma=\sqrt{np(1-p)}=\sqrt{2000*0.02*(1-0.02)}=6.26$ $x$ es $B(2000,0.02)$ y $x_N$ es $N(40,6.26)$.\
+Respuesta: Se trata de una distribución binomial ya que solo pueden ser defectuosos o no defectuosos. La probabilidad que sea defectuoso es $p=0.02$ (2%) y $n=2000$, lo que nos da una distribución Binomial $B(2000,0.02)$. Puesto que la $n$ es grande podemos hacer una aproximación a la distribución Normal. Calculamos la media y desviación estándar de la distribución Normal $\mu=np=200*0.02=40$ y $\sigma=\sqrt{np(1-p)}=\sqrt{2000*0.02*(1-0.02)}=6.26$ $x$ es $B(2000,0.02)$ y $x_N$ es $N(40,6.26)$.\
 La probabilidad que $x<50$ es $$p(x<50)=p(x_N\le 49)\,,$$ y si estandarizamos $$p(x_N\le 49)=p\left(z\le \frac{49-40}{6.26} \right)=p(z\le 1.44)=0.9251\,.$$
 
 \vspace{0.5cm}
 
-EJERCICIOS de estadística y probabilidad:\
+{\noindent}  EJERCICIOS de estadística y probabilidad:\
 
 \vspace{0.5cm} 
 
@@ -699,7 +709,7 @@ $$E[x]=-2\lim_{y \to\infty}\frac{2}{e^y}+2\left[e^{-y}(y^2+2y+2) \right]_{y=0}=0
 
 \vspace{0.5cm}
 
-Ejercicio 2: Calcule E\[x\] si x tiene la función de densidad de probabilidad
+{\noindent}  Ejercicio 2: Calcule E\[x\] si x tiene la función de densidad de probabilidad
 
 $$f(x)=\Bigg\{\begin{array}{c}
  c(1-x^2)\,\,\,\,\,,-1<x<1 \\ 0 \,\,\,\,\,,otherwise
@@ -709,7 +719,7 @@ $$E[x]=\int^1_{-1} x[c(1-x^2)]dx=c \int^1_{-1} x[(1-x^2)]dx=$$ $$=c \int^1_{-1} 
 
 \vspace{0.5cm}
 
-Ejercicio 3: Calcule E\[x\] si x tiene la función de densidad de probabilidad
+{\noindent}  Ejercicio 3: Calcule E\[x\] si x tiene la función de densidad de probabilidad
 
 $$f(x)=\Bigg\{\begin{array}{c}
  \frac{5}{x^2}\,\,\,\,\,,x>5 \\ 0 \,\,\,\,\,,x\le5
@@ -765,9 +775,9 @@ $$E[x]=\int^{-\infty}_{-\infty} x F(x) dx=\int^{-\infty}_{-\infty} x \frac{1}{\s
 
 \vspace{0.5cm}
 
-**Teorema del límite central**:   
+{\noindent}  Teorema del límite central:   
 
-Definición 1: Sea $X_1,\,X_2,\,X_3,...,X_n$ un conjunto de variables aleatorias, independientes e idénticamente distribuidas con media $\mu$ y varianza $\sigma^2$ distinta de cero. Sea $$S_n=X_1+X_2+....+X_n\,,$$ entonces $$\lim_{n \to\infty} Pr (Z_n\le z)= \Phi(z)\,,$$ donde $\Phi(z)$ es una distribución Normal estandar y $Z_n=\frac{S_n - n\mu} {\sigma\sqrt{n}} = \frac{\bar{X} - \mu} {\sigma/\sqrt{n}}$ es una estandarización del sumatorio $S_n$ de tal forma que la media de la nueva variable $Z_n$ sea cero y su desviación estándard sea igual a 1. De esta forma, las variables $Z_n$ convergerán a una distribución normal estándar $N(0,1)$, cuando $n$ tienda a infinito.\
+Definición 1: Sea $X_1,\,X_2,\,X_3,...,X_n$ un conjunto de variables aleatorias, independientes e idénticamente distribuidas con media $\mu$ y varianza $\sigma^2$ distinta de cero. Sea $$S_n=X_1+X_2+....+X_n\,,$$ entonces $$\lim_{n \to\infty} Pr (Z_n\le z)= \Phi(z)\,,$$ donde $\Phi(z)$ es una distribución Normal estándar y $Z_n=\frac{S_n - n\mu} {\sigma\sqrt{n}} = \frac{\bar{X} - \mu} {\sigma/\sqrt{n}}$ es una estandarización del sumatorio $S_n$ de tal forma que la media de la nueva variable $Z_n$ sea cero y su desviación estándard sea igual a 1. De esta forma, las variables $Z_n$ convergerán a una distribución normal estándar $N(0,1)$, cuando $n$ tienda a infinito.\
 
 Definición 2: Sea $X_1,\,X_2,\,X_3,...,X_n$ un conjunto de variables aleatorias, independientes e idénticamente distribuidas con media $\mu$ y varianza $\sigma^2$ distinta de cero. Entonces, si $n$ es suficientemente grande, la variable aleatoria
 
@@ -780,9 +790,9 @@ tiene aproximadamente una distribución normal con media $\mu(\bar{X})=\mu$ y de
 
 Aplicación 1: Calculo de probabilidades sobre la media muestral.\
 
-Ejemplo: La recolección de muestras de agua con una roseta es una variable aleatoria con media $\mu=150\,{\rm ml}$ y varianza de $\sigma^2=120\,{\rm ml}^2$. Si tomamos $n=40$ muestras aleatorias de agua. (a) ?\`Cual es la media y la desviación estándar de la media muestral?, (b) ¿Cual es la probabilidad de que la media muestral contenga entre $145$ y $153\,{\rm ml}$ de agua?\
+Ejemplo: La recolección de muestras de agua con una roseta es una variable aleatoria con media $\mu=150\,{ ml}$ y varianza de $\sigma^2=120\,{ ml}^2$. Si tomamos $n=40$ muestras aleatorias de agua. (a) ?\`Cual es la media y la desviación estándar de la media muestral?, (b) ¿Cual es la probabilidad de que la media muestral contenga entre $145$ y $153\,{ ml}$ de agua?\
 
-(a) $\mu(\bar{X})=150\,{\rm ml}$ y $\sigma(\bar{X})=\sigma/\sqrt{n}=\sqrt{120/40}= \sqrt{3}\,{\rm ml}$\
+(a) $\mu(\bar{X})=150\,{ ml}$ y $\sigma(\bar{X})=\sigma/\sqrt{n}=\sqrt{120/40}= \sqrt{3}\,{ ml}$\
 (b) Queremos calcular $Pr(145 \le \bar{X} \le 153)$. Si escribimos la probabilidad en forma estandarizada, entonces:
 
 $$Pr(145 \le \bar{X} \le 153) =
@@ -793,7 +803,7 @@ $$=Pr(Z \le 1.73)- Pr(Z \le -2.89)=0.9582-(1-0.9981)=0.9582-0.0019=0.9563$$
 
 \vspace{0.5cm}
 
-**Función de densidad de probabilidad conjunta**\
+{\noindent}  Función de densidad de probabilidad conjunta\
 
 La probabilidad que dos variables aleatorias $(x,y)$ caigan en la región $R$ (como por ejemplo un rectángulo) se obtiene integrando su función de probabilidad conjunta
 
@@ -813,7 +823,7 @@ $Fx(x)=\int^{\infty}_{-\infty} F(x,y)dy$ y $Fy(y)=\int^{\infty}_{-\infty} F(x,y)
 
 \vspace{0.5cm}
 
-Ejemplo del uso de la función de densidad de probabilidad conjunta\
+{\noindent}  Ejemplo del uso de la función de densidad de probabilidad conjunta\
 
 Imaginemos que una empresa de instrumentación oceanográfica fabrica boyas Lagrangianas de grosor $x$ y diámetro $y$, los cuales varian de una boya a la otra. Imaginemos que la función de densidad de probabilidad conjunta de la variable aleatoria "dimensión del instrumento oceanográfico" es:
 
@@ -825,19 +835,19 @@ Ahora queremos saber que probabilidad hay de que una boya tenga un grosor $1 \le
 
 \vspace{0.5cm}
 
-Significancia estadística utilizando la distribución Normal\
+{\noindent}  Significancia estadística utilizando la distribución Normal\
 
-Como vimos en el teorema central del límite, para una población infinita ($N\rightarrow\infty$) la desviación estandar de la distribución de las medias muestrales es:
+Como vimos en el teorema central del límite, para una población infinita ($N\rightarrow\infty$) la desviación estándar de la distribución de las medias muestrales es:
 
-$$\sigma(\bar{x})=\frac{\sigma}{\sqrt{N}}=error\,estandar\,del\,estimado\,de\,la\,media\,.$$
+$$\sigma(\bar{x})=\frac{\sigma}{\sqrt{N}}=error\,estándar\,del\,estimado\,de\,la\,media\,.$$
 
-Aquí, $\sigma$ es la desviación estandard de la población y $N$ es el número de datos (independoentes) utilizado para calcular la media muestral. Entonces, si promediamos observaciones de una población de desviación estandar $\sigma$, la desviación estandard de esos promedios disminuye como el inverso de la raíz cuadrada del tamaño muestral $N$.\
+Aquí, $\sigma$ es la desviación estándar de la población y $N$ es el número de datos (independoentes) utilizado para calcular la media muestral. Entonces, si promediamos observaciones de una población de desviación estándar $\sigma$, la desviación estándar de esos promedios disminuye como el inverso de la raíz cuadrada del tamaño muestral $N$.\
 
 Si $N$ es suficientemente grande podemos usar las estimaciones de $\sigma$ y $\bar{x}$ para calcular el denominado estadístico $z$ que corresponde a una distribución normal estandarizada de media $\mu=0$ y $\sigma=1$
 
 $$z=\frac{\bar{x}-\mu}{\sigma(\bar{x})}=\frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt{N}}}$$\
 
-La fórmula de arriba puede modificarse convenientemente para darnos un test de significancia estadística para la diferencia entre medias muestrales con tamaños muestrales y desviación estandar diferentes:
+La fórmula de arriba puede modificarse convenientemente para darnos un test de significancia estadística para la diferencia entre medias muestrales con tamaños muestrales y desviación estándar diferentes:
 
 $$z=\frac{\bar{x}_1-\bar{x}_2-\Delta_{1,2}}
   {\frac{\sigma_1^2}{\sqrt{N_1}} + \frac{\sigma_2^2}{\sqrt{N_2}}}\,,$$
@@ -905,7 +915,7 @@ $$\bar{x}-t_{\alpha/2}\frac{s}{\sqrt{N-1}} < \mu <
 
 Si $\alpha=0.05$, hay un 95% de probabilidad que cualquier estadístico $t$ caiga en el intervalo $$t_{-0.025}<\frac{\bar{x}-\mu}{s}\sqrt{N-1}<t_{0.025}\,,$$ de lo cual podemos deducir que la verdadera media $\mu$ es de esperar con un 95% de confianza que caiga en el intervalo: $$\bar{x}-t_{0.025}\frac{s}{\sqrt{N-1}}<\mu<\bar{x}+t_{0.025}\frac{s}{\sqrt{N-1}}\,.$$
 
-De forma general, podemos definir el intervalo de confianza como: $$\mu=\bar{x}\pm t_c\frac{\hat{s}}{\sqrt{N}}\,,$$ donde $t_c$ es el valor crítico del estadístico $t$ (límites del intervalo), el cual depende del número de grados de libertad y del nivel de confiabilidad deseado. El intervalo de confianza con el estadístico $z$, el cual solo es apropiado para tamaños muestrales grandes ($N>30$) donde la desviación estandar es conocida: $$\mu=\bar{x}\pm z_c\frac{\sigma}{\sqrt{N}}\,.$$ Observamos que la teoría para tamaños muestrales pequeños reemplaza el estadístico $z$ por el $t$ y utiliza una desviación estandar muestral modificada $$\hat{s}=\sqrt{\frac{N}{N-1}s}\,.$$ %\vspace{0.5cm} % {\noindent \textbf Diferencias entre medias}\\ %Supongamos dos muestras de tamaño $N_1$ y $N_2$ extraidas de una población %con distribución normal con desviaciones estandar siguales. Supongamos %que las medias muestrales son $\bar{x_1}$ y $\bar{x_2}$ y las %desviaciones estandar muestrales son $s_1$ y $s_2$. Para comprobar %la hipótesis nula ($H_0$) que ambas muestras provienen de la misma población, %es decir $\mu_1=\mu_2$ y $\sigma_1=\sigma_2$ podemos usar la siguiente expresión
+De forma general, podemos definir el intervalo de confianza como: $$\mu=\bar{x}\pm t_c\frac{\hat{s}}{\sqrt{N}}\,,$$ donde $t_c$ es el valor crítico del estadístico $t$ (límites del intervalo), el cual depende del número de grados de libertad y del nivel de confiabilidad deseado. El intervalo de confianza con el estadístico $z$, el cual solo es apropiado para tamaños muestrales grandes ($N>30$) donde la desviación estándar es conocida: $$\mu=\bar{x}\pm z_c\frac{\sigma}{\sqrt{N}}\,.$$ Observamos que la teoría para tamaños muestrales pequeños reemplaza el estadístico $z$ por el $t$ y utiliza una desviación estándar muestral modificada $$\hat{s}=\sqrt{\frac{N}{N-1}s}\,.$$ %\vspace{0.5cm} % {\noindent \textbf Diferencias entre medias}\\ %Supongamos dos muestras de tamaño $N_1$ y $N_2$ extraidas de una población %con distribución normal con desviaciones estándar siguales. Supongamos %que las medias muestrales son $\bar{x_1}$ y $\bar{x_2}$ y las %desviaciones estándar muestrales son $s_1$ y $s_2$. Para comprobar %la hipótesis nula ($H_0$) que ambas muestras provienen de la misma población, %es decir $\mu_1=\mu_2$ y $\sigma_1=\sigma_2$ podemos usar la siguiente expresión
 
 $$t=\frac{(\bar{x_1}-\bar{x_2})-(\mu_1-\mu_2)}{\sigma\sqrt{\frac{1}{N_1} + \frac{1}{N_2}}};$$
 
@@ -915,25 +925,25 @@ donde $\nu=N_1+N_2-2$.\
 
 El teorema central del límite (TCL) para la diferencia de medias muestrales de dos poblaciones viene dado por
 
-$$\bar{x}_1-\bar{x}_2\,\sim\,{\rm N}(\mu_{\bar{x}_1-\bar{x}_2},\sigma_{\bar{x}_1-\bar{x}_2})\,,$$ \
+$$\bar{x}_1-\bar{x}_2\,\sim\,{ N}(\mu_{\bar{x}_1-\bar{x}_2},\sigma_{\bar{x}_1-\bar{x}_2})\,,$$ \
 
-donde $${\rm Media:}\,\,\mu_{\bar{x}_1-\bar{x}_2}=\mu_{\bar{x}_1}-\mu{\bar{x}_2}=\mu_1-\mu_2$$ 
+donde $${ Media:}\,\,\mu_{\bar{x}_1-\bar{x}_2}=\mu_{\bar{x}_1}-\mu{\bar{x}_2}=\mu_1-\mu_2$$ 
 
-$$\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,{\rm Varianza:}\,\,\sigma^2_{\bar{x}_1-\bar{x}_2}=
+$$\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,{ Varianza:}\,\,\sigma^2_{\bar{x}_1-\bar{x}_2}=
    \sigma^2{\bar{x}_1}+\sigma^2{\bar{x}_2}=
    \sqrt{  \frac{{\sigma_1}^2}{N_1} + \frac{{\sigma_2}^2}{N_2} }$$\
 
-\textbf {3.1} Desviaciones estandar poblacionales ($\sigma_1$ y $\sigma_2$) conocidas; $\mu_1$ y $\mu_2$ desconocidas} (estadístico z):
+\textbf {3.1} Desviaciones estándar poblacionales ($\sigma_1$ y $\sigma_2$) conocidas; $\mu_1$ y $\mu_2$ desconocidas} (estadístico z):
 
 $$z=\frac{\bar{x}_1-\bar{x}_2-(\mu_1-\mu_2)}
          {\sqrt{\frac{{\sigma_1}^2}{N_1}+\frac{{\sigma_2}^2}{N_2}}}$$ \
          
-**3.2** Desviaciones estandar poblacionales ($\sigma_1$ y $\sigma_2$) y medias poblacionales ($\mu_1$ y $\mu_2$) desconocidas (estadístico t):
+**3.2** Desviaciones estándar poblacionales ($\sigma_1$ y $\sigma_2$) y medias poblacionales ($\mu_1$ y $\mu_2$) desconocidas (estadístico t):
 
 $$t=\frac{\bar{x}_1-\bar{x}_2-(\mu_1-\mu_2)}
               {\sqrt{\frac{{s_1}^2}{N_1}+\frac{{s_2}^2}{N_2}}}$$ \
               
-**3.3** Desviaciones estandar poblacionales ($\sigma_1$ y $\sigma_2$) desconocidas pero iguales (estadístico t): \
+**3.3** Desviaciones estándar poblacionales ($\sigma_1$ y $\sigma_2$) desconocidas pero iguales (estadístico t): \
 
 Supongamos dos muestras de tamaño $N_1$ y $N_2$ extraídas de dos poblaciones Normales con desviaciones estándar iguales ($\sigma_1=\sigma_2$). Supongamos que conocemos las medias y desviaciones estándar muestrales $\bar{x}_1$ y $\bar{x}_2$ y $s_1$ y $s_2$. Para comprobar la hipótesis nula $H_o$ que las muestran proceden de la misma población ($\mu_1=\mu_2$ y $\sigma_1=\sigma_2$) usamos el estadístico t-score (o pooled t):
 
@@ -951,7 +961,7 @@ $x_1\equiv$ Tiempo de acción "antifouling" fórmula 1\
 $x_2\equiv$ Tiempo de acción "antifouling" fórmula 2\
 $x_1\sim$ Desconocida ($\mu_1,\sigma_1=$ 8 días)\
 $x_2\sim$ Desconocida ($\mu_2,\sigma_2=$ 8 días)\
-$\bar{x}_1-\bar{x}_2\,\sim\,{\rm N}(\mu_1-\mu_2,\sigma_1/\sqrt{N_1} + \sigma_2/\sqrt{N_2})$ (TCL)\
+$\bar{x}_1-\bar{x}_2\,\sim\,{ N}(\mu_1-\mu_2,\sigma_1/\sqrt{N_1} + \sigma_2/\sqrt{N_2})$ (TCL)\
 $\bar{x}_1=116$ días\\ $\bar{x}_2=112$ días\
 $N_1=N_2=35$\ 
 $\alpha=0.01$\
@@ -980,9 +990,9 @@ $$4-4.4559<
 
 y el intervalo de confianza es:\
 
-$$-0.4559<\mu_1-\mu_2<8.4559\,\,{\rm al}\,\,99\%\,(\alpha=0.01)$$
+$$-0.4559<\mu_1-\mu_2<8.4559\,\,{ al}\,\,99\%\,(\alpha=0.01)$$
 
-$$H_0:\,\mu_1 - \mu_2 = 0\,\,{\rm al}\,\,99\%\,,$$
+$$H_0:\,\mu_1 - \mu_2 = 0\,\,{ al}\,\,99\%\,,$$
 
 y aceptamos hipótesis nula $H_0$.\
 
@@ -1022,7 +1032,7 @@ $$\frac{(N-1)s^2}{\chi^2_{\alpha/2}}<\sigma^2<\frac{(N-1)s^2}{\chi^2_{1-\alpha/2
 \end{center}
 ```
 Usamos $1-{\alpha/2}$ porque la $\chi^2$ es positiva. El valor $\chi^2_{\alpha/2}$ es mayor que el valor $\chi^2_{1-\alpha/2}$. Las tablas dan la probabilidad a la derecha del valor.\
-Para una población normalmente distribuida con desviación estandar $\sigma$, la función de densidad de probabilidad de la *chi-cuadrada* es: $$F_x(\chi)=f_0\chi^{\nu-2}e^{-\frac{1}{2}\chi^2};\,\,\nu=N-1\,.$$
+Para una población normalmente distribuida con desviación estándar $\sigma$, la función de densidad de probabilidad de la *chi-cuadrada* es: $$F_x(\chi)=f_0\chi^{\nu-2}e^{-\frac{1}{2}\chi^2};\,\,\nu=N-1\,.$$
 
 Puesto que la distribución *chi* es asimétrica y positiva, si $\alpha=0.05$ (95% confianza), el intervalo de confianza para la varianza $\sigma^2$ como $$\frac{(N-1)s^2}{\chi^2_{0.025}}<\sigma^2<\frac{(N-1)s^2}{\chi^2_{0.975}}\,,$$
 
@@ -1030,16 +1040,16 @@ y si leemos en las tablas para $\nu=9$ grados de libertad:
 
 $$\frac{(N-1)s^2}{19.023}<\sigma^2<\frac{(N-1)s^2}{2.700}\,,$$
 
-**Ejemplo**: Supongamos que tenemos $\nu=9$ grados de libertad de nuestra estimación espectral de la componente meridional de la velocidad de la corriente. Sabemos que la varianza muestral de un pico espectral es $s^2=10\,{\rm cm}\,{\rm s}^2$ ?\`Cuál es el intervalo de confianza al 95% para la varianza?\
+**Ejemplo**: Supongamos que tenemos $\nu=9$ grados de libertad de nuestra estimación espectral de la componente meridional de la velocidad de la corriente. Sabemos que la varianza muestral de un pico espectral es $s^2=10\,{ cm}\,{ s}^2$ ?\`Cuál es el intervalo de confianza al 95% para la varianza?\
 
 De las tablas estadísticas vemos que para $\nu=N-1=9$ grados de libertad, $\chi^2_{1-\alpha/2}=\chi^2_{0.095}=19.02$ y $\chi^2_{\alpha/2}=\chi^2_{0.025}=2.70$. Entonces, el intervalo es:
 
-$$\frac{(9)10}{19.023}<\sigma^2<\frac{(9)10}{2.700}$$ $$4.7\,{\rm cm}^2\,{\rm s}^{-2}<\sigma^2<33.3\,{\rm cm}^2\,{\rm s}^{-2}$$
+$$\frac{(9)10}{19.023}<\sigma^2<\frac{(9)10}{2.700}$$ $$4.7\,{ cm}^2\,{ s}^{-2}<\sigma^2<33.3\,{ cm}^2\,{ s}^{-2}$$
 
 \vspace{0.5cm}
 
 {\noindent \textbf Grados de libertad}\\ El número de grados de libertad es el número de muestras independientes N menos el número de parámetros del estadístico que queremos estimar. Por ejemplo en el estadístico $t$ $$t=\frac{\bar{x}-\mu}{\frac{s}{\sqrt{N-1}}}=\frac{\bar{x}-\mu}{\frac{\hat{s}}{\sqrt{N}}};
-\hat{s}=\sqrt{\frac{N}{N-1}s}\,,$$ calculamos la media muestral y la desviación estandar $s$ a partir de los datos, pero la verdadera media $\mu$ debe ser estimada, por lo que $\nu=N-1$. Similarmente en el estadístico *chi-cuadrada* $$\chi^2=(N-1)\frac{s^2}{\sigma^2}\,,$$ conocemos la varianza muestral $s^2$ y el tamaño muestral $N$, pero debemos estimar la verdadera varianza, y entonces $\nu=N-1$.
+\hat{s}=\sqrt{\frac{N}{N-1}s}\,,$$ calculamos la media muestral y la desviación estándar $s$ a partir de los datos, pero la verdadera media $\mu$ debe ser estimada, por lo que $\nu=N-1$. Similarmente en el estadístico *chi-cuadrada* $$\chi^2=(N-1)\frac{s^2}{\sigma^2}\,,$$ conocemos la varianza muestral $s^2$ y el tamaño muestral $N$, pero debemos estimar la verdadera varianza, y entonces $\nu=N-1$.
 
 \vspace{0.5cm}
 
@@ -1073,14 +1083,14 @@ $H_0$: El coeficiente de correlación es cero $H_1$: El coeficiente de correlaci
 
 $$\bigcup^n_{i=1}E_i\in S,$$
 
-cada uno de los cuales tiene probabilidad positiva de ocurrir $P(Ei)>0$ para $i=1,2,....,n$ y son exclusivos entre si $$E_i\cap E_j=\o \,\,\,\,i\ne j\,.$$ Entonces dada la ocurrencia previa de un evento cualquiera $B$, la probabilidad de que suceda el evento $E_j$ es
+{\noindent}cada uno de los cuales tiene probabilidad positiva de ocurrir $P(Ei)>0$ para $i=1,2,....,n$ y son exclusivos entre si $$E_i\cap E_j=\o \,\,\,\,i\ne j\,.$$ Entonces dada la ocurrencia previa de un evento cualquiera $B$, la probabilidad de que suceda el evento $E_j$ es
 
 ```{=tex}
 \begin{equation}
 P(E_j|B)=\frac{P(B|E_j)P(E_j)}{\sum^n_{i=1}P(B|E_i)P(E_i)}\,,
 \end{equation}
 ```
-donde
+{\noindent}donde
 
 $$P(E_j|E_i)=\frac{P(E_i\cap E_j)}{P(E_i)}\,,$$
 
@@ -1141,7 +1151,7 @@ En general se puede obtener un {\textbf vector unitario} (de módulo $=1$) divid
 
 \vspace{0.5cm}
 
-**Vectores ortonormales**
+{\noindent}  **Vectores ortonormales**
 
 Dos vectores ortogonales ${\textbf u}$ y ${\textbf v}$ si tienen módulo la unidad, entonces se denominan vectores ortonormales.
 
@@ -1165,7 +1175,7 @@ que se satisface cuando no todos los coeficientes son cero. En caso contarrio, s
 
 \vspace{0.5cm}
 
-**Ortonormalización Gram-Schmidt**
+{\noindent} **Ortonormalización Gram-Schmidt**
 
 Es un método para convertir un conjunto de vectores ${\textbf v}$ en vectores ortonormales. De forma general el proceso definido por Gram-Schmidt para ortonormalizar el vector ortogonal ${\textbf w}_k$ a partir de un conjunto de vectores ortonormales ${\textbf u}_i=[{\textbf u}_1, {\textbf u}_2,...,{\textbf u}_{k-1}]$ se define como:
 
@@ -1173,11 +1183,11 @@ $${\textbf w}_k={\textbf v}_k-\sum\limits^{k-1}_{i=1} {\textbf u}_i\cdot{\textbf
 
 \vspace{0.25cm}
 
-$${\textbf v}_k\equiv\,\,{\rm vectores}\,\,{\rm originales}$$ 
+$${\textbf v}_k\equiv\,\,{ vectores}\,\,{ originales}$$ 
 
-$${\textbf u}_i\equiv\,\,{\rm vectores}\,\,{\rm ortonormales}$$
+$${\textbf u}_i\equiv\,\,{ vectores}\,\,{ ortonormales}$$
 
- $${\textbf w}_k\equiv\,\,{\rm vectores}\,\,{\rm ortogonales}\,\,{\rm a}\,\,{\textbf u}_j$$
+ $${\textbf w}_k\equiv\,\,{ vectores}\,\,{ ortogonales}\,\,{ a}\,\,{\textbf u}_j$$
 
 \vspace{0.25cm}
 
@@ -1235,7 +1245,7 @@ $${\textbf A}=\left(\begin{array}{cccc}
 
 \vspace{0.5cm} 
 
-**Aplicación lineal** 
+{\noindent} **Aplicación lineal* 
 
 Sean dos espacios vectoriales $V$ y $W$, decimos que una aplicación $f:V \rightarrow W$ es lineal si la \`imagen' de la combincación lineal es la combinación lineal de las imágenes. Es decir, 
 
@@ -1247,31 +1257,22 @@ Ejemplos:
 
 \vspace{0.5cm} (1) La aplicación $f$: ${\cal R}^3 \rightarrow {\cal R}^2$ definida por $f(x,y,z)=(x+y,y+2z)$ es lineal.
 
-Demostración: Definimos ${\textbf u}=[u_1,u_2,u_3]$ y ${\textbf v}=[v_1,v_2,v_3]$. Entonces $f$ es lineal si $$f(\alpha (u_1,u_2,u_3) + \beta(v_1,v_2,v_3))=\alpha f(u_1,u_2,u_3) + \beta f(v_1,v_2,v_3)=$$ 
-$$f(\alpha u_1 + \beta v_1,\alpha u_2 + \beta v_2,\alpha u_3 + \beta v_3 )=\alpha [u_1 + u_2,u_2 + 2u_3] +
-\beta [v_1 + v_2,v_2 + 2v_3]$$ 
-
-$$[\alpha u_1 + \beta v_1 + \alpha u_2 + \beta v_2,\alpha u_2 + \beta v_2 + 2 (\alpha u_3 + \beta v_3)]=
+Demostración: Definimos ${\textbf u}=[u_1,u_2,u_3]$ y ${\textbf v}=[v_1,v_2,v_3]$. Entonces $f$ es lineal si $$f(\alpha (u_1,u_2,u_3) + \beta(v_1,v_2,v_3))=\alpha f(u_1,u_2,u_3) + \beta f(v_1,v_2,v_3)=$$ $$f(\alpha u_1 + \beta v_1,\alpha u_2 + \beta v_2,\alpha u_3 + \beta v_3 )=\alpha [u_1 + u_2,u_2 + 2u_3] +
+\beta [v_1 + v_2,v_2 + 2v_3]$$ $$[\alpha u_1 + \beta v_1 + \alpha u_2 + \beta v_2,\alpha u_2 + \beta v_2 + 2 (\alpha u_3 + \beta v_3)]=
 [\alpha u_1 + \alpha u_2 + \beta v_1 + \beta v_2, \alpha u_2 + 2\alpha u_3 + \beta v_2 + 2\beta v_3]$$
 
 \vspace{0.5cm} (2) La aplicación $f$: ${\cal R}^3 \rightarrow {\cal R}^2$ definida por $f(x,y,z)=(x+y+1,y+2z)$ no es lineal.
 
 \vspace{0.5cm}
 
-(3) La aplicación ${\textbf R}$: ${\cal R}^2 \rightarrow {\cal R}^2$ definida por 
-
-$${\textbf x}'={\textbf R}{\textbf x}\,,$$
-
-$${\textbf R}=\left( \begin{array}{cc}
+(3) La aplicación ${\textbf R}$: ${\cal R}^2 \rightarrow {\cal R}^2$ definida por $${\textbf x}'={\textbf R}{\textbf x}\,,$$ $${\textbf R}=\left( \begin{array}{cc}
      cos(\theta) & -sin(\theta)\\
      sin(\theta) & cos(\theta)
-       \end{array} \right)\,,$$ 
-       
-rota el vector un ángulo $\theta$ en sentido contrario a las agujas del reloj. Si queremos cambiar el sentido de la rotación solo debemos tomar el signo de $\theta$ negativo. Aqui ${\textbf x}'$ es el vector rotado o la imagen de la aplicación rotación.
+       \end{array} \right)\,,$$ rota el vector un ángulo $\theta$ en sentido contrario a las agujas del reloj. Si queremos cambiar el sentido de la rotación solo debemos tomar el signo de $\theta$ negativo. Aqui ${\textbf x}'$ es el vector rotado o la imagen de la aplicación rotación.
 
 \vspace{0.5cm}
 
-**Matriz Identidad**
+{\noindent \textbf Matriz Identidad}
 
 Se define la matriz identidad ${\textbf I}$ como una matriz diagonal compuesta por unos
 
@@ -1287,27 +1288,19 @@ El producto matricial de cualquier matriz ${\textbf A}$ por la matriz identidad 
 
 {\noindent \textbf Matriz transpuesta}
 
-Sea ${\textbf A}$ una matriz $m\times n$ con elementos $[a_{ij}]\,\,{\rm para}\,\,i=1,2,...,m; j=1,2,...,n$. Se define el elemento de su transpuesta como $${\textbf A}^T=[a_{ji}]\,.$$
+Sea ${\textbf A}$ una matriz $m\times n$ con elementos $[a_{ij}]\,\,{ para}\,\,i=1,2,...,m; j=1,2,...,n$. Se define el elemento de su transpuesta como $${\textbf A}^T=[a_{ji}]\,.$$
 
-La inversa de la matriz transpuesta es 
-
-$$({\textbf A}^T)^{-1}={\textbf A}\,,$$ 
-
-si ${\textbf A}$ es ortogonal. \ 
-
-**Demostración**: 
-
-$$({\textbf A}^T)^{-1}={\textbf A}$$ $${\textbf A}^T({\textbf A}^T)^{-1}={\textbf A}^T{\textbf A}={\textbf I}$$ $${\textbf A}{\textbf A}^T({\textbf A}^T)^{-1}={\textbf A}{\textbf I}$$
+La inversa de la matriz transpuesta es $$({\textbf A}^T)^{-1}={\textbf A}\,,$$ si ${\textbf A}$ es ortogonal. \\ {\textbf Demostración}: $$({\textbf A}^T)^{-1}={\textbf A}$$ $${\textbf A}^T({\textbf A}^T)^{-1}={\textbf A}^T{\textbf A}={\textbf I}$$ $${\textbf A}{\textbf A}^T({\textbf A}^T)^{-1}={\textbf A}{\textbf I}$$
 
 \vspace{0.5cm}
 
-**Matriz Ortogonal**
+{\noindent \textbf Matriz Ortogonal}
 
 Una matriz ${\textbf A}$ es ortogonal si ${\textbf A}{\textbf A}^T={\textbf A}^T{\textbf A}={\textbf I}\,.$
 
 \vspace{0.5cm}
 
-**Matriz Diagonal**
+{\noindent \textbf Matriz Diagonal}
 
 Una matriz es diagonal si únicamente contiene algunos elementos diferentes de cero en la diagonal principal (ceros en la matriz triangular superior e inferior).
 
@@ -1315,11 +1308,12 @@ $${\textbf D}=\left(\begin{array}{ccc}
   a_{11} & 0 & 0\\
   0 & a_{22} & 0\\
   0 & 0 & a_{33}
-\end{array}\right) $$
+\end{array}\right)
+$$
 
 \vspace{0.5cm}
 
-**Matriz Simétrica**
+{\noindent \textbf Matriz Simétrica}
 
 Una matriz simétrica se define como aquella matriz ${\textbf A}$ tal que sea igual a su traspuesta $${\textbf A}={\textbf A}^T\,\,(a_{ij}=a_{ji})$$
 
@@ -1332,26 +1326,22 @@ $$
 
 \vspace{0.5cm}
 
-**Matriz Antisimétrica**
+{\noindent \textbf Matriz Antisimétrica}
 
-Una matriz antisimétrica se define como aquella matriz ${\textbf A}$ tal que sea igual a su traspuesta 
-
-$${\textbf A}=-{\textbf A}^T\,\,(a_{ij}=-a_{ji})$$
+Una matriz antisimétrica se define como aquella matriz ${\textbf A}$ tal que sea igual a su traspuesta $${\textbf A}=-{\textbf A}^T\,\,(a_{ij}=-a_{ji})$$
 
 $${\textbf A}=\left(\begin{array}{cccc}
   0 & a_{12} & a_{13}\\
   -a_{12} & 0 & a_{23}\\
   -a_{13} & -a_{23} & 0\\
 \end{array}\right)
-$$ 
-
-**NOTA**: Cualquier matriz ${\textbf A}$ se puede descomponer en una parte simétrica y otra antisimétrica:
+$$ \\ NOTA: Cualquier matriz ${\textbf A}$ se puede descomponer en una parte simétrica y otra antisimétrica:
 
 $$A=\frac{1}{2}({\textbf A}+{\textbf A}^T) + \frac{1}{2}({\textbf A}-{\textbf A}^T)\,.$$
 
 \vspace{0.5cm}
 
-**Matriz Singular**
+{\noindent \textbf Matriz Singular}
 
 Una matriz singular es aquella matriz cuadrada cuyo determinante es igual a cero. Las matrices singulares no tienen matriz inversa. \\ \\ Ejemplo:
 
@@ -1371,10 +1361,9 @@ Una matriz cualquiera se puede convertir en matriz cuadrada si es multiplicada p
 
 \vspace{0.5cm}
 
-**Determinante de una matriz**
+{\noindent \textbf Determinante de una matriz}
 
-El determinante de una matriz ${\textbf A}$ $3\times 3$ se puede calcular como 
-$$|{\textbf A}|=\left|\begin{array}{cccc}
+\noindent El determinante de una matriz ${\textbf A}$ $3\times 3$ se puede calcular como $$|{\textbf A}|=\left|\begin{array}{cccc}
   a_{11} & a_{12} & a_{13}\\
   a_{21} & a_{22} & a_{23}\\
   a_{31} & a_{32} & a_{33}\\
@@ -1386,11 +1375,7 @@ Para matrices de orden superior se puede utilizar la formula de adjuntos. El det
 
 \vspace{0.5cm}
 
-**Rango de una matriz** \ 
-
-**Definición 1**: El rango de una matriz se define como el número de filas o columnas de la matriz que son linealmente independientes. \
-
-**Definición 2**: El orden de la mayor submatriz cuadrada no nula
+{\noindent \textbf Rango de una matriz} \\ \\ {\textbf Definición 1}: El rango de una matriz se define como el número de filas o columnas de la matriz que son linealmente independientes. \\ \\ {\textbf Definición 2}: El orden de la mayor submatriz cuadrada no nula
 
 Así para calcular el rango debemos de hacer cero todos los elementos posibles de la matriz hasta obtener una submatriz no nula que nos indicará el rango de la matriz.
 
@@ -1418,29 +1403,21 @@ $$\left[\begin{array}{cccc}
  1 & 0 & -5\\
   0 & 1 & 3\\
   0 & -1 & -3\\
-\end{array}\right]\,,$$ 
-
-y entonces el rango de la matriz es 2. El rango lo podíamos haber encontrado simplimente viendo que sustrayendo la segunda fila de la matriz a la primera obtenemos la tercera fila; solamente hay 2 vectores linealmente independientes.
+\end{array}\right]\,,$$ y entonces el rango de la matriz es 2. El rango lo podíamos haber encontrado simplimente viendo que sustrayendo la segunda fila de la matriz a la primera obtenemos la tercera fila; solamente hay 2 vectores linealmente independientes.
 
 \vspace{0.5cm}
 
-**Matriz inversa**
+{\noindent \textbf Matriz inversa}
 
-La matriz cuadrada ${\textbf A}$ es invertible si existe una matriz ${\textbf A}^{-1}$ tal que 
-
-$${\textbf A}^{-1}{\textbf A}={\textbf I}\,\,\,{\rm and}\,\,\,{\textbf A}{\textbf A}^{-1}={\textbf I}\,.$$
+\noindent La matriz cuadrada ${\textbf A}$ es invertible si existe una matriz ${\textbf A}^{-1}$ tal que $${\textbf A}^{-1}{\textbf A}={\textbf I}\,\,\,{ and}\,\,\,{\textbf A}{\textbf A}^{-1}={\textbf I}\,.$$
 
 \vspace{0.5cm}
 
-**Proposición**: Si ${\textbf A}$ es invertible entonces la única solución de ${\textbf A}{\textbf x}={\textbf b}$ es 
-
-$${\textbf x}={\textbf A}^{-1}{\textbf b}\,.$$
+{\noindent \textbf Proposición} Si ${\textbf A}$ es invertible entonces la única solución de ${\textbf A}{\textbf x}={\textbf b}$ es $${\textbf x}={\textbf A}^{-1}{\textbf b}\,.$$
 
 \vspace{0.5cm}
 
-**Proposición**: Si ${\textbf A}$ es una matriz cuadrada de dimensión $2\times 2$ y $|{\textbf A}|=a_{11}a_{22} - a_{12}a_{21}$ no es cero, entonces 
-
-$${\textbf A}^{-1}=\left(\begin{array}{cc}
+{\noindent \textbf Proposición} Si ${\textbf A}$ es una matriz cuadrada de dimensión $2\times 2$ y $|{\textbf A}|=a_{11}a_{22} - a_{12}a_{21}$ no es cero, entonces $${\textbf A}^{-1}=\left(\begin{array}{cc}
   a_{11} & a_{12} \\
   a_{21} & a_{22} \\
 \end{array}
@@ -1455,13 +1432,9 @@ $${\textbf A}^{-1}=\left(\begin{array}{cc}
 
 \vspace{0.5cm}
 
-**Cálculo de matriz inversa con método Gauss-Jordan**
+{\noindent \textbf Cálculo de matriz inversa con método Gauss-Jordan}
 
-El método de Gauss-Jordan usa la siguiente identidad matemática 
-$[{\textbf A}|{\textbf I}]\rightarrow [{\textbf I}|{\textbf A}^{-1}]$. \
-
-**Ejemplo**: Calcula la matriz inversa de 
-$$\left(\begin{array}{cc}
+\noindent El método de Gauss-Jordan usa la siguiente identidad matemática $[{\textbf A}|{\textbf I}]\rightarrow [{\textbf I}|{\textbf A}^{-1}]$. \\ {\textbf Ejemplo:} Calcula la matriz inversa de $$\left(\begin{array}{cc}
   2 & 3 \\
   4 & 7 \\
 \end{array}
@@ -1487,9 +1460,7 @@ $$[{\textbf A}  {\textbf I}]=
   2 & 0 & & 7 & -3\\
   0 & 1 & & -2 & 1\\
         \end{array}
-  \right)\rightarrow$$ 
-  
-$$\underbrace{\rightarrow}_{r_1/2}
+  \right)\rightarrow$$ $$\underbrace{\rightarrow}_{r_1/2}
   \left(
         \begin{array}{ccccc}
   1 & 0 & & 7/2 & -3/2\\
@@ -1508,9 +1479,7 @@ $${\textbf A}^{-1}=\left(
         \end{array}
   \right)\,.$$
 
-**Ejemplo 2:**
-
-$${\textbf A}=\left[\begin{array}{cccc}
+\noindent {\textbf Ejemplo 2:} $${\textbf A}=\left[\begin{array}{cccc}
   1 & -1 & 2\\
   2 & 0 & 3\\
   0 & 1 & -1\\
@@ -1523,65 +1492,37 @@ $${\textbf A}=\left[\begin{array}{cccc}
 
 \vspace{0.5cm}
 
-**Factorización LU**
+{\noindent \textbf Factorización LU}
 
-Es la descomposición de una matriz en una matriz triangular inferior ${\textbf L}$ y una matriz triangular superior ${\textbf U}$, es decir 
-
-$${\textbf A}={\textbf L}{\textbf U}\,,$$ 
-donde 
-$${\textbf L}=\left(\begin{array}{cccc}
+\noindent Es la descomposición de una matriz en una matriz triangular inferior ${\textbf L}$ y una matriz triangular superior ${\textbf U}$, es decir $${\textbf A}={\textbf L}{\textbf U}\,,$$ donde $${\textbf L}=\left(\begin{array}{cccc}
   a_{12} & 0\\
   a_{21} & a_{22}\\
-\end{array}\right)\,$$ 
-
-es una matriz triangular inferior (L; lower) y 
-
-$$
+\end{array}\right)\,$$ es una matriz triangular inferior (L; lower) y $$
 {\textbf U}=\left(\begin{array}{cccc}
   a_{12} & a_{21}\\
   0 & a_{12}\\
-\end{array}\right)\,,$$ 
-
-es una matriz triangular superior (U; superior).\ 
-Esta factorización se suele usar para resolver un sistema de ecuaciones lineal ${\textbf A}{\textbf x}={\textbf b}$ y no es única. Es decir, pueden existir más de una factorización. Si sustituimos la definición de arriba 
-$${\textbf A}{\textbf x}=({\textbf L}{\textbf U}){\textbf x}={\textbf b}\,,$$ 
-lo que implica que 
-$${\textbf L}({\textbf U}{\textbf x})={\textbf b}\,.$$ 
-
-Si definimos ${\textbf U}{\textbf x}={\textbf z}$, entonces tenemos que 
-$${\textbf L}{\textbf z}={\textbf b}\,.$$ 
-
-Como ${\textbf L}$ es una matriz triangular inferior, podemos resolver para ${\textbf z}$ utilizando sustitución hacia delante. Luego, como ${\textbf U}$ es una matriz triangular superior, resolvemos ${\textbf U}{\textbf x}={\textbf z}$ por sustitución en reversa.
+\end{array}\right)\,,$$ es una matriz triangular superior (U; superior).\\ Esta factorización se suele usar para resolver un sistema de ecuaciones lineal ${\textbf A}{\textbf x}={\textbf b}$ y no es única. Es decir, pueden existir más de una factorización. Si sustituimos la definición de arriba $${\textbf A}{\textbf x}=({\textbf L}{\textbf U}){\textbf x}={\textbf b}\,,$$ lo que implica que $${\textbf L}({\textbf U}{\textbf x})={\textbf b}\,.$$ \\ Si definimos ${\textbf U}{\textbf x}={\textbf z}$, entonces tenemos que $${\textbf L}{\textbf z}={\textbf b}\,.$$ Como ${\textbf L}$ es una matriz triangular inferior, podemos resolver para ${\textbf z}$ utilizando sustitución hacia delante. Luego, como ${\textbf U}$ es una matriz triangular superior, resolvemos ${\textbf U}{\textbf x}={\textbf z}$ por sustitución en reversa.
 
 \vspace{0.5cm}
 
-**Ejemplo**:
+{\noindent \textbf Ejemplo:}
 
-Encuentre la descomposición LU de la matriz 
-
-$$\left(\begin{array}{ccccc}
+\noindent Encuentre la descomposición LU de la matriz $$\left(\begin{array}{ccccc}
   2 & 5\\
  -3 & -4\\
         \end{array}\right)\,.
 $$
 
-Si multiplicamos la primera fila por $L_{21}=3/2$ y le sumamos la segunda fila hacemos cero el elemento $a_{21}=-3$ 
-$${\textbf U}=\left(\begin{array}{ccccc}
+\noindent Si multiplicamos la primera fila por $L_{21}=3/2$ y le sumamos la segunda fila hacemos cero el elemento $a_{21}=-3$ $${\textbf U}=\left(\begin{array}{ccccc}
   2 & 5\\
  0 & 7/2\\
         \end{array}\right)\,.
-$$ 
-
-Esta matriz ya es una matriz triangular superior, es decir, la matriz ${\textbf U}$. Para encontrar la matriz triangular inferior solo debemos de conocer el valor del elemento $L_{21}$. Ese elemento es el multiplicador con signo opuesto usado en la eliminación de Gauss-Jordan. Es decir, $L_{21}=-3/2$. La matriz ${\textbf L}$ es 
-
-$${\textbf L}=\left(\begin{array}{ccccc}
+$$ Esta matriz ya es una matriz triangular superior, es decir, la matriz ${\textbf U}$. Para encontrar la matriz triangular inferior solo debemos de conocer el valor del elemento $L_{21}$. Ese elemento es el multiplicador con signo opuesto usado en la eliminación de Gauss-Jordan. Es decir, $L_{21}=-3/2$. La matriz ${\textbf L}$ es $${\textbf L}=\left(\begin{array}{ccccc}
   1 & 0\\
  -3/2 & 1\\
         \end{array}\right)\,.$$
 
-Vamos a comprobar que
-
-$$\left(\begin{array}{ccccc}
+\noindent Vamos a comprobar $$\left(\begin{array}{ccccc}
   1 & 0\\
  -3/2 & 1\\
         \end{array}\right)
@@ -1597,24 +1538,18 @@ $$\left(\begin{array}{ccccc}
 
 \vspace{0.5cm}
 
-**Ejemplo**:
+{\noindent \textbf Ejemplo:}
 
-Resuelva el siguiente sistema de ecuaciones con la descomposición LU 
+\noindent Resuelva el siguiente sistema de ecuaciones con la descomposición LU $$2x_1+3x_2+4x_3=6$$ $$4x_1+5x_2+10x_3=16$$ $$4x_1+8x_2+2x_3=2$$
 
-$$2x_1+3x_2+4x_3=6$$ $$4x_1+5x_2+10x_3=16$$ $$4x_1+8x_2+2x_3=2$$
-
-La matriz de coeficientes es 
-
-$${\textbf A}=\left(\begin{array}{ccccc}
+\noindent La matriz de coeficientes es $${\textbf A}=\left(\begin{array}{ccccc}
   2 & 3 & 4\\
   4 & 5 & 10\\
   4 & 8 & 2 \\
         \end{array}\right)\,.
 $$
 
-Si factorizamos 
-
-$${\textbf L}=\left(\begin{array}{ccccc}
+\noindent Si factorizamos $${\textbf L}=\left(\begin{array}{ccccc}
   1 & 0 & 0\\
   2 & 1 & 0\\
   2 & -2 & 1 \\
@@ -1629,8 +1564,7 @@ $${\textbf U}=\left(\begin{array}{ccccc}
   0 & 0 & 0 \\
         \end{array}\right)\,.$$
 
-Si utilizamos la identidad ${\textbf L}{\textbf z}={\textbf b}$ obtenemos 
-$$\left(\begin{array}{ccccc}
+\noindent Si utilizamos la identidad ${\textbf L}{\textbf z}={\textbf b}$ obtenemos $$\left(\begin{array}{ccccc}
   1 & 0 & 0\\
   2 & 1 & 0\\
   2 & -2 & 1 \\
@@ -1646,18 +1580,15 @@ $$\left(\begin{array}{ccccc}
   2 \\
         \end{array}\right)\,.$$
 
-Si resolvemos para ${\textbf z}$ $$z_1=6$$ $$z_2=16-2z_1=4$$ $$z_3=2+2z_2-2z_1=-2$$
+\noindent Si resolvemos para ${\textbf z}$ $$z_1=6$$ $$z_2=16-2z_1=4$$ $$z_3=2+2z_2-2z_1=-2$$
 
-Así que 
-
-$${\textbf z}=\left(\begin{array}{c}
+\noindent Así que $${\textbf z}=\left(\begin{array}{c}
   6 \\
   4 \\
   -2 \\
         \end{array}\right)\,.$$
 
-Si utilizamos ahora la definición ${\textbf U}{\textbf x}={\textbf z}\,,$ 
-$$\left(\begin{array}{ccccc}
+\noindent Si utilizamos ahora la definición ${\textbf U}{\textbf x}={\textbf z}\,,$ $$\left(\begin{array}{ccccc}
   2 & 3 & 4\\
   0 & -1 & 2\\
   0 & 0 & 0 \\
@@ -1671,15 +1602,9 @@ $$\left(\begin{array}{ccccc}
   6 \\
   4 \\
   -2 \\
-        \end{array}\right)\,,$$ 
-        
-y obtenemos 
+        \end{array}\right)\,,$$ \noindent y obtenemos $$x_3=1$$ $$x_2=\frac{4-2x_3}{-1}=-2$$ $$x_1=\frac{6-4x_3-3x_2}{2}=4$$
 
-$$x_3=1$$ $$x_2=\frac{4-2x_3}{-1}=-2$$ $$x_1=\frac{6-4x_3-3x_2}{2}=4$$
-
-Por lo tanto la solución del sistema de ecuaciones es 
-
-$${\textbf x}=\left(\begin{array}{c}
+\noindent Por lo tanto la solución del sistema de ecuaciones es $${\textbf x}=\left(\begin{array}{c}
   4 \\
   -2\\
   1 \\
@@ -1687,9 +1612,9 @@ $${\textbf x}=\left(\begin{array}{c}
 
 \vspace{0.5cm}
 
-#### Valores propios y vectores propios
+{\noindent \textbf Valores propios y vectores propios}
 
-Sea ${\textbf A}$ una matriz cuadrada, un número real $\lambda$ se dice que es un valor propio de ${\textbf A}$ si existe un vector, diferente del vector cero, ${\textbf x}$ tal que $${\textbf A}{\textbf x}=\lambda{\textbf x}\,.$$
+\noindent Sea ${\textbf A}$ una matriz cuadrada, un número real $\lambda$ se dice que es un valor propio de ${\textbf A}$ si existe un vector, diferente del vector cero, ${\textbf x}$ tal que $${\textbf A}{\textbf x}=\lambda{\textbf x}\,.$$
 
 \noindent Es decir, ${\textbf x}$ es un vector que al transformarlo mediante la multiplicación por ${\textbf A}$ el vector resultante mantiene la misma dirección; solamente se modifica su longitud (magnitud) y/o sentido. El valor propio $\lambda$ nos informa si el vector propio ${\textbf x}$ se acorta o alarga o cambia de signo cuando es multiplicado por ${\textbf A}$.
 
@@ -1701,23 +1626,17 @@ Sea ${\textbf A}$ una matriz cuadrada, un número real $\lambda$ se dice que es 
 
 {\noindent \textbf Ejemplo:}
 
-\noindent Calcula los valores propios y vectores propios de la matriz 
-
-$${\textbf A}=\left(\begin{array}{ccccc}
+\noindent Calcula los valores propios y vectores propios de la matriz $${\textbf A}=\left(\begin{array}{ccccc}
   1 & 2\\
   2 & 4\\
         \end{array}\right)\,.$$
 
-Sabemos 
-
-$$|{\textbf A}-\lambda{\textbf I}|=\left|\begin{array}{ccccc}
+\noindent Sabemos $$|{\textbf A}-\lambda{\textbf I}|=\left|\begin{array}{ccccc}
   1-\lambda & 2\\
   2 & 4-\lambda\\
         \end{array}\right|=\lambda^2-5\lambda=0\,.$$
 
-\noindent El polinomio de arriba se llama polinomio característico y es igual a cero cuando $\lambda$ es un valor propio. Resolviendo obtenemos dos soluciones $\lambda=0$ y $\lambda=5$. Ahora para encontrar los vectores propios debemos resolver el sistema $({\textbf A}-\lambda{\textbf I}){\textbf x}=0$ separadamente para las dos $\lambda$: 
-
-$$({\textbf A}-0{\textbf I}){\textbf x}=
+\noindent El polinomio de arriba se llama polinomio característico y es igual a cero cuando $\lambda$ es un valor propio. Resolviendo obtenemos dos soluciones $\lambda=0$ y $\lambda=5$. Ahora para encontrar los vectores propios debemos resolver el sistema $({\textbf A}-\lambda{\textbf I}){\textbf x}=0$ separadamente para las dos $\lambda$: $$({\textbf A}-0{\textbf I}){\textbf x}=
 \left(\begin{array}{ccccc}
   1 & 2\\
   2 & 4\\
@@ -1732,7 +1651,7 @@ $$({\textbf A}-0{\textbf I}){\textbf x}=
       \end{array}\right)\,\,\,\rightarrow\,\,\,{\textbf x}=\left(\begin{array}{c}
   2 \\
   -1 \\
-      \end{array}\right)\,\,\,{\rm para}\,\,\,\lambda_1=0\,,$$
+      \end{array}\right)\,\,\,{ para}\,\,\,\lambda_1=0\,,$$
 
 y
 
@@ -1751,11 +1670,11 @@ $$({\textbf A}-5{\textbf I}){\textbf x}=
       \end{array}\right)\,\,\,\rightarrow\,\,\,{\textbf x}=\left(\begin{array}{c}
   1 \\
   2 \\
-      \end{array}\right)\,\,\,{\rm para}\,\,\,\lambda_2=5\,.$$
+      \end{array}\right)\,\,\,{ para}\,\,\,\lambda_2=5\,.$$
 
 \vspace{0.25cm}
 
- **Ejercicio**: Calcule los valores y vectores propios de la matriz de rotación
+\noindent {\textbf Ejercicio:} Calcule los valores y vectores propios de la matriz de rotación
 
 $${\textbf R}=
 \left(\begin{array}{ccccc}
@@ -1831,7 +1750,7 @@ Sea $${\textbf y}={\textbf A}{\textbf x}\,,$$ donde ${\textbf y}$ es $m\times 1$
 
 ## Cuadrados mínimos y regresión
 
-\noindent En esta sección se van a introducir algunos modelos lineales estadísticos o modelos de regresión. Aqui se incluyen ajustes lineales por mínimos cuadrados, coeficientes de correlación, regresión múltiple, etc.
+\noindent En esta sección se van a introducir algunos modelos lineales estadísticos o modelos de regresión. Aqui se incluyen ajustes lineales por cuadrados mínimos, coeficientes de correlación, regresión múltiple, etc.
 
 ### Métodos de cuadrados mínimos
 
@@ -1841,47 +1760,24 @@ Sea $${\textbf y}={\textbf A}{\textbf x}\,,$$ donde ${\textbf y}$ es $m\times 1$
 
 {\noindent \textbf (A) \large Mínimos cuadrados lineales} \\ Empezamos aplicando el método en términos de estimación lineal. Nos referimos a lineal en cuanto a los coeficientes $b_0, b_1,...,b_k$, es decir, $y=b_0 + b_1x_1 + \epsilon$ es lineal, pero $y=b_0+sin(b_1x_1)$ no lo es. \\
 
-(1) {\textbf Ajuste de una recta a un conjunto de datos} \\ \noindent Queremos usar los mejores coeficientes $b_0$ y $b_1$ en el sentido que se reduzca la desviación estandar de la recta ajustada versus los datos. Sea $i=1,2,...,N$ observaciones, entonces $$y_i=\hat{y_i} + \epsilon\,,$$ donde $$\hat{y_i}=b_0+b_1 x_i$$ es el estimador estadístico y $\epsilon$ es el residuo (medida de la diferencia de la recta ajustada versus conjunto de puntos). Para encontrar $b_0, \, b_1$ debemos de minimizar la suma de los errores cuadrados (SEC), donde SEC es la varianza total que no es explicada por nuestro modelo de regresión lineal $$SEC=\sum^N_{i=1} \epsilon^2_i=\sum^N_{i=1} (y_i - \hat{y_i})^2=\sum^N_{i=1} [y_i - (b_0+b_1 x_i)]^2\,.$$ \\
+(1) {\textbf Ajuste de una recta a un conjunto de datos} \\ \noindent Queremos usar los mejores coeficientes $b_0$ y $b_1$ en el sentido que se reduzca la desviación estándar de la recta ajustada versus los datos. Sea $i=1,2,...,N$ observaciones, entonces $$y_i=\hat{y_i} + \epsilon\,,$$ donde $$\hat{y_i}=b_0+b_1 x_i$$ es el estimador estadístico y $\epsilon$ es el residuo (medida de la diferencia de la recta ajustada versus conjunto de puntos). Para encontrar $b_0, \, b_1$ debemos de minimizar la suma de los errores cuadrados (SEC), donde SEC es la varianza total que no es explicada por nuestro modelo de regresión lineal $$SEC=\sum^N_{i=1} \epsilon^2_i=\sum^N_{i=1} (y_i - \hat{y_i})^2=\sum^N_{i=1} [y_i - (b_0+b_1 x_i)]^2\,.$$ \\
 
-La suma de los cuadrados totales se define como 
-$$SCT=\sum^N_{i=1} (y_i - \bar{y})^2\,,$$ 
+La suma de los cuadrados totales se define como $$SCT=\sum^N_{i=1} (y_i - \bar{y})^2\,,$$ y la suma de los cuadrados residuales $$SCR=\sum^N_{i=1} (\hat{y_i} - \bar{y})^2\,.$$ \\ La SCT es proporcional a la varianza de los datos y SCR es proporcional a la cantidad de varianza explicada por nuestra regresión. La varianza total (o SCT) se puede descomponer en función de SCR y SEC como: $$SCT=\sum^N_{i=1}(y_i-\bar{y})^2 = \sum^N_{i=1}(\hat{y_i} + \epsilon_i - \bar{y})^2
+=\sum^N_{i=1}((\hat{y_i}- \bar{y}) + \epsilon_i)^2=\sum^N_{i=1}(\hat{y_i}- \bar{y})^2 +$$ $$+\sum^N_{i=1}\epsilon_i^2 + 2\sum^N_{i=1}(\hat{y_i}- \bar{y})\epsilon_i\,,$$ y por lo tanto $$SCT=SCR + SEC\,$$ \\ ya que por las ecuaciones normales $2\sum^N_{i=1}(\hat{y_i}- \bar{y})\epsilon_i=0$.\
 
-y la suma de los cuadrados residuales 
+\noindent El problema de mínimos cuadrados consiste en minimizar la SEC con respecto los coeficientes, cuyas condiciones son $$\frac{\partial{SEC}}{\partial{b_0}}=0; \frac{\partial{SEC}}{\partial{b_1}}=0\,.$$\
 
-$$SCR=\sum^N_{i=1} (\hat{y_i} - \bar{y})^2\,.$$ \
-
-La SCT es proporcional a la varianza de los datos y SCR es proporcional a la cantidad de varianza explicada por nuestra regresión. La varianza total (o SCT) se puede descomponer en función de SCR y SEC como: 
-
-$$SCT=\sum^N_{i=1}(y_i-\bar{y})^2 = \sum^N_{i=1}(\hat{y_i} + \epsilon_i - \bar{y})^2
-=\sum^N_{i=1}((\hat{y_i}- \bar{y}) + \epsilon_i)^2=\sum^N_{i=1}(\hat{y_i}- \bar{y})^2 +$$ 
-
-$$+\sum^N_{i=1}\epsilon_i^2 + 2\sum^N_{i=1}(\hat{y_i}- \bar{y})\epsilon_i\,,$$ y por lo tanto 
-
-$$SCT=SCR + SEC\,$$ \ 
-
-ya que por las ecuaciones normales $2\sum^N_{i=1}(\hat{y_i}- \bar{y})\epsilon_i=0$.\
-
-El problema de mínimos cuadrados consiste en minimizar la SEC con respecto los coeficientes, cuyas condiciones son 
-
-$$\frac{\partial{SEC}}{\partial{b_0}}=0; \frac{\partial{SEC}}{\partial{b_1}}=0\,.$$\
-
-\noindent Substituyendo obtenemos para $b_0$ 
-
-$$\frac{\partial{SEC}}{\partial{b_0}} =\frac{\partial}{\partial{b_0}}
+\noindent Substituyendo obtenemos para $b_0$ $$\frac{\partial{SEC}}{\partial{b_0}} =\frac{\partial}{\partial{b_0}}
   \left\{
     \sum^N_{i=1} [y_i - (b_0+b_1 x_i)]^2
   \right\}=
-  -2\sum^N_{i=1} [y_i - (b_0+b_1 x_i)]=$$ 
-  
-  $$=-2\left(\sum^N_{i=1}y_i -N b_0 - b_1\sum^N_{i=1} x_i  \right)=0\,,$$ y para $b_1$ 
-  
-$$\frac{\partial{SEC}}{\partial{b_1}} =\frac{\partial{}}{\partial{b_1}}
+  -2\sum^N_{i=1} [y_i - (b_0+b_1 x_i)]=$$ $$=-2\left(\sum^N_{i=1}y_i -N b_0 - b_1\sum^N_{i=1} x_i  \right)=0\,,$$ y para $b_1$ $$\frac{\partial{SEC}}{\partial{b_1}} =\frac{\partial{}}{\partial{b_1}}
   \left\{
     \sum^N_{i=1} [y_i - (b_0+b_1 x_i)]^2
   \right\}=
-  -2\sum^N_{i=1} x_i [y_i - (b_0+b_1 x_i)]=$$ $$=-2\left(\sum^N_{i=1}x_i y_i - b_0\sum^N_{i=1}x_i - b_1\sum^N_{i=1} x^2_i \right)=0\,.$$
+  -2\sum^N_{i=1} x_i [y_i - (b_0+b_1 x_i)]=$$ $$=-2\left(\sum^N_{i=1}x_i y_i - b_0\sum^N_{i=1}x_i - b_1\sum^N_{i=1} x^2_i \right)=0\,.$$\
 
-Si resolvemos para $b_0$
+\noindent Si resolvemos para $b_0$
 
 $$b_0=\bar{y}-b_1\bar{x}\,,$$
 
@@ -1891,9 +1787,7 @@ $$b_1=\frac{N \sum\limits^N_{i=1} x_i y_i - \sum\limits^N_{i=1}x_i \sum\limits^N
            {N\sum\limits^N_{i=1}x^2_i-\left(\sum\limits^N_{i=1}x_i \right)^2}=
       \frac{\sum\limits^N_{i=1} x_i y_i - \frac{1}{N}\sum\limits^N_{i=1}x_i \sum\limits^N_{i=1}y_i}
            {\sum\limits^N_{i=1}x^2_i-\frac{1}{N}\left(\sum\limits^N_{i=1}x_i \right)^2}=$$ $$=\frac{(N-1)C_{xy}}{(N-1)s^2_x}=\frac{\sum\limits^N_{i=1} (x_i-\bar{x})(y_i-\bar{y})}
-{\sum\limits^N_{i=1} (x_i-\bar{x})^2}=\frac{<x'y'>}{<x'^2>}\,,$$ 
-
-donde $C_{xy}=<x'y'>$ es la covarianza entre $x$ e $y$, y $s^2_x=<x'^2>$ es la varianza de $x$. Así, una vez hemos calculado las medias de las variables $x$ e $y$, podemos encontrar el coeficiente $b_1$ y, a partir de este, calcular el segundo coeficiente $b_0$.\
+                                      {\sum\limits^N_{i=1} (x_i-\bar{x})^2}=\frac{<x'y'>}{<x'^2>}\,,$$ donde $C_{xy}=<x'y'>$ es la covarianza entre $x$ e $y$, y $s^2_x=<x'^2>$ es la varianza de $x$. Así, una vez hemos calculado las medias de las variables $x$ e $y$, podemos encontrar el coeficiente $b_1$ y, a partir de este, calcular el segundo coeficiente $b_0$.\
 \
 \noindent Si sustituimos $b_0=\bar{y}-b_1\bar{x}$ en la ecuación de la regresión lineal $\hat{y_i}=b_0+b_1 x_i$
 
@@ -1915,31 +1809,21 @@ es el porcentaje de varianza explicada por nuestra regresión lineal (varianza e
 
 \vspace{0.5cm}
 
-{\noindent \textbf Error estandar de la estimación}
+{\noindent \textbf Error estándar de la estimación}
 
-\noindent Una medida de la magnitud absoluta de la bondad del ajuste es el error estandar del estimado, $s_{\epsilon}$, definido como
+\noindent Una medida de la magnitud absoluta de la bondad del ajuste es el error estándar del estimado, $s_{\epsilon}$, definido como
 
 $$s_{\epsilon}=[SEC/(N-2)]^{1/2}=\left[ \frac{1}{N-2}\sum\limits^N_{i=1} (y-\hat{y})^2\right]^{1/2}\,.$$
 
-El número de grados de libertad, $N-2$, se debe a que necesitamos estimar dos parámetros para encontrar realizar la regresión lineal. Si ${\epsilon}$ es una variable aleatoria que sigue una distribución Normal de media cero y desviación estandar $s_{\epsilon}$, entonces, el $68.3\%$ de las observaciones caen dentro del intervalo $\pm 1s_{\epsilon}$ unidades de la recta ajustada, $95.4\%$ caerá dentro del intervalo $\pm 2 s_{\epsilon}$ unidades de la recta, y $99.7\%$ caerán en el intervalo $\pm 3 s_{\epsilon}$ unidades de la recta. $s_{\epsilon}$ es la desviación estandar de $y$ alrededor de su media, i.e., la recta ajustada $b_0 + b_1 x$.
+El número de grados de libertad, $N-2$, se debe a que necesitamos estimar dos parámetros para encontrar realizar la regresión lineal. Si ${\epsilon}$ es una variable aleatoria que sigue una distribución Normal de media cero y desviación estándar $s_{\epsilon}$, entonces, el $68.3\%$ de las observaciones caen dentro del intervalo $\pm 1s_{\epsilon}$ unidades de la recta ajustada, $95.4\%$ caerá dentro del intervalo $\pm 2 s_{\epsilon}$ unidades de la recta, y $99.7\%$ caerán en el intervalo $\pm 3 s_{\epsilon}$ unidades de la recta. $s_{\epsilon}$ es la desviación estándar de $y$ alrededor de su media, i.e., la recta ajustada $b_0 + b_1 x$.
 
 \vspace{0.5cm}
 
 **Generalización de mínimos cuadrados en notación matricial**
 
-\noindent Supongamos el modelo dependiente de $k$ variables independientes $X_k$ $$Y=b_0 + b_1 X_1 + b_2 X_2 + .... + b_k X_k + \epsilon\,,$$ y supongamos que hacemos N observaciones independientes $y_1, y_2,....,y_N$ de $Y$. Por lo tanto podemos escribir el modelo como
+\noindent Supongamos el modelo dependiente de $k$ variables independientes $X_k$ $$Y=b_0 + b_1 X_1 + b_2 X_2 + .... + b_k X_k + \epsilon\,,$$ y supongamos que hacemos N observaciones independientes $y_1, y_2,....,y_N$ de $Y$. Por lo tanto podemos escribir el modelo como $$y_i=b_0 + b_1 x_{i1} + b_2 x_{i2} + ... + b_k x_{ik} + \epsilon_i\,,$$ donde $x_{ij}$ es la observación $i$ del de la variable independiente $j$. Es decir, $$N;\,\,{ observaciones}$$ $$k;\,\,{ variables\,\,independientes}$$ $$k+1;\,\,{ coeficientes}$$
 
-$$y_i=b_0 + b_1 x_{i1} + b_2 x_{i2} + ... + b_k x_{ik} + \epsilon_i\,,$$ 
- 
- donde $x_{ij}$ es la observación $i$ del de la variable independiente $j$. Es decir, 
- 
- $$N;\,\,{\rm observaciones}$$ 
- 
- $$k;\,\,{\rm variables\,\,independientes}$$ $$k+1;\,\,{\rm coeficientes}$$
-
-\noindent Si escribimos en notación matricial
-
-$${\textbf Y}=\left(\begin{array}{c}
+\noindent Si escribimos en notación matricial $${\textbf Y}=\left(\begin{array}{c}
   y_1\\
   y_2\\
   ...\\
@@ -1952,9 +1836,7 @@ $${\textbf Y}=\left(\begin{array}{c}
   ... & ... & ... & ...\\
   ... & ... & ... & ...\\
   1 & x_{N1} & ... & x_{Nk}\\
-      \end{array}\right)$$ 
-      
-$${\textbf B}=\left(\begin{array}{c}
+      \end{array}\right)$$ $${\textbf B}=\left(\begin{array}{c}
   b_0\\
   b_1\\
   ...\\
@@ -1968,89 +1850,39 @@ $${\textbf B}=\left(\begin{array}{c}
   ...\\
   ...\\
   \epsilon_N
-\end{array}\right)\,.$$ 
-
- De esta forma, podemos escribir nuestro modelo en notación matricial como 
- 
- $${\textbf Y}={\textbf X}{\textbf B} + {\textbf E}\,.$$ 
- 
-Si restringimos el modelo a una variable independiente ($k=1$), i.e. dos coeficientes $(b_0, b_1)$, entonces 
-
-$${\textbf B}=\left(\begin{array}{c}
+      \end{array}\right)\,.$$ \\ \\ \noindent De esta forma, podemos escribir nuestro modelo en notación matricial como $${\textbf Y}={\textbf X}{\textbf B} + {\textbf E}\,.$$ \\ \\ \noindent Si restringimos el modelo a una variable independiente ($k=1$), i.e. dos coeficientes $(b_0, b_1)$, entonces $${\textbf B}=\left(\begin{array}{c}
   b_0\\
   b_1\\
-  \end{array}\right)\,,$$ es la matriz de coeficientes, e $${\textbf X}=\left(\begin{array}{cc}
+      \end{array}\right)\,,$$ es la matriz de coeficientes, e $${\textbf X}=\left(\begin{array}{cc}
   1& x_{11}\\
   1& x_{21}\\
   ... & ...\\
   ... & ...\\
    ... & ...\\
-  1& x_{N1}\end{array}\right)\,,
-$$ 
- 
- es la matriz de variables independientes. Si utilizamos la definición de los residuos como $${\textbf E}={\textbf Y}-{\textbf X}{\textbf B}\,,$$ podemos encontrar la suma de los residuos al cuadrado como 
-$$SEC=\sum^N_{i=1} \epsilon^2_i=\sum^N_{i=1} \epsilon_i \epsilon_i=
-{\textbf E}^T{\textbf E}=({\textbf Y}-{\textbf X}{\textbf B})^T({\textbf Y}-{\textbf X}{\textbf B})=$$ 
-
-$${\textbf Y}^T{\textbf Y} - {\textbf Y}^T{\textbf X}{\textbf B}-{\textbf B}^T{\textbf X}^T{\textbf Y}+{\textbf B}^T
+ 1 & x_{N1}
+ \end{array}\right)\,,$$ es la matriz de variables independientes. Si utilizamos la definición de los residuos como $${\textbf E}={\textbf Y}-{\textbf X}{\textbf B}\,,$$ podemos encontrar la suma de los residuos al cuadrado como $$SEC=\sum^N_{i=1} \epsilon^2_i=\sum^N_{i=1} \epsilon_i \epsilon_i=
+{\textbf E}^T{\textbf E}=({\textbf Y}-{\textbf X}{\textbf B})^T({\textbf Y}-{\textbf X}{\textbf B})=$$ $${\textbf Y}^T{\textbf Y} - {\textbf Y}^T{\textbf X}{\textbf B}-{\textbf B}^T{\textbf X}^T{\textbf Y}+{\textbf B}^T
 {\textbf X}^T{\textbf X}{\textbf B}\,.$$
 
-\noindent Si queremos minimizar esa suma de errores entonces $$\frac{\partial{SEC}}{\partial{\textbf B}}=0\,.$$ Para calcular las derivadas de ${SEC}$ respecto de los coeficientes ${\textbf b}$ vamos a asumir las siguientes consideraraciones \
-
-(i) ${\textbf Y}^T{\textbf X}{\textbf B}={\textbf B}^T{\textbf X}^T{\textbf Y}$ ya que son matrices elemento ($1\times1$) y siempre son simétricas. Por lo tanto $-{\textbf Y}^T{\textbf X}{\textbf B}-{\textbf B}^T{\textbf X}^T{\textbf Y}=-2{\textbf B}^T{\textbf X}^T{\textbf Y}$, y su derivada $$-2{\textbf X}^T{\textbf Y}\,.$$ \
-
-(ii) $\partial{{\textbf B}^T{\textbf X}^T{\textbf X}{\textbf B}}/\partial{\textbf B}=2{\textbf X}^T{\textbf X}{\textbf B}$. Para demostrar esto tomemos el caso para el ajuste lineal (2 parámetros). Definamos los elementos de ${\textbf X}^T{\textbf X}$ como $c_{ij}\,\,i,j=1,2$ y $c_{12}=c_{21}$ por ser simétrica. Entonces 
-
-$${\textbf B}^T{\textbf X}^T{\textbf X}{\textbf B}=c_{11}b_0^2+c_{22}b_1^2 + 2c_{12} b_0 b_1\,,$$ 
-
-y su derivada respecto $b_0$ es 
-
-$$2c_{11}b_0 + 2c_{12}b_1$$ 
-
-y respecto a $b_1$ es 
-
-$$2c_{12}b_0 + 2c_{22}b_1\,.$$ 
-
-Si acomodamos las derivadas en un vector columna $2\times1$ obtenemos 
-
-$$\left(\begin{array}{c}
+\noindent Si queremos minimizar esa suma de errores entonces $$\frac{\partial{SEC}}{\partial{\textbf B}}=0\,.$$ Para calcular las derivadas de ${SEC}$ respecto de los coeficientes ${\textbf b}$ vamos a asumir las siguientes consideraraciones \\ \\ (i) ${\textbf Y}^T{\textbf X}{\textbf B}={\textbf B}^T{\textbf X}^T{\textbf Y}$ ya que son matrices elemento ($1\times1$) y siempre son simétricas. Por lo tanto $-{\textbf Y}^T{\textbf X}{\textbf B}-{\textbf B}^T{\textbf X}^T{\textbf Y}=-2{\textbf B}^T{\textbf X}^T{\textbf Y}$, y su derivada $$-2{\textbf X}^T{\textbf Y}\,.$$ \\ \\ (ii) $\partial{{\textbf B}^T{\textbf X}^T{\textbf X}{\textbf B}}/\partial{\textbf B}=2{\textbf X}^T{\textbf X}{\textbf B}$. Para demostrar esto tomemos el caso para el ajuste lineal (2 parámetros). Definamos los elementos de ${\textbf X}^T{\textbf X}$ como $c_{ij}\,\,i,j=1,2$ y $c_{12}=c_{21}$ por ser simétrica. Entonces $${\textbf B}^T{\textbf X}^T{\textbf X}{\textbf B}=c_{11}b_0^2+c_{22}b_1^2 + 2c_{12} b_0 b_1\,,$$ y su derivada respecto $b_0$ es $$2c_{11}b_0 + 2c_{12}b_1$$ y respecto a $b_1$ es $$2c_{12}b_0 + 2c_{22}b_1\,.$$ Si acomodamos las derivadas en un vector columna $2\times1$ obtenemos $$\left(\begin{array}{c}
   2c_{11}b_0 + 2c_{12}b_1 \\
   2c_{12}b_0 + 2c_{22}b_1 \\
-        \end{array}\right)=2{\textbf X}^T{\textbf X}{\textbf B}\,.$$ 
-
-y por lo tanto 
-
-$$\frac{\partial{S}}{\partial{\textbf B}}=-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf B}\,,$$ 
-
-y las ecuaciones normales quedan 
-
-$$-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf
+        \end{array}\right)=2{\textbf X}^T{\textbf X}{\textbf B}\,.$$ y por lo tanto $$\frac{\partial{S}}{\partial{\textbf B}}=-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf
+B}\,,$$ y las ecuaciones normales quedan $$-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf
 B}=0\,.$$
 
-\noindent Finalmente, el problema de mínimos cuadrados es 
-$$({\textbf X}^T{\textbf X}){\textbf B}={\textbf X}^T{\textbf Y}\,.$$ 
-
-Y resolviendo para ${\textbf B}$ la forma general del método de regresión por mínimos cuadrados es 
-
-$${\textbf B}=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T{\textbf Y}\,,$$ 
-
-o equivalentemente 
-
-$${\textbf B}^T={\textbf Y}^T{\textbf X}({\textbf X}^T{\textbf X})^{-1}\,.$$
+\noindent Finalmente, el problema de mínimos cuadrados es $$({\textbf X}^T{\textbf X}){\textbf B}={\textbf X}^T{\textbf Y}\,.$$ Y resolviendo para ${\textbf B}$ la forma general del método de regresión por mínimos cuadrados es $${\textbf B}=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T{\textbf Y}\,,$$ o equivalentemente $${\textbf B}^T={\textbf Y}^T{\textbf X}({\textbf X}^T{\textbf X})^{-1}\,.$$
 
 \vspace{0.5cm}
 
-#### Propiedades estadísticas
-
-Algunas de las consideraciones de un modelo de regresión múltiple son:
+\noindent {\textbf Propiedades estadísticas} \\ \noindent Algunas de las consideraciones de un modelo de regresión múltiple son:
 
 ```{=tex}
 \begin{itemize}
 \item[1.]Distribuciones aleatorias con media cero. El vector
 $N\times1$ de errores, $\epsilon$, sigue una distribución aleatoria de
-media cero tal que $E[\epsilon]=0$, es ecir, 
-$E[\epsilon_i]=0\,(i=1,2,....,N)$.
-
+media cero tal que $E[\epsilon]=0$, es ecir, $E[\epsilon_i]=
+0\,(i=1,2,....,N)$.
 \item[2.]Homoscedasticidad. La matriz de covarianzas de los errores
 $E[\epsilon \epsilon']$ existe y los elementos de la diagonal
 principal son igual a $\sigma^2$, es decir,
@@ -2063,102 +1895,49 @@ $\beta$, y el escalar $\sigma$ son números fijos desconocidos con
 $\sigma>0$.
 \item[5.]Modelo lineal. Los valores del vector dependiente $y$ han sido
 generados a partir de el modelo de regresión lineal multivariado:
-
-$${\rm y}={\textbf X}\beta + \epsilon$$
-
+$${ y}={\textbf X}\beta + \epsilon$$
 \item[6.]Normalidad. Las distribuciones aleatorias de los errores siguen
 una distribución Normal. Las consideraciones 2 y 3 pueden expresarse en
 notación matricial
-
 $$E[\epsilon \epsilon']=\sigma^2\,{\textbf I}\,,$$
 donde ${\textbf I}$ es la matrix identidad $N\times N$. Si además la
 consideración 1 se cumple, entonces $\epsilon$ sigue una distribución Normal
 $$\epsilon\sim N(0,\sigma^2{\textbf I})\,.$$
 \\
-\noindent {Las consideraciones 3 y 6 implican que las distribuciones aleatorias $\epsilon_i,\,i=1,2,....,N$ son linealmente independientes.}
+\noindent Las consideraciones 3 y 6 implican que las distribuciones aleatorias $\epsilon_i,\,
+i=1,2,....,N$ son linealmente independientes.
 \end{itemize}
 ```
 \vspace{0.5cm}
 
-**Mínimos cuadrados no tienen sesgo** 
-
-La esperanza del vector de coeficientes $k\times 1$, $b$, se obtiene a partir de las consideraciones 1,4, y 5. La consideración 5 implica que el estimador de los coeficientes $b=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T {\rm y}$ se puede escribir cómo
+\noindent {\textbf Mínimos cuadrados no tienen sesgo} \\ \noindent La esperanza del vector de coeficientes $k\times 1$, $b$, se obtiene a partir de las consideraciones 1,4, y 5. La consideración 5 implica que el estimador de los coeficientes $b=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T { y}$ se puede escribir cómo
 
 $$b=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T({\textbf X} \beta + \epsilon)={\textbf I}\beta +
     ({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T \epsilon\,.$$ \\
 
-De las consideraciones 1, y 4 obtenemos 
-
-$$E[b]=E[\beta + ({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T\epsilon]=
-  \beta + ({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T \underbrace{E[\epsilon]}_{0}=\beta\,,$$ 
-  
-lo que implica que $b$ es insesgado.
+\noindent De las consideraciones 1, y 4 obtenemos $$E[b]=E[\beta + ({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T\epsilon]=
+  \beta + ({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T \underbrace{E[\epsilon]}_{0}=\beta\,,$$ lo que implica que $b$ es insesgado.
 
 \vspace{0.5cm}
 
-**Matriz de varianza de** $b$ \
-
-Usando el resultado de arriba, bajo las consideraciones 1-6, la matriz de varianza de los estimadores de los coeficientes $b$ (o momento centrado de orden 2) viene dada por 
-
-$${\rm var(b)}=E[(b-\beta)(b-\beta)^T]=E[({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T\epsilon \epsilon^T{\textbf X}
-    ({\textbf X}^T{\textbf X})^{-1}]=$$ 
-$$=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T E[\epsilon \epsilon^T]{\textbf X}({\textbf X}^T{\textbf X})^{-1}=
+\noindent {\textbf Matriz de varianza de $b$} \\ \noindent Usando el resultado de arriba, bajo las consideraciones 1-6, la matriz de varianza de los estimadores de los coeficientes $b$ (o momento centrado de orden 2) viene dada por $${ var(b)}=E[(b-\beta)(b-\beta)^T]=E[({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T\epsilon \epsilon^T{\textbf X}
+    ({\textbf X}^T{\textbf X})^{-1}]=$$ $$=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T E[\epsilon \epsilon^T]{\textbf X}({\textbf X}^T{\textbf X})^{-1}=
     ({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T(\sigma^2{\textbf I}){\textbf X}({\textbf X}^T{\textbf X})^{-1}=
-    \sigma^2({\textbf X}^T{\textbf X})^{-1}\,.$$ \
-
-Los elementos de la diagonal principal de esta matriz son las varianzas asociadas a los estimadores de los coeficientes $b$, y los elementos fuera de la diagonal principal representan la covarianza entre esos estimadores. \
-Si asumimos que las variables del problema han sido estandarizadas, es decir la media ha sido extraida de las variables $x_{ij}$ e $y_i$ y hemos dividido por las desviaciones estandar 
-
-$${\textbf X}^T{\textbf X}=\left(\begin{array}{cccc}
+    \sigma^2({\textbf X}^T{\textbf X})^{-1}\,.$$ \\ \\ \noindent Los elementos de la diagonal principal de esta matriz son las varianzas asociadas a los estimadores de los coeficientes $b$, y los elementos fuera de la diagonal principal representan la covarianza entre esos estimadores. \\ Si asumimos que las variables del problema han sido estandarizadas, es decir la media ha sido extraida de las variables $x_{ij}$ e $y_i$ y hemos dividido por las desviaciones estándar $${\textbf X}^T{\textbf X}=\left(\begin{array}{cccc}
    \sum\limits_{i=1}^N{x_{i1}x_{i1}} & \sum\limits_{i=1}^N{x_{i1}x_{i2}} & ... & \sum\limits_{i=1}^N{x_{i1}x_{ik}}\\
    \sum\limits_{i=1}^N{x_{i2}x_{i1}} & \sum\limits_{i=1}^N{x_{i2}x_{i2}} & ... & \sum\limits_{i=1}^N{x_{i2}x_{ik}}\\
-        . & . & . \\
+                . & . & . \\
         . & . & . \\
         . & . & . \\
    \sum\limits_{i=1}^N{x_{ik}x_{i1}} & \sum\limits_{i=1}^N{x_{ik}x_{i2}} & ... & \sum\limits_{i=1}^N{x_{ik}x_{ik}}\\
-        \end{array}\right)\,,$$ 
-
-es una matriz $k\times k$ y en notación índice se puede escribir como 
-
-$$[{\textbf X}^T{\textbf X}]_{nm}=(N-1)\rho_{x_{in} x_{im}}\,\,;(i=1,2,...,N)\,,$$ 
-
-que se puede interpretar como la matriz de correlaciones entre las variables independientes. La matriz 
-
-$${\textbf X}^T{\textbf Y}=\left(\begin{array}{c}
+        \end{array}\right)\,,$$ es una matriz $k\times k$ y en notación índice se puede escribir como $$[{\textbf X}^T{\textbf X}]_{nm}=(N-1)\rho_{x_{in} x_{im}}\,\,;(i=1,2,...,N)\,,$$ que se puede interpretar como la matriz de correlaciones entre las variables independientes. La matriz $${\textbf X}^T{\textbf Y}=\left(\begin{array}{c}
   \sum\limits_{i=1}^N y_i x_{i1}\\
   \sum\limits_{i=1}^N y_i x_{i2}\\
                    . \\
            . \\
            . \\
   \sum\limits_{i=1}^N y_i x_{ik}\\
-        \end{array}\right)\,,$$ 
-        
-es una matriz $k\times 1$ y en notación índice es 
-
-$$[{\textbf Y}^T{\textbf X}]_n=(N-1)\rho_{y_i x_{in}}\,\,;(i=1,2,...,N)\,.$$ 
-Esta matriz se puede interpretar como la matriz de correlación entre las variables independientes y dependientes. \ 
-
-El modelo multivariado en notación índice es 
-
-$$(N-1)\rho_{x_{in} x_{im}}b_m=(N-1)\rho_{y_i x_{in}}$$
-
-o 
-
-$$\rho_{x_{in} x_{im}}b_m=\rho_{y_i x_{in}}\,;m=n=1,2,....,k; i=1,2,...,N$$ 
-
-y para una única observación $i$ dada obtenemos 
-
-$$\rho_{x_{n} x_{m}}b_m=\rho_{y x_{n}}\,$$ 
-
-Ahora supongamos, por simplicidad, que solo tenemos dos variables independientes. Entonces: 
-
-$$\rho_{x_{1} x_{1}}b_1+\rho_{x_{1} x_{2}}b_2=\rho_{y x_{1}}$$ 
-
-$$\rho_{x_{2} x_{1}}b_1+\rho_{x_{2} x_{2}}b_2=\rho_{y x_{2}}\,,$$
-
-y puesto que $\rho_{x_{1} x_{1}}=\rho_{x_{2} x_{1}}=1$, y $\rho_{x_{1} x_{2}}=\rho_{x_{2} x_{1}}$, podemos escribir el sistema como: 
-
-$$\left(\begin{array}{cc}
+        \end{array}\right)\,,$$ es una matriz $k\times 1$ y en notación índice es $$[{\textbf Y}^T{\textbf X}]_n=(N-1)\rho_{y_i x_{in}}\,\,;(i=1,2,...,N)\,.$$ Esta matriz se puede interpretar como la matriz de correlación entre las variables independientes y dependientes. \\ \noindent El modelo multivariado en notación índice es $$(N-1)\rho_{x_{in} x_{im}}b_m=(N-1)\rho_{y_i x_{in}}$$ o $$\rho_{x_{in} x_{im}}b_m=\rho_{y_i x_{in}}\,;m=n=1,2,....,k; i=1,2,...,N$$ y para una única observación $i$ dada obtenemos $$\rho_{x_{n} x_{m}}b_m=\rho_{y x_{n}}\,$$ Ahora supongamos, por simplicidad, que solo tenemos dos variables independientes. Entonces: $$\rho_{x_{1} x_{1}}b_1+\rho_{x_{1} x_{2}}b_2=\rho_{y x_{1}}$$ $$\rho_{x_{2} x_{1}}b_1+\rho_{x_{2} x_{2}}b_2=\rho_{y x_{2}}\,,$$ y puesto que $\rho_{x_{1} x_{1}}=\rho_{x_{2} x_{1}}=1$, y $\rho_{x_{1} x_{2}}=\rho_{x_{2} x_{1}}$, podemos escribir el sistema como: $$\left(\begin{array}{cc}
   1 & \rho_{x_{1} x_{2}} \\
   \rho_{x_{1} x_{2}} & 1 \\
         \end{array}\right)
@@ -2188,87 +1967,39 @@ $$\left(\begin{array}{cc}
   \rho_{y x_{2}} \\
         \end{array}\right)\,.$$ $$b_1=\frac{1}{1-\rho^2_{x_{1} x_{2}}}({\rho_{y x_{1}} - \rho_{x_{1} x_{2}} \rho_{y x_{2}}})$$ $$b_2=\frac{1}{1-\rho^2_{x_{1} x_{2}}}({\rho_{y x_{2}} - \rho_{x_{1} x_{2}} \rho_{y x_{1}}})\,.$$
 
-\noindent Finalmente puntualizar que el problema de mínimos cuadrados se puede resolver utilizando la descomposición $LU$. Para ello solo es necesario un cambio de variable en la ecuación 
-
-$${\textbf X}^T{\textbf X}{\textbf B}={\textbf X}^T{\textbf Y}$$ 
-
-para obtener un sistema de ecuaciones tipo ${\textbf A}{\textbf x}={\textbf b}$, donde ahora ${\textbf A}={\textbf X}^T{\textbf X}$, ${\textbf x}={\textbf B}$, y ${\textbf b}={\textbf X}^T{\textbf Y}$.
+\noindent Finalmente puntualizar que el problema de mínimos cuadrados se puede resolver utilizando la descomposición $LU$. Para ello solo es necesario un cambio de variable en la ecuación $${\textbf X}^T{\textbf X}{\textbf B}={\textbf X}^T{\textbf Y}$$ para obtener un sistema de ecuaciones tipo ${\textbf A}{\textbf x}={\textbf b}$, donde ahora ${\textbf A}={\textbf X}^T{\textbf X}$, ${\textbf x}={\textbf B}$, y ${\textbf b}={\textbf X}^T{\textbf Y}$.
 
 \vspace{0.5cm}
 
-(2) **Cuadrados Mínimos con restricciones**
+{\noindent \textbf (2) Mínimos cuadrados con restricciones}
 
 \vspace{0.5cm}
 
-**NOTA**: Multiplicadores de Lagrange \
+{\textbf \noindent NOTA: Multiplicadores de Lagrange} \\ \noindent Dada la función $f(x)=f(x_1,x_2,...,x_N)$ que depende de $N$ variables y $p$ restricciones $g_1(x)=d_1, g_2(x)=d_2,....,g_p(x)=d_p$ entonces el teorema de Lagrange nos dice que para minimizar la función $f(x)$ bajo esas $p$ restricciones debemos resolver el sistema de ecuaciones $$\frac{\partial}{\partial{x_i}}\left[ f(x) +\sum\limits_{j=1}^p \lambda_j g_j(x)\right]=0\,\,\,; i=1,2,...,N$$ $$g_j(x)=d_j\,\,\,; j=1,2,...,p$$
 
-Dada la función $f(x)=f(x_1,x_2,...,x_N)$ que depende de $N$ variables y $p$ restricciones $g_1(x)=d_1, g_2(x)=d_2,....,g_p(x)=d_p$ entonces el teorema de Lagrange nos dice que para minimizar la función $f(x)$ bajo esas $p$ restricciones debemos resolver el sistema de ecuaciones 
+\noindent Vamos a usar los multiplicadores de Lagrange para resolver el problema de mínimos cuadrados $${\textbf Y}={\textbf X}{\textbf B}\,,$$ pero incluyendo $p$ restricciones de la forma $${\textbf G}{\textbf B}={\textbf d}\,.$$
 
-$$\frac{\partial}{\partial{x_i}}\left[ f(x) +\sum\limits_{j=1}^p \lambda_j g_j(x)\right]=0\,\,\,; i=1,2,...,N$$ $$g_j(x)=d_j\,\,\,; j=1,2,...,p$$
+\noindent Queremos minimizar la función: $${\textbf \cal L}=({\textbf Y}-{\textbf X}{\textbf B})^T({\textbf Y}-{\textbf X}{\textbf B}) +{\textbf \lambda}^T({\textbf G}{\textbf B}-{\textbf d})\,.$$ Aqui hemos introducido $p$ incógnitas pero también tenemos $p$ nuevas ecuaciones ${\textbf G}{\textbf B}={\textbf d}$. Derivando ${\textbf \cal L}$ e igualando a cero $$\frac{\partial{\textbf \cal L}}{\partial{\textbf B}}=-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf B} + {\textbf G}^T{\textbf \lambda}=0\,,$$ lo cual tiene la solución $${\textbf B}=( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y} -\frac{1}{2}{\textbf G}^T{\textbf \lambda})\,,$$ que para ${\textbf \lambda}=0$ se reduce a la expresión de los mínimos cuadrados sin restricciones $${\textbf B}=( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y})\,.$$
 
-\noindent Vamos a usar los multiplicadores de Lagrange para resolver el problema de cuadrados mínimos 
+\noindent Si sutituimos en la ecuación de las restricciones $${\textbf G}( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y} -\frac{1}{2}{\textbf G}^T{\textbf \lambda})={\textbf d}\,,$$ y resolvemos para ${\textbf \lambda}$, obtenemos $$\frac{1}{2}{\textbf \lambda}=\left[ {\textbf G}({\textbf X}^T {\textbf X})^{-1}{\textbf G}^T\right]^{-1} \left[ {\textbf G}({\textbf X}^T {\textbf X})^{-1}{\textbf X}^T{\textbf Y}-{\textbf d}\right]\,.$$
 
-$${\textbf Y}={\textbf X}{\textbf B}\,,$$ pero incluyendo $p$ restricciones de la forma $${\textbf G}{\textbf B}={\textbf d}\,.$$
-
-\noindent Queremos minimizar la función: 
-
-$${\textbf \cal L}=({\textbf Y}-{\textbf X}{\textbf B})^T({\textbf Y}-{\textbf X}{\textbf B}) +{\textbf \lambda}^T({\textbf G}{\textbf B}-{\textbf d})\,.$$ 
-
-Aqui hemos introducido $p$ incógnitas pero también tenemos $p$ nuevas ecuaciones ${\textbf G}{\textbf B}={\textbf d}$. Derivando ${\textbf \cal L}$ e igualando a cero 
-
-$$\frac{\partial{\textbf \cal L}}{\partial{\textbf B}}=-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf B} + {\textbf G}^T{\textbf \lambda}=0\,,$$ 
-
-lo cual tiene la solución 
-
-$${\textbf B}=( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y} -\frac{1}{2}{\textbf G}^T{\textbf \lambda})\,,$$ 
-
-que para ${\textbf \lambda}=0$ se reduce a la expresión de los mínimos cuadrados sin restricciones 
-
-$${\textbf B}=( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y})\,.$$
-
-Si sutituimos en la ecuación de las restricciones 
-
-$${\textbf G}( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y} -\frac{1}{2}{\textbf G}^T{\textbf \lambda})={\textbf d}\,,$$ 
-
-y resolvemos para ${\textbf \lambda}$, obtenemos 
-
-$$\frac{1}{2}{\textbf \lambda}=\left[ {\textbf G}({\textbf X}^T {\textbf X})^{-1}{\textbf G}^T\right]^{-1} \left[ {\textbf G}({\textbf X}^T {\textbf X})^{-1}{\textbf X}^T{\textbf Y}-{\textbf d}\right]\,.$$
-
-Finalmente, si sustituimos en la solución para la matriz de coeficientes ${\textbf B}$ obtenemos 
-
-$${\textbf B}=({\textbf X}^T {\textbf X})^{-1}\left( {\textbf X}^T {\textbf Y} - {\textbf G}^T\left[{\textbf G}({\textbf X}^T{\textbf X})^{-1}{\textbf G}^T \right]^{-1}
+\noindent Finalmente, si sustituimos en la solución para la matriz de coeficientes ${\textbf B}$ obtenemos $${\textbf B}=({\textbf X}^T {\textbf X})^{-1}\left( {\textbf X}^T {\textbf Y} - {\textbf G}^T\left[{\textbf G}({\textbf X}^T{\textbf X})^{-1}{\textbf G}^T \right]^{-1}
            \left[{\textbf G}({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T {\textbf Y}-{\textbf d}\right] \right)\,.$$
 
-Un ejemplo sería ajustar una recta a un conjunto de observaciones pero imponiendo que la recta pase por algún punto determinado del espacio $xy$.
+\noindent Un ejemplo sería ajustar una recta a un conjunto de observaciones pero imponiendo que la recta pase por algún punto determinado del espacio $xy$.
 
 \vspace{0.5cm}
 
-(3) **Cuadrados Mínimos pesados**  
-
-En ocasiones debido a las incertidumbres asociadas a la medidas de las variables independientes es conveniente asignarles un peso diferencial en el problema de mínimos cuadrados. Supongamos que unas variables independientes son conocidas con mayor precisión que otras. Entonces el modelo de mínimos cuadrados pesados es: 
-$$SEC=({\textbf Y}-{\textbf X}{\textbf B})^T{\textbf W}_{\epsilon}({\textbf Y}-{\textbf X}{\textbf B})\,,$$ 
-
-donde ${\textbf W}_{\epsilon}$ es una matriz diagonal con los elementos $\sigma_j^{-2}$, el inverso de la varianza de cada variable independiente. \
-
-Sin embargo, en general, los errores en los datos estan correlacionados, y ${\textbf W}_{\epsilon}$ no es diagonal. Una elección razonable para ${\textbf W}_{\epsilon}$ es el inverso de la matriz de covarianzas. Si asumimos que ${\textbf Y}$ se compone de un valor medio mas un error o fluctuación respecto la media 
-$${\textbf Y}=\bar{\textbf Y}+{\textbf Y}'\,,$$ 
-
-entonces la matriz de covarianzas es $<{\textbf Y}'{\textbf Y}'^T>$ y 
-
-$${\textbf W}_{\epsilon}=<{\textbf Y}'{\textbf Y}'^T>^{-1}\,.$$
+{\noindent \textbf (3) Mínimos cuadrados pesados} \\ \noindent En ocasiones debido a las incertidumbres asociadas a la medidas de las variables independientes es conveniente asignarles un peso diferencial en el problema de mínimos cuadrados. Supongamos que unas variables independientes son conocidas con mayor precisión que otras. Entonces el modelo de mínimos cuadrados pesados es: $$SEC=({\textbf Y}-{\textbf X}{\textbf B})^T{\textbf W}_{\epsilon}({\textbf Y}-{\textbf X}{\textbf B})\,,$$ donde ${\textbf W}_{\epsilon}$ es una matriz diagonal con los elementos $\sigma_j^{-2}$, el inverso de la varianza de cada variable independiente. \\ \noindent Sin embargo, en general, los errores en los datos estan correlacionados, y ${\textbf W}_{\epsilon}$ no es diagonal. Una elección razonable para ${\textbf W}_{\epsilon}$ es el inverso de la matriz de covarianzas. Si asumimos que ${\textbf Y}$ se compone de un valor medio mas un error o fluctuación respecto la media $${\textbf Y}=\bar{\textbf Y}+{\textbf Y}'\,,$$ entonces la matriz de covarianzas es $<{\textbf Y}'{\textbf Y}'^T>$ y $${\textbf W}_{\epsilon}=<{\textbf Y}'{\textbf Y}'^T>^{-1}\,.$$
 
 \vspace{0.5cm}
 
-**Ejemplo (1)**: Emery and Thompson (sección 3.12.4). \ 
-
-En la tabla adjunta se muestran 5 observaciones de la variable independiente ($x_i$) y dependiente ($y_i$). Se pide ajustar una recta al conjunto de datos y calcular las medidas de error (varianza $s^2$ y coeficiente de correlación al cuadrado $r^2$) asociadas al ajuste lineal. 
-
-<!--
+{\noindent \textbf Ejemplo (1):} Emery and Thompson (sección 3.12.4). \\ \noindent En la tabla adjunta se muestran 5 observaciones de la variable independiente ($x_i$) y dependiente ($y_i$). Se pide ajustar una recta al conjunto de datos y calcular las medidas de error (varianza $s^2$ y coeficiente de correlación al cuadrado $r^2$) asociadas al ajuste lineal. <!--
 your comment goes here
 \begin{center}
 `` \includegraphics[width=1\textwidth]{regresion_example} ``
 \end{center}
---> 
+--> % %insert table
 
 ```{=tex}
 \begin{center}
@@ -2285,8 +2016,7 @@ $x_i$ & $y_i$ & $x_i\,y_i$ & $x_i^2$ \\ [0.5ex] % inserts table
 \end{tabular}
 \end{center}
 ```
-Los coeficientes del modelo lineal se pueden calcular con las expresiones: 
-$$\hat{b}_1=\frac{\left[N \sum\limits^N_{i=1} x_i y_i - \sum\limits^N_{i=1}x_i \sum\limits^N_{i=1}y_i\right]}
+Los coeficientes del modelo lineal se pueden calcular con las expresiones: $$\hat{b}_1=\frac{\left[N \sum\limits^N_{i=1} x_i y_i - \sum\limits^N_{i=1}x_i \sum\limits^N_{i=1}y_i\right]}
            {N\sum\limits^N_{i=1}x^2_i-\left(\sum\limits^N_{i=1}x_i \right)^2}=$$ $$\frac{[(5)(7)-(0)(5)]}{[(5)(10)-10^2]}=0.7$$
 
 $$b_0=\bar{y}-b_1\bar{x}=5/5-(0.7)(0)=1$$
@@ -2335,7 +2065,7 @@ $$ ({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T{\textbf Y}=
 
 \vspace{0.5cm}
 
-Como ya vimos, para calcular la varianza de nuestro ajuste usamos 
+{\noindent} Como ya vimos, para calcular la varianza de nuestro ajuste usamos 
 
 $$s^2=\frac{1}{N-2}\sum\limits^N_{i=1}(y_i-\hat{y_i})^2=\frac{1}{N-2}SEC\,,$$ 
 
@@ -2373,14 +2103,12 @@ $$SEC=\left(\begin{array}{ccccc}
         5 \\ 7\\
         \end{array}\right)=11-9.9=1.1$$
 
-$SEC$ puede ser calculado directamente con la expresión: 
-
-$$SEC=\sum \limits^N_{i=1}(\hat{y_i}-y_i)^2=
+{\noindent} $SEC$ puede ser calculado directamente con la expresión: $$SEC=\sum \limits^N_{i=1}(\hat{y_i}-y_i)^2=
    (-0.4)^2 + (-0.3)^2+(0)^2 + (0.7)^2 + (0.6)^2=1.1$$
 
-\noindent Y entonces la desviación estandar de nuestro ajuste lineal es $$s=\sqrt{\frac{1}{N-2}SEC}=\sqrt{\frac{1}{5-2}1.1}=\sqrt{1.1/3}\simeq0.366\,.$$
+\noindent Y entonces la desviación estándar de nuestro ajuste lineal es $$s=\sqrt{\frac{1}{N-2}SEC}=\sqrt{\frac{1}{5-2}1.1}=\sqrt{1.1/3}\simeq0.366\,.$$
 
-El coeficiente de correlación se puede escribir como 
+{\noindent} El coeficiente de correlación se puede escribir como 
 
 $$r^2=\frac{SCR}{SCT}=\frac{\sum\limits^N_{i=1}(\hat{y_i}-\bar{y})^2}{\sum\limits^N_{i=1}
 ({y_i}-\bar{y})^2}=\frac{4.9}{6}\simeq0.8167$$
@@ -2389,23 +2117,13 @@ $$r^2=\frac{SCR}{SCT}=\frac{\sum\limits^N_{i=1}(\hat{y_i}-\bar{y})^2}{\sum\limit
 
 (4) **Ajuste de curvas con mínimos cuadrados** \ 
 
-En general, podemos escribir nuestro modelo lineal como $$Y=b_0 + b_1x + b_2 x^2 + ... + b_k x^k + \epsilon\,.$$ \ 
-
-El procedimiento es el mismo que para el caso de la línea recta, pero ahora la matriz ${\textbf X}$ tiene una columna mas. Es decir, para $k=2$ y para $N$ observaciones independientes las ecuaciones independientes son 
-
-$$y_1=b_0 + b_1x_1 + b_2 x_1^2 + \epsilon_1$$ 
-$$y_2=b_0 + b_1x_2 + b_2 x_2^2 + \epsilon_2$$ 
-$$...$$ $$...$$ $$...$$ $$y_N=b_0 + b_1x_N + b_2 x_N^2 + \epsilon_N\,$$ 
-y puden resolverse matricialmente para ${\textbf B}$ como 
-$${\textbf B}=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T{\textbf Y}\,,$$ 
-
-donde ${\textbf X}$ tiene una columna mas que el caso del ajuste de una recta, i.e. $k+1$ columnas.
+{\noindent} En general, podemos escribir nuestro modelo lineal como $$Y=b_0 + b_1x + b_2 x^2 + ... + b_k x^k + \epsilon\,.$$ \\ \\ \noindent El procedimiento es el mismo que para el caso de la línea recta, pero ahora la matriz ${\textbf X}$ tiene una columna mas. Es decir, para $k=2$ y para $N$ observaciones independientes las ecuaciones independientes son $$y_1=b_0 + b_1x_1 + b_2 x_1^2 + \epsilon_1$$ $$y_2=b_0 + b_1x_2 + b_2 x_2^2 + \epsilon_2$$ $$...$$ $$...$$ $$...$$ $$y_N=b_0 + b_1x_N + b_2 x_N^2 + \epsilon_N\,$$ y puden resolverse matricialmente para ${\textbf B}$ como $${\textbf B}=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T{\textbf Y}\,,$$ donde ${\textbf X}$ tiene una columna mas que el caso del ajuste de una recta, i.e. $k+1$ columnas.
 
 \vspace{0.5cm}
 
-**Ejemplo (2)**: Ajustes por cuadrados mínimos con restricciones. \
+{\noindent} **Ejemplo (2)**: Ajustes por cuadrados mínimos con restricciones. \
 
-Supongamos que queremos ajustar dos polinomios $f(x)$ y $g(x)$ de orden d-1 a dos conjunto de datos contínuos de $M$ y $N$ observaciones, respectivamente, $x_1, x_2, ....,x_M\leq a$ y $x_{M+1}, x_{M+2}, ....,x_N>a$, tal que, queremos minimizar:
+{\noindent} Supongamos que queremos ajustar dos polinomios $f(x)$ y $g(x)$ de orden d-1 a dos conjunto de datos contínuos de $M$ y $N$ observaciones, respectivamente, $x_1, x_2, ....,x_M\leq a$ y $x_{M+1}, x_{M+2}, ....,x_N>a$, tal que, queremos minimizar:
 
 $$\sum\limits^M_{i=1}(f(x_i)-y_i)^2 + \sum\limits^N_{i=M+1}(g(x_i)-y_i)^2\,,$$
 
@@ -2501,9 +2219,9 @@ $${\textbf X}=\left(\begin{array}{cccccccc}
 
 \vspace{0.5cm}
 
-1. Linealización del problema no lineal En ocasiones se puede linealizar el problema y resolverlo utilizando la solución de mínimos cuadrados lineales. Por ejemplo, supongamos que queremos ajustar un conjunto de $N$ observaciones a una función no-lineal exponencial: $$\hat{y}=a e^{bx}\,.$$
+1.  Linealización del problema no lineal En ocasiones se puede linealizar el problema y resolverlo utilizando la solución de mínimos cuadrados lineales. Por ejemplo, supongamos que queremos ajustar un conjunto de $N$ observaciones a una función no-lineal exponencial: $$\hat{y}=a e^{bx}\,.$$
 
-Este ejemplo se puede linealizar: $$\hat{y}=a e^{bx}\rightarrow ln(\hat{y})=ln(a) + bx\,,$$ y resolver el problema lineal: $${\cal Y}={\cal B}_1 + {\cal B}_2 {\cal X}\,,$$ donde hemos hecho el cambio de variables: $${\cal Y}=ln(\hat{y})\,,{\cal B}_1=ln(a)\,,{\cal B}_2=b\,\,\,{\rm y}\,{\cal X}=x\,.$$
+Este ejemplo se puede linealizar: $$\hat{y}=a e^{bx}\rightarrow ln(\hat{y})=ln(a) + bx\,,$$ y resolver el problema lineal: $${\cal Y}={\cal B}_1 + {\cal B}_2 {\cal X}\,,$$ donde hemos hecho el cambio de variables: $${\cal Y}=ln(\hat{y})\,,{\cal B}_1=ln(a)\,,{\cal B}_2=b\,\,\,{ y}\,{\cal X}=x\,.$$
 
 Resolvemos para ${\cal B}_1$ y ${\cal B}_2$:
 
@@ -2515,9 +2233,8 @@ $${\cal B}=\left(\begin{array}{c}
 
 \vspace{0.5cm}
 
-2. Resolución numérica del problema no lineal\
-
-Cuando no es posible linealizar la función no-lineal que queremos ajustar, debemos minimizar la suma de los errores cuadráticos medios y resolver numéricamente. La $SEC$ del modelo exponencial
+2.  Resolución numérica del problema no lineal\
+    Cuando no es posible linealizar la función no-lineal que queremos ajustar, debemos minimizar la suma de los errores cuadráticos medios y resolver numéricamente. La $SEC$ del modelo exponencial
 
 $$SEC=\sum\limits^N_{i=1}(y_i-\hat{y_i})^2=\sum\limits^N_{i=1}
               {\underbrace{\left(y_i - a e^{bx_i}\right)}_{\epsilon_i}}^2\,$$ 
@@ -2563,18 +2280,18 @@ $$r=\rho_{xy}=\frac{\frac{1}{N-1}\sum\limits^N_{i=1}(x_i-\bar{x})(y_i-\bar{y})}
      {\sqrt{\frac{1}{N-1}\sum\limits^N_{i=1}(x_i-\bar{x})}
      \sqrt{\frac{1}{N-1}\sum\limits^N_{i=1}(y_i-\bar{y})}}=\frac{C_{xy}}{s_x s_y}\,,$$
 
-donde $C_{xy}$ es la covarianza de $x$ e $y$, y $s_x$ y $s_y$ son las correspondientesdesviaciones estandar.\
+donde $C_{xy}$ es la covarianza de $x$ e $y$, y $s_x$ y $s_y$ son las correspondientesdesviaciones estándar.\
 \
 **Propiedades del coeficiente de correlación**\
 
 (1) $r$ es adimensional.\
-(2) la magnitud de $r$ se encuantra acotada entre $-1$ y $1$, ya que es una normalización de la covarianza por el producto de la desviación estandar de las dos variables aleatorias.\
+(2) la magnitud de $r$ se encuantra acotada entre $-1$ y $1$, ya que es una normalización de la covarianza por el producto de la desviación estándar de las dos variables aleatorias.\
 
-Si $r=\pm1$ entonces el ajuste es perfecto. Para $r=0$ los puntos estan dispersos aleatoriamente y no existe relación alguna entre las variables. Normalmente encontramos el estadístico $r^2$ en lugar de $r$. $r^2$ se puede reescribir como
+\noindent Si $r=\pm1$ entonces el ajuste es perfecto. Para $r=0$ los puntos estan dispersos aleatoriamente y no existe relación alguna entre las variables. Normalmente encontramos el estadístico $r^2$ en lugar de $r$. $r^2$ se puede reescribir como
 
 $$r^2=SCR/SCT=\frac{SCT-SEC}{SCT}=1-\frac{SEC}{SCT}=\frac{C^2_{xy}}{(s_x s_y)^2}\,,$$
 
-lo que nos informa del porcentaje de la varianza explicada ($r^2={\rm varianza\,explicada}/{\rm varianza\,total}$) como vimos anteriormente. Un valor de $r=0.75$ significa que la regresión lineal de $y$ sobre $x$, es decir $\hat{y}$, explica $100*r^2=56.25\%$ de la varianza total de la muestra.\
+lo que nos informa del porcentaje de la varianza explicada ($r^2={ varianza\,explicada}/{ varianza\,total}$) como vimos anteriormente. Un valor de $r=0.75$ significa que la regresión lineal de $y$ sobre $x$, es decir $\hat{y}$, explica $100*r^2=56.25\%$ de la varianza total de la muestra.\
 \noindent Finalmente puntualizar que también podemos calcular el coeficiente de correlación utilizando los estimados de los coeficientes de regresión. Para el caso de una línea recta sabemos
 
 $$\hat{b}_1=\frac{C_{xy}}{s^2_x}\,.$$
@@ -2599,14 +2316,13 @@ $$\tilde{r}^2=1-\frac{Var(SEC)}{Var(SCT)}=1-\frac{SEC/N-k-1}{SCT/N-1}=
 1-\frac{N-1}{N-k-1}(1-r^2)=$$ $$=1-(1-r^2)\frac{N-1}{N-k-1}\,,$$
 
 donde para $k=0$ obtenemos la definición clásica del coeficiente de correlación.\
-
+\
 **Intervalo de confianza para el coeficiente de correlación**\
-
-Podemos calcular intervalos de confianza para el coeficiente de correlación $r$ por medio de la denominada transformación Z de Fisher. Básicamente transforma $r$ en una variable normal estandar $Z$
+Podemos calcular intervalos de confianza para el coeficiente de correlación $r$ por medio de la denominada transformación Z de Fisher. Básicamente transforma $r$ en una variable normal estándar $Z$
 
 $$Z=\frac{1}{2}\frac{ln(1+r)}{ln(1-r)}\,,$$
 
-con desviación estandar
+con desviación estándar
 
 $$\sigma(Z)=\frac{1}{\sqrt{(N-3)}}\,,$$
 
@@ -2622,33 +2338,20 @@ $$Z-Z_{\alpha/2}<Z<Z+Z_{\alpha/2}$$
 
 \vspace{0.5cm}
 
-\noindent **Ejemplo**:\
-
-Supongamos $N=21$ y $r=0.8$. Encuentra el intervalo de confianza al $95\%$ para el coeficiente de correlación poblacional $\rho_0$.
+\noindent *\*Ejemplo\*\*:\
+\noindent Supongamos $N=21$ y $r=0.8$. Encuentra el intervalo de confianza al $95\%$ para el coeficiente de correlación poblacional $\rho_0$.
 
 $$Z=\frac{1}{2}\frac{ln(1+0.8)}{ln(1-0.8)}=1.0986$$
 
-Puesto que $Z$ esta Normalmente distribuida, entonces todos los valores deben de caer dentro de 1.96 desviaciones estandar de $Z$. Entonces, al $95\%$, la verdadera media $\mu_Z$ esta contenida en $$Z-1.96\sigma(Z) < \mu(Z) < Z + 1.96\sigma(Z)$$ $$Z-1.96\frac{1}{\sqrt{(21-3)}} < \mu(Z) < Z + 1.96\frac{1}{\sqrt{(21-3)}}$$ $$0.6366<\mu(Z)<1.5606$$
+\noindent Puesto que $Z$ esta Normalmente distribuida, entonces todos los valores deben de caer dentro de 1.96 desviaciones estándar de $Z$. Entonces, al $95\%$, la verdadera media $\mu_Z$ esta contenida en $$Z-1.96\sigma(Z) < \mu(Z) < Z + 1.96\sigma(Z)$$ $$Z-1.96\frac{1}{\sqrt{(21-3)}} < \mu(Z) < Z + 1.96\frac{1}{\sqrt{(21-3)}}$$ $$0.6366<\mu(Z)<1.5606$$
 
-Los límites encontrados para $\mu(Z)$ los podemos transformar en términos de la verdadera correlación 
+\noindent Los límites encontrados para $\mu(Z)$ los podemos transformar en términos de la verdadera correlación $$\mu(Z)=0.6366=\frac{1}{2} \left\{ \frac{1+\rho}{1-\rho} \right\} \rightarrow  \rho=0.56\,,$$ donde hemos usado $$e^{2\mu}=\frac{1+\rho}{1-\rho}$$ $$e^{2\mu}-1=\rho(1+e^{2\mu})$$ $$\rho=\frac{(e^{2\mu(Z)}-1)}{(e^{2\mu(Z)}+1)}\,.$$
 
-$$\mu(Z)=0.6366=\frac{1}{2} \left\{ \frac{1+\rho}{1-\rho} \right\} \rightarrow  \rho=0.56\,,$$ 
-
-donde hemos usado 
-
-$$e^{2\mu}=\frac{1+\rho}{1-\rho}$$ 
-$$e^{2\mu}-1=\rho(1+e^{2\mu})$$ 
-$$\rho=\frac{(e^{2\mu(Z)}-1)}{(e^{2\mu(Z)}+1)}\,.$$
-
-Podemos afirmar con un 95% de confianza que la verdadera correlación 
-$\rho$ esta en el intervalo $0.56<\rho,0.92$, dado un tamaño muestral
-$N=21$ y una correlación muestral $r=0.8$.
+\noindent Podemos afirmar con un 95% de confianza que la verdadera correlación $\rho$ esta en el intervalo $0.56<\rho,0.92$, dado un tamaño muestral $N=21$ y una correlación muestral $r=0.8$.
 
 \vspace{0.5cm}
 
-**Verdaderos grados de libertad**  
-
-Ya hemos definido anteriormente los grados de libertad se define como el número de muestras independientes $N$ menos el número de parámetros que se quieren estimar. Esta definición es un tanto incorrecta puesto que debemos de también asegurar que las $N$ muestras son efectivamente independientes, es decir, no estan autocorreladas en el espacio-tiempo. Para considerar esto $N$ debe reesecribirse como 
+{\noindent \textbf Verdaderos grados de libertad} \\ \noindent Ya hemos definido anteriormente los grados de libertad se define como el número de muestras independientes $N$ menos el número de parámetros que se quieren estimar. Esta definición es un tanto incorrecta puesto que debemos de también asegurar que las $N$ muestras son efectivamente independientes, es decir, no estan autocorreladas en el espacio-tiempo. Para considerar esto $N$ debe reesecribirse como 
 
 $$N^{*}=\frac{N}{\left[ \sum\limits^{\infty}_{\tau=-\infty}
 C_{xx}(\tau)C_{yy}(\tau) + C_{xy}(\tau)C_{yx}(\tau)
@@ -2664,44 +2367,42 @@ $$\frac{N}{\left[\sum\limits^{\infty}_{\tau=-\infty}
 
 \vspace{0.5cm}
 
-**Regla 1**
-
-Si $x$ e $y$ tienen errores aleatorios independientes $\delta{x}$ y $\delta{y}$,nentonces el error en la suma $z=x+y$ es
+\noindent **Regla 1**
+\noindent Si $x$ e $y$ tienen errores aleatorios independientes $\delta{x}$ y $\delta{y}$,nentonces el error en la suma $z=x+y$ es
 
 $$\delta{z}=\sqrt{\delta{x}^2 + \delta{y}^2}\,.$$
 
 \vspace{0.5cm}
 
-**Regla 2** 
+\noindent **Regla 2** 
 
-Si $x$ e $y$ tienen errores aleatorios independientes $\delta{x}$ y $\delta{y}$, entonces el error en la multiplicación $z=xy$ es 
+\noindent Si $x$ e $y$ tienen errores aleatorios independientes $\delta{x}$ y $\delta{y}$, entonces el error en la multiplicación $z=xy$ es 
 
 $$\frac{\delta{z}}{z}=\sqrt{\left(\frac{\delta{x}^2}{x}\right) + \left(\frac{\delta{y}^2}{y}\right)}\,.$$
 
 \vspace{0.5cm}
 
-**Regla 3** 
+\noindent **Regla 3** \
 
-Si $z=f(x)$, donde $f()$ es una función dada, entonces 
+\noindent Si $z=f(x)$, donde $f()$ es una función dada, entonces 
 
 $$\delta{z}=|f'(x)|\delta{x}\,.$$
 
 \vspace{0.5cm}
 
-**Formula general para propagación del error**
+\noindent **Formula general para propagación del error**
 
-Sea $x_1, x_2,....,x_N$ medidas con incertidumbres $\delta{x_1},\delta{x_2},....,\delta{x_3}$. Supongamos que queremos determinar $q$, el cual es una función de $x_1,x_2,...,x_N$: $$q=f(x_1, x_2,...,x_N)\,.$$ El error asociado a $q$ es entonces 
+\noindent Sea $x_1, x_2,....,x_N$ medidas con incertidumbres $\delta{x_1},\delta{x_2},....,\delta{x_3}$. Supongamos que queremos determinar $q$, el cual es una función de $x_1,x_2,...,x_N$: $$q=f(x_1, x_2,...,x_N)\,.$$ El error asociado a $q$ es entonces 
 
 $$\delta{q}=\sqrt{\left( \frac{\partial{q}}{\partial{x_1}}\delta{x_1}\right)^2 + ... +
                   \left( \frac{\partial{q}}{\partial{x_N}}\delta{x_N}\right)^2}$$
-
-Si $q=x_1+x_2$ entonces obtenemos la regla 1: 
+\noindent Si $q=x_1+x_2$ entonces obtenemos la regla 1: 
 
 $$\frac{\partial{q}}{\partial{x_1}}=1\,,$$ $$\frac{\partial{q}}{\partial{x_2}}=1\,,$$ 
 
 $$\delta{q}=\sqrt{\delta{x_1}^2 + \delta{x_2}^2}\,.$$
 
-Si $q=x_1x_2$ entonces obtenemos la regla 2: 
+\noindent Si $q=x_1x_2$ entonces obtenemos la regla 2: 
 
 $$\frac{\partial{q}}{\partial{x_1}}=x_2\,,$$ $$\frac{\partial{q}}{\partial{x_2}}=x_1\,,$$ 
 
@@ -2711,9 +2412,9 @@ $$\frac{\delta{q}}{q}=\sqrt{\left(\frac{\delta{x_1}^2}{x_1}\right) + \left(\frac
 
 \vspace{0.5cm}
 
-*Demstración:* 
+\noindent *Demstración:* 
 
-Queremos calcular la desviación estándar de la función 
+\noindent Queremos calcular la desviación estándar de la función 
 
 $$q=q(x_1, x_2,....,x_N)\,,$$ 
 
@@ -2722,7 +2423,7 @@ $$q - \bar{q}=\left(x_1 - \bar{x}_1\right)\frac{\partial{q}}{\partial{x_1}} +
                           \left(x_2 - \bar{x}_2\right)\frac{\partial{q}}{\partial{x_2}}+  \,.\,.\,.\,
                           + \left(x_N - \bar{x}_N\right)\frac{\partial{q}}{\partial{x_N}}\,.$$ 
                           
-La varianza de la función $q$ es: 
+\noindent La varianza de la función $q$ es: 
 
 $$s^2_q=\frac{1}{N-1}\sum\limits^N_{i=1}\left( q_i-\bar{q} \right)^2=
                \frac{1}{N-1}\left[
@@ -2743,7 +2444,7 @@ $$=s^2_{x_1}\left(\frac{\partial{q}}{\partial{x_1}}\right)^2 +
    2 s_{{x_1}{x_2}}
    \frac{\partial{q}}{\partial{x_1}}\frac{\partial{q}}{\partial{x_2}}+\,.\,.\,.$$ 
    
-y finalmente la expresión general para la propagación del error es: 
+  y finalmente la expresión general para la propagación del error es: 
   
 $$s_{q}=\sqrt{s^2_{x_1}\left(\frac{\partial{q}}{\partial{x_1}}\right)^2 +
                s^2_{x_2}\left(\frac{\partial{q}}{\partial{x_2}}\right)^2+
@@ -2759,10 +2460,9 @@ $$s_{q}=\sqrt{s^2_{x_1}\left(\frac{\partial{q}}{\partial{x_1}}\right)^2 +
 $$S=a_0+a_1 R_T^{1/2}+a_2 R_T+a_3 R_T^{3/2}+a_4 R_T^{2}+a_5 R_T^{5/2}+\Delta{S}\,,$$ 
 
 donde 
-
 $$R_T=\frac{R}{R_p r_t}\,\,\,,\,\,R=\frac{C(S,T,0)}{C(35,15,0)}\,,$$ 
 
-$C(35,15,0)$ es la conductividad de un agua de salinidad práctica 35 a los $15\,^\circ{\rm C}$, 
+$C(35,15,0)$ es la conductividad de un agua de salinidad práctica 35 a los $15\,^\circ{ C}$, 
 $$r_t=c_0 + c_1 T + c_2 T^2 + c_3T^3 + c_4T^4\,,$$ 
 
 $$R_p=1+\frac{P(e_1+e_2P+e_3P^2)}{(1+d_1T+d_2T^2+(d_3 + d_4T)R)}\,,$$
@@ -2785,7 +2485,7 @@ $\sum a_i=35.0000\,\,\,\,\sum b_i=0.0000$ \
 
 $k=0.0162$ \
 
-\noindent Si el error de precisión del termistor y de la celda de conductividad del CTD es $\delta{T}=0.001\,^\circ{\rm C}$ y $\delta{C}=0.001\,{\rm S}{\rm m}^{-1}$, respectivamente, calcule la incertidumbre asociada al cálculo de la salinidad $S$ a partir de la formula general de propagación del error para $C=5\,{\rm S}\,{\rm m}^{-1}$, $T=28\,^\circ\,{\rm C}$, y $P=50\,{\rm dbar}$. Suponga que $\delta{P}=0$, es decir, el altímetro no tiene errores de precisión. \
+\noindent Si el error de precisión del termistor y de la celda de conductividad del CTD es $\delta{T}=0.001\,^\circ{ C}$ y $\delta{C}=0.001\,{ S}{ m}^{-1}$, respectivamente, calcule la incertidumbre asociada al cálculo de la salinidad $S$ a partir de la formula general de propagación del error para $C=5\,{ S}\,{ m}^{-1}$, $T=28\,^\circ\,{ C}$, y $P=50\,{ dbar}$. Suponga que $\delta{P}=0$, es decir, el altímetro no tiene errores de precisión. \
  
 **Resultado**: 
 
@@ -2883,9 +2583,9 @@ Esta suma de polinomios de Lagrange es el polinomio de menor grado que interpola
 
 Los polinomios de Lagrange para $i\ne j$ son iguales a cero, y para $i=j$ son iguales a 1. Veamos esto:
 
-$${\rm (1)}\,\,\,\,\,{\rm Para}\,\,\,{i \ne j}:\,\,\,\,\,{\cal L}_i(x_j)=\prod^{N+1}_{\substack{k=1\\ k\ne i}} \frac{x_j-x_k}{x_i-x_k}=$$ $$=\frac{x_j-x_1}{x_i-x_1} \frac{x_j-x_2}{x_i-x_2} ...\frac{x_j-x_j}{x_i-x_j}....\frac{x_j-x_{N+1}}{x_i-x_{N+1}}$$
+$${ (1)}\,\,\,\,\,{ Para}\,\,\,{i \ne j}:\,\,\,\,\,{\cal L}_i(x_j)=\prod^{N+1}_{\substack{k=1\\ k\ne i}} \frac{x_j-x_k}{x_i-x_k}=$$ $$=\frac{x_j-x_1}{x_i-x_1} \frac{x_j-x_2}{x_i-x_2} ...\frac{x_j-x_j}{x_i-x_j}....\frac{x_j-x_{N+1}}{x_i-x_{N+1}}$$
 
-$${\rm (2)}\,\,\,\,\,{\rm Para}\,\,\,{i = j}:\,\,\,\,\,{\cal L}_i(x_j)=\prod^{N+1}_{\substack{k=1\\ k\ne i}} \frac{x_j-x_k}{x_j-x_k}=1$$
+$${ (2)}\,\,\,\,\,{ Para}\,\,\,{i = j}:\,\,\,\,\,{\cal L}_i(x_j)=\prod^{N+1}_{\substack{k=1\\ k\ne i}} \frac{x_j-x_k}{x_j-x_k}=1$$
 
 De modo que $${\cal L}_i(x_j)=\delta_{ij}=\begin{cases}
 \begin{array}{c}
@@ -2913,11 +2613,11 @@ your comment goes here
 
 La interpolación por spline cúbicos es un método de ajuste de polinomios de orden 3 por segmentos. Veamos este método con un ejemplo.
 
-Supongamos que queremos interpolar los siguientes datos $(x_i,y_i)=[(2,-1), (3,2), (5,-7)]$ con una spline cúbica. Primero definimos un polinomio cúbico para cada intervalo: $$s(x)=a_1x^3 + b_1 x^2 +c_1x +d_1\,\,\,\,\,{\rm si}\,\,\,\,\,x\in[2,3]$$ $$s(x)=a_2x^3 + b_2 x^2 +c_2x +d_2\,\,\,\,\,{\rm si}\,\,\,\,\,x\in[3,5]$$
+Supongamos que queremos interpolar los siguientes datos $(x_i,y_i)=[(2,-1), (3,2), (5,-7)]$ con una spline cúbica. Primero definimos un polinomio cúbico para cada intervalo: $$s(x)=a_1x^3 + b_1 x^2 +c_1x +d_1\,\,\,\,\,{ si}\,\,\,\,\,x\in[2,3]$$ $$s(x)=a_2x^3 + b_2 x^2 +c_2x +d_2\,\,\,\,\,{ si}\,\,\,\,\,x\in[3,5]$$
 
 A continuación debemos de asegurar que los polinomios pasan por los puntos del problema: $$s(2)=8a_1 + 4b_1  +2c_1 +d_1=-1$$ $$s(3)=27a_1 + 9b_1  +3c_1 +d_1=2$$ $$s(3)=27a_2 + 9b_2  +3c_2 +d_2=2$$ $$s(5)=125a_2 + 25b_2  +5c_2 +d_2=-7$$
 
-Ahora calculamos la primera y segundas derivadas para cada intervalo $$s'(x)=3a_1x^2+2b_1x+c_1\,\,\,\,\,{\rm si}\,\,\,\,\,x\in[2,3]$$ $$s'(x)=3a_2x^2+2b_2x+c_2\,\,\,\,\,{\rm si}\,\,\,\,\,x\in[3,5]$$ $$s''(x)=6a_1x+2b_1\,\,\,\,\,{\rm si}\,\,\,\,\,x\in[2,3]$$ $$s''(x)=6a_2x+2b_2\,\,\,\,\,{\rm si}\,\,\,\,\,x\in[3,5]$$ y aseguramos que sean contínuas. Para ello debemos de igualar las derivadas entre intervalos de manera que no hayan discontinuidades $$3a_1(3)^2+2b_1(3)+c_1=3a_2(3)^2+2b_2(3)+c_2\rightarrow 27a_1+6b_1+c_1=27a_2+6b_2+c_2$$ $$6a_1(3)+2b_1=6a_2(3)+2b_2\rightarrow 18a_1+2_b1=18a_2+2_b2$$
+Ahora calculamos la primera y segundas derivadas para cada intervalo $$s'(x)=3a_1x^2+2b_1x+c_1\,\,\,\,\,{ si}\,\,\,\,\,x\in[2,3]$$ $$s'(x)=3a_2x^2+2b_2x+c_2\,\,\,\,\,{ si}\,\,\,\,\,x\in[3,5]$$ $$s''(x)=6a_1x+2b_1\,\,\,\,\,{ si}\,\,\,\,\,x\in[2,3]$$ $$s''(x)=6a_2x+2b_2\,\,\,\,\,{ si}\,\,\,\,\,x\in[3,5]$$ y aseguramos que sean contínuas. Para ello debemos de igualar las derivadas entre intervalos de manera que no hayan discontinuidades $$3a_1(3)^2+2b_1(3)+c_1=3a_2(3)^2+2b_2(3)+c_2\rightarrow 27a_1+6b_1+c_1=27a_2+6b_2+c_2$$ $$6a_1(3)+2b_1=6a_2(3)+2b_2\rightarrow 18a_1+2_b1=18a_2+2_b2$$
 
 En este momento tenemos 6 equaciones y 8 incógnitas. Debemos por lo tanto encontrar dos ecuaciones mas. Para ello vamos a forzar que en los extremos la segunda derivada sea nula, es decir, no haya curvatura $$s''(x_0)=s''(2)=0\rightarrow 6a_1(2)+2b_1=0 \rightarrow 12a_1 + 2b_1=0$$ $$s''(x_N)=s''(5)=0\rightarrow 6a_2(5)+2b_2=0 \rightarrow 30a_2+2b_2=0$$
 
@@ -2955,7 +2655,7 @@ $$\left(\begin{array}{cccccccc}
   0 \\
     \end{array}\right)$$
 
-Este sistema se puede resolver facilmente si la matriz de datos es invertible. Los coeficientes resultantes son $$a_1=-1.25\,\,\,\,\,b_1=7.5\,\,\,\,c_1=-10.75\,\,\,\,d_1=0.5$$ $$a_1=0.625\,\,\,\,\,b_1=-9.375\,\,\,\,c_1=39.875\,\,\,\,d_1=-50.125\,,$$ y los polinomios de nuestra spline cúbica es $$s(x)=-1.25x^3+7.5x^2-10.75x+0.5\,\,\,\,\,{\rm si}\,\,\,\,\,x\in[2,3]$$ $$s(x)=0.625x^3+-9.375x^2-39.875x+50.125\,\,\,\,\,{\rm si}\,\,\,\,\,x\in[3,5]$$
+Este sistema se puede resolver facilmente si la matriz de datos es invertible. Los coeficientes resultantes son $$a_1=-1.25\,\,\,\,\,b_1=7.5\,\,\,\,c_1=-10.75\,\,\,\,d_1=0.5$$ $$a_1=0.625\,\,\,\,\,b_1=-9.375\,\,\,\,c_1=39.875\,\,\,\,d_1=-50.125\,,$$ y los polinomios de nuestra spline cúbica es $$s(x)=-1.25x^3+7.5x^2-10.75x+0.5\,\,\,\,\,{ si}\,\,\,\,\,x\in[2,3]$$ $$s(x)=0.625x^3+-9.375x^2-39.875x+50.125\,\,\,\,\,{ si}\,\,\,\,\,x\in[3,5]$$
 
 ```{=html}
 <!--
@@ -3009,7 +2709,7 @@ $$\epsilon=\frac{SEC}{\sum\limits^N_{i=1}\phi'_g \phi'_g}=1-2 \sum\limits^N_{i=1
 
 donde
 
-$$r_{gi}=\frac{\sum\limits^N_{i=1} \phi'_g\phi'_i}{\sum\limits^N_{i=1}\phi'_g \phi'_g}\,\,\,\,\,{\rm y}\,\,\,\,\,r_{ij}=\frac{\sum\limits^N_{i=1} \phi'_i \phi'_j}{\sum\limits^N_{i=1}\phi'_g \phi'_g}\,,$$
+$$r_{gi}=\frac{\sum\limits^N_{i=1} \phi'_g\phi'_i}{\sum\limits^N_{i=1}\phi'_g \phi'_g}\,\,\,\,\,{ y}\,\,\,\,\,r_{ij}=\frac{\sum\limits^N_{i=1} \phi'_i \phi'_j}{\sum\limits^N_{i=1}\phi'_g \phi'_g}\,,$$
 
 son matrices de correlación entre el punto de malla y las estaciones, y entre las estaciones, respectivamente.
 
@@ -3309,7 +3009,7 @@ Puesto que queremos ${\textbf b}_{i}$ ser ortogonal, requerimos $${\textbf b}^T_
 
 El objetivo del análisis es encontrar una base de vectores ortogonales tal que las funciones $\alpha_i(t)$ no esten correlacionadas $$<\alpha_i \alpha_j>=<{\textbf b}^T_{i}{\textbf T}{\textbf b}^T_{j}{\textbf T}>=<{\textbf b}^T_{i}{\textbf T}{\textbf T}^T{\textbf b}_{j}>={\textbf b}^T_{i}<{\textbf T} {\textbf T}^T>{\textbf b}_{j}=\delta_{ij}<\alpha^2_i>\,,$$ donde $$<\alpha_i^2>=\frac{1}{N}\sum\limits^N_{n=1}=\alpha^2_i(t_n)\,.$$ Es decir, la matriz de covarianza de $\alpha_i(t)$ será una matriz diagonal ${\textbf D}$. Para $M$ posiciones se puede reescribir como
 
-$${\textbf B}^T<{\textbf T}{\textbf T}^T>{\textbf B}={\textbf D}\,\,\,\,\,\,\,\,\,{\rm o}\,\,\,\,\,\,\,\,{\textbf B}^T{\textbf T}{\textbf T}^T{\textbf B}=N{\textbf D}$$
+$${\textbf B}^T<{\textbf T}{\textbf T}^T>{\textbf B}={\textbf D}\,\,\,\,\,\,\,\,\,{ o}\,\,\,\,\,\,\,\,{\textbf B}^T{\textbf T}{\textbf T}^T{\textbf B}=N{\textbf D}$$
 
 donde ${\textbf B}$ es una matriz ortogonal cuyas columnas son los vectores ortogonales ${\textbf b}_i$ y ${\textbf D}$ es una matriz diagonal compuesta por las varianzas de las funciones temporales $\alpha_i(t)$. Si multiplicamos por ${\textbf B}$ llegamos a un sistema propio
 
@@ -3335,7 +3035,7 @@ De este análisis deducimos que las primeras $K$ funciones ortogonales o FEOs so
 
 Una matriz de datos de $M$ localizaciones y $N$ tiempos se puede descomponer
 
-$$\bf {C} \bf {B}=\bf {B} {\Lambda}\,,$$
+$${\textbf C}{\textbf B}={\textbf B}{\textbf \Lambda}\,,$$
 
 donde
 
@@ -3453,7 +3153,7 @@ Ambas matrices de dispersión obtenidas del producto de la matriz de datos consi
 
 Como ya hemos visto nuestro sistema propio es 
 
-$${\textbf B}^T<{\textbf T}{\textbf T}^T>{\textbf B}={\textbf D}\,\,\,\,\,\,\,\,\,{\rm o}\,\,\,\,\,\,\,\,{\textbf B}^T{\textbf T}{\textbf T}^T{\textbf B}=N{\textbf D}\,,$$ 
+$${\textbf B}^T<{\textbf T}{\textbf T}^T>{\textbf B}={\textbf D}\,\,\,\,\,\,\,\,\,{ o}\,\,\,\,\,\,\,\,{\textbf B}^T{\textbf T}{\textbf T}^T{\textbf B}=N{\textbf D}\,,$$ 
 
 donde ${\textbf B}$ es una matriz cuyas columnas son los vectores propios y ${\textbf D}$ es una matriz cuadrada con los $M$ valores propios en la diagonal principal. Si queremos expresar los datos originales en términos de los vectores propios, entonces debemos usar la definición 
 
@@ -3512,7 +3212,7 @@ N{\textbf D}$$
 
 $${\textbf I}{\textbf Z}{\textbf Z}^T{\textbf I}=N{\textbf D}$$ 
 
-$${\textbf Z}{\textbf Z}^T=N{\textbf D}\,\,\,\,\,\,{\rm o}\,\,\,\,\,\,<{\textbf Z}{\textbf Z}^T>={\textbf D}\,.$$ 
+$${\textbf Z}{\textbf Z}^T=N{\textbf D}\,\,\,\,\,\,{ o}\,\,\,\,\,\,<{\textbf Z}{\textbf Z}^T>={\textbf D}\,.$$ 
 
 Por lo tanto no solo las FEOs sino también las CPs son ortogonales.
 
@@ -3876,13 +3576,13 @@ Como ya hemos dicho el primer armónico ($p=1$) oscila con frecuencia fundamenta
 \begin{framed}
 {\noindent \textbf Integrales de funciones trigonométricas útiles:}
 \\
-$$\int {\rm cos} ax dx =\frac{{\rm sen} ax}{a} + C$$
+$$\int { cos} ax dx =\frac{{ sen} ax}{a} + C$$
 \\
-$$\int {\rm sen} ax dx =-\frac{{\rm cos} ax}{a} + C$$
+$$\int { sen} ax dx =-\frac{{ cos} ax}{a} + C$$
 \\
-$$\int {\rm sen}^2 ax dx =\frac{x}{2}-\frac{\rm{sen} 2ax}{4a} + C$$
+$$\int { sen}^2 ax dx =\frac{x}{2}-\frac{{sen} 2ax}{4a} + C$$
 \\
-$$\int {\rm cos}^2 ax dx =\frac{x}{2}+\frac{\rm{sen} 2ax}{4a} + C$$
+$$\int { cos}^2 ax dx =\frac{x}{2}+\frac{{sen} 2ax}{4a} + C$$
 
 \end{framed}
 ```
@@ -4111,17 +3811,17 @@ $$f(t)=\sum\limits^\infty_{p=-\infty} C^*_p e^{i\omega_p t_n}\,\,\,\,\,\,\,;\,\,
 
 La parte real de la FFT me da las amplitudes $A_p$ y la parte imaginaria me da las amplitudes $-B_p$ $$Re [F(p)]=A_p=\frac{2}{N}\sum\limits_{n=0}^{N-1} f(t_n) cos(2\pi p n /N),\,\,\,\,p=0,1,...,N/2$$ $$Im [F(p)]=-B_p=-\frac{2}{N}\sum\limits_{n=0}^{N-1} f(t_n) sen(2\pi p n /N),\,\,\,\,p=0,1,...,N/2$$
 
-En general, debemos de normalizar las amplitudes $A_p$ y $B_p$ por la longitud del registro $N$. Así que en Matlab la amplitud de la FFT es $${\rm abs}({\rm fft}(f(t)))/N\,,$$ y la potencia de la FFT es $${\rm abs}({\rm fft}(f(t)).^2/N^2\,.$$
+En general, debemos de normalizar las amplitudes $A_p$ y $B_p$ por la longitud del registro $N$. Así que en Matlab la amplitud de la FFT es $${ abs}({ fft}(f(t)))/N\,,$$ y la potencia de la FFT es $${ abs}({ fft}(f(t)).^2/N^2\,.$$
 
 La FFT ha descompuesto una señal de $N$ elementos, $f(t)$, en un conjunto de $N/2 +1$ ondas cosinusoidales y $N/2 + 1$ ondas sinusoidales, con las frecuencias definidas por el índice $p=0,1,...,N/2$, i.e. \$\omega\_p= 2\pi f_p = 2\pi p / T = 2\pi p / N \Delta t \$. Las amplitudes de los cosenos estan contenidas en $Re [F(p)]$ y las amplitudes de los senos en $Im [F(p)]$. Note que las frecuencias son siempre *positivas*, es decir, los índices $k$ siempre van de cero a $N/2$. Las frecuencias entre $N/2$ y $N-1$ son *negativas*. Recuerda que el espectro frecuencial de una señal discreta es periódico, y entonces las frecuencias son negativas entre $N/2$ y $N-1$ al igual que en el intervalo $-N/2$ y $-1$. Los puntos $0$ y $N/2$ separan las frecuencias negativas de las positivas. Es por ello que, generalmente, solamente centramos nuestra atención en la parte positiva del espectro. La magnitud (o norma) de la transformada de Fourier discreta es 
 
-$${\rm Magnitud}=|F(p)|=\sqrt{Re [F(p)]^2 + Im[F(p)]^2}\,,$$ 
+$${ Magnitud}=|F(p)|=\sqrt{Re [F(p)]^2 + Im[F(p)]^2}\,,$$ 
 
 y la fase es 
 
 $$Phase=tan^{-1}\left( \frac{Im[F(p)]}{Re [F(p)]} \right)\,.$$
 
-La FFT organiza los coeficientes de Fourier (imaginarios y reales) en frecuencias *negativas* y *positivas* y reparte la varianza de la señal equitativamente entre ellas. En $p=0$ tenemos la media de la serie temporal, aunque debido a que hemos eliminado la media y la tendencia de la serie temporal no debemos de preocuparnos por ella. Entre $p=1,...,N/2$ tenemos los valores de los coeficientes de Fourier reales y entre $p=N/2+1,...,N-1$ tenemos los complejos conjugados de los primeros $N/2$ coeficientes. Si calculamos el valor absoluto de la transformada de Fourier (en Matlab ${\rm abs}({\rm fft}(f(t)))/N$) estamos calculando $A_p^2 + B_p^2$ y si solo nos quedamos con los primeros $N/2$ elementos de la FFT, debemos de multiplicar por un factor de $2$ para conservar la energía espectral.
+La FFT organiza los coeficientes de Fourier (imaginarios y reales) en frecuencias *negativas* y *positivas* y reparte la varianza de la señal equitativamente entre ellas. En $p=0$ tenemos la media de la serie temporal, aunque debido a que hemos eliminado la media y la tendencia de la serie temporal no debemos de preocuparnos por ella. Entre $p=1,...,N/2$ tenemos los valores de los coeficientes de Fourier reales y entre $p=N/2+1,...,N-1$ tenemos los complejos conjugados de los primeros $N/2$ coeficientes. Si calculamos el valor absoluto de la transformada de Fourier (en Matlab ${ abs}({ fft}(f(t)))/N$) estamos calculando $A_p^2 + B_p^2$ y si solo nos quedamos con los primeros $N/2$ elementos de la FFT, debemos de multiplicar por un factor de $2$ para conservar la energía espectral.
 
 \vspace{0.25cm}
 
@@ -4131,7 +3831,7 @@ La FFT organiza los coeficientes de Fourier (imaginarios y reales) en frecuencia
 
 (1) *Espectro de amplitud*
 
-La gráfica de la magnitud de los coeficientes complejos $|C_p^*|$ de la serie de Fourier $$f(t)=\sum\limits^\infty_{p=-\infty} C^*_p e^{i\omega_p t_n}$$ frente a (versus) la frecuencia $\omega_p$ se denomina espectro de amplitud de la función periódica $f(t)$. En Matlab (para las primeras $N/2$ componentes), $${\rm Amplitud}=2*|C^*_p|=abs({\rm fft}(f(t)))/N\,.$$
+La gráfica de la magnitud de los coeficientes complejos $|C_p^*|$ de la serie de Fourier $$f(t)=\sum\limits^\infty_{p=-\infty} C^*_p e^{i\omega_p t_n}$$ frente a (versus) la frecuencia $\omega_p$ se denomina espectro de amplitud de la función periódica $f(t)$. En Matlab (para las primeras $N/2$ componentes), $${ Amplitud}=2*|C^*_p|=abs({ fft}(f(t)))/N\,.$$
 
 \vspace{0.5cm}
 
@@ -4139,12 +3839,12 @@ La gráfica de la magnitud de los coeficientes complejos $|C_p^*|$ de la serie d
 
 El espectro de densidad de potencia (PSD, por sus siglas en inglés) es la potencia de la FFT por unidad de frecuencia $${\it PSD}(p)=2*|C^*_p|^2/\Delta f$$ donde $\Delta f=1/N\Delta t$ es la frecuencia fundamental.
 
-La gráfica de ${\rm PSD}(p)$ de la frente a (versus) la frecuencia $\omega_p$ se denomina espectro de densidad de potencia de la función periódica $f(t)$. Si solo nos quedamos con las $N/2$ primeras componentes en Matlab se escribe $${\it PSD}(p)=2*abs({\rm fft}(f(t)))^2/N^2/\Delta f\,.$$
+La gráfica de ${ PSD}(p)$ de la frente a (versus) la frecuencia $\omega_p$ se denomina espectro de densidad de potencia de la función periódica $f(t)$. Si solo nos quedamos con las $N/2$ primeras componentes en Matlab se escribe $${\it PSD}(p)=2*abs({ fft}(f(t)))^2/N^2/\Delta f\,.$$
 
 Esta normalización tiene su fundamento en el cumplimiento del teorema de Parseval, de tal forma que la energía total de la señal en el dominio temporal $f(t)$ (por unidad de tiempo) sea igual a la energía total de la señal en el dominio frecuencial definido por $C^*_p$: $$\frac{1}{T}\sum\limits^N_{n=1}|f(t_n)|^2 \Delta t =\frac{1}{N}\sum\limits^N_{n=1}|f(t_n)|^2 =
 var(f(t))=\sum\limits^{\infty}_{p=-\infty} |C^*_p|^2=\sum\limits^{N/2}_{p=0}PSD(p)*\Delta f\,.$$\
 \
-Este teorema de conservacón de energía nos informa de que la integral bajo la curva espectral ${\rm PSD}(p)$ debe ser igual a la varianza total de la serie temporal.
+Este teorema de conservacón de energía nos informa de que la integral bajo la curva espectral ${ PSD}(p)$ debe ser igual a la varianza total de la serie temporal.
 
 \vspace{0.5cm}
 
@@ -4236,7 +3936,7 @@ Podemos observar como en el caso de la serie no-periódica existe una transferen
 
 ```{=tex}
 \begin{framed}
-{\rm RECORDATORIO:}
+{ RECORDATORIO:}
 \
 La función de covarianza cruzada se debe definir en función de un desfase $\tau$ como
  $$C_{xy}(\tau)=\frac{1}{N-m}\sum\limits^{N-m}_{n=0}x(n\Delta t) y(n\Delta t +\tau)\,,$$
@@ -4254,7 +3954,7 @@ Kundu (1976b) define la función de correlación cruzada desfasada entre dos ser
 $$\rho=\frac{\overline{w_1^*(t)w_2(t)}}
 {\left[ \overline{w_1^*(t)w_1^*(t)}\,\, \overline{w_2^*(t)w_2(t)} \right]^{1/2}}\,,$$
 
-donde $w=u+i v$, los asteriscos $*$ indican complejo conjugados, y los subíndices $1$ y $2$ se refieren a dos estaciones de medida. La cantidad $\rho$ es un número complejo cuya magnitud ($\le1$) nos da una medida de correlación promedia y cuyo ángulo de fase da el angulo promedio, medido en el sentido contrario a las agujas del reloj, del segundo vector con respecto del primero. Por ejemplo, un ángulo de fase negativo entre las profundidades $50$ y $100\,{\rm m}$ implica que la señal llega primero a $z=-100\,{\rm m}$ y luego a $z=-50\,{\rm m}$, es decir, podría tratarse de una onda interna cuyas fases se propagan hacia arriba.
+donde $w=u+i v$, los asteriscos $*$ indican complejo conjugados, y los subíndices $1$ y $2$ se refieren a dos estaciones de medida. La cantidad $\rho$ es un número complejo cuya magnitud ($\le1$) nos da una medida de correlación promedia y cuyo ángulo de fase da el angulo promedio, medido en el sentido contrario a las agujas del reloj, del segundo vector con respecto del primero. Por ejemplo, un ángulo de fase negativo entre las profundidades $50$ y $100\,{ m}$ implica que la señal llega primero a $z=-100\,{ m}$ y luego a $z=-50\,{ m}$, es decir, podría tratarse de una onda interna cuyas fases se propagan hacia arriba.
 
 \vspace{0.5cm}
 
@@ -4295,7 +3995,7 @@ El factor $e^{i(\theta_{xp}-\theta_{yp})}$ aparece para considerar que ambas ser
 
 (4) **Espectro cruzado complejo**
 
-Si escribimos $F_{xy}(p)$ en términos de los coeficientes de Fourier reales $$F_x(p) F^*_y(p)=\frac{1}{2}\left(A_{xp} - iB_{xp} \right)e^{i\omega_p t_n}\frac{1}{2}\left(A_{yp} + iB_{yp} \right)e^{-i\omega_p t_n}=$$ $$=\frac{1}{4}\left[A_{xk}A_{yk}  + B_{xk}B_{yp} + i\left(A_{xp}B_{yp} - A_{yp}B_{xp}\right)\right]\,.$$ Para el caso de series $x(t)$ e $y(t)$ reales sabemos que las frecuencias negativas son los complejos conjugados de las frecuencias positivas y entonces $$A_k=A_{-k}\,\,\,\,\,{\rm y}\,\,\,\,\,B_k=B_{-k}\,,$$ y $$F_x(p)F^*_y(p)=F_x(-p)F_y^*(-p)\,,$$ y como conclusión
+Si escribimos $F_{xy}(p)$ en términos de los coeficientes de Fourier reales $$F_x(p) F^*_y(p)=\frac{1}{2}\left(A_{xp} - iB_{xp} \right)e^{i\omega_p t_n}\frac{1}{2}\left(A_{yp} + iB_{yp} \right)e^{-i\omega_p t_n}=$$ $$=\frac{1}{4}\left[A_{xk}A_{yk}  + B_{xk}B_{yp} + i\left(A_{xp}B_{yp} - A_{yp}B_{xp}\right)\right]\,.$$ Para el caso de series $x(t)$ e $y(t)$ reales sabemos que las frecuencias negativas son los complejos conjugados de las frecuencias positivas y entonces $$A_k=A_{-k}\,\,\,\,\,{ y}\,\,\,\,\,B_k=B_{-k}\,,$$ y $$F_x(p)F^*_y(p)=F_x(-p)F_y^*(-p)\,,$$ y como conclusión
 
 $$F_{xy}(p)+F_{xy}(-p)=\frac{1}{2}\left[ A_{xp}A_{yp}  + B_{xp}B_{yp} + i\left(A_{xp}B_{yp} - A_{yp}B_{xp}\right)\right]\,,$$
 
@@ -4433,7 +4133,7 @@ Esta función respuesta tiende a cero cuando $\omega T / 2$ se acerca a cero, es
   \begin{array}{l}
      \frac{1}{2}\left( 1-cos\frac{2\pi t}{T}\right)
       \text{ if } -T/2 \le t \le T/2 \\
-     0 \text{ if } {\rm contrario} \\
+     0 \text{ if } { contrario} \\
   \end{array}
   \right.
   \end{equation*} 
@@ -4444,7 +4144,7 @@ Esta función respuesta tiende a cero cuando $\omega T / 2$ se acerca a cero, es
   r(t)=\left\lbrace
   \begin{array}{l}
      \left(0.54  + 0.46 cos(\frac{\pi t}{T}) \right) \text{ if } -T/2 \le t \le T/2 \\
-     0 \text{ if } {\rm contrario} \\
+     0 \text{ if } { contrario} \\
   \end{array}
   \right.
   \end{equation*}
@@ -4456,7 +4156,7 @@ Esta función respuesta tiende a cero cuando $\omega T / 2$ se acerca a cero, es
 ```
 Es evidente que este tipo de filtro es un suavizado o filtro pasa bajo. Sin embargo, siempre podemos recuperar facilmente la señal de alta frecuencia (filtro pasa altas) restando a la señal original la serie suavizada con convolución.
 
-Imaginemos que tenemos una serie temporal $u(t)$ con un paso temporal de $dt=1\,{\rm h}$. Entonces, para suavizar $u(t)$ de tal forma que se eliminen las señales con periodos menores de $T=48\,{\rm h}$, es decir, un filtro pasa baja con frecuencia de corte $1/48\,{\rm h}^{-1}$ debemos convolucionar $u(t)$ con una función de resouesta $r(t)$ o ventana. En este ejemplo  *Matlab* se muestra como programar un suavizado
+Imaginemos que tenemos una serie temporal $u(t)$ con un paso temporal de $dt=1\,{ h}$. Entonces, para suavizar $u(t)$ de tal forma que se eliminen las señales con periodos menores de $T=48\,{ h}$, es decir, un filtro pasa baja con frecuencia de corte $1/48\,{ h}^{-1}$ debemos convolucionar $u(t)$ con una función de resouesta $r(t)$ o ventana. En este ejemplo  *Matlab* se muestra como programar un suavizado
 
 ```{=tex}
 \begin{framed}
@@ -4491,7 +4191,7 @@ Ya hemos visto que podemos suavizar una señal simplemente con la convolución e
     |R(\omega)|=\left\lbrace
       \begin{array}{l}
      1 \text{ si } \omega_{c1}\le|\omega|\le \omega_{c2} \\
-     0 \text{ si } \text({\rm lo}\,\,\,{\rm contrario}) \\
+     0 \text{ si } \text({ lo}\,\,\,{ contrario}) \\
       \end{array}
       \right.
       \end{equation*} \\
@@ -4537,7 +4237,7 @@ end\\
 
 Supongamos un simple filtro simétrico obtenido como la convolución entre una función de pesos $r(t)$ y la señal $x(t)$ 
 
-$$y_n=\sum\limits^{\infty}_{p=-\infty} r_p x_{n-p}\,\,\,\,{\rm donde}\,\,\,\,r_p=r_{-p}\,,$$ 
+$$y_n=\sum\limits^{\infty}_{p=-\infty} r_p x_{n-p}\,\,\,\,{ donde}\,\,\,\,r_p=r_{-p}\,,$$ 
 
 son pesos elegidos adecuadamente. El efecto de filtrado se observa mejor en el dominio frecuencial. Queremos calcular la transformada de Fourier de una serie temporal $f(t)$, la cual ha sido desfasada un tiempo $\Delta t = a$: 
 
@@ -4548,9 +4248,9 @@ De esta expresión deducimos que la transformada de Fourier de una serie desfasa
 
 $$R(\omega)=\frac{Y(\omega)}{X(\omega)}=\sum\limits^{\infty}_{p=-\infty} r_p e^{-i\omega_p \Delta t}\,.$$
 
-Puesto que $r_p=r_{-p}$ y 
+{\noindent}Puesto que $r_p=r_{-p}$ y 
 
-$${\rm cos}(x)=\frac{e^{ix} + e^{-ix}}{2}\,,$$ 
+$${ cos}(x)=\frac{e^{ix} + e^{-ix}}{2}\,,$$ 
 
 podemos escribir la función respuesta del filtrado deseado como 
 
@@ -4595,11 +4295,10 @@ Esta longitud de onda coincide con el ancho de banda de transición del filtro, 
 $$x(t)[filtrado]={\cal F}^{-1}[R(f)X(f)]\,,$$ 
 \
 (ii) convolucionar la respuesta en el dominio temporal $r(t)$ por la serie temporal. 
-$$x(t)[{\rm filtrado}]=[r(t)*x](t)\,.$$ \
+$$x(t)[{ filtrado}]=[r(t)*x](t)\,.$$ \
 
-Si queremos un filtro pasa alta, usamos $r_p({\rm pasa}\,\,\,{\rm alto})=1-r_p$. Y la función respuesta sería 
-
-$$R(\omega)[{\rm pasa}\,\,\,{\rm alto}]=1-R(\omega)=1-\frac{\omega_c}{\omega_N} - 2\sum\limits^{\infty}_{p=1}
+{\noindent}Si queremos un filtro pasa alta, usamos $r_p({ pasa}\,\,\,{ alto})=1-r_p$. Y la función respuesta sería 
+$$R(\omega)[{ pasa}\,\,\,{ alto}]=1-R(\omega)=1-\frac{\omega_c}{\omega_N} - 2\sum\limits^{\infty}_{p=1}
 \frac{sen(\pi p \omega_c / \omega_N)}{\pi p}cos(\pi p \omega / \omega_N)$$ 
 \
 Veamos ahora de nuevo el promedio corrido pero esta vez usando el método de Fourier. De nuevo decir que el promedio corrido reemplaza el valor central de la ventana por el promedio de los valores que rodean a ese punto. Para este ejemplo los pesos son siempre iguales $r_p=1/T$ para el intervalo $-N<p<N$, donde $T=1/(2N+1)$ es el tamaño de la ventana \`boxcar'. De esta forma \ 
@@ -4796,9 +4495,9 @@ set(gca,'fontsize',18);\\
 axis([-1 1 -0.2 1.2]);\\
 \end{framed}
 ```
-Para el filtro pasa bajas: $$x(t)[{\rm filtrado}]=[r_p \sigma_p * x](t)\,,$$ o $$x(t)[{\rm filtrado}]={\cal F}^{-1}[\widetilde{R}(f)X(f)]\,.$$
+Para el filtro pasa bajas: $$x(t)[{ filtrado}]=[r_p \sigma_p * x](t)\,,$$ o $$x(t)[{ filtrado}]={\cal F}^{-1}[\widetilde{R}(f)X(f)]\,.$$
 
-Para el filtro pasa-banda: $$x(t)[{\rm filtrado}]=[r_p \sigma_p cos\left( \frac{\pi p f_0}{f_N}\right)*x](t)\,,$$ o $$x(t)[{\rm filtrado}]={\cal F}^{-1}[\widetilde{R}_b(f)X(f)]\,.$$
+Para el filtro pasa-banda: $$x(t)[{ filtrado}]=[r_p \sigma_p cos\left( \frac{\pi p f_0}{f_N}\right)*x](t)\,,$$ o $$x(t)[{ filtrado}]={\cal F}^{-1}[\widetilde{R}_b(f)X(f)]\,.$$
 
 Todo esto se puede programar facilmente en  *Matlab* como se muestra en el siguiente:
 
@@ -4915,7 +4614,7 @@ fo=f2; \%frecuencia central del filtro\\
 fc=0.03;\\
 fn=0.5; \% frecuencia de Nyquist\\
 N = 30; \% recordemos que el número total de coeficientes será N+1+N. \\
-$[{\rm h},{\rm Fh},{\rm Rh}]$=lnz\_co(fo,fc,fn,N,df);\\
+$[{ h},{ Fh},{ Rh}]$=lnz\_co(fo,fc,fn,N,df);\\
 zf = lnz\_fi(z,h); \%serie filtrada y listo.
 \end{framed}
 ```
@@ -5003,7 +4702,7 @@ Año 2 & 8.9 & 9.5 & 10.6 & 11.4 & 12.9 & 12.7 & 13.9 & 14.2 & 13.5 & 11.4 & 10.
 ```
 \\ \\
 
-Deseamos encontrar las componentes mareales dominantes en la serie temporal de temperatura. A simple vista podemos ver que existe una frecuencia dominante semianual. Por tanto, vamos buscar las amplitudes y frecuencias de interés, es decir, de las componentes anual y semianual que tienen unas frecuencias de $f_1=1/12$ meses ($=0.0833\,{\rm cpm}$) y $f_2=1/24$ meses ($=0.1667\,{\rm cpm}$). Los argumentos de las funciones de Fourier son $\phi_1(n)=\omega_1 t_n=2\pi(1/12)*n*\Delta t=(\pi/6)*n*1=n\pi/6$ y $\phi_2(n)=\omega_2 t_n=2\pi(1/6)*n*\Delta t=(\pi/3)*n*1=n\pi/3$ Para este problema las matrices son \\
+Deseamos encontrar las componentes mareales dominantes en la serie temporal de temperatura. A simple vista podemos ver que existe una frecuencia dominante semianual. Por tanto, vamos buscar las amplitudes y frecuencias de interés, es decir, de las componentes anual y semianual que tienen unas frecuencias de $f_1=1/12$ meses ($=0.0833\,{ cpm}$) y $f_2=1/24$ meses ($=0.1667\,{ cpm}$). Los argumentos de las funciones de Fourier son $\phi_1(n)=\omega_1 t_n=2\pi(1/12)*n*\Delta t=(\pi/6)*n*1=n\pi/6$ y $\phi_2(n)=\omega_2 t_n=2\pi(1/6)*n*\Delta t=(\pi/3)*n*1=n\pi/3$ Para este problema las matrices son \\
 
 $${\textbf D}=\left( \begin{array}{ccccc}
   N & c_1 & c_2 & s_1 & s_2 \\
@@ -5091,7 +4790,7 @@ sen(\omega t_n) & cos(\omega t_n) & -sen(\omega t_n) & cos(\omega t_n) \\
 
 Una vez los valores de ${\textbf z}$ son encontrados a partir de la solución de mínimos cuadrados de arriba, podemos encontrar los parámetros de la elipse como: $$R^+=\sqrt{\left( ASP^2 + ACP^2\right)}\,;\,\,\,\,\,R^-=\sqrt{\left( ASM^2 + ACM^2\right)}$$ $$\epsilon^+=tan^{-1}\left(\frac{ASP}{ACP}\right)\,;\,\,\,\,\,\epsilon^-=tan^{-1}\left(\frac{ASM}{ACM}\right)$$
 
-Por ejemplo, si queremos demodular la amplitud y fase de las ondas inerciales observadas en un anclaje situado en latitudes medias, debemos de usar una frecuencia $\omega=2\Omega sen\phi$ y ajustar por mínimos cuadrados segmentos de $24\,{\rm h}$ sin superposición. La serie temporal medida por el anclaje debería de ser horaria para que existan mas datos por segmento que parámetros a ajustar.
+Por ejemplo, si queremos demodular la amplitud y fase de las ondas inerciales observadas en un anclaje situado en latitudes medias, debemos de usar una frecuencia $\omega=2\Omega sen\phi$ y ajustar por mínimos cuadrados segmentos de $24\,{ h}$ sin superposición. La serie temporal medida por el anclaje debería de ser horaria para que existan mas datos por segmento que parámetros a ajustar.
 
 Otra forma, tal vez mas sencilla, es la siguiente. Imaginemos que la serie original es $X(t)$ y se asume como una señal periódica con frecuencia igual a la de interés mas otras cosas que llamamos $Z(t)$ $$X(t)=A(t)cos\left(\omega t + \varphi(t)\right) + Z(t)= \frac{1}{2}A(t)
        \left[e^{i(\omega t + \varphi(t))} + e^{-i(\omega t + \varphi(t))} \right] + Z(t)\,,$$ donde la amplitud $A(t)$ y la fase $\varphi(t)$ de la señal periódica se asumen que dependen del tiempo pero que varían "lentamente" en comparación a la frecuencia $\omega$.
@@ -5109,7 +4808,7 @@ El término (a) varía lentamente ya que $\varphi(t)$ también lo hace y no tien
 
 (3) Extraer $A_s(t)$ y $\varphi_s(t)$: $$\frac{1}{2}A_s(t)=|Y_s(t)|=2\left( Re[Y_s]^2 + Im[Y_s]^2\right)^{1/2}$$ $$e^{i\varphi(t)}=2\frac{Y_s(t)}{A_s(t)}\,;\,\,\,\,\,\varphi_s(t)=tan^{-1}\left(\frac{Im[Y_s]}{Re[Y_s]}\right)$$
 
-Al suavizar hacemos dos cosas. Primero, eliminamos los términos no deseados (a) y (b). El tipo de filtrado o suavizado determina la anchura de la banda de frecuencias de las oscilaciones retenidas. Por ejemplo, si usamos un triángulo (ventana triangular) de longitud $2T-1$ donde $T=2\pi/\omega$ es el periodo de demodulación, entonces para la banda para la potencia-media ($3\,{\rm dB}$ desde el pico) será $\omega \in [T/(1+0.44295),T/(1-0.44295)]$. Potencia media se refiere a la frecuencia a la cual la potencia se ha reducido a la mitad de su valor medio de la banda. Segundo, el filtrado suaviza las series de amplitud y la fase. \\
+Al suavizar hacemos dos cosas. Primero, eliminamos los términos no deseados (a) y (b). El tipo de filtrado o suavizado determina la anchura de la banda de frecuencias de las oscilaciones retenidas. Por ejemplo, si usamos un triángulo (ventana triangular) de longitud $2T-1$ donde $T=2\pi/\omega$ es el periodo de demodulación, entonces para la banda para la potencia-media ($3\,{ dB}$ desde el pico) será $\omega \in [T/(1+0.44295),T/(1-0.44295)]$. Potencia media se refiere a la frecuencia a la cual la potencia se ha reducido a la mitad de su valor medio de la banda. Segundo, el filtrado suaviza las series de amplitud y la fase. \\
 
 (4) La elección de la frecuencia de demodulación $\omega$ se puede validar ajustando localmente una línea a la fase,$\varphi\simeq a + bt$. Típicamente esto lo haremos en fragmentos de longiutd $T$. De esta forma si seleccionamos el origen en el tiempo central de cada fragmento (tal que $a\simeq 0$) obtenemos que $cos(\omega t + \varphi)\simeq cos(\omega t + bt)=cos(\hat{\omega} t)$.
 

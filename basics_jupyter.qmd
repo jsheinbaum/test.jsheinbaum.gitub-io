@@ -73,7 +73,7 @@ print(inittime)
 print(finaltime)
 lat_toplot = np.arange(5, 35.25, 0.25) # last number is exclusive
 lon_toplot = np.arange(260, 310.25, 0.25) # last number is exclusive
-dataw= dsw.sel(time=slice(inittime,finaltime),height_above_ground2=10, lon=lon_toplot, lat=lat_toplot)
+dataw= dsw.sel(time1=slice(inittime,finaltime),height_above_ground2=10, lon=lon_toplot, lat=lat_toplot)
 u10=dataw['u-component_of_wind_height_above_ground'].values
 v10=dataw['v-component_of_wind_height_above_ground'].values
 lon=dataw.lon.values
@@ -84,7 +84,7 @@ V10=v10[l,:,:].squeeze()
 vec_crs = ccrs.RotatedPole(pole_longitude=180.0, pole_latitude=90.0)
 #central_rotated_longitude=0.0)
 data_crs=ccrs.PlateCarree()
-print(dataw.time[l])
+print(dataw.time1[l])
 fig = plt.figure(figsize=(20,5))
 ax1 = fig.add_subplot(1, 1, 1, projection=ccrs.PlateCarree())
 ax1.set_extent([260, 311, 4, 40], crs=ccrs.PlateCarree())
