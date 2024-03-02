@@ -83,6 +83,7 @@
 
 %% always will want this available
 \RequirePackage{graphicx}
+\RequirePackage{pdfpages}
 
 %% to get illustrations to print, in spite of being in Draft mode:
 \setkeys{Gin}{draft=false}

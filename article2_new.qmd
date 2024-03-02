@@ -1,8 +1,8 @@
-m--
+---
 title: "Notas Curso Análisis de datos"
 format:
   pdf:
-    agu-pdf:
+    agu-pdf: 
         keep-tex: true
     agu-html: default
 author:
@@ -67,12 +67,10 @@ bibliography: bibliography.bib
 citation:
   container-title: Geophysical Research Letters
 keep-tex: true
-date: last-modified
+date: March 01 2024
 ---
-```{=html}
-<!--
+```{=tex}
 \includepdf[pages={-}]{/Users/julios/curso_analisis_de_datos/Instrumentacion_2023.pdf}
--->
 ```
 
 ## Estadística y conceptos de probabilidad
@@ -150,7 +148,7 @@ Imaginemos que queremos conocer cual es la temperatura superficial promedio en l
 
 Este ejemplo precisa de la distinción entre lo que consideramos nuestra *señal* (temperatura media) de los procesos que son *ruido* (Estaciones del año, los años Niño, ondas internas, etc.). De esta forma, al definir el promedio estamos haciendo explícita la separación entre *señal* y *ruido*. Finalmente, una vez definido sobre que promediar, existen en literatura una gran cantidad de herramientas estadísticas que podemos utilizar. Definir *señal* y *ruido*, y determinar sobre que conjunto de datos vamos a calcular el promedio, es una tarea difícil. Conocer como debemos muestrear el océano también debe hacerse cuidadosamente.\
 
-En oceanografía física se muestrea el océano de forma discontínua, es decir, se obtienen medidas puntuales en el espacio y en el tiempo. Como dijimos anteriormente, el océano contiene procesos de diferentes escalas espaciales y temporales, nolineales, y aleatorios. Es por ello que es sumamente importante saber escojer el intervalo de muestreo $\Delta{t}$ dependiendo del fenómeno que se quiere muestrear. Debemos de tener en mente que la frecuencia mas alta que podemos resolver es la frecuencia de Nyquist:
+En oceanografía física se muestrea el océano de forma discontínua, es decir, se obtienen medidas puntuales en el espacio y en el tiempo. Como dijimos anteriormente, el océano contiene procesos de diferentes escalas espaciales y temporales, nolineales, y aleatorios. Es por ello que es sumamente importante saber escoger el intervalo de muestreo $\Delta{t}$ dependiendo del fenómeno que se quiere muestrear. Debemos de tener en mente que la frecuencia mas alta que podemos resolver es la frecuencia de Nyquist:
 
 $$f_N=1/(2\Delta{t})\,.$$
 
@@ -182,7 +180,7 @@ La media de una muestra de N valores $x_i=x_1,x_2,...,x_N$ es
 \bar{x}=\frac{1}{N}\sum^N_{i=1}x_i=<x>\,.
 \end{equation}
 ```
-La media debe de diferenciarse de la mediana. La media es el momento de orden cero. La mediana de una población es aquel valor numérico que separa el 50% de valores mas altos del 50% de valores mas bajos. Se puede calcular ordenando de menor a mayor el conjunto de valores y escojer el valor central si el conjunto de datos es impar o el promedio de los dos centrales si es par.\
+La media debe de diferenciarse de la mediana. La media es el momento de orden cero. La mediana de una población es aquel valor numérico que separa el 50% de valores mas altos del 50% de valores mas bajos. Se puede calcular ordenando de menor a mayor el conjunto de valores y escoger el valor central si el conjunto de datos es impar o el promedio de los dos centrales si es par.\
 
 2.  La varianza:\
 
@@ -282,7 +280,8 @@ donde $\alpha$ es una constante. El error cometido por este estimador se define 
 
 $$\epsilon=<(\hat{y}-y)^2>=\alpha^2<x^2>+<y^2>-2\alpha<xy>$$
 
-y si queremos minimizar dicho error entonces tenemos que encontrar que $\alpha$ es el que provoca que la derivada $\partial{\epsilon}/\partial{\alpha}\rightarrow{0}$. Es decir
+y si queremos minimizar dicho error entonces tenemos que encontrar que $\alpha$ es el que provoca que la derivada 
+$\partial{\epsilon}/\partial{\alpha}\rightarrow{0}$. Es decir
 
 $$\partial{\epsilon}/\partial{\alpha}=2\alpha<x^2>-2<xy>=0\,,$$
 
@@ -537,7 +536,7 @@ y similarmente para 2 y 3 desviaciones estándar\
 $$P(-2\le z \le 2)=\int^{+2}_{-2} F_x(z) dz=95.45\%$$ $$P(-3\le z \le 3)=\int^{+3}_{-3} F_x(z) dz=99.73\%\,.$$
 
 Entonces solo hay un $4.55\%$ de probabilidad de que una variable normalmente distribuida caiga fuera de dos desviaciones estándar respecto de la media. Puesto que es una probabilidad con 2 colas, la probabilidad de que una variable normal exceda su media por mas de $2\sigma$ es la mitad de esto, es decir $2.275\%$, ya que la distribución normal es simétrica.\
-En la práctica una PDF se calcula como un histograma escalado. Es por ello que necesitamos escojer el tamaño y localización de los bins en el histograma. La demo muestra las consecuencias de esta elección (pdf_demo.m).
+En la práctica una PDF se calcula como un histograma escalado. Es por ello que necesitamos escoger el tamaño y localización de los bins en el histograma. La demo muestra las consecuencias de esta elección (pdf_demo.m).
 
 ```{=tex}
 \begin{center}
@@ -915,7 +914,11 @@ $$\bar{x}-t_{\alpha/2}\frac{s}{\sqrt{N-1}} < \mu <
 
 Si $\alpha=0.05$, hay un 95% de probabilidad que cualquier estadístico $t$ caiga en el intervalo $$t_{-0.025}<\frac{\bar{x}-\mu}{s}\sqrt{N-1}<t_{0.025}\,,$$ de lo cual podemos deducir que la verdadera media $\mu$ es de esperar con un 95% de confianza que caiga en el intervalo: $$\bar{x}-t_{0.025}\frac{s}{\sqrt{N-1}}<\mu<\bar{x}+t_{0.025}\frac{s}{\sqrt{N-1}}\,.$$
 
-De forma general, podemos definir el intervalo de confianza como: $$\mu=\bar{x}\pm t_c\frac{\hat{s}}{\sqrt{N}}\,,$$ donde $t_c$ es el valor crítico del estadístico $t$ (límites del intervalo), el cual depende del número de grados de libertad y del nivel de confiabilidad deseado. El intervalo de confianza con el estadístico $z$, el cual solo es apropiado para tamaños muestrales grandes ($N>30$) donde la desviación estándar es conocida: $$\mu=\bar{x}\pm z_c\frac{\sigma}{\sqrt{N}}\,.$$ Observamos que la teoría para tamaños muestrales pequeños reemplaza el estadístico $z$ por el $t$ y utiliza una desviación estándar muestral modificada $$\hat{s}=\sqrt{\frac{N}{N-1}s}\,.$$ %\vspace{0.5cm} % {\noindent \textbf Diferencias entre medias}\\ %Supongamos dos muestras de tamaño $N_1$ y $N_2$ extraidas de una población %con distribución normal con desviaciones estándar siguales. Supongamos %que las medias muestrales son $\bar{x_1}$ y $\bar{x_2}$ y las %desviaciones estándar muestrales son $s_1$ y $s_2$. Para comprobar %la hipótesis nula ($H_0$) que ambas muestras provienen de la misma población, %es decir $\mu_1=\mu_2$ y $\sigma_1=\sigma_2$ podemos usar la siguiente expresión
+De forma general, podemos definir el intervalo de confianza como: $$\mu=\bar{x}\pm t_c\frac{\hat{s}}{\sqrt{N}}\,,$$ donde $t_c$ es el valor crítico del estadístico $t$ (límites del intervalo), el cual depende del número de grados de libertad y del nivel de confiabilidad deseado. El intervalo de confianza con el estadístico $z$, el cual solo es apropiado para tamaños muestrales grandes ($N>30$) donde la desviación estándar es conocida: $$\mu=\bar{x}\pm z_c\frac{\sigma}{\sqrt{N}}\,.$$ Observamos que la teoría para tamaños muestrales pequeños reemplaza el estadístico $z$ por el $t$ y utiliza una desviación estándar muestral modificada 
+
+$$\hat{s}=\sqrt{\frac{N}{N-1}s}\,.$$ %\vspace{0.5cm} % {\noindent \textbf Diferencias entre medias}\\ 
+
+Supongamos dos muestras de tamaño $N_1$ y $N_2$ extraidas de una población %con distribución normal con desviaciones estándar siguales. Supongamos que las medias muestrales son $\bar{x_1}$ y $\bar{x_2}$ y las %desviaciones estándar muestrales son $s_1$ y $s_2$. Para comprobar %la hipótesis nula ($H_0$) que ambas muestras provienen de la misma población, %es decir $\mu_1=\mu_2$ y $\sigma_1=\sigma_2$ podemos usar la siguiente expresión
 
 $$t=\frac{(\bar{x_1}-\bar{x_2})-(\mu_1-\mu_2)}{\sigma\sqrt{\frac{1}{N_1} + \frac{1}{N_2}}};$$
 
@@ -1758,24 +1761,33 @@ Sea $${\textbf y}={\textbf A}{\textbf x}\,,$$ donde ${\textbf y}$ es $m\times 1$
 
 \vspace{0.5cm}
 
-{\noindent \textbf (A) \large Mínimos cuadrados lineales} \\ Empezamos aplicando el método en términos de estimación lineal. Nos referimos a lineal en cuanto a los coeficientes $b_0, b_1,...,b_k$, es decir, $y=b_0 + b_1x_1 + \epsilon$ es lineal, pero $y=b_0+sin(b_1x_1)$ no lo es. \\
+{\noindent \textbf (A) \large cuadrados mínimos lineales} \\ Empezamos aplicando el método en términos de estimación lineal. Nos referimos a lineal en cuanto a los coeficientes $b_0, b_1,...,b_k$, es decir, $y=b_0 + b_1x_1 + \epsilon$ es lineal, pero $y=b_0+sin(b_1x_1)$ no lo es. \\
 
 (1) {\textbf Ajuste de una recta a un conjunto de datos} \\ \noindent Queremos usar los mejores coeficientes $b_0$ y $b_1$ en el sentido que se reduzca la desviación estándar de la recta ajustada versus los datos. Sea $i=1,2,...,N$ observaciones, entonces $$y_i=\hat{y_i} + \epsilon\,,$$ donde $$\hat{y_i}=b_0+b_1 x_i$$ es el estimador estadístico y $\epsilon$ es el residuo (medida de la diferencia de la recta ajustada versus conjunto de puntos). Para encontrar $b_0, \, b_1$ debemos de minimizar la suma de los errores cuadrados (SEC), donde SEC es la varianza total que no es explicada por nuestro modelo de regresión lineal $$SEC=\sum^N_{i=1} \epsilon^2_i=\sum^N_{i=1} (y_i - \hat{y_i})^2=\sum^N_{i=1} [y_i - (b_0+b_1 x_i)]^2\,.$$ \\
 
 La suma de los cuadrados totales se define como $$SCT=\sum^N_{i=1} (y_i - \bar{y})^2\,,$$ y la suma de los cuadrados residuales $$SCR=\sum^N_{i=1} (\hat{y_i} - \bar{y})^2\,.$$ \\ La SCT es proporcional a la varianza de los datos y SCR es proporcional a la cantidad de varianza explicada por nuestra regresión. La varianza total (o SCT) se puede descomponer en función de SCR y SEC como: $$SCT=\sum^N_{i=1}(y_i-\bar{y})^2 = \sum^N_{i=1}(\hat{y_i} + \epsilon_i - \bar{y})^2
 =\sum^N_{i=1}((\hat{y_i}- \bar{y}) + \epsilon_i)^2=\sum^N_{i=1}(\hat{y_i}- \bar{y})^2 +$$ $$+\sum^N_{i=1}\epsilon_i^2 + 2\sum^N_{i=1}(\hat{y_i}- \bar{y})\epsilon_i\,,$$ y por lo tanto $$SCT=SCR + SEC\,$$ \\ ya que por las ecuaciones normales $2\sum^N_{i=1}(\hat{y_i}- \bar{y})\epsilon_i=0$.\
 
-\noindent El problema de mínimos cuadrados consiste en minimizar la SEC con respecto los coeficientes, cuyas condiciones son $$\frac{\partial{SEC}}{\partial{b_0}}=0; \frac{\partial{SEC}}{\partial{b_1}}=0\,.$$\
+\noindent El problema de cuadrados mínimos consiste en minimizar la SEC con respecto los coeficientes, cuyas condiciones son $$\frac{\partial{SEC}}{\partial{b_0}}=0; \frac{\partial{SEC}}{\partial{b_1}}=0\,.$$\
 
-\noindent Substituyendo obtenemos para $b_0$ $$\frac{\partial{SEC}}{\partial{b_0}} =\frac{\partial}{\partial{b_0}}
+\noindent Substituyendo obtenemos para $b_0$ 
+
+$$\frac{\partial{SEC}}{\partial{b_0}} =\frac{\partial}{\partial{b_0}}
   \left\{
     \sum^N_{i=1} [y_i - (b_0+b_1 x_i)]^2
   \right\}=
-  -2\sum^N_{i=1} [y_i - (b_0+b_1 x_i)]=$$ $$=-2\left(\sum^N_{i=1}y_i -N b_0 - b_1\sum^N_{i=1} x_i  \right)=0\,,$$ y para $b_1$ $$\frac{\partial{SEC}}{\partial{b_1}} =\frac{\partial{}}{\partial{b_1}}
+  -2\sum^N_{i=1} [y_i - (b_0+b_1 x_i)]=$$ $$=-2\left(\sum^N_{i=1}y_i -N b_0 - b_1\sum^N_{i=1} x_i  \right)=0\,,$$ 
+  
+  y para $b_1$ 
+  
+$$\frac{\partial{SEC}}{\partial{b_1}} =\frac{\partial{}}{\partial{b_1}}
   \left\{
     \sum^N_{i=1} [y_i - (b_0+b_1 x_i)]^2
   \right\}=
-  -2\sum^N_{i=1} x_i [y_i - (b_0+b_1 x_i)]=$$ $$=-2\left(\sum^N_{i=1}x_i y_i - b_0\sum^N_{i=1}x_i - b_1\sum^N_{i=1} x^2_i \right)=0\,.$$\
+-2\sum^N_{i=1} x_i [y_i - (b_0+b_1 x_i)]=$$ 
+
+$$=-2\left(\sum^N_{i=1}x_i y_i - 
+b_0\sum^N_{i=1}x_i - b_1\sum^N_{i=1} x^2_i \right)=0 $$ \\ 
 
 \noindent Si resolvemos para $b_0$
 
@@ -1786,9 +1798,13 @@ y sustituimos en la segunda ecuación, obtenemos:
 $$b_1=\frac{N \sum\limits^N_{i=1} x_i y_i - \sum\limits^N_{i=1}x_i \sum\limits^N_{i=1}y_i}
            {N\sum\limits^N_{i=1}x^2_i-\left(\sum\limits^N_{i=1}x_i \right)^2}=
       \frac{\sum\limits^N_{i=1} x_i y_i - \frac{1}{N}\sum\limits^N_{i=1}x_i \sum\limits^N_{i=1}y_i}
-           {\sum\limits^N_{i=1}x^2_i-\frac{1}{N}\left(\sum\limits^N_{i=1}x_i \right)^2}=$$ $$=\frac{(N-1)C_{xy}}{(N-1)s^2_x}=\frac{\sum\limits^N_{i=1} (x_i-\bar{x})(y_i-\bar{y})}
-                                      {\sum\limits^N_{i=1} (x_i-\bar{x})^2}=\frac{<x'y'>}{<x'^2>}\,,$$ donde $C_{xy}=<x'y'>$ es la covarianza entre $x$ e $y$, y $s^2_x=<x'^2>$ es la varianza de $x$. Así, una vez hemos calculado las medias de las variables $x$ e $y$, podemos encontrar el coeficiente $b_1$ y, a partir de este, calcular el segundo coeficiente $b_0$.\
-\
+           {\sum\limits^N_{i=1}x^2_i-\frac{1}{N}\left(\sum\limits^N_{i=1}x_i \right)^2}=$$ 
+
+$$=\frac{(N-1)C_{xy}}{(N-1)s^2_x}=\frac{\sum\limits^N_{i=1} (x_i-\bar{x})(y_i-\bar{y})} {\sum\limits^N_{i=1} (x_i-\bar{x})^2}=\frac{<x'y'>}{<x'^2>}\,,$$ 
+           
+donde $C_{xy}=<x'y'>$ es la covarianza entre $x$ e $y$, y $s^2_x=<x'^2>$ es la varianza de $x$. Así, una vez hemos calculado las medias de las variables $x$ e $y$, podemos encontrar el coeficiente $b_1$ y, a partir de este, calcular el segundo coeficiente $b_0$.
+
+
 \noindent Si sustituimos $b_0=\bar{y}-b_1\bar{x}$ en la ecuación de la regresión lineal $\hat{y_i}=b_0+b_1 x_i$
 
 obtenemos
@@ -1799,8 +1815,9 @@ $$\hat{y_i}=\bar{y} +b_1{x'_i}\,,$$ o finalmente
 
 $$\hat{y'_i}=b_1{x'_i}\,,$$
 
-que nos informa que cuando $x'_i=0\,(x_i=\bar{x})$ entonces $\hat{y'_i}=0 \,(\hat{y}=\bar{y})$, es decir, la recta pasa por el punto $(\bar{x},\bar{y})$, de tal forma, que puesto que $\partial{SEC}/{\partial{b_0}}=0$ minimiza la suma del error, $\sum \epsilon_i=0$, los puntos estan dispersos respecto a la recta ajustada de tal forma que los residuos positivos ($\epsilon>0$) siempre se cancelan con los residuos negativos ($\epsilon<0$). El parámetro $b_0$ se interpreta como la intersección (corte con el eje $y$) y $b_1$ es la pendiente de la recta ajustada.\
-\
+que nos informa que cuando $x'_i=0\,(x_i=\bar{x})$ entonces $\hat{y'_i}=0 \,(\hat{y}=\bar{y})$, es decir, la recta pasa por el punto $(\bar{x},\bar{y})$, de tal forma, que puesto que $\partial{SEC}/{\partial{b_0}}=0$ minimiza la suma del error, $\sum \epsilon_i=0$, los puntos estan dispersos respecto a la recta ajustada de tal forma que los residuos positivos ($\epsilon>0$) siempre se cancelan con los residuos negativos ($\epsilon<0$). El parámetro $b_0$ se interpreta como la intersección (corte con el eje $y$) y $b_1$ es la pendiente de la recta ajustada.
+
+
 \noindent El cociente
 
 $$100(SCR/SCT)\,,$$
@@ -1819,7 +1836,7 @@ El número de grados de libertad, $N-2$, se debe a que necesitamos estimar dos p
 
 \vspace{0.5cm}
 
-**Generalización de mínimos cuadrados en notación matricial**
+**Generalización de cuadrados mínimos en notación matricial**
 
 \noindent Supongamos el modelo dependiente de $k$ variables independientes $X_k$ $$Y=b_0 + b_1 X_1 + b_2 X_2 + .... + b_k X_k + \epsilon\,,$$ y supongamos que hacemos N observaciones independientes $y_1, y_2,....,y_N$ de $Y$. Por lo tanto podemos escribir el modelo como $$y_i=b_0 + b_1 x_{i1} + b_2 x_{i2} + ... + b_k x_{ik} + \epsilon_i\,,$$ donde $x_{ij}$ es la observación $i$ del de la variable independiente $j$. Es decir, $$N;\,\,{ observaciones}$$ $$k;\,\,{ variables\,\,independientes}$$ $$k+1;\,\,{ coeficientes}$$
 
@@ -1830,7 +1847,7 @@ El número de grados de libertad, $N-2$, se debe a que necesitamos estimar dos p
   ...\\
   ...\\
   y_N
-      \end{array}\right)\,\,\,{\textbf X}=\left(\begin{array}{cccc}
+  \end{array}\right)\,\,\,{\textbf X}=\left(\begin{array}{cccc}
   1 & x_{11} & ... & x_{1k}\\
   1 & x_{21} & ... & x_{2k}\\
   ... & ... & ... & ...\\
@@ -1860,22 +1877,65 @@ El número de grados de libertad, $N-2$, se debe a que necesitamos estimar dos p
   ... & ...\\
    ... & ...\\
  1 & x_{N1}
- \end{array}\right)\,,$$ es la matriz de variables independientes. Si utilizamos la definición de los residuos como $${\textbf E}={\textbf Y}-{\textbf X}{\textbf B}\,,$$ podemos encontrar la suma de los residuos al cuadrado como $$SEC=\sum^N_{i=1} \epsilon^2_i=\sum^N_{i=1} \epsilon_i \epsilon_i=
-{\textbf E}^T{\textbf E}=({\textbf Y}-{\textbf X}{\textbf B})^T({\textbf Y}-{\textbf X}{\textbf B})=$$ $${\textbf Y}^T{\textbf Y} - {\textbf Y}^T{\textbf X}{\textbf B}-{\textbf B}^T{\textbf X}^T{\textbf Y}+{\textbf B}^T
+ \end{array}\right)\,,$$ es la matriz de variables independientes. Si utilizamos la definición de los residuos como 
+ 
+ $${\textbf E}={\textbf Y}-{\textbf X}{\textbf B}\,,$$ 
+ 
+ podemos encontrar la suma de los residuos al cuadrado como  \\
+ 
+$$SEC=\sum^N_{i=1} \epsilon^2_i=\sum^N_{i=1} \epsilon_i \epsilon_i=
+{\textbf E}^T{\textbf E}=({\textbf Y}-{\textbf X}{\textbf B})^T({\textbf Y}-{\textbf X}{\textbf B})=$$ 
+
+$${\textbf Y}^T{\textbf Y} - {\textbf Y}^T{\textbf X}{\textbf B}-{\textbf B}^T{\textbf X}^T{\textbf Y}+{\textbf B}^T
 {\textbf X}^T{\textbf X}{\textbf B}\,.$$
 
-\noindent Si queremos minimizar esa suma de errores entonces $$\frac{\partial{SEC}}{\partial{\textbf B}}=0\,.$$ Para calcular las derivadas de ${SEC}$ respecto de los coeficientes ${\textbf b}$ vamos a asumir las siguientes consideraraciones \\ \\ (i) ${\textbf Y}^T{\textbf X}{\textbf B}={\textbf B}^T{\textbf X}^T{\textbf Y}$ ya que son matrices elemento ($1\times1$) y siempre son simétricas. Por lo tanto $-{\textbf Y}^T{\textbf X}{\textbf B}-{\textbf B}^T{\textbf X}^T{\textbf Y}=-2{\textbf B}^T{\textbf X}^T{\textbf Y}$, y su derivada $$-2{\textbf X}^T{\textbf Y}\,.$$ \\ \\ (ii) $\partial{{\textbf B}^T{\textbf X}^T{\textbf X}{\textbf B}}/\partial{\textbf B}=2{\textbf X}^T{\textbf X}{\textbf B}$. Para demostrar esto tomemos el caso para el ajuste lineal (2 parámetros). Definamos los elementos de ${\textbf X}^T{\textbf X}$ como $c_{ij}\,\,i,j=1,2$ y $c_{12}=c_{21}$ por ser simétrica. Entonces $${\textbf B}^T{\textbf X}^T{\textbf X}{\textbf B}=c_{11}b_0^2+c_{22}b_1^2 + 2c_{12} b_0 b_1\,,$$ y su derivada respecto $b_0$ es $$2c_{11}b_0 + 2c_{12}b_1$$ y respecto a $b_1$ es $$2c_{12}b_0 + 2c_{22}b_1\,.$$ Si acomodamos las derivadas en un vector columna $2\times1$ obtenemos $$\left(\begin{array}{c}
+\noindent Si queremos minimizar esa suma de errores entonces $$\frac{\partial{SEC}}{\partial{\textbf B}}=0\,.$$ Para calcular las derivadas de ${SEC}$ respecto de los coeficientes ${\textbf b}$ vamos a asumir las siguientes consideraraciones \\ 
+
+(i) ${\textbf Y}^T{\textbf X}{\textbf B}={\textbf B}^T{\textbf X}^T{\textbf Y}$ ya que son matrices elemento ($1\times1$) y siempre son simétricas. Por lo tanto $-{\textbf Y}^T{\textbf X}{\textbf B}-{\textbf B}^T{\textbf X}^T{\textbf Y}=-2{\textbf B}^T{\textbf X}^T{\textbf Y}$, y su derivada $$-2{\textbf X}^T{\textbf Y}\,.$$ \\ 
+
+(ii) $\partial{{\textbf B}^T{\textbf X}^T{\textbf X}{\textbf B}}/\partial{\textbf B}=2{\textbf X}^T{\textbf X}{\textbf B}$. Para demostrar esto tomemos el caso para el ajuste lineal (2 parámetros). Definamos los elementos de ${\textbf X}^T{\textbf X}$ como $c_{ij}\,\,i,j=1,2$ y $c_{12}=c_{21}$ por ser simétrica. Entonces 
+
+$${\textbf B}^T{\textbf X}^T{\textbf X}{\textbf B}=c_{11}b_0^2+c_{22}b_1^2 + 2c_{12} b_0 b_1\,,$$ 
+
+y su derivada respecto $b_0$ es 
+
+$$2c_{11}b_0 + 2c_{12}b_1$$ 
+
+y respecto a $b_1$ es 
+
+$$2c_{12}b_0 + 2c_{22}b_1\,.$$ 
+
+Si acomodamos las derivadas en un vector columna $2\times1$ obtenemos 
+$$\left(\begin{array}{c}
   2c_{11}b_0 + 2c_{12}b_1 \\
   2c_{12}b_0 + 2c_{22}b_1 \\
-        \end{array}\right)=2{\textbf X}^T{\textbf X}{\textbf B}\,.$$ y por lo tanto $$\frac{\partial{S}}{\partial{\textbf B}}=-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf
-B}\,,$$ y las ecuaciones normales quedan $$-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf
+        \end{array}\right)=2{\textbf X}^T{\textbf X}{\textbf B}\,.$$ \\
+        
+y por lo tanto \\
+$$\frac{\partial{S}}{\partial{\textbf B}}=-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf
+B}\,,$$ 
+
+y las ecuaciones normales quedan \\
+
+$$-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf
 B}=0\,.$$
 
-\noindent Finalmente, el problema de mínimos cuadrados es $$({\textbf X}^T{\textbf X}){\textbf B}={\textbf X}^T{\textbf Y}\,.$$ Y resolviendo para ${\textbf B}$ la forma general del método de regresión por mínimos cuadrados es $${\textbf B}=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T{\textbf Y}\,,$$ o equivalentemente $${\textbf B}^T={\textbf Y}^T{\textbf X}({\textbf X}^T{\textbf X})^{-1}\,.$$
+\noindent Finalmente, el problema de cuadrados mínimos es 
+$$({\textbf X}^T{\textbf X}){\textbf B}={\textbf X}^T{\textbf Y}\,.$$ 
+
+Y resolviendo para ${\textbf B}$ la forma general del método de regresión por cuadrados mínimos es 
+
+$${\textbf B}=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T{\textbf Y}\,,$$ 
+
+o equivalentemente 
+
+$${\textbf B}^T={\textbf Y}^T{\textbf X}({\textbf X}^T{\textbf X})^{-1}\,.$$
 
 \vspace{0.5cm}
 
-\noindent {\textbf Propiedades estadísticas} \\ \noindent Algunas de las consideraciones de un modelo de regresión múltiple son:
+\noindent {\textbf Propiedades estadísticas} \\ 
+
+\noindent Algunas de las consideraciones de un modelo de regresión múltiple son:
 
 ```{=tex}
 \begin{itemize}
@@ -1910,7 +1970,7 @@ i=1,2,....,N$ son linealmente independientes.
 ```
 \vspace{0.5cm}
 
-\noindent {\textbf Mínimos cuadrados no tienen sesgo} \\ \noindent La esperanza del vector de coeficientes $k\times 1$, $b$, se obtiene a partir de las consideraciones 1,4, y 5. La consideración 5 implica que el estimador de los coeficientes $b=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T { y}$ se puede escribir cómo
+\noindent {\textbf cuadrados mínimos no tienen sesgo} \\ \noindent La esperanza del vector de coeficientes $k\times 1$, $b$, se obtiene a partir de las consideraciones 1,4, y 5. La consideración 5 implica que el estimador de los coeficientes $b=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T { y}$ se puede escribir cómo
 
 $$b=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T({\textbf X} \beta + \epsilon)={\textbf I}\beta +
     ({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T \epsilon\,.$$ \\
@@ -1920,24 +1980,61 @@ $$b=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T({\textbf X} \beta + \epsilon)={
 
 \vspace{0.5cm}
 
-\noindent {\textbf Matriz de varianza de $b$} \\ \noindent Usando el resultado de arriba, bajo las consideraciones 1-6, la matriz de varianza de los estimadores de los coeficientes $b$ (o momento centrado de orden 2) viene dada por $${ var(b)}=E[(b-\beta)(b-\beta)^T]=E[({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T\epsilon \epsilon^T{\textbf X}
-    ({\textbf X}^T{\textbf X})^{-1}]=$$ $$=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T E[\epsilon \epsilon^T]{\textbf X}({\textbf X}^T{\textbf X})^{-1}=
-    ({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T(\sigma^2{\textbf I}){\textbf X}({\textbf X}^T{\textbf X})^{-1}=
-    \sigma^2({\textbf X}^T{\textbf X})^{-1}\,.$$ \\ \\ \noindent Los elementos de la diagonal principal de esta matriz son las varianzas asociadas a los estimadores de los coeficientes $b$, y los elementos fuera de la diagonal principal representan la covarianza entre esos estimadores. \\ Si asumimos que las variables del problema han sido estandarizadas, es decir la media ha sido extraida de las variables $x_{ij}$ e $y_i$ y hemos dividido por las desviaciones estándar $${\textbf X}^T{\textbf X}=\left(\begin{array}{cccc}
+\noindent {\textbf Matriz de varianza de $b$} \\ 
+
+\noindent Usando el resultado de arriba, bajo las consideraciones 1-6, la matriz de varianza de los estimadores de 
+los coeficientes $b$ (o momento centrado de orden 2) viene dada por 
+
+$${ var(b)}=E[(b-\beta)(b-\beta)^T]=E[({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T\epsilon \epsilon^T{\textbf X}
+    ({\textbf X}^T{\textbf X})^{-1}]=$$ 
+$$=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T E[\epsilon \epsilon^T]{\textbf X}({\textbf X}^T{\textbf X})^{-1}=
+({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T(\sigma^2{\textbf I}){\textbf X}({\textbf X}^T{\textbf X})^{-1}=
+   \sigma^2({\textbf X}^T{\textbf X})^{-1}\,.$$ \\ 
+
+\noindent Los elementos de la diagonal principal de esta matriz son las varianzas asociadas a los estimadores de los coeficientes $b$, y los elementos fuera de la diagonal principal representan la covarianza entre esos estimadores. \\
+Si asumimos que las variables del problema han sido estandarizadas, es decir la media ha sido extraida de las variables $x_{ij}$ e $y_i$ y hemos dividido por las desviaciones estándar 
+    
+$${\textbf X}^T{\textbf X}=\left(\begin{array}{cccc}
    \sum\limits_{i=1}^N{x_{i1}x_{i1}} & \sum\limits_{i=1}^N{x_{i1}x_{i2}} & ... & \sum\limits_{i=1}^N{x_{i1}x_{ik}}\\
    \sum\limits_{i=1}^N{x_{i2}x_{i1}} & \sum\limits_{i=1}^N{x_{i2}x_{i2}} & ... & \sum\limits_{i=1}^N{x_{i2}x_{ik}}\\
-                . & . & . \\
+        . & . & . \\
         . & . & . \\
         . & . & . \\
    \sum\limits_{i=1}^N{x_{ik}x_{i1}} & \sum\limits_{i=1}^N{x_{ik}x_{i2}} & ... & \sum\limits_{i=1}^N{x_{ik}x_{ik}}\\
-        \end{array}\right)\,,$$ es una matriz $k\times k$ y en notación índice se puede escribir como $$[{\textbf X}^T{\textbf X}]_{nm}=(N-1)\rho_{x_{in} x_{im}}\,\,;(i=1,2,...,N)\,,$$ que se puede interpretar como la matriz de correlaciones entre las variables independientes. La matriz $${\textbf X}^T{\textbf Y}=\left(\begin{array}{c}
+        \end{array}\right)\,,$$ 
+        
+es una matriz $k\times k$ y en notación índice se puede escribir como 
+
+$$[{\textbf X}^T{\textbf X}]_{nm}=(N-1)\rho_{x_{in} x_{im}}\,\,;(i=1,2,...,N)\,,$$ 
+
+que se puede interpretar como la matriz de correlaciones entre las variables independientes. La matriz 
+
+$${\textbf X}^T{\textbf Y}=\left(\begin{array}{c}
   \sum\limits_{i=1}^N y_i x_{i1}\\
   \sum\limits_{i=1}^N y_i x_{i2}\\
                    . \\
            . \\
            . \\
   \sum\limits_{i=1}^N y_i x_{ik}\\
-        \end{array}\right)\,,$$ es una matriz $k\times 1$ y en notación índice es $$[{\textbf Y}^T{\textbf X}]_n=(N-1)\rho_{y_i x_{in}}\,\,;(i=1,2,...,N)\,.$$ Esta matriz se puede interpretar como la matriz de correlación entre las variables independientes y dependientes. \\ \noindent El modelo multivariado en notación índice es $$(N-1)\rho_{x_{in} x_{im}}b_m=(N-1)\rho_{y_i x_{in}}$$ o $$\rho_{x_{in} x_{im}}b_m=\rho_{y_i x_{in}}\,;m=n=1,2,....,k; i=1,2,...,N$$ y para una única observación $i$ dada obtenemos $$\rho_{x_{n} x_{m}}b_m=\rho_{y x_{n}}\,$$ Ahora supongamos, por simplicidad, que solo tenemos dos variables independientes. Entonces: $$\rho_{x_{1} x_{1}}b_1+\rho_{x_{1} x_{2}}b_2=\rho_{y x_{1}}$$ $$\rho_{x_{2} x_{1}}b_1+\rho_{x_{2} x_{2}}b_2=\rho_{y x_{2}}\,,$$ y puesto que $\rho_{x_{1} x_{1}}=\rho_{x_{2} x_{1}}=1$, y $\rho_{x_{1} x_{2}}=\rho_{x_{2} x_{1}}$, podemos escribir el sistema como: $$\left(\begin{array}{cc}
+  \end{array}\right)$$ 
+        
+es una matriz $k\times 1$ y en notación índice es 
+        
+  $$[{\textbf Y}^T{\textbf X}]_n=(N-1)\rho_{y_i x_{in}}\,\,;(i=1,2,...,N)\,.$$ 
+        
+  Esta matriz se puede interpretar como la matriz de correlación entre las variables independientes y dependientes. \\ 
+        
+  \noindent El modelo multivariado en notación índice es 
+        $(N-1)\rho_{x_{in} x_{im}}b_m=(N-1)\rho_{y_i x_{in}}$ o
+        $\rho_{x_{in} x_{im}}b_m=\rho_{y_i x_{in}}\,;m=n=1,2,....,k; i=1,2,...,N$ 
+        
+  y para una única observación $i$ dada obtenemos $$\rho_{x_{n} x_{m}}b_m=\rho_{y x_{n}}\,$$ Ahora supongamos, por simplicidad, que solo tenemos dos variables independientes. Entonces: 
+        
+  $$\rho_{x_{1} x_{1}}b_1+\rho_{x_{1} x_{2}}b_2=\rho_{y x_{1}}$$ $$\rho_{x_{2} x_{1}}b_1+\rho_{x_{2} x_{2}}b_2=\rho_{y x_{2}}\,,$$
+
+y puesto que $\rho_{x_{1} x_{1}}=\rho_{x_{2} x_{1}}=1$, y $\rho_{x_{1} x_{2}}=\rho_{x_{2} x_{1}}$, podemos escribir el sistema como: 
+         
+$$\left(\begin{array}{cc}
   1 & \rho_{x_{1} x_{2}} \\
   \rho_{x_{1} x_{2}} & 1 \\
         \end{array}\right)
@@ -1948,7 +2045,11 @@ $$b=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T({\textbf X} \beta + \epsilon)={
      \left(\begin{array}{c}
   \rho_{y x_{1}} \\
   \rho_{y x_{2}} \\
-        \end{array}\right)\,.$$ De forma que los coeficientes quedan como $$\left(\begin{array}{c}
+        \end{array}\right)\,.$$ \\
+        
+De forma que los coeficientes quedan como \\
+
+$$\left(\begin{array}{c}
   b_1 \\
   b_2 \\
         \end{array}\right)=\left(\begin{array}{cc}
@@ -1965,32 +2066,87 @@ $$b=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T({\textbf X} \beta + \epsilon)={
         \end{array}\right)\left(\begin{array}{c}
   \rho_{y x_{1}} \\
   \rho_{y x_{2}} \\
-        \end{array}\right)\,.$$ $$b_1=\frac{1}{1-\rho^2_{x_{1} x_{2}}}({\rho_{y x_{1}} - \rho_{x_{1} x_{2}} \rho_{y x_{2}}})$$ $$b_2=\frac{1}{1-\rho^2_{x_{1} x_{2}}}({\rho_{y x_{2}} - \rho_{x_{1} x_{2}} \rho_{y x_{1}}})\,.$$
+  \end{array}\right)\,.$$ 
+        
+  $$b_1=\frac{1}{1-\rho^2_{x_{1} x_{2}}}({\rho_{y x_{1}} - \rho_{x_{1} x_{2}} \rho_{y x_{2}}})$$ $$b_2=\frac{1}{1-\rho^2_{x_{1} x_{2}}}({\rho_{y x_{2}} - \rho_{x_{1} x_{2}} \rho_{y x_{1}}})\,.$$
 
-\noindent Finalmente puntualizar que el problema de mínimos cuadrados se puede resolver utilizando la descomposición $LU$. Para ello solo es necesario un cambio de variable en la ecuación $${\textbf X}^T{\textbf X}{\textbf B}={\textbf X}^T{\textbf Y}$$ para obtener un sistema de ecuaciones tipo ${\textbf A}{\textbf x}={\textbf b}$, donde ahora ${\textbf A}={\textbf X}^T{\textbf X}$, ${\textbf x}={\textbf B}$, y ${\textbf b}={\textbf X}^T{\textbf Y}$.
-
-\vspace{0.5cm}
-
-{\noindent \textbf (2) Mínimos cuadrados con restricciones}
+\noindent Finalmente puntualizar que el problema de cuadrados mínimos se puede resolver utilizando la descomposición $LU$. Para ello solo es necesario un cambio de variable en la ecuación $${\textbf X}^T{\textbf X}{\textbf B}={\textbf X}^T{\textbf Y}$$ para obtener un sistema de ecuaciones tipo ${\textbf A}{\textbf x}={\textbf b}$, donde ahora ${\textbf A}={\textbf X}^T{\textbf X}$, ${\textbf x}={\textbf B}$, y ${\textbf b}={\textbf X}^T{\textbf Y}$.
 
 \vspace{0.5cm}
 
-{\textbf \noindent NOTA: Multiplicadores de Lagrange} \\ \noindent Dada la función $f(x)=f(x_1,x_2,...,x_N)$ que depende de $N$ variables y $p$ restricciones $g_1(x)=d_1, g_2(x)=d_2,....,g_p(x)=d_p$ entonces el teorema de Lagrange nos dice que para minimizar la función $f(x)$ bajo esas $p$ restricciones debemos resolver el sistema de ecuaciones $$\frac{\partial}{\partial{x_i}}\left[ f(x) +\sum\limits_{j=1}^p \lambda_j g_j(x)\right]=0\,\,\,; i=1,2,...,N$$ $$g_j(x)=d_j\,\,\,; j=1,2,...,p$$
+{\noindent \textbf (2) Cuadrados mínimos con restricciones}
 
-\noindent Vamos a usar los multiplicadores de Lagrange para resolver el problema de mínimos cuadrados $${\textbf Y}={\textbf X}{\textbf B}\,,$$ pero incluyendo $p$ restricciones de la forma $${\textbf G}{\textbf B}={\textbf d}\,.$$
+\vspace{0.5cm}
 
-\noindent Queremos minimizar la función: $${\textbf \cal L}=({\textbf Y}-{\textbf X}{\textbf B})^T({\textbf Y}-{\textbf X}{\textbf B}) +{\textbf \lambda}^T({\textbf G}{\textbf B}-{\textbf d})\,.$$ Aqui hemos introducido $p$ incógnitas pero también tenemos $p$ nuevas ecuaciones ${\textbf G}{\textbf B}={\textbf d}$. Derivando ${\textbf \cal L}$ e igualando a cero $$\frac{\partial{\textbf \cal L}}{\partial{\textbf B}}=-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf B} + {\textbf G}^T{\textbf \lambda}=0\,,$$ lo cual tiene la solución $${\textbf B}=( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y} -\frac{1}{2}{\textbf G}^T{\textbf \lambda})\,,$$ que para ${\textbf \lambda}=0$ se reduce a la expresión de los mínimos cuadrados sin restricciones $${\textbf B}=( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y})\,.$$
+\textbf {\noindent NOTA: Multiplicadores de Lagrange} \\ 
 
-\noindent Si sutituimos en la ecuación de las restricciones $${\textbf G}( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y} -\frac{1}{2}{\textbf G}^T{\textbf \lambda})={\textbf d}\,,$$ y resolvemos para ${\textbf \lambda}$, obtenemos $$\frac{1}{2}{\textbf \lambda}=\left[ {\textbf G}({\textbf X}^T {\textbf X})^{-1}{\textbf G}^T\right]^{-1} \left[ {\textbf G}({\textbf X}^T {\textbf X})^{-1}{\textbf X}^T{\textbf Y}-{\textbf d}\right]\,.$$
+\noindent Dada la función $f(x)=f(x_1,x_2,...,x_N)$ que depende de $N$ variables y $p$ restricciones 
+$g_1(x)=d_1, g_2(x)=d_2,....,g_p(x)=d_p$ 
+entonces el teorema de  Lagrange nos dice que para minimizar la función $f(x)$ bajo esas $p$ restricciones 
+debemos resolver el sistema de ecuaciones:
 
-\noindent Finalmente, si sustituimos en la solución para la matriz de coeficientes ${\textbf B}$ obtenemos $${\textbf B}=({\textbf X}^T {\textbf X})^{-1}\left( {\textbf X}^T {\textbf Y} - {\textbf G}^T\left[{\textbf G}({\textbf X}^T{\textbf X})^{-1}{\textbf G}^T \right]^{-1}
-           \left[{\textbf G}({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T {\textbf Y}-{\textbf d}\right] \right)\,.$$
+```{=tex}
+\begin{equation}
+\frac{\partial}{\partial{x_i}}\left[ f(x) +\sum\limits_{j=1}^p \lambda_j g_j(x)\right]=0\,\,\,; i=1,2,...,N$$ $$g_j(x)=d_j\,\,\,; j=1,2,...,p
+\end{equation}
+```
+
+\noindent Vamos a usar los multiplicadores de Lagrange para resolver el problema de cuadrados mínimos \\
+
+$${\textbf Y}={\textbf X}{\textbf B}\,,$$ \\
+
+pero incluyendo $p$ restricciones de la forma \\
+
+$${\textbf G}{\textbf B}={\textbf d}\,.$$ \\
+
+\noindent Queremos minimizar la función: 
+
+```{=tex}
+\begin{equation}
+{\textbf \cal L}=({\textbf Y}-{\textbf X}{\textbf B})^T({\textbf 
+Y}-{\textbf X}{\textbf B}) +{\textbf \lambda}^T({\textbf G}{\textbf B}-{\textbf d})
+\end{equation}
+``` 
+
+Aqui hemos introducido $p$ incógnitas pero también tenemos $p$ nuevas ecuaciones ${\textbf G}{\textbf B}={\textbf d}$. Derivando ${\textbf \cal L}$ e igualando a cero \\
+
+$$\frac{\partial{\textbf \cal L}}{\partial{\textbf B}}=-2{\textbf X}^T{\textbf Y}+2{\textbf X}^T{\textbf X}{\textbf B} + {\textbf G}^T{\textbf \lambda}=0\,,$$ \\
+
+lo cual tiene la solución\\
+
+$${\textbf B}=( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y} -\frac{1}{2}{\textbf G}^T{\textbf \lambda})\,,$$ 
+
+que para ${\textbf \lambda}=0$ se reduce a la expresión de los cuadrados mínimos sin restricciones 
+
+$${\textbf B}=( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y})\,.$$
+
+\noindent Si sutituimos en la ecuación de las restricciones 
+
+$${\textbf G}( {\textbf X}^T {\textbf X} )^{-1} ({\textbf X}^T {\textbf Y} 
+-\frac{1}{2}{\textbf G}^T{\textbf \lambda})={\textbf d}\,,$$ 
+
+y resolvemos para ${\textbf \lambda}$, obtenemos 
+
+$$\frac{1}{2}{\textbf \lambda}=\left[ {\textbf G}({\textbf X}^T {\textbf X})^{-1}
+{\textbf G}^T\right]^{-1} \left[ {\textbf G}({\textbf X}^T {\textbf X})^{-1}
+{\textbf X}^T{\textbf Y}-{\textbf d}\right]\,.$$
+
+\noindent Finalmente, si sustituimos en la solución para la matriz de coeficientes ${\textbf B}$ obtenemos 
+
+
+$${\textbf B}=({\textbf X}^T {\textbf X})^{-1}\left( {\textbf X}^T {\textbf Y} - 
+{\textbf G}^T\left[{\textbf G}({\textbf X}^T{\textbf X})^{-1}{\textbf G}^T 
+\right]^{-1}\left[{\textbf G}({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T 
+{\textbf Y}-{\textbf d}\right] \right)\,.$$
+
 
 \noindent Un ejemplo sería ajustar una recta a un conjunto de observaciones pero imponiendo que la recta pase por algún punto determinado del espacio $xy$.
 
 \vspace{0.5cm}
 
-{\noindent \textbf (3) Mínimos cuadrados pesados} \\ \noindent En ocasiones debido a las incertidumbres asociadas a la medidas de las variables independientes es conveniente asignarles un peso diferencial en el problema de mínimos cuadrados. Supongamos que unas variables independientes son conocidas con mayor precisión que otras. Entonces el modelo de mínimos cuadrados pesados es: $$SEC=({\textbf Y}-{\textbf X}{\textbf B})^T{\textbf W}_{\epsilon}({\textbf Y}-{\textbf X}{\textbf B})\,,$$ donde ${\textbf W}_{\epsilon}$ es una matriz diagonal con los elementos $\sigma_j^{-2}$, el inverso de la varianza de cada variable independiente. \\ \noindent Sin embargo, en general, los errores en los datos estan correlacionados, y ${\textbf W}_{\epsilon}$ no es diagonal. Una elección razonable para ${\textbf W}_{\epsilon}$ es el inverso de la matriz de covarianzas. Si asumimos que ${\textbf Y}$ se compone de un valor medio mas un error o fluctuación respecto la media $${\textbf Y}=\bar{\textbf Y}+{\textbf Y}'\,,$$ entonces la matriz de covarianzas es $<{\textbf Y}'{\textbf Y}'^T>$ y $${\textbf W}_{\epsilon}=<{\textbf Y}'{\textbf Y}'^T>^{-1}\,.$$
+{\noindent \textbf (3) cuadrados mínimos pesados} \\ 
+
+\noindent En ocasiones debido a las incertidumbres asociadas a la medidas de las variables independientes es conveniente asignarles un peso diferencial en el problema de cuadrados mínimos. Supongamos que unas variables independientes son conocidas con mayor precisión que otras. Entonces el modelo de cuadrados mínimos pesados es: $$SEC=({\textbf Y}-{\textbf X}{\textbf B})^T{\textbf W}_{\epsilon}({\textbf Y}-{\textbf X}{\textbf B})\,,$$ donde ${\textbf W}_{\epsilon}$ es una matriz diagonal con los elementos $\sigma_j^{-2}$, el inverso de la varianza de cada variable independiente. \\ \noindent Sin embargo, en general, los errores en los datos estan correlacionados, y ${\textbf W}_{\epsilon}$ no es diagonal. Una elección razonable para ${\textbf W}_{\epsilon}$ es el inverso de la matriz de covarianzas. Si asumimos que ${\textbf Y}$ se compone de un valor medio mas un error o fluctuación respecto la media $${\textbf Y}=\bar{\textbf Y}+{\textbf Y}'\,,$$ entonces la matriz de covarianzas es $<{\textbf Y}'{\textbf Y}'^T>$ y $${\textbf W}_{\epsilon}=<{\textbf Y}'{\textbf Y}'^T>^{-1}\,.$$
 
 \vspace{0.5cm}
 
@@ -2115,7 +2271,7 @@ $$r^2=\frac{SCR}{SCT}=\frac{\sum\limits^N_{i=1}(\hat{y_i}-\bar{y})^2}{\sum\limit
 
 \vspace{0.5cm}
 
-(4) **Ajuste de curvas con mínimos cuadrados** \ 
+(4) **Ajuste de curvas con cuadrados mínimos** \ 
 
 {\noindent} En general, podemos escribir nuestro modelo lineal como $$Y=b_0 + b_1x + b_2 x^2 + ... + b_k x^k + \epsilon\,.$$ \\ \\ \noindent El procedimiento es el mismo que para el caso de la línea recta, pero ahora la matriz ${\textbf X}$ tiene una columna mas. Es decir, para $k=2$ y para $N$ observaciones independientes las ecuaciones independientes son $$y_1=b_0 + b_1x_1 + b_2 x_1^2 + \epsilon_1$$ $$y_2=b_0 + b_1x_2 + b_2 x_2^2 + \epsilon_2$$ $$...$$ $$...$$ $$...$$ $$y_N=b_0 + b_1x_N + b_2 x_N^2 + \epsilon_N\,$$ y puden resolverse matricialmente para ${\textbf B}$ como $${\textbf B}=({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T{\textbf Y}\,,$$ donde ${\textbf X}$ tiene una columna mas que el caso del ajuste de una recta, i.e. $k+1$ columnas.
 
@@ -2160,7 +2316,7 @@ $${\textbf G}=\left(\begin{array}{cccccccc}
             0\\
               \end{array}\right)\,.$$
 
-Segundo debemos de calcular los coeficientes del ajuste ${\textbf B}$ con la expresión para mínimos cuadrados con restricciones.
+Segundo debemos de calcular los coeficientes del ajuste ${\textbf B}$ con la expresión para cuadrados mínimos con restricciones.
 
 $${\textbf B}=({\textbf X}^T {\textbf X})^{-1}\left( {\textbf X}^T {\textbf Y} - {\textbf G}^T\left[{\textbf G}({\textbf X}^T{\textbf X})^{-1}{\textbf G}^T \right]^{-1}
            \left[{\textbf G}({\textbf X}^T{\textbf X})^{-1}{\textbf X}^T {\textbf Y}-{\textbf d}\right] \right)\,.$$
@@ -2215,11 +2371,11 @@ $${\textbf X}=\left(\begin{array}{cccccccc}
 
 #### Cuadrados Mínimos no-lineales\
 
-\noindent Los mínimos cuadrados no-lineales se aplican cuando queremos ajustar un conjunto de observaciones a un modelo que no es lineal en cuanto a los coeficientes.
+\noindent Los cuadrados mínimos no-lineales se aplican cuando queremos ajustar un conjunto de observaciones a un modelo que no es lineal en cuanto a los coeficientes.
 
 \vspace{0.5cm}
 
-1.  Linealización del problema no lineal En ocasiones se puede linealizar el problema y resolverlo utilizando la solución de mínimos cuadrados lineales. Por ejemplo, supongamos que queremos ajustar un conjunto de $N$ observaciones a una función no-lineal exponencial: $$\hat{y}=a e^{bx}\,.$$
+1.  Linealización del problema no lineal En ocasiones se puede linealizar el problema y resolverlo utilizando la solución de cuadrados mínimos lineales. Por ejemplo, supongamos que queremos ajustar un conjunto de $N$ observaciones a una función no-lineal exponencial: $$\hat{y}=a e^{bx}\,.$$
 
 Este ejemplo se puede linealizar: $$\hat{y}=a e^{bx}\rightarrow ln(\hat{y})=ln(a) + bx\,,$$ y resolver el problema lineal: $${\cal Y}={\cal B}_1 + {\cal B}_2 {\cal X}\,,$$ donde hemos hecho el cambio de variables: $${\cal Y}=ln(\hat{y})\,,{\cal B}_1=ln(a)\,,{\cal B}_2=b\,\,\,{ y}\,{\cal X}=x\,.$$
 
@@ -2247,7 +2403,7 @@ $$\frac{\partial{SEC}}{\partial{a}}=
 $$\frac{\partial{SEC}}{\partial{b}}=
 2\sum\limits^N_{i=1}\left(y_i - a e^{bx_i}\right)\frac{\partial{\epsilon_i}}{\partial{b}}=0\,.$$
 
-Debemos resolver el sistema de ecuaciones de arriba, lo cual se puede hacer con descomposiciones algebráicas tipo ${\textbf L}{\textbf U}$, minimizando $SEC$ con la función de Matlab *fminsearch.m* (o implementando un método numérico manual), o directamente utilizando la función de mínimos cuadrados no-lineales de Matlab *nlinfit.m*.\
+Debemos resolver el sistema de ecuaciones de arriba, lo cual se puede hacer con descomposiciones algebráicas tipo ${\textbf L}{\textbf U}$, minimizando $SEC$ con la función de Matlab *fminsearch.m* (o implementando un método numérico manual), o directamente utilizando la función de cuadrados mínimos no-lineales de Matlab *nlinfit.m*.\
 Otro ejemplo no-lineal es ajustar la siguiente función trigonométrica: $$\hat{y}=\phi_1 e^{\phi_2 x} cos(\phi_3 x + \phi_4)\,,$$ donde la suma de los errores cuadráticos es:
 
 $$SEC=\sum\limits^N_{i=1}(y_i-\hat{y_i})^2=\sum\limits^N_{i=1}
@@ -2696,7 +2852,7 @@ Típicamente se debe asumir dos condiciones: \\
     \end{array}
     \end{cases}$$
 
-Supongamos entonces fluctuaciones respecto un estado climatológico o media $$\phi_i'=\phi_i-\bar{\phi}\,; i=1,2,...,N$$ Ahora vamos a intentar aproximar el valor de $\phi'$ en un punto de una malla, $\phi_g$, en términos de una combinación lineal de los valores en estaciones vecinas $\phi_i$ (señal). Entonces el problema de mínimos cuadrados es $$\phi'_g=\sum\limits^N_{i=1}b_i\phi_i'$$ donde $\phi'_g$ son anonmalías en la malla regular y $\phi_i'$ son anomalías en las estaciones. Los mejores coeficientes son aquellos que minimizan el error cuadrático medio, es decir,
+Supongamos entonces fluctuaciones respecto un estado climatológico o media $$\phi_i'=\phi_i-\bar{\phi}\,; i=1,2,...,N$$ Ahora vamos a intentar aproximar el valor de $\phi'$ en un punto de una malla, $\phi_g$, en términos de una combinación lineal de los valores en estaciones vecinas $\phi_i$ (señal). Entonces el problema de cuadrados mínimos es $$\phi'_g=\sum\limits^N_{i=1}b_i\phi_i'$$ donde $\phi'_g$ son anonmalías en la malla regular y $\phi_i'$ son anomalías en las estaciones. Los mejores coeficientes son aquellos que minimizan el error cuadrático medio, es decir,
 
 $$SEC=\sum\limits^N_{i=1}\left(\phi'_g-\sum\limits_{i=1}^N b_i\phi'_i \right)^2
      =\sum\limits^N_{i=1}\left(\phi'_g-\sum\limits_{i=1}^N b_i\phi'_i \right)\left(\phi'_g-\sum\limits_{i=1}^N b_i\phi'_i \right)=$$ $$\sum\limits^N_{i=1}\left[\phi'_g \phi'_g -2\sum\limits_{i=1}^N b_i\phi'_g\phi'_i
@@ -2838,7 +2994,11 @@ $$\epsilon=1-2 \sum\limits^N_{i=1} b_i r_{gi} + \sum\limits^N_{i=1}\sum\limits^N
 
 donde $\eta$ es el cociente entre la varianza del error (ruido) y la varianza de las medidas, es decir el cociente ruido-señal $$\eta=\frac{<\delta^2>}{<\phi'_g\phi'_g>}\,.$$
 
-La minimización del error nos da la condición $$r_{gi}=\sum\limits^N_{j=1}b_j r_{ij}+\eta b_i\,,$$ y los coeficientes en notación índice son $$b_j=(r_{ij} + \eta I_{ij})^{-1}r_{gi}\,,$$ donde $I_{ij}$ es la matriz identidad. De esta expresión se deduce que cuando $\eta$ es grande (mucho ruido en la medida) entonces los coeficientes son mas pequeños respecto al caso de observaciones perfectas. Consecuentemente nuestro mapa interpolado se acerca mas a la climatología ya que la anomalía es menor para coeficientes mas pequeños 
+La minimización del error nos da la condición 
+
+$$r_{gi}=\sum\limits^N_{j=1}b_j r_{ij}+\eta b_i\,,$$ 
+
+y los coeficientes en notación índice son $$b_j=(r_{ij} + \eta I_{ij})^{-1}r_{gi}\,,$$ donde $I_{ij}$ es la matriz identidad. De esta expresión se deduce que cuando $\eta$ es grande (mucho ruido en la medida) entonces los coeficientes son mas pequeños respecto al caso de observaciones perfectas. Consecuentemente nuestro mapa interpolado se acerca mas a la climatología ya que la anomalía es menor para coeficientes mas pequeños 
 
 $$\downarrow \sum\limits^N_{i=1}b_i\phi'_i \,\,\,\,\,\rightarrow \,\,\,\,\,\downarrow\phi'_g\,\,\,\,\,\,\text{y}\,\,\,\,\,\phi_g\rightarrow\bar{\phi}\,.$$ 
 
@@ -2928,7 +3088,32 @@ $$m\frac{d^2y_n}{dt^2}=-T sen\theta_{n-1} - T sen\theta_{n}\,.$$
 %\includegraphics[width=0.5\textwidth]{Modos_fisicos.pdf}
 \end{center}
 ```
-Bajo la suposición de que los desplazamientos son pequeños, el $sen\theta_n=tan\theta_n$, es decir, $sen\theta_{n-1}=tan\theta_{n-1}=y_n-y_{n-1}/d$ y $sen\theta_n=tan\theta_n=(y_n-y_{n+1})/d$. Entonces la ecuación queda $$m\frac{d^2y_n}{dt^2}=-T\frac{y_n-y_{n-1}}{d} - T\frac{y_n-y_{n+1}}{d}\,,$$ y si reagrupamos $$m\frac{d^2y_n}{dt^2}=\frac{T}{d}(y_{n-1}-2y_n+y_{n+1})\,.$$ Vamos ahora a substituir una solución oscilatoria del tipo $$y_n=Y_n e^{i\omega t}$$ en la ecuación del movimiento $$-m\omega^2 Y_n e^{i\omega t}=\frac{T}{d}(Y_{n-1} e^{i\omega t}-2Y_n e^{i\omega t}+Y_{n+1} e^{i\omega t})$$ $$\frac{-m\omega^2 d}{T} Y_n e^{i\omega t}=\frac{T}{d}(Y_{n-1} e^{i\omega t}-2Y_n e^{i\omega t}+Y_{n+1} e^{i\omega t})\,.$$ Si definimos $$\lambda=\frac{m\omega^2 d}{T}\,,$$ el sistema de ecuaciones a resolver es $$-\lambda Y_n=(Y_{n-1}-2Y_n +Y_{n+1})$$ $$Y_n(2-\lambda)-Y_{n-1}-Y_{n+1}=0\,,$$ con las condiciones de frontera $Y_0=Y_{n+1}=0$ en las paredes.
+Bajo la suposición de que los desplazamientos son pequeños, el $sen\theta_n=tan\theta_n$, es decir, $sen\theta_{n-1}=tan\theta_{n-1}=y_n-y_{n-1}/d$ y $sen\theta_n=tan\theta_n=(y_n-y_{n+1})/d$. Entonces la ecuación queda 
+
+$$m\frac{d^2y_n}{dt^2}=-T\frac{y_n-y_{n-1}}{d} - T\frac{y_n-y_{n+1}}{d}\,,$$ 
+
+y si reagrupamos 
+
+$$m\frac{d^2y_n}{dt^2}=\frac{T}{d}(y_{n-1}-2y_n+y_{n+1})\,.$$ 
+
+Vamos ahora a substituir una solución oscilatoria del tipo  $y_n=Y_n e^{i\omega t}$ 
+en la ecuación del movimiento 
+
+$$-m\omega^2 Y_n e^{i\omega t}=\frac{T}{d}(Y_{n-1} e^{i\omega t}-2Y_n e^{i\omega t}+Y_{n+1} e^{i\omega t})$$ \\
+
+$$\frac{-m\omega^2 d}{T} Y_n e^{i\omega t}=\frac{T}{d}(Y_{n-1} e^{i\omega t}-2Y_n e^{i\omega t}+Y_{n+1} e^{i\omega t})\,.$$ \\
+
+Si definimos 
+
+$$\lambda=\frac{m\omega^2 d}{T}\,,$$ \\
+
+el sistema de ecuaciones a resolver es \\
+
+$$-\lambda Y_n=(Y_{n-1}-2Y_n +Y_{n+1})$$ \\
+
+$$Y_n(2-\lambda)-Y_{n-1}-Y_{n+1}=0\,,$$ \\
+
+con las condiciones de frontera $Y_0=Y_{n+1}=0$ en las paredes.
 
 Vamos a suponer ahora el caso de dos bolas. Para la primera bola $n=1$ $$Y_1(2-\lambda)-Y_0-Y_2=0\,,$$ y para la bola $n=2$ $$Y_2(2-\lambda)-Y_1-Y_3=0\,.$$ Si aplicamos las condiciones de frontera $Y_0=Y_3=0$, nos queda uns sistema "propio", donde $\lambda$ son los autovalores.
 
@@ -2979,11 +3164,21 @@ Estas soluciones representan los modos oscilatorios de un sistema físico de dos
 
 ### Definición de FEOs
 
-Un análisis en FEOs busca estructuras en los datos que explican la mayor cantidad de varianza de un conjunto de datos bidimensional. La primera dimensión es la dimension en la que deseamos encontrar una estructura, y la otra dimension es la dimensión en la que se muestrean las diferentes realizaciones. Por ejemplo, un conjunto de series temporales de datos distribuidos espacialmente (i.e. arreglo de anclajes). La primera dimensión es espacio y la segunda es tiempo. Las estructuras en la dimensión espacial son las FEOs, mientras que las estructuras en la dimensión de muestreo se denominan Componentes Principales (CPs). \\ Tanto las FEOs como las PCs son ortogonales en sus dimensiones. Las FEOs/PCs pueden entenderse de diferentes formas: \\ (i) Transforma variables correlacionadas en un conjunto de variables no correlacionadas que expresan mejor la relación dinámica entre los datos originales. \\ (ii) Identifica y ordena los vectores ortogonales (o dimensiones) a lo largo de los cuales nuestro conjunto de datos presenta la mayor varianza. \\ (iii) Una vez definidas las FEOs, es posible encontrar la mejor aproximación de los datos originales con el mínimo número de vectores ortogonales.
+Un análisis en FEOs busca estructuras en los datos que explican la mayor cantidad de varianza de un conjunto de datos bidimensional. La primera dimensión es la dimension en la que deseamos encontrar una estructura, y la otra dimension es la dimensión en la que se muestrean las diferentes realizaciones. Por ejemplo, un conjunto de series temporales de datos distribuidos espacialmente (i.e. arreglo de anclajes). La primera dimensión es espacio y la segunda es tiempo. Las estructuras en la dimensión espacial son las FEOs, mientras que las estructuras en la dimensión de muestreo se denominan Componentes Principales (CPs). \\ 
+
+Tanto las FEOs como las PCs son ortogonales en sus dimensiones. Las FEOs/PCs pueden entenderse de diferentes formas: \\ 
+
+(i) Transforma variables correlacionadas en un conjunto de variables no correlacionadas que expresan 
+mejor la relación dinámica entre los datos originales. \\ 
+
+(ii) Identifica y ordena los vectores ortogonales (o dimensiones) a lo largo de los cuales nuestro 
+conjunto de datos presenta la mayor varianza. \\ 
+
+(iii) Una vez definidas las FEOs, es posible encontrar la mejor aproximación de los datos originales con el mínimo número de vectores ortogonales. \\
 
 \vspace{0.25cm}
 
-En general, aplicaremos el análisis en FEOs para describir de manera mas sencilla conjuntos de datos organizados en matrices $M\times N$:} \
+En general, aplicaremos el análisis en FEOs para describir de manera mas sencilla conjuntos de datos organizados en matrices $M\times N$: \
 
 (1) Una matriz espacio-tiempo: Medidas de una variable en $M$ localizaciones y $N$ tiempos. \
  
@@ -2999,90 +3194,135 @@ Aunque los procesos físicos dominantes son representados por los primeros modos
 
 ### Teoría
 
-Supongamos M localizaciones de medición con series temporales de temperatura de N elementos. Queremos descomponer la serie temporal de temperatura en una localización dada $k$ como una combinación lineal de $M$ funciones ortogonales ${\textbf b}_i$ cuyas amplitudes son pesadas con $M$ coeficientes dependientes del tiempo, es decir,
+Supongamos M localizaciones de medición con series temporales de temperatura de N elementos. Queremos descomponer la serie temporal de temperatura en una localización dada $k$ como una combinación lineal de $M$ 
+funciones ortogonales ${\textbf b}_i$ cuyas amplitudes son pesadas con $M$ coeficientes 
+dependientes del tiempo, es decir,
 
-$${\textbf T}(t)=\sum\limits^M_{i=1}[\alpha_i(t){\textbf b}_{i}]\,,$$
+$$
+{\textbf T}(t)=\sum\limits^M_{i=1}[\alpha_i(t){\textbf b}_{i}]\,$$
 
 donde $\alpha_i(t)$ es la amplitud del modo ortogonal $i$ al tiempo $t=t_n(1\le n\le N)$. Los coeficientes $\alpha_i(t)$ nos informan de como varian los modos ${\textbf b}_{i}$ con el tiempo. Necesitamos tantas funciones ortogonales como estaciones con series temporales tenemos para poder describir la varianza total de los datos originales de temperatura a cada tiempo. Sin mebargo, en términos prácticos podemos explicar una gran cantidad de varianza de los datos originales con las primeras FEOs. Podemos ver el problema al revés, es decir, tenemos $N$ funciones temporales cuyas amplitudes son pesadas por $M$ coeficientes que varian en el espacio. En este caso hablamos de PCs. Ya sea la reducción de los datos en funciones ortogonales espaciales (FEOs) o temporales (PCs), obtenemos los mismos resultados.
 
 Puesto que queremos ${\textbf b}_{i}$ ser ortogonal, requerimos $${\textbf b}^T_i {\textbf b}_{j}=\delta_{ij}\,,$$ y los coeficientes temporales $\alpha_i={\textbf b}^T_{i}{\textbf T}(t)$. Son precisamente estos coeficientes temporales las CPs, es decir, la proyección de los datos originales sobre las FEOs o la expresión de los datos originales en la nueva base de vectores ortogonales (el nuevo sistema de coordenadas).
 
-El objetivo del análisis es encontrar una base de vectores ortogonales tal que las funciones $\alpha_i(t)$ no esten correlacionadas $$<\alpha_i \alpha_j>=<{\textbf b}^T_{i}{\textbf T}{\textbf b}^T_{j}{\textbf T}>=<{\textbf b}^T_{i}{\textbf T}{\textbf T}^T{\textbf b}_{j}>={\textbf b}^T_{i}<{\textbf T} {\textbf T}^T>{\textbf b}_{j}=\delta_{ij}<\alpha^2_i>\,,$$ donde $$<\alpha_i^2>=\frac{1}{N}\sum\limits^N_{n=1}=\alpha^2_i(t_n)\,.$$ Es decir, la matriz de covarianza de $\alpha_i(t)$ será una matriz diagonal ${\textbf D}$. Para $M$ posiciones se puede reescribir como
+El objetivo del análisis es encontrar una base de vectores ortogonales tal que las funciones $\alpha_i(t)$ no estén correlacionadas 
+$$
+<\alpha_i \alpha_j>=<{\textbf b}^T_{i}{\textbf T}{\textbf b}^T_{j}{\textbf T}>=<{\textbf b}^T_{i}{\textbf T}{\textbf T}^T{\textbf b}_{j}>={\textbf b}^T_{i}<{\textbf T} {\textbf T}^T>{\textbf b}_{j}=\delta_{ij}<\alpha^2_i>\,,$$ donde $$<\alpha_i^2>=\frac{1}{N}\sum\limits^N_{n=1}=\alpha^2_i(t_n)\,.$$ 
 
-$${\textbf B}^T<{\textbf T}{\textbf T}^T>{\textbf B}={\textbf D}\,\,\,\,\,\,\,\,\,{ o}\,\,\,\,\,\,\,\,{\textbf B}^T{\textbf T}{\textbf T}^T{\textbf B}=N{\textbf D}$$
+Es decir, la matriz de covarianza de $\alpha_i(t)$ será una matriz diagonal ${\textbf D}$. Para $M$ posiciones se puede reescribir como
+
+$$
+{\textbf B}^T<{\textbf T}{\textbf T}^T>{\textbf B}={\textbf D}\,\,\,\,\,\,\,\,\,{ o}\,\,\,\,\,\,\,\,{\textbf B}^T{\textbf T}{\textbf T}^T{\textbf B}=N{\textbf D}$$
 
 donde ${\textbf B}$ es una matriz ortogonal cuyas columnas son los vectores ortogonales ${\textbf b}_i$ y ${\textbf D}$ es una matriz diagonal compuesta por las varianzas de las funciones temporales $\alpha_i(t)$. Si multiplicamos por ${\textbf B}$ llegamos a un sistema propio
 
-$$<{\textbf T}{\textbf T}^T>{\textbf B}={\textbf B}{\textbf D}\,.$$
+$$
+<{\textbf T}{\textbf T}^T>{\textbf B}={\textbf B}{\textbf D}\,.$$
 
 Este tipo de sistema propio es conocido. La diagonal de ${\textbf D}$ esta compuesta por valores propios y las columnas de ${\textbf B}$ son los vectores propios. Los vectores propios son denominados FEOs, y los valores propios son las varianzas de las amplitudes $\alpha_i$. Básicamente hemos realizado una transformación de coordenadas de tal forma que los vectores propios ${\textbf b}_i$
 
-indican combinaciones lineales de datos que no estan correlacionados (i.e., $<\alpha_i \alpha_j>=\delta_{ij}<\alpha^2_i>$). Esta descomposición de los datos en FEOs es óptima en el sentido de mínimos cuadrados. Imaginemos que queremos un conjunto de $K$ vectores que mejor aproxima ${\textbf T}$
+indican combinaciones lineales de datos que no estan correlacionados (i.e., $<\alpha_i \alpha_j>=\delta_{ij}<\alpha^2_i>$). Esta descomposición de los datos en FEOs es óptima en el sentido de cuadrados mínimos. Imaginemos que queremos un conjunto de $K$ vectores que mejor aproxima ${\textbf T}$
 
 $$<(\hat{\textbf T}-{\textbf T})^T(\hat{\textbf T}-{\textbf T})>=<{\textbf T}^T{\textbf T}>
   -\sum\limits^K_{i=1}<\alpha^2_i>\,.$$
 
-El problema en mínimos cuadrados, bajo las restricciones que las funciones ${\textbf b}_i$ sean ortogonales, se puede escribir a partir de los multiplicadores de Lagrange
+El problema en cuadrados mínimos, bajo las restricciones que las funciones ${\textbf b}_i$ sean ortogonales, se puede escribir a partir de los multiplicadores de Lagrange
 
-$${\textbf \cal L}=\sum\limits^K_{i=1}\left[{\textbf b}^T_i<{\textbf T}{\textbf T}^T>{\textbf b}_i-
-            \lambda_i({\textbf b}_i^T{\textbf b}_i-1)\right]\,.$$
+```{=tex}
+\begin{equation}
+{\textbf \cal L}=\sum\limits^K_{i=1}\left[{\textbf b}^T_i<{\textbf T}{\textbf T}^T>{\textbf b}_i-
+            \lambda_i({\textbf b}_i^T{\textbf b}_i-1)\right]
+\end{equation}
+```
 
 Si derivamos ${\textbf \cal L}$ respecto de ${\textbf b}_i$ obtenemos el sistema propio
 
-$$<{\textbf T}{\textbf T}^T>{\textbf b}_i=\lambda_i{\textbf b}_i\,.$$
+```{=tex}
+\begin{equation}
+<{\textbf T}{\textbf T}^T>{\textbf b}_i=\lambda_i{\textbf b}_i
+\end{equation}
+```
 
 De este análisis deducimos que las primeras $K$ funciones ortogonales o FEOs son las mejores funciones que explican la máxima varianza de los datos originales, donde los valores porpios estan ordenados de mayor a menor. Es decir, no existe un subset de datos mas pequeño que $K$ funciones ortogonales que produce el error cuadrático medio menor. En este sentido las FEOs son los mejores \`descriptores' de la varianza de los datos.
 
 Una matriz de datos de $M$ localizaciones y $N$ tiempos se puede descomponer
 
-$${\textbf C}{\textbf B}={\textbf B}{\textbf \Lambda}\,,$$
+$$ \textbf{C} \textbf{B}=\textbf{B} \textbf{\Lambda}$$
 
-donde
+donde \\
 
-$${\textbf C}={\textbf T}{\textbf T}^T=\left(\begin{array}{cccc}
-   \sum\limits_{i=1}^N{T_{1}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{1}(t_i)T_{2}(t_i)} & ... & \sum\limits_{i=1}^N{T_{1}(t_i)T_{M}(t_i)}\\
-   \sum\limits_{i=1}^N{T_{2}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{2}(t_i)T_{2}(t_i)} & ... & \sum\limits_{i=1}^N{T_{2}(t_i)T_{M}(t_i)}\\
+```{=tex}
+\begin{equation}
+{C}={T}{T}^T=\left(\begin{array}{cccc}
+   \sum\limits_{i=1}^N{T_{1}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{1}(t_i)T_{2}(t_i)} 
+   & ... & \sum\limits_{i=1}^N{T_{1}(t_i)T_{M}(t_i)} \\
+   
+   \sum\limits_{i=1}^N{T_{2}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{2}(t_i)T_{2}(t_i)} 
+   & ... & \sum\limits_{i=1}^N{T_{2}(t_i)T_{M}(t_i)} \\
                 . & . & . \\
         . & . & . \\
         . & . & . \\
-   \sum\limits_{i=1}^N{T_{M}(t_i)T_{1}(t_)} & \sum\limits_{i=1}^N{T_{M}(t_i)T_{2}(t_i)} & ... & \sum\limits_{i=1}^N{T_{M}(t_i)T_{M}(t_i)}\\
-        \end{array}\right)\,,$$
+   \sum\limits_{i=1}^N{T_{M}(t_i)T_{1}(t_)} & \sum\limits_{i=1}^N{T_{M}(t_i)T_{2}(t_i)}
+  & ... & \sum\limits_{i=1}^N{T_{M}(t_i)T_{M}(t_i)}\end{array}\right)
+  \end{equation}
+  ```
 
-es la matriz de covarianza entre las series temporales de temperatura en localizaciones espaciales, unas con otras;
+\\
+es la matriz de covarianza entre las series temporales de 
+temperatura en localizaciones espaciales, unas con otras: \\
 
-$${\textbf T}=\left(\begin{array}{cccc}
+
+```{=tex}
+\begin{equation}
+{T}=\left(\begin{array}{cccc}
    T_{1}(t_1) & T_{1}(t_2) & ... & T_{1}(t_N)\\
    T_{2}(t_1) & T_{2}(t_2) & ... & T_{2}(t_N)\\
-                . & . & . \\
+        . & . & . \\
         . & . & . \\
         . & . & . \\
    T_{M}(t_1) & T_{M}(t_2) & ... & T_{M}(t_N)\\
-        \end{array}\right)$$ es la
+   \end{array}\right)
+\end{equation} 
+```
+\\
+es la matriz de datos de temperatura; \\
 
-matriz de datos de temperatura;
-
-$${\textbf B}=\left(\begin{array}{cccc}
+```{=tex}
+\begin{equation}
+{B}=\left(\begin{array}{cccc}
    b_{11} & b_{12} & ... & b_{1M}\\
    b_{21} & b_{22} & ... & b_{2M}\\
                 . & . & . \\
         . & . & . \\
         . & . & . \\
    b_{M1} & b_{M2} & ... & b_{MM}\\
-        \end{array}\right)\,,$$ es la matriz con los vectores propios ${\textbf b}_i$ como columnas, y 
-$${\textbf \Lambda}=\left(\begin{array}{cccc}
+        \end{array}\right)\ 
+\end{equation}
+```
+\\        
+
+es la matriz con los vectores propios ${\textbf b}_i$ como columnas, y \\
+
+```{=tex}
+\begin{equation}
+\Lambda=\left(\begin{array}{cccc}
    \lambda_1 & 0 & ... & 0\\
   0 & \lambda_2 & ... &0\\
-                . & . & . \\
+        . & . & . \\
         . & . & . \\
         . & . & . \\
    0 & 0 & ... & \lambda_M\\
-        \end{array}\right)\,,$$ 
-        
-es la matriz diagonal compuesta por los valores propios $\lambda_i=<\alpha_i^2>$ \
+        \end{array}\right) 
+\end{equation}
+```
+\\        
+es la matriz diagonal compuesta por los valores propios $\lambda_i=<\alpha_i^2>$ \\
 
-Otra forma de entender las FEOs (PCs) consiste en un análisis en valores propios de las matrices de dispersión de nuestras matrices de datos. La matriz de dispersión es el producto matricial de la matriz con su transpuesta, o a la inversa. La primera matriz de dispersión es 
+Otra forma de entender las FEOs (PCs) consiste en un análisis en valores propios de las matrices de dispersión de nuestras matrices de datos. La matriz de dispersión es el producto matricial de la matriz con su transpuesta, o a la inversa. La primera matriz de dispersión es \\
 
-$${\textbf C}={\textbf T}{\textbf T}^T=\left(\begin{array}{cccc}
+```{=tex}
+\begin{equation}
+{C}={T}{T}^T=\left(\begin{array}{cccc}
    T_{1}(t_1) & T_{1}(t_2) & ... & T_{1}(t_N)\\
    T_{2}(t_1) & T_{2}(t_2) & ... & T_{2}(t_N)\\
                 . & . & . \\
@@ -3097,42 +3337,55 @@ $${\textbf C}={\textbf T}{\textbf T}^T=\left(\begin{array}{cccc}
         . & . & . \\
         . & . & . \\
    T_{1}(t_N) & T_{2}(t_N) & ... & T_{M}(t_N)\\
-        \end{array}\right)=$$ 
+        \end{array}\right)
+  \end{equation}
+  ``` 
         
-$$=\left(\begin{array}{cccc}
-   \sum\limits_{i=1}^N{T_{1}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{1}(t_i)T_{2}(t_i)} & ... & \sum\limits_{i=1}^N{T_{1}(t_i)T_{M}(t_i)}\\
-   \sum\limits_{i=1}^N{T_{2}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{2}(t_i)T_{2}(t_i)} & ... & \sum\limits_{i=1}^N{T_{2}(t_i)T_{M}(t_i)}\\
-                . & . & . \\
+```{=tex}
+\begin{equation}
+\left(\begin{array}{cccc}
+   \sum\limits_{i=1}^N{T_{1}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{1}(t_i)T_{2}(t_i)} 
+   & ... & \sum\limits_{i=1}^N{T_{1}(t_i)T_{M}(t_i)}\\
+   \sum\limits_{i=1}^N{T_{2}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{2}(t_i)T_{2}(t_i)} 
+   & ... & \sum\limits_{i=1}^N{T_{2}(t_i)T_{M}(t_i)}\\
         . & . & . \\
         . & . & . \\
-   \sum\limits_{i=1}^N{T_{M}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{M}(t_i)T_{2}(t_i)} & ... & \sum\limits_{i=1}^N{T_{M}(t_i)T_{M}(t_i)}\\
-        \end{array}\right)\,,$$ 
+        . & . & . \\
+   \sum\limits_{i=1}^N{T_{M}(t_i)T_{1}(t_i)} & \sum\limits_{i=1}^N{T_{M}(t_i)T_{2}(t_i)} 
+   & ... & \sum\limits_{i=1}^N{T_{M}(t_i)T_{M}(t_i)}\\
+   \end{array}\right)
+  \end{equation}
+  ``` 
         
 $$\left( M \times M \right)$$ 
 
-y la segunda es 
+y la segunda es \\
 
-$${\textbf C}={\textbf T}^T{\textbf T}=
-\left(\begin{array}{cccc}
-   T_{1}(t_1) & T_{2}(t_1) & ... & T_{M}(t_1)\\
-   T_{1}(t_2) & T_{2}(t_2) & ... & T_{M}(t_2)\\
-                . & . & . \\
+```{=tex}
+\begin{equation}
+ C={T}^T{T}=\left(\begin{array}{cccc}
+   T_{1}(t_1) & T_{2}(t_1) & ... & T_{M}(t_1) \\
+   T_{1}(t_2) & T_{2}(t_2) & ... & T_{M}(t_2) \\
+        . & . & . \\
         . & . & . \\
         . & . & . \\
    T_{1}(t_N) & T_{2}(t_N) & ... & T_{M}(t_N)\\
-        \end{array}\right)\left(\begin{array}{cccc}
+        \end{array}\right)
+\left(\begin{array}{cccc}
    T_{1}(t_1) & T_{1}(t_2) & ... & T_{1}(t_N)\\
    T_{2}(t_1) & T_{2}(t_2) & ... & T_{2}(t_N)\\
-                . & . & . \\
+        . & . & . \\
         . & . & . \\
         . & . & . \\
    T_{M}(t_1) & T_{M}(t_2) & ... & T_{M}(t_N)\\
-\end{array}\right)=$$ 
+\end{array}\right)= 
+\end{equation}
+```
 
 $$=\left(\begin{array}{cccc}
    \sum\limits_{i=1}^M{T_{i}(t_1)T_{i}(t_1)} & \sum\limits_{i=1}^M{T_{i}(t_1)T_{i}(t_2)} & ... & \sum\limits_{i=1}^i{T_{1}(t_1)T_{i}(t_N)}\\
    \sum\limits_{i=1}^M{T_{i}(t_2)T_{i}(t_1)} & \sum\limits_{i=1}^M{T_{i}(t_2)T_{i}(t_2)} & ... & \sum\limits_{i=1}^M{T_{i}(t_2)T_{i}(t_N)}\\
-                . & . & . \\
+        . & . & . \\
         . & . & . \\
         . & . & . \\
    \sum\limits_{i=1}^M{T_{i}(t_N)T_{i}(t_1)} & \sum\limits_{i=1}^M{T_{i}(t_N)T_{i}(t_2)} & ... & \sum\limits_{i=1}^M{T_{i}(t_N)T_{i}(t_N)}\\
@@ -3140,7 +3393,9 @@ $$=\left(\begin{array}{cccc}
         
 Ambas matrices de dispersión obtenidas del producto de la matriz de datos consigo misma son matrices de covarianza simétricas. La primera matriz de dispersión ${\textbf T}{\textbf T}^T$ es una matriz $M \times M$ con lo que hemos eliminado la dimensión temporal o dimensión de muestreo. En este caso, la matriz de dispersión es una matriz de covarianzas temporales (determinadas por sus variaciones temporales) de las estaciones unas con otras. En la segunda matriz ${\textbf T}^T{\textbf T}$ se invierten las dimensiones, la matriz resultante es $N\times N$, y es una matriz de covarianzas espaciales (determinadas por sus variaciones espaciales) entre los diferenetes tiempos. \
 
-**Ejemplo**: Un ejmplo sencillo viene dado por el diagrama de dispersión de la figura. La primera EOF o vector propio que explica la mayor varianza sería la recta que se ajusta al conjunto de puntos y la segunda EOF sería la línea perpendicular a la ajustada.
+**Ejemplo**: Un ejmplo sencillo viene dado por el diagrama de dispersión de la figura. 
+La primera EOF o vector propio que explica la mayor varianza sería la recta que se 
+ajusta al conjunto de puntos y la segunda EOF sería la línea perpendicular a la ajustada.
 
 ```{=tex}
 \begin{center}
@@ -3167,27 +3422,40 @@ y finalmente para recuperar los datos originales a partir de la base de FEOs usa
 
 $${\textbf T}={\textbf B}{\textbf Z}\,,$$ 
 
-ya que ${\textbf B}{\textbf B}^T={\textbf I}$. La matriz ${\textbf Z}$ contiene los vectores de las CPs, que no son mas que las amplitudes por las cuales multiplicamos las FEOs para obtener los datos originales de vuelta. De esta forma podemos ir de un espacio (vectores propios) al otro (datos originales) con la matriz de FEOs. Supongamos que tenemos un conjunto de vectores propios ortogonales y normalizados. El primero de ellos por ejemplo sería
+ya que ${\textbf B}{\textbf B}^T={\textbf I}$. La matriz ${\textbf Z}$ contiene los vectores de 
+las CPs, que no son mas que las amplitudes por 
+las cuales multiplicamos las FEOs para obtener los datos originales de vuelta. 
+De esta forma podemos ir de un espacio (vectores propios) al otro (datos originales) 
+con la matriz de FEOs. Supongamos que tenemos un conjunto de vectores propios ortogonales 
+y normalizados. El primero de ellos por ejemplo sería
 
-$${\textbf e}=\left(\begin{array}{c}
+```{=tex}
+\begin{equation}
+{\textbf e}=\left(\begin{array}{c}
    e_{11} \\
    e_{21} \\
-         .\\
-         .\\
+     .\\
+     .\\
      .\\
    e_{M1} \\
-        \end{array}\right)\,.$$ 
-        
-Si ponemos todos los vectores propios en columna obtenemos la matriz cuadrada ${\textbf B}$, la cual es ortonormal ${\textbf B}^T{\textbf B}={\textbf I}$. Si queremos proyectar un vector propio sobre los datos originales y obtener la amplitud de este vector propio en cada tiempo, debemos de hacer 
+ \end{array}\right)
+\end{equation}
+```   
+Si ponemos todos los vectores propios en columna obtenemos la matriz cuadrada ${\textbf B}$, 
+la cual es ortonormal ${\textbf B}^T{\textbf B}={\textbf I}$. Si queremos proyectar 
+un vector propio sobre los datos originales y  obtener la amplitud de este vector propio 
+en cada tiempo, debemos hacer 
 
-$${\textbf e}^T{\textbf T}=\left(\begin{array}{ccccccc}
+```{=tex}
+\begin{equation}
+{e}^T{T}=\left(\begin{array}{ccccccc}
    e_{11} &
    e_{21} & . & . & . & e_{M1} \\
         \end{array}\right)
     \left(\begin{array}{cccc}
    T_{1}(t_1) & T_{1}(t_2) & ... & T_{1}(t_N)\\
    T_{2}(t_1) & T_{2}(t_2) & ... & T_{2}(t_N)\\
-                . & . & . \\
+        . & . & . \\
         . & . & . \\
         . & . & . \\
    T_{M}(t_1) & T_{M}(t_2) & ... & T_{M}(t_N)\\
@@ -3195,24 +3463,31 @@ $${\textbf e}^T{\textbf T}=\left(\begin{array}{ccccccc}
     \left(\begin{array}{ccccccc}
    z_{11} &
    z_{12} & . & . & . & z_{1N} \\
-        \end{array}\right)\,,$$
+        \end{array}\right)
+\end{equation}
+```
         
-donde, por ejemplo, $z_{11}=e_{11}T_1(t_1)+ e_{21}T_2(t_1) + ... + e_{M1}T_M(t_1)\,.$ Si hacemos lo mismo para todos los otros vectores propios, obtenemos series temporales de longitud $N$ para cada FEO, lo cual se denominan componentes principales de cada EOF 
+donde, por ejemplo, $z_{11}=e_{11}T_1(t_1)+ e_{21}T_2(t_1) + ... + e_{M1}T_M(t_1)\,.$ Si hacemos lo mismo para todos los otros vectores propios, obtenemos series temporales de longitud $N$ para cada FEO, las cuales se denominan componentes principales de cada EOF 
 
-$${\textbf Z}={\textbf B}^T{\textbf T}\,.$$ $$M\times N$$
+$$ \textbf {Z}=\textbf {B}^T\textbf {T}\,.$$ 
 
-Las CPs también son ortogonales. Si substituimos ${\textbf T}={\textbf B}{\textbf Z}$, en ${\textbf B}^T{\textbf T}{\textbf T}^T{\textbf B}=N{\textbf D}$ obtenemos 
+$$M\times N $$
 
-$${\textbf B}^T{\textbf B}{\textbf Z}({\textbf B}{\textbf Z})^T{\textbf B}=N{\textbf D}$$ 
+Las CPs también son ortogonales. Si substituimos 
+
+${\textbf T}={\textbf B}{\textbf Z}$, en ${\textbf B}^T{\textbf T}{\textbf T}^T{\textbf B}=N{\textbf D}$
+
+ obtenemos 
+
+$$ {\textbf B}^T{\textbf B}{\textbf Z}({\textbf B}{\textbf Z})^T{\textbf B}=N{\textbf D}$$ 
 
 
 
-$${\textbf I}{\textbf Z}{\textbf Z}^T{\textbf B}^T{\textbf B}=
-N{\textbf D}$$ 
+$${\textbf I}{\textbf Z}{\textbf Z}^T{\textbf B}^T{\textbf B}= N{\textbf D}$$ 
 
 $${\textbf I}{\textbf Z}{\textbf Z}^T{\textbf I}=N{\textbf D}$$ 
 
-$${\textbf Z}{\textbf Z}^T=N{\textbf D}\,\,\,\,\,\,{ o}\,\,\,\,\,\,<{\textbf Z}{\textbf Z}^T>={\textbf D}\,.$$ 
+$$ {Z}{Z}^T=N{\textbf D}\,\,\,\,\,\,{ o}\,\,\,\,\,\,<{\textbf Z}{\textbf Z}^T>={\textbf D}\,.$$ 
 
 Por lo tanto no solo las FEOs sino también las CPs son ortogonales.
 
@@ -3235,7 +3510,8 @@ matrices: (i) una matriz ortogonal ${\textbf U}$ (i.e., ${\textbf U}^T{\textbf U
 diagonal ${\textbf S}$, y la transpuesta de una matriz ortogonal
 ${\textbf V}$ (i.e., ${\textbf V}^T{\textbf V}={\textbf I}$)
 
-$${\textbf A}={\textbf U}{\textbf S}{\textbf V}^T\,.$$
+$$
+{\textbf A}={\textbf U}{\textbf S}{\textbf V}^T\,.$$
 
 Las columnas de ${\textbf U}$ son vectores propios ortogonales de
 ${\textbf A}{\textbf A}^T$ o los vectores singulares izquierdos de ${\textbf A}$,
@@ -3278,7 +3554,8 @@ $$\frac{1}{N} {\textbf T}{\textbf T}^T = \frac{1}{N} ({\textbf U}{\textbf S}{\te
 
 La derecha del igual es la descomposición en valores propios de la matriz de covarianza, donde ${\textbf S}{\textbf S}^T$ es cuadrada y diagonal con los elementos igual a $N\lambda_i$; y las columnas de ${\textbf U}$ son las FEOs. Las amplitudes de las FEOs vienen dadas por las filas de la matriz 
 
-$${\textbf U}^T{\textbf T}={\textbf S}{\textbf V}\,,$$ 
+$$
+{\textbf U}^T{\textbf T}={\textbf S}{\textbf V}\,,$$ 
 
 asociado con valores singulares no nulos.
 
@@ -3286,21 +3563,21 @@ asociado con valores singulares no nulos.
 
 **Interpretación de las FEOs**
 
-Como comentario final hay que decir que las FEOs no son muy fáciles de interpretar. Matemáticamente son estructuras que representan la mayor cantidad de varianza de los datos originales y que son ortogonales entre ellas. En ocasiones estas estructuras nos dan estructuras con sentido físico en un conjunto de datos, en otras no. Las estructuras particulares encontradas dependerán de cómo hemos acomodado nuestra matriz bidimensional de datos. Algunas sugerencias para detectar si las FEOs tienen sentido físico son las siguientes: \
+Como comentario final hay que decir que las FEOs no son muy fáciles de interpretar. Matemáticamente son estructuras que representan la mayor cantidad de varianza de los datos originales y que son ortogonales entre ellas. En ocasiones estas estructuras nos dan estructuras con sentido físico en un conjunto de datos, en otras no. Las estructuras particulares encontradas dependerán de cómo hemos acomodado nuestra matriz bidimensional de datos. Algunas sugerencias para detectar si las FEOs tienen sentido físico son las siguientes: \\
 
-(1) ¿La varianza de tu FEO es mas grande que lo que esperabas si los datos originales no tenían estructura alguna? \
+(1) ¿La varianza de tu FEO es mas grande que lo que esperabas si los datos originales no tenían estructura alguna? \\
  
-(2) ¿Existe una explicación apriori para las estructuras que has encontrado? ?`Se pueden explicar las estructuras en términos de alguna teoría? ¿Las estructuras se comportan consistentemente con la teoría apriori? \
+(2) ¿Existe una explicación apriori para las estructuras que has encontrado? ?`Se pueden explicar las estructuras en términos de alguna teoría? ¿Las estructuras se comportan consistentemente con la teoría apriori? \\
 
-(3) ¿Cuán robustas son las estructuras a la elección del dominio de la estructura? ¿Si cambias el dominio del análisis, esas estructuras cambian significantemente? ¿Si las estructuras estan definidas en un espacio geográfico, y cambias el tamaño de la región, las estructuras cambian significativamente? ¿Si las estructuras estan definidas en el espacio de parámetros y añades o eliminas un parámetros, los resultados cambian de forma suave o aleatoriamente? \
+(3) ¿Cuán robustas son las estructuras a la elección del dominio de la estructura? ¿Si cambias el dominio del análisis, esas estructuras cambian significantemente? ¿Si las estructuras estan definidas en un espacio geográfico, y cambias el tamaño de la región, las estructuras cambian significativamente? ¿Si las estructuras estan definidas en el espacio de parámetros y añades o eliminas un parámetros, los resultados cambian de forma suave o aleatoriamente? \\
 
-(4)¿Cuán robustas son las estructuras a los datos usados? ¿Si divides los datos originales en fracciones menores y haces el analisis de cada fracción, obtienes las mismas estructuras?
+(4)¿Cuán robustas son las estructuras a los datos usados? ¿Si divides los datos originales en fracciones menores y haces el analisis de cada fracción, obtienes las mismas estructuras? \\
 
 \vspace{0.5cm}
 
 **Ejemplo de descomposición en valores singulares** 
 
-\  Supongamos la matriz 
+Supongamos la matriz 
 
 $${\textbf A}=\left(\begin{array}{ccc}
   3 & 1 & 1\\
@@ -3388,7 +3665,8 @@ $${\textbf U}=\left(\begin{array}{cc}
   \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
 \end{array}\right)\,.$$
 
-Similarmente, para calcular la matriz ${\textbf V}$ debemos resolver el problema en vectores y valores propios de la matriz ${\textbf A}^T{\textbf A}$ 
+Similarmente, para calcular la matriz ${\textbf V}$ debemos resolver el problema en vectores y valores propios de la matriz
+ ${\textbf A}^T{\textbf A}$ 
 
 $${\textbf A}^T{\textbf A}=\left(\begin{array}{ccc}
   3 & -1 \\
@@ -3459,7 +3737,7 @@ $$x_2=2$$ $$2x_1+8-10=0$$
 
 $$x_1=1$$ 
 
-lo que implica que para $\lambda_3=0$ ${\textbf v}_3=[1,2,-5]$. \
+lo que implica que para $\lambda_3=0$ ${\textbf v}_3=[1,2,-5]$. \\
 
 Si organizamos los vectores de acuerdo con el valor de los valores propios (de mayor a menor) obtenemos la matriz 
 
@@ -3503,7 +3781,7 @@ $${\textbf V}^T=\left(\begin{array}{ccc}
   \frac{1}{\sqrt{30}} & \frac{2}{\sqrt{30}} & \frac{-5}{\sqrt{30}}\\
       \end{array}\right)\,.$$
 
-Para calcular ${\textbf S}$ debemos tomar las raices cuadradas de los valores propios diferentes de cero ($\lambda_i\ne0$) y colocarlos en la diagonal principal en orden descendente. Es decir, el valor propio mayor en la posición $s_{11}$, el siguiente mas grande en $s_{22}$, y así sucesivamente. Los valores propios diferentes de cero son iguales para ${\textbf U}$ y ${\textbf V}$ con lo que no importa de cual los tomemos. Puesto que solo hay dos valores propios diferentes de cero y el orden de las matrices ${\textbf U}$ y ${\textbf V}$ es $3\times3$, debemos añadir una columna de ceros a ${\textbf S}$ 
+Para calcular ${\textbf S}$ debemos tomar las raices cuadradas de los valores propios diferentes de cero ($\lambda_i\ne0$) y colocarlos en la diagonal principal en orden descendente. Es decir, el valor propio mayor en la posición $s_{11}$, el siguiente mas grande en $s_{22}$, y así sucesivamente. Los valores propios diferentes de cero son iguales para ${\textbf U}$ y ${\textbf V}$ con lo que no importa de cual los tomemos. Puesto que solo hay dos valores propios diferentes de cero y el orden de las matrices ${\textbf U}$ y ${\textbf V}$ es $3\times3$, debemos añadir una columna de ceros a ${\textbf S}$ \\
 
 $${\textbf S}=\left(\begin{array}{ccc}
   \sqrt{12} & 0 & 0 \\
@@ -3544,7 +3822,7 @@ $$=\left(\begin{array}{ccc}
 
 ### Introducción
 
-Una función periódica es aquella cuyos valores se repiten a intervalos regulares. El tiempo entre las sucesivas repeticiones se denomina periodo $\tau$. Normalmente lo definimos entre sucesivas crestas. Matemáticamente, una función es periódica si $f(t)=f(t+T)$ para todo valor de $T$.
+Una función periódica es aquella cuyos valores se repiten a intervalos regulares. El tiempo entre las sucesivas repeticiones se denomina periodo $\tau$. Normalmente lo definimos entre sucesivas crestas. Matemáticamente, una función es periódica si $f(t)=f(t+T)$ para todo valor de $T$. \\
 
 ```{=tex}
 \begin{center}
@@ -3632,35 +3910,80 @@ $$sen\theta=\frac{e^{i\theta}-e^{-i\theta}}{2i}$$
 $$cos\theta=\frac{e^{i\theta}+e^{-i\theta}}{2}$$
 \end{framed}
 ```
-También podemos representar la serie de Fourier en notación compacta como: $$f(t)=\frac{1}{2}C_0 +\sum\limits^\infty_{p=1}C_p cos(\omega_p t - \theta_p)\,,$$ en la cual la amplitud de la $p$ésima componente es $$C_p=\sqrt{A_p^2+B_p^2}\,,\,\,\,\,p=1,2,....$$ donde $C_0=A_0 (B_0=0)$ es dos veces el valor promedio de la serie y $$\theta_p=arctg[B_p/A_p]\,,\,\,\,\,p=1,2,...$$ es el ángulo de fase de la componente al tiempo $t=0$. El ángulo de fase nos informa del "desfase" *lag* relativo de las componente en radianes (o grados) medido en el sentido contrario a las agujas del reloj desde el eje real definido por $B_p=0, A_p>0$. El correspondiente tiempo de desfase para la componente $p$ésima es $t_p=\theta_p/2\pi f_p$ en el cual $\theta_p$ esta medida en radianes. La energía espectral se define como las amplitudes de los coeficientes de Fourier al cuadrado, lo cual representa la varianza y entonces la energía $$C^2_p=A_p^2 + B_p^2\,.$$ \\ \\ De igual forma con las relaciones trigonométricas de arriba se puede expresar las series de Fourier en notación compleja. Usando $$sen\omega_p t=\frac{e^{i\omega_pt}-e^{-i\omega_pt}}{2i}\,\,\,\,\,\,\,y\,\,\,\,\,\,\,
-cos\omega_p t=\frac{e^{i\omega_pt}+e^{-i\omega_pt}}{2}\,,$$ obtenemos $$f(x)=\frac{1}{2}A_0 +\sum\limits^\infty_{p=1}[A_p cos(\omega_p t) + B_p sen(\omega_p t)]=$$ $$=\frac{1}{2}A_0 +\sum\limits^\infty_{p=1}\left[ A_p \frac{e^{i\omega_pt}+e^{-i\omega_pt}}{2} + B_p \frac{e^{i\omega_pt}-e^{-i\omega_pt}}{2i}\right]=$$ $$=\frac{1}{2}A_0+\sum\limits^\infty_{p=1}\left[\frac{A_p e^{i\omega_p t}}{2} + \frac{A_p e^{-i\omega_p t}}{2} -
-\frac{iB_p e^{i\omega_p t}}{2} + \frac{iB_p e^{-i\omega_p t}}{2} \right]=$$ $$=\frac{1}{2}A_0+\sum\limits^\infty_{p=1} e^{i\omega_p t}\frac{A_p-iB_p}{2} +
-                  \sum\limits^\infty_{p=1} e^{-i\omega_p t}\frac{A_p+iB_p}{2}=$$ $$=C^*_0 + \sum\limits^\infty_{p=1}C^*_pe^{i\omega_p t} + \sum\limits^\infty_{p=1}C^*_{-p} e^{-i\omega_p t}=
-\sum\limits^\infty_{p=-\infty} C^*_p e^{i\omega_p t}\,,$$ donde hemos definido las siguientes relaciones entre los coeficientes de Fourier complejos y reales: $$C^*_0=\frac{1}{2}A_0\,,$$ $$C^*_p=\frac{1}{2}(A_p-iB_p)\,,$$ $$C^*_{-p}=\frac{1}{2}(A_p+iB_p)\,.$$
+También podemos representar la serie de Fourier en notación compacta como: $$f(t)=\frac{1}{2}C_0 +\sum\limits^\infty_{p=1}C_p cos(\omega_p t - \theta_p)\,,$$ en la cual la amplitud de la $p$ésima componente es $$C_p=\sqrt{A_p^2+B_p^2}\,,\,\,\,\,p=1,2,....$$ donde $C_0=A_0 (B_0=0)$ es dos veces el valor promedio de la serie y $$\theta_p=arctg[B_p/A_p]\,,\,\,\,\,p=1,2,...$$ es el ángulo de fase de la componente al tiempo $t=0$. El ángulo de fase nos informa del "desfase" *lag* relativo de las componente en radianes (o grados) medido en el sentido contrario a las agujas del reloj desde el eje real definido por $B_p=0, A_p>0$. El correspondiente tiempo de desfase para la componente $p$ésima es $t_p=\theta_p/2\pi f_p$ en el cual $\theta_p$ esta medida en radianes. La energía espectral se define como las amplitudes de los coeficientes de Fourier al cuadrado, lo cual representa la varianza y entonces la energía $$C^2_p=A_p^2 + B_p^2\,.$$ \\ \\ De igual forma con las relaciones trigonométricas de arriba se puede expresar las series de Fourier en notación compleja. Usando 
+$$sen\omega_p t=\frac{e^{i\omega_pt}-e^{-i\omega_pt}}{2i}\,\,\,\,\,\,\,y\,\,\,\,\,\,\,
+cos\omega_p t=\frac{e^{i\omega_pt}+e^{-i\omega_pt}}{2}\,,$$ obtenemos $$f(x)=\frac{1}{2}A_0 +\sum\limits^\infty_{p=1}[A_p cos(\omega_p t) + B_p sen(\omega_p t)]=$$ $$=\frac{1}{2}A_0 +\sum\limits^\infty_{p=1}\left[ A_p \frac{e^{i\omega_pt}+e^{-i\omega_pt}}{2} + B_p \frac{e^{i\omega_pt}-e^{-i\omega_pt}}{2i}\right]=$$ 
 
-En resumen, podemos reconstruir la serie periódica $f(t)$ con la transformada de Fourier $$f(x)=\sum\limits^\infty_{p=-\infty} C^*_p e^{i\omega_p t}\,,$$ e inversamente podemos calcular los coeficientes de Fourier $C^*_p$ a partir de la $f(t)$ $$C^*_p=\frac{1}{2}(A_p-iB_p)=\frac{1}{2}\left(\frac{2}{T}\int\limits_0^{T} f(t) cos(\omega_p t) dt -
-                                             i \frac{2}{T}\int\limits_0^{T} f(t) sen(\omega_p t) dt \right)=$$ $$=\frac{1}{T}\int\limits_0^{T} f(t) [cos(\omega_p t) - isen(\omega_p t) ]dt = \frac{1}{T}\int\limits_0^{T} f(t) e^{-i \omega_p t} dt\,,$$ es decir, podemos pasar del espacio temporal $f(t)$ al espacio espectral o de Fourier $C^*_p$ e inversamente regresar al espacio temporal de nuevo.
+$$=\frac{1}{2}A_0+\sum\limits^\infty_{p=1}\left[\frac{A_p e^{i\omega_p t}}{2} + \frac{A_p e^{-i\omega_p t}}{2} -
+\frac{iB_p e^{i\omega_p t}}{2} + \frac{iB_p e^{-i\omega_p t}}{2} \right]=$$ 
 
-El teorema de Parseval es precisamente el que demuestra que la el valor cuadrático medio de la serie de Fourier es igual al error cuadrático medio de los coeficientes de Fourier. La varianza de la serie de Fourier es $$\frac{1}{T}\int\limits^{T}_0 f^2(t) dt=\frac{1}{T}\int\limits^{T}_0
-\left(\frac{1}{2}A_0 +\sum\limits^\infty_{p=1}[A_p cos(\omega_p t) + B_p sen(\omega_p t)]\right) dt=$$ $$=\frac{1}{T}\frac{1}{4} A^2_0 \int\limits^{T}_0 dt + \frac{1}{T}A_0 \sum\limits^\infty_{p=1} A_p \int\limits^{T}_0 cos(\omega_p t)dt + \frac{1}{T}A_0\sum\limits^\infty_{p=1}B_p \int\limits^{T}_0 sen(\omega_p t)dt +$$ $$+\frac{1}{T}\sum\limits^\infty_{p=1}A^2_p \int\limits^{T}_0 cos^2(\omega_p t)dt +
-\frac{1}{T}\sum\limits^\infty_{p=1}B^2_p \int\limits^{T}_0 sen^2(\omega_p t)dt+$$ $$+\frac{1}{T}2\sum\limits^\infty_{p=1}A_p \sum\limits^\infty_{p=1}B_p\int\limits^{T}_0 sen(\omega_p t)cos(\omega_p t)dt=
-\frac{1}{T}\frac{1}{4}A^2_0 T + \frac{1}{T}\sum\limits^\infty_{p=1}A^2_p\left[ \frac{t}{2} + \frac{sen(2\omega_p t)}{4\omega_p}\right]^T_0+$$ $$+\frac{1}{T}\sum\limits^\infty_{p=1}B^2_p\left[ \frac{t}{2} - \frac{sen(2\omega_p t)}{4\omega_p}\right]^T_0=
-\frac{1}{4}A^2_0 + \frac{1}{2}\sum\limits^\infty_{p=1}A_p^2 + \frac{1}{2}\sum\limits^\infty_{p=1}B_p^2=$$ $$=\frac{1}{4}A^2_0 + \frac{1}{2}\sum\limits^\infty_{p=1} A_p^2 + B_p^2\,.$$
+$$=\frac{1}{2}A_0+\sum\limits^\infty_{p=1} e^{i\omega_p t}\frac{A_p-iB_p}{2} + 
+ \sum\limits^\infty_{p=1} e^{-i\omega_p t}\frac{A_p+iB_p}{2} $$ 
 
-Utilizando las siguientes identidades $$|C^*_p|^2=|C^*_{-p}|^2=\frac{1}{4}(A_p^2 + B_p^2)\,,$$ $$C^*_0=\frac{1}{2}A_0\,,$$ el teorema de Parseval en términos de los coeficientes de Fourier complejos es $$\frac{1}{T}\int\limits^{T}_0 f^2(t) dt=(C^*_0)^2 + \frac{1}{2}\sum\limits^\infty_{p=1} 4|C^*_p|^2=
-(C^*_0)^2 + \sum\limits^\infty_{p=1} |C^*_p|^2 + \sum\limits^\infty_{p=1} |C^*_p|^2=$$ $$=(C^*_0)^2 + \sum\limits^\infty_{p=1} |C^*_p|^2 + \sum\limits^\infty_{p=1} |C^*_{-p}|^2=
+$$=C^*_0 + \sum\limits^\infty_{p=1}C^*_pe^{i\omega_p t} + \sum\limits^\infty_{p=1}C^*_{-p} e^{-i\omega_p t}=
+\sum\limits^\infty_{p=-\infty} C^*_p e^{i\omega_p t}\,,$$ 
+
+donde hemos definido las siguientes relaciones entre los coeficientes de Fourier complejos y reales: 
+
+$$C^*_0=\frac{1}{2}A_0\,,$$ $$C^*_p=\frac{1}{2}(A_p-iB_p)\,,$$ 
+
+$$C^*_{-p}=\frac{1}{2}(A_p+iB_p)\,.$$
+
+En resumen, podemos reconstruir la serie periódica $f(t)$ con la transformada de Fourier $$f(x)=\sum\limits^\infty_{p=-\infty} C^*_p e^{i\omega_p t}\,,$$ e inversamente podemos calcular los coeficientes de Fourier $C^*_p$ a partir de la $f(t)$ 
+
+$$C^*_p=\frac{1}{2}(A_p-iB_p)=\frac{1}{2}\left(\frac{2}{T}\int\limits_0^{T} f(t) cos(\omega_p t) dt -
+                                             i \frac{2}{T}\int\limits_0^{T} f(t) sen(\omega_p t) dt \right)=$$ 
+
+$$=\frac{1}{T}\int\limits_0^{T} f(t) [cos(\omega_p t) - isen(\omega_p t) ]dt = 
+\frac{1}{T}\int\limits_0^{T} f(t) e^{-i \omega_p t} dt\,,$$ 
+
+es decir, podemos pasar del espacio temporal $f(t)$ al espacio espectral o de Fourier $C^*_p$ 
+e inversamente regresar al espacio temporal de nuevo.
+
+El teorema de Parseval es precisamente el que demuestra que la el valor cuadrático medio de la serie de Fourier es igual al error cuadrático medio de los coeficientes de Fourier. La varianza de la serie de Fourier es 
+
+$$\frac{1}{T}\int\limits^{T}_0 f^2(t) dt=\frac{1}{T}\int\limits^{T}_0
+\left(\frac{1}{2}A_0 +\sum\limits^\infty_{p=1}[A_p cos(\omega_p t) + B_p sen(\omega_p t)]\right) dt=$$ 
+
+$$=\frac{1}{T}\frac{1}{4} A^2_0 \int\limits^{T}_0 dt + \frac{1}{T}A_0 \sum\limits^\infty_{p=1} A_p \int\limits^{T}_0 cos(\omega_p t)dt + \frac{1}{T}A_0\sum\limits^\infty_{p=1}B_p \int\limits^{T}_0 sen(\omega_p t)dt +$$ 
+
+$$+\frac{1}{T}\sum\limits^\infty_{p=1}A^2_p \int\limits^{T}_0 cos^2(\omega_p t)dt +
+\frac{1}{T}\sum\limits^\infty_{p=1}B^2_p \int\limits^{T}_0 sen^2(\omega_p t)dt+$$ 
+
+$$+\frac{1}{T}2\sum\limits^\infty_{p=1}A_p \sum\limits^\infty_{p=1}B_p\int\limits^{T}_0 sen(\omega_p t)cos(\omega_p t)dt=
+\frac{1}{T}\frac{1}{4}A^2_0 T + \frac{1}{T}\sum\limits^\infty_{p=1}A^2_p\left[ \frac{t}{2} 
++ \frac{sen(2\omega_p t)}{4\omega_p}\right]^T_0+$$ 
+
+$$+\frac{1}{T}\sum\limits^\infty_{p=1}B^2_p\left[ \frac{t}{2} - \frac{sen(2\omega_p t)}{4\omega_p}\right]^T_0=
+\frac{1}{4}A^2_0 + \frac{1}{2}\sum\limits^\infty_{p=1}A_p^2 + \frac{1}{2}\sum\limits^\infty_{p=1}B_p^2=$$ 
+
+$$=\frac{1}{4}A^2_0 + \frac{1}{2}\sum\limits^\infty_{p=1} A_p^2 + B_p^2\,.$$
+
+Utilizando las siguientes identidades 
+$$|C^*_p|^2=|C^*_{-p}|^2=\frac{1}{4}(A_p^2 + B_p^2)\,,$$ 
+$$C^*_0=\frac{1}{2}A_0\,,$$ 
+
+el teorema de Parseval en términos de los coeficientes de Fourier complejos es 
+
+$$\frac{1}{T}\int\limits^{T}_0 f^2(t) dt=(C^*_0)^2 + \frac{1}{2}\sum\limits^\infty_{p=1} 4|C^*_p|^2=
+(C^*_0)^2 + \sum\limits^\infty_{p=1} |C^*_p|^2 + \sum\limits^\infty_{p=1} 
+|C^*_p|^2=$$ 
+
+$$=(C^*_0)^2 + \sum\limits^\infty_{p=1} |C^*_p|^2 + \sum\limits^\infty_{p=1} |C^*_{-p}|^2=
 \sum\limits^\infty_{p=-\infty} |C^*_p|^2$$
 
 \newpage
 
 ```{=tex}
 \begin{framed}
-El teorema de Parseval es una
-ley de conservación que demuestra que la suma de los módulos cuadrados
+El teorema de Parseval es una ley de conservación que demuestra que la suma de los módulos cuadrados
 de los coeficientes de Fourier complejos es igual al valor promedio de
 $f^2(x)$
-$$\frac{1}{T}\int\limits^{T}_0 f^2(t) dt=\frac{1}{4}A^2_0 + \frac{1}{2}\sum\limits^\infty_{p=1} A_p^2 + B_p^2=
+
+$$\frac{1}{T}\int\limits^{T}_0 f^2(t) dt=\frac{1}{4}A^2_0 + 
+\frac{1}{2}\sum\limits^\infty_{p=1} A_p^2 + B_p^2=
 \sum\limits^\infty_{p=-\infty} |C^*_p|^2\,.$$
+
 \end{framed}
 ```
 Esto da lugar a la relación entre la amplitud de las componentes de Fourier en el dominio espectral (de frecuencia) y la varianza de la serie en el dominio temporal. \
@@ -3671,13 +3994,16 @@ Esto da lugar a la relación entre la amplitud de las componentes de Fourier en 
 
 {\textbf Ejemplo de cálculo de coeficientes de Fourier}
 
-Imaginemos la siguiente onda cuadrada representada por la función $$f(t)=
+Imaginemos la siguiente onda cuadrada representada por la función 
+
+$$f(t)=
  \left\lbrace
   \begin{array}{l}
      -1,\text{para} -\frac{1}{2}T\le t< 0 \\
      +1,\text{para} 0\le t< \frac{1}{2}T  \\
   \end{array}
   \right.$$
+
 
 ```{=tex}
 \begin{center}
@@ -3687,6 +4013,7 @@ Imaginemos la siguiente onda cuadrada representada por la función $$f(t)=
 Onda cuadrada.
 \end{center}
 ```
+
 Puesto que función de arriba es impar, es decir cumple la condición de simetría $-f(t)=f(-t)$, entonces la serie de Fourier resultante solamente contendrá componentes sinusoidales. Entonces $$B_p=\frac{2}{T}\int\limits_{-T/2}^{T/2} f(t) sen(\omega_p t) dt=$$ $$=\frac{2}{T}\int\limits_{-T/2}^{0} f(t) sen(\omega_p t) dt + \frac{2}{T}\int\limits_{0}^{T/2} f(t) sen(\omega_p t) dt=$$ $$\frac{2}{T}\left[ (-1) \int\limits_{-T/2}^{0} sen(\omega_p t) dt +
                    (1) \int\limits_{0}^{T/2} sen(\omega_p t) dt \right]=$$
 
@@ -4554,24 +4881,27 @@ end\\
 \%*************\\
 \end{framed}
 ```
+
 ```{=tex}
 \begin{framed}
 \% Por comodidad generamos la respuesta en frecuencia del filtro.\\
 
- Fh=-fn:df:fn; Fh=Fh';\\
+\% Fh=-fn:df:fn; Fh=Fh';\\
 \% for k=1:length(Fh);\\
 \% Rh(k)=sum( h.*cos( 2*pi*p*Fh(k)/(2*fn) ) );\\
 \% end;\\
 \% \\
-xdum=length(Fh); ydum=length(p);\\
-A = zeros(xdum,ydum);\\
-dum=2*pi/(2*fn);\\
-A = cos(dum*Fh*p);\\
+\%x dum=length(Fh); ydum=length(p);\\
+\% A = zeros(xdum,ydum);\\
+\% dum=2*pi/(2*fn);\\
+\% A = cos(dum*Fh*p);\\
 
-M=length(h);\\
-h=reshape(h,M,1);\\
+\% M=length(h);\\
+\% h=reshape(h,M,1);\\
 
-Rh = A*h;\%multiplicamos la matriz de cosenos por la senal (= a suma comentada de arriba)\\
+\% Rh = A*h;
+
+\%multiplicamos la matriz de cosenos por la senal (= a suma comentada de arriba)\\
 
 \end{framed}
 ```
@@ -4622,7 +4952,7 @@ zf = lnz\_fi(z,h); \%serie filtrada y listo.
 
 ### Análisis Armónico
 
-Se trata de un ajuste por mínimos cuadrados de una serie temporal dominada por armónicos específicos. Por ejemplo, en el caso del océano, es muy comúnencontrar en series temporales de temperatura, salinidad, velocidad, etc.. señales de las mareas que no son nada mas que corrientes periódicas generadas por fuerzas astronómicas con una frecuencia de oscilación determinada (24h, 12h, etc...).
+Se trata de un ajuste por cuadrados mínimos de una serie temporal dominada por armónicos específicos. Por ejemplo, en el caso del océano, es muy comúnencontrar en series temporales de temperatura, salinidad, velocidad, etc.. señales de las mareas que no son nada mas que corrientes periódicas generadas por fuerzas astronómicas con una frecuencia de oscilación determinada (24h, 12h, etc...).
 
 El método consiste en elejir las frecuencias de los armónicos y usar cuadrados mínimos para ajustarlos a la serie temporal. Supongamos $M$ armónicos a ajustar
 
@@ -4632,7 +4962,7 @@ donde $\overline{y(t)}$ es el promedio de la serie, y $y_r(t_n)$ es el residuo d
 
 $$y(t_n) = \overline{f(t)} + \sum\limits^{M}_{q=1}[A_q cos(\omega_q t_n)+B_q sen(\omega_q t_n)] +y_r(t_n)\,,$$ donde $$C_q=\sqrt{A_q^2+B_q^2}\,,\,\,\,\,q=1,2,....$$ $$\theta_q=arctg[B_q/A_q]\,,\,\,\,\,q=1,2,...$$
 
-Antes de empezar el análisis debemos de extraer la media, $\overline{y}$, a la serie temporal. El método de mínimos cuadrados consiste en minimizar la suma de los errores cuadrados $SEC$, es decir, $$SEC= \sum\limits^N_{n=1} y_r^2(t_n) = \sum\limits^N_{n=1}  \left( y(t_n) - \left[ \overline{y(t)} +
+Antes de empezar el análisis debemos de extraer la media, $\overline{y}$, a la serie temporal. El método de cuadrados mínimos consiste en minimizar la suma de los errores cuadrados $SEC$, es decir, $$SEC= \sum\limits^N_{n=1} y_r^2(t_n) = \sum\limits^N_{n=1}  \left( y(t_n) - \left[ \overline{y(t)} +
  \sum\limits^{M}_{q=1} A_q cos(\omega_q t_n)+B_q sen(\omega_q t_n) \right] \right)^2 =$$ $$=\sum\limits^N_{n=1}  \left(y(t_n) - \left[ \overline{y(t)} +
 \sum\limits^{M}_{q=1} A_q cos(2\pi q n/ N)+B_q sen(2\pi q n/ N) \right] \right)^2$$
 
@@ -4756,7 +5086,13 @@ El coeficiente de correlación entre la señal original y la serie de Fourier co
 
 ### Demodulación compleja
 
-Este método es utilizado para conocer el comportamiento de una componente o armónico con frecuencia particular $\omega$, tal como la marea diurna, o semidiurna, o las ondas inerciales. Aqui vamos a mostrar la forma clásica de demodular que consiste en ajustar por fragmentos de la serie un armónico teórico utilizando mínimos cuadrados. Cada fragmento de la serie debe, como mínimo, contener un ciclo del armónico a demodular. Para cada segmento, la anomalía de la componente de velocidad a la frecuencia de interés $\omega$ es $${\textbf u} - \overline{\textbf u}=[u(t)-\overline{u(t)} +iv(t)-\overline{v(t)}]=$$ $$R^+ e^{i(\omega t + \epsilon^+)} + R^- e^{-i(\omega t + \epsilon^-)}\,,$$ donde $\overline{u(t)}$, $\overline{v(t)}$ son las componentes de la velocidad promedio, $R^+,\,\,R^-$ y $\epsilon^+\,\,\epsilon^-$ son las amplitudes y fases de las componentes rotatorias que giran en el sentido de las agujas del reloj (+) y en el sentido contrario (-). La serie temporal esta definida para cada $t_k\,(k=1,2,....,N)$ y las soluciones son encontradas resolviendo el sistema de ecuaciones $${\textbf z}={\textbf D}^{-1}{\textbf y}\,,$$ donde $${\textbf y}=\left( \begin{array}{c}
+Este método es utilizado para conocer el comportamiento de una componente o armónico con frecuencia particular $\omega$, tal como la marea diurna, o semidiurna, o las ondas inerciales. Aqui vamos a mostrar la forma clásica de demodular que consiste en ajustar por fragmentos de la serie un armónico teórico utilizando cuadrados mínimos. Cada fragmento de la serie debe, como mínimo, contener un ciclo del armónico a demodular. Para cada segmento, la anomalía de la componente de velocidad a la frecuencia de interés $\omega$ es $${\textbf u} - \overline{\textbf u}=[u(t)-\overline{u(t)} +iv(t)-\overline{v(t)}]=$$ $$R^+ e^{i(\omega t + \epsilon^+)} + R^- e^{-i(\omega t + \epsilon^-)}\,,$$ donde $\overline{u(t)}$, $\overline{v(t)}$ son las componentes de la velocidad promedio, $R^+,\,\,R^-$ y $\epsilon^+\,\,\epsilon^-$ son las amplitudes y fases de las componentes rotatorias que giran en el sentido de las agujas del reloj (+) y en el sentido contrario (-). La serie temporal esta definida para cada $t_k\,(k=1,2,....,N)$ y las soluciones son encontradas resolviendo el sistema de ecuaciones 
+
+$${\textbf z}={\textbf D}^{-1}{\textbf y}\,,$$ 
+
+donde \\ 
+
+$${\textbf y}=\left( \begin{array}{c}
 u(t_1) \\
 u(t_2) \\
 ... \\
@@ -4777,7 +5113,11 @@ ACP \\
 ASP\\
 ACM \\
 ASM\\
-\end{array} \right)\,,$$ y la matriz ${\textbf D}$ es $${\textbf D}=\left( \begin{array}{cccc}
+\end{array} \right)\,,$$ 
+
+y la matriz ${\textbf D}$ es 
+
+$${\textbf D}=\left( \begin{array}{cccc}
 cos(\omega t_1) & -sen(\omega t_1) & cos(\omega t_1) & sen(\omega t_1) \\
 cos(\omega t_2) & -sen(\omega t_2) & cos(\omega t_2) & sen(\omega t_2) \\
 ... \\
@@ -4788,9 +5128,13 @@ sen(\omega t_2) & cos(\omega t_2) & -sen(\omega t_2) & cos(\omega t_2) \\
 sen(\omega t_n) & cos(\omega t_n) & -sen(\omega t_n) & cos(\omega t_n) \\
 \end{array} \right)\,.$$
 
-Una vez los valores de ${\textbf z}$ son encontrados a partir de la solución de mínimos cuadrados de arriba, podemos encontrar los parámetros de la elipse como: $$R^+=\sqrt{\left( ASP^2 + ACP^2\right)}\,;\,\,\,\,\,R^-=\sqrt{\left( ASM^2 + ACM^2\right)}$$ $$\epsilon^+=tan^{-1}\left(\frac{ASP}{ACP}\right)\,;\,\,\,\,\,\epsilon^-=tan^{-1}\left(\frac{ASM}{ACM}\right)$$
+Una vez los valores de ${\textbf z}$ son encontrados a partir de la solución de cuadrados mínimos de arriba, podemos encontrar los parámetros de la elipse como: 
 
-Por ejemplo, si queremos demodular la amplitud y fase de las ondas inerciales observadas en un anclaje situado en latitudes medias, debemos de usar una frecuencia $\omega=2\Omega sen\phi$ y ajustar por mínimos cuadrados segmentos de $24\,{ h}$ sin superposición. La serie temporal medida por el anclaje debería de ser horaria para que existan mas datos por segmento que parámetros a ajustar.
+$$R^+=\sqrt{\left( ASP^2 + ACP^2\right)}\,;\,\,\,\,\,R^-=\sqrt{\left( ASM^2 + ACM^2\right)}$$ 
+
+$$\epsilon^+=tan^{-1}\left(\frac{ASP}{ACP}\right)\,;\,\,\,\,\,\epsilon^-=tan^{-1}\left(\frac{ASM}{ACM}\right)$$
+
+Por ejemplo, si queremos demodular la amplitud y fase de las ondas inerciales observadas en un anclaje situado en latitudes medias, debemos de usar una frecuencia $\omega=2\Omega sen\phi$ y ajustar por cuadrados mínimos segmentos de $24\,{ h}$ sin superposición. La serie temporal medida por el anclaje debería de ser horaria para que existan mas datos por segmento que parámetros a ajustar.
 
 Otra forma, tal vez mas sencilla, es la siguiente. Imaginemos que la serie original es $X(t)$ y se asume como una señal periódica con frecuencia igual a la de interés mas otras cosas que llamamos $Z(t)$ $$X(t)=A(t)cos\left(\omega t + \varphi(t)\right) + Z(t)= \frac{1}{2}A(t)
        \left[e^{i(\omega t + \varphi(t))} + e^{-i(\omega t + \varphi(t))} \right] + Z(t)\,,$$ donde la amplitud $A(t)$ y la fase $\varphi(t)$ de la señal periódica se asumen que dependen del tiempo pero que varían "lentamente" en comparación a la frecuencia $\omega$.
@@ -4806,13 +5150,30 @@ El término (a) varía lentamente ya que $\varphi(t)$ también lo hace y no tien
 
 (2) Filtro pasa-bajas de la serie $Y(t)$ para eliminar las ondas con frecuencia $\omega$ o por encima de $\omega$. Esto eliminará prácticamente los términos (b) y (c), y suavizará (a). El resultado es $$Y_s(t)=\frac{1}{2}A_s(t)e^{i\varphi_s(t)}\,,$$ donde el subíndice $_s$ significa suavizado o filtro pasa-bajas. \\
 
-(3) Extraer $A_s(t)$ y $\varphi_s(t)$: $$\frac{1}{2}A_s(t)=|Y_s(t)|=2\left( Re[Y_s]^2 + Im[Y_s]^2\right)^{1/2}$$ $$e^{i\varphi(t)}=2\frac{Y_s(t)}{A_s(t)}\,;\,\,\,\,\,\varphi_s(t)=tan^{-1}\left(\frac{Im[Y_s]}{Re[Y_s]}\right)$$
+(3) Extraer $A_s(t)$ y $\varphi_s(t)$: 
 
-Al suavizar hacemos dos cosas. Primero, eliminamos los términos no deseados (a) y (b). El tipo de filtrado o suavizado determina la anchura de la banda de frecuencias de las oscilaciones retenidas. Por ejemplo, si usamos un triángulo (ventana triangular) de longitud $2T-1$ donde $T=2\pi/\omega$ es el periodo de demodulación, entonces para la banda para la potencia-media ($3\,{ dB}$ desde el pico) será $\omega \in [T/(1+0.44295),T/(1-0.44295)]$. Potencia media se refiere a la frecuencia a la cual la potencia se ha reducido a la mitad de su valor medio de la banda. Segundo, el filtrado suaviza las series de amplitud y la fase. \\
+$$\frac{1}{2}A_s(t)=|Y_s(t)|=2\left( Re[Y_s]^2 + Im[Y_s]^2\right)^{1/2}$$ 
 
-(4) La elección de la frecuencia de demodulación $\omega$ se puede validar ajustando localmente una línea a la fase,$\varphi\simeq a + bt$. Típicamente esto lo haremos en fragmentos de longiutd $T$. De esta forma si seleccionamos el origen en el tiempo central de cada fragmento (tal que $a\simeq 0$) obtenemos que $cos(\omega t + \varphi)\simeq cos(\omega t + bt)=cos(\hat{\omega} t)$.
+$$e^{i\varphi(t)}=2\frac{Y_s(t)}{A_s(t)}\,;\,\,\,\,\,\varphi_s(t)=tan^{-1}
+\left(\frac{Im[Y_s]}{Re[Y_s]}\right)$$
 
-La frecuencia ajustada $\hat{\omega}=\omega + a$ es una validación de la elección inicial de nuestra frecuencia de demodulación $\omega$.
+Al suavizar hacemos dos cosas. Primero, eliminamos los términos no deseados (a) y (b). 
+El tipo de filtrado o suavizado determina la anchura de la banda de frecuencias de 
+las oscilaciones retenidas. Por ejemplo, si usamos un triángulo (ventana triangular) 
+de longitud $2T-1$ donde $T=2\pi/\omega$ es el periodo de demodulación, entonces 
+para la banda para la potencia-media ($3\,{ dB}$ desde el pico) será 
+$\omega \in [T/(1+0.44295),T/(1-0.44295)]$. Potencia media se refiere a la 
+frecuencia a la cual la potencia se ha reducido a la mitad de su valor medio de la banda. 
+Segundo, el filtrado suaviza las series de amplitud y la fase. \\
+
+(4) La elección de la frecuencia de demodulación $\omega$ se puede validar ajustando 
+localmente una línea a la fase,$\varphi\simeq a + bt$. Típicamente esto lo haremos 
+en fragmentos de longiutd $T$. De esta forma si seleccionamos el origen en el tiempo 
+central de cada fragmento (tal que $a\simeq 0$) obtenemos que 
+$cos(\omega t + \varphi)\simeq cos(\omega t + bt)=cos(\hat{\omega} t)$. \\
+
+La frecuencia ajustada $\hat{\omega}=\omega + a$ es una validación de la elección 
+inicial de nuestra frecuencia de demodulación $\omega$.
 
 ```{=tex}
 \begin{center}
@@ -4826,8 +5187,13 @@ Ayuda de Muchos
 ## Open research
 
 Disponible para todos
+```{=html}
+<!--
+comment
 
 ## References {.unnumbered}
 
 ::: {#refs}
 :::
+-->
+```
